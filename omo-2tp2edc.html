@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everyday Computing - Transport, Misc</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Everyday Computing - Transport, Misc</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0ec98ef">1. Public</a>
+<ul>
+<li><a href="#org92e0ead">1.1. Planes</a>
+<ul>
+<li><a href="#org1631e16">1.1.1. General</a></li>
+<li><a href="#org66c952a">1.1.2. GoI Official</a></li>
+<li><a href="#orgd199a93">1.1.3. Tools</a></li>
+<li><a href="#org3a6ffac">1.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6ee2312">1.2. Ships</a></li>
+<li><a href="#orgd35b035">1.3. Trains</a></li>
+<li><a href="#orgce764da">1.4. Metro</a></li>
+<li><a href="#org777f918">1.5. Buses</a>
+<ul>
+<li><a href="#org012bfd2">1.5.1. Tools</a></li>
+<li><a href="#orge927edd">1.5.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2b8e261">2. Private</a>
+<ul>
+<li><a href="#org664afb8">2.1. Cars</a>
+<ul>
+<li><a href="#orgc43b1a4">2.1.1. General</a></li>
+<li><a href="#org2b5b666">2.1.2. Privacy And Security</a></li>
+<li><a href="#orgc716749">2.1.3. Cabs</a></li>
+<li><a href="#org8ec3361">2.1.4. GoI Official</a></li>
+<li><a href="#org0dba8ee">2.1.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc96a509">2.2. Two</a>
+<ul>
+<li><a href="#orgcefe518">2.2.1. Cycle</a></li>
+<li><a href="#org26a4b8f">2.2.2. Bikes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1b55299">3. GoI Official</a></li>
+<li><a href="#orga17e346">4. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org0ec98ef" class="outline-2">
+<h2 id="org0ec98ef"><span class="section-number-2">1.</span> Public</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org92e0ead" class="outline-3">
+<h3 id="org92e0ead"><span class="section-number-3">1.1.</span> Planes</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org1631e16" class="outline-4">
+<h4 id="org1631e16"><span class="section-number-4">1.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org66c952a" class="outline-4">
+<h4 id="org66c952a"><span class="section-number-4">1.1.2.</span> GoI Official</h4>
+<div class="outline-text-4" id="text-1-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="org36c3850"></a>DigiYatra<br />
+<ul class="org-ul">
+<li><a id="org9ca5829"></a>General<br />
+<div class="outline-text-6" id="text-org9ca5829">
+<ul class="org-ul">
+<li>“DigiYatra,” Wikipedia. Feb. 11, 2024. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=DigiYatra&amp;oldid=1206314470">https://en.wikipedia.org/w/index.php?title=DigiYatra&amp;oldid=1206314470</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0bd3be8"></a>GoI Official<br />
+<div class="outline-text-6" id="text-org0bd3be8">
+<ul class="org-ul">
+<li>“Digi Yatra- A New Digital Experience for Air Travellers| National Portal of India.” Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.india.gov.in/spotlight/digi-yatra-new-digital-experience-air-travellers">https://www.india.gov.in/spotlight/digi-yatra-new-digital-experience-air-travellers</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb04abac"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org10c2b35"></a>Critical Studies<br />
+<div class="outline-text-7" id="text-org10c2b35">
+<ul class="org-ul">
+<li>“Resist Surveillance Tech, Reject Digi Yatra,” Internet Freedom Foundation. Accessed: Mar. 10, 2024. [Online]. Available: <a href="https://internetfreedom.in/reject-digiyatra/">https://internetfreedom.in/reject-digiyatra/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgd905971"></a>Misc<br />
+<div class="outline-text-6" id="text-orgd905971">
+<ul class="org-ul">
+<li>J. Chandra, “Digi Yatra could be expanded to hotels, rail travel and public places: CEO,” The Hindu, Jun. 18, 2024. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/digi-yatra-could-be-expanded-to-hotels-rail-travel-and-public-places-ceo/article68300903.ece">https://www.thehindu.com/news/national/digi-yatra-could-be-expanded-to-hotels-rail-travel-and-public-places-ceo/article68300903.ece</a></li>
+
+<li>S. NT, “No central storage of passenger data under Digi Yatra: India’s Civil Aviation Ministry,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2023/03/223-digi-yatra-civil-aviation-ministry-data-storage-rti/">https://www.medianama.com/2023/03/223-digi-yatra-civil-aviation-ministry-data-storage-rti/</a></li>
+<li>S. NT, “Digi Yatra does not come under RTI: India’s Civil Aviation Ministry,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2023/03/223-civil-aviation-ministry-digi-yatra-right-to-information/">https://www.medianama.com/2023/03/223-civil-aviation-ministry-digi-yatra-right-to-information/</a></li>
+<li>A. Ganesan, “NITI Aayog on Digi Yatra and Responsble AI: Key takeaways,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2022/11/223-niti-aayog-digi-yatra-report-facial-recognition/">https://www.medianama.com/2022/11/223-niti-aayog-digi-yatra-report-facial-recognition/</a></li>
+<li>Medianama, “MediaNama Daily: Aviation Ministry’s Digi Yatra is experiencing some turbulence,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2023/03/223-medianama-daily-digi-yatra/">https://www.medianama.com/2023/03/223-medianama-daily-digi-yatra/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Chandra, “Watch | What is DigiYatra, and why were people complaining about it in airports?,” The Hindu, Jan. 19, 2024. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/watch-what-is-digiyatra-and-why-were-complaining-about-it-in-airports/article67755970.ece">https://www.thehindu.com/news/national/watch-what-is-digiyatra-and-why-were-complaining-about-it-in-airports/article67755970.ece</a></li>
+<li>J. Chandra, “Centre’s Digi Yatra enrolment takes off as airport security staff sign up flyers without their consent,” The Hindu, Jan. 05, 2024. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/passengers-say-cisf-and-airport-staff-are-collecting-biometric-data-without-consent/article67710134.ece">https://www.thehindu.com/news/national/passengers-say-cisf-and-airport-staff-are-collecting-biometric-data-without-consent/article67710134.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“DigiYatra: The Promise and Perils of India’s New Airport Biometric System,” The Wire. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://thewire.in/tech/digiyatra-the-promise-and-perils-of-indias-new-airport-biometric-system">https://thewire.in/tech/digiyatra-the-promise-and-perils-of-indias-new-airport-biometric-system</a></li>
+
+<li>“DigiYatra: who owns your data?,” Internet Freedom Foundation (IFF). Accessed: Nov. 19, 2025. [Online]. Available: <a href="https://internetfreedom.in/digiyatra-who-owns-your-data/">https://internetfreedom.in/digiyatra-who-owns-your-data/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgd199a93" class="outline-4">
+<h4 id="orgd199a93"><span class="section-number-4">1.1.3.</span> Tools</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>“‎Goibibo: Hotel, Flight Booking,” App Store, Jul. 09, 2023. <a href="https://apps.apple.com/us/app/goibibo-hotel-flight-booking/id631927169">https://apps.apple.com/us/app/goibibo-hotel-flight-booking/id631927169</a> (accessed Jul. 20, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‎MakeMyTrip Flight, Hotel, Bus,” App Store, Jun. 26, 2023. <a href="https://apps.apple.com/us/app/makemytrip-flight-hotel-bus/id530488359">https://apps.apple.com/us/app/makemytrip-flight-hotel-bus/id530488359</a> (accessed Jul. 20, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3a6ffac" class="outline-4">
+<h4 id="org3a6ffac"><span class="section-number-4">1.1.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org6ee2312" class="outline-3">
+<h3 id="org6ee2312"><span class="section-number-3">1.2.</span> Ships</h3>
+</div>
+<div id="outline-container-orgd35b035" class="outline-3">
+<h3 id="orgd35b035"><span class="section-number-3">1.3.</span> Trains</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>V. Sanzgiri, “Mass Surveillance? Railway coaches to get face-detection cameras,” MediaNama. Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/02/223-indian-railway-coaches-cameras/">https://www.medianama.com/2024/02/223-indian-railway-coaches-cameras/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgce764da" class="outline-3">
+<h3 id="orgce764da"><span class="section-number-3">1.4.</span> Metro</h3>
+</div>
+<div id="outline-container-org777f918" class="outline-3">
+<h3 id="org777f918"><span class="section-number-3">1.5.</span> Buses</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-org012bfd2" class="outline-4">
+<h4 id="org012bfd2"><span class="section-number-4">1.5.1.</span> Tools</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<ul class="org-ul">
+<li>“‎redBus - Bus Booking App,” App Store, Jun. 12, 2023. <a href="https://apps.apple.com/us/app/redbus-bus-booking-app/id733712604">https://apps.apple.com/us/app/redbus-bus-booking-app/id733712604</a> (accessed Jul. 20, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge927edd" class="outline-4">
+<h4 id="orge927edd"><span class="section-number-4">1.5.2.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b8e261" class="outline-2">
+<h2 id="org2b8e261"><span class="section-number-2">2.</span> Private</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org664afb8" class="outline-3">
+<h3 id="org664afb8"><span class="section-number-3">2.1.</span> Cars</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgc43b1a4" class="outline-4">
+<h4 id="orgc43b1a4"><span class="section-number-4">2.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org2b5b666" class="outline-4">
+<h4 id="org2b5b666"><span class="section-number-4">2.1.2.</span> Privacy And Security</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="orga502e0b"></a>General<br />
+<div class="outline-text-5" id="text-orga502e0b">
+<ul class="org-ul">
+<li><b>It’s Official: Cars Are the Worst Product Category We Have Ever Reviewed for Privacy, *Privacy Not Included: A Buyer’s Guide for Connected Products,”</b> Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/its-official-cars-are-the-worst-product-category-we-have-ever-reviewed-for-privacy/">https://foundation.mozilla.org/en/privacynotincluded/articles/its-official-cars-are-the-worst-product-category-we-have-ever-reviewed-for-privacy/</a> (accessed Sep. 07, 2023).</li>
+<li>“*Privacy Not Included: A Buyer’s Guide for Connected Products,” Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/after-researching-cars-and-privacy-heres-what-keeps-us-up-at-night/">https://foundation.mozilla.org/en/privacynotincluded/articles/after-researching-cars-and-privacy-heres-what-keeps-us-up-at-night/</a> (accessed Sep. 07, 2023).</li>
+<li>“*Privacy Not Included: A Buyer’s Guide for Connected Products,” Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/what-data-does-my-car-collect-about-me-and-where-does-it-go/">https://foundation.mozilla.org/en/privacynotincluded/articles/what-data-does-my-car-collect-about-me-and-where-does-it-go/</a> (accessed Sep. 07, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“‘Is This Even Legal?’ Our Top Cars-And-Privacy Question, Answered.,”</b> Mozilla Foundation. Accessed: Oct. 18, 2023. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/is-this-even-legal-our-top-cars-and-privacy-question-answered/">https://foundation.mozilla.org/en/blog/is-this-even-legal-our-top-cars-and-privacy-question-answered/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“If You’ve Got a New Car, It’s a Data Privacy Nightmare,” Gizmodo, Sep. 06, 2023. <a href="https://gizmodo.com/mozilla-new-cars-data-privacy-report-1850805416">https://gizmodo.com/mozilla-new-cars-data-privacy-report-1850805416</a> (accessed Sep. 07, 2023).</li>
+<li>“Internet-Connected Cars Fail Privacy and Security Tests Conducted By Mozilla - Slashdot,” Sep. 06, 2023. <a href="https://yro.slashdot.org/story/23/09/06/2035237/internet-connected-cars-fail-privacy-and-security-tests-conducted-by-mozilla">https://yro.slashdot.org/story/23/09/06/2035237/internet-connected-cars-fail-privacy-and-security-tests-conducted-by-mozilla</a> (accessed Sep. 07, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Klosowski, “How to Figure Out What Your Car Knows About You (and Opt Out of Sharing When You Can),” Electronic Frontier Foundation. Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can">https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pluralistic: Your car spies on you and rats you out to insurance companies (12 Mar 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/03/12/market-failure/">https://pluralistic.net/2024/03/12/market-failure/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge8cc81d"></a>Brands<br />
+<ul class="org-ul">
+<li><a id="org627bb37"></a>Volkswagen<br />
+<div class="outline-text-6" id="text-org627bb37">
+<ul class="org-ul">
+<li>“*Privacy Not Included review: Volkswagen,” Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/volkswagen/">https://foundation.mozilla.org/en/privacynotincluded/volkswagen/</a> (accessed Sep. 07, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3480533"></a>Misc<br />
+<div class="outline-text-5" id="text-org3480533">
+<ul class="org-ul">
+<li>T. Klosowski, “Senators Expose Car Companies’ Terrible Data Privacy Practices,” Electronic Frontier Foundation. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/07/senators-expose-car-companies-terrible-data-privacy-practices">https://www.eff.org/deeplinks/2024/07/senators-expose-car-companies-terrible-data-privacy-practices</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgc716749" class="outline-4">
+<h4 id="orgc716749"><span class="section-number-4">2.1.3.</span> Cabs</h4>
+<div class="outline-text-4" id="text-2-1-3">
+</div>
+<ul class="org-ul">
+<li><a id="org9e03e13"></a>Electric<br />
+<div class="outline-text-5" id="text-org9e03e13">
+<ul class="org-ul">
+<li>“‎BluSmart: Safe Electric Cabs,” App Store, Jun. 27, 2023. <a href="https://apps.apple.com/in/app/blusmart-safe-electric-cabs/id1460355618">https://apps.apple.com/in/app/blusmart-safe-electric-cabs/id1460355618</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfb36dda"></a>Misc<br />
+<div class="outline-text-5" id="text-orgfb36dda">
+<ul class="org-ul">
+<li>“‎Uber - Request a ride,” App Store, Jun. 26, 2023. <a href="https://apps.apple.com/in/app/uber-request-a-ride/id368677368">https://apps.apple.com/in/app/uber-request-a-ride/id368677368</a> (accessed Jul. 03, 2023).</li>
+
+<li>“‎Ola Cabs,” App Store, Jun. 14, 2023. <a href="https://apps.apple.com/in/app/ola-cabs/id539179365">https://apps.apple.com/in/app/ola-cabs/id539179365</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org8ec3361" class="outline-4">
+<h4 id="org8ec3361"><span class="section-number-4">2.1.4.</span> GoI Official</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<ul class="org-ul">
+<li>“‎NextGen mParivahan,” App Store, Jun. 08, 2023. <a href="https://apps.apple.com/in/app/nextgen-mparivahan/id1450914131">https://apps.apple.com/in/app/nextgen-mparivahan/id1450914131</a> (accessed Jul. 03, 2023).</li>
+
+<li>“‎My FASTag,” App Store, Oct. 29, 2022. <a href="https://apps.apple.com/in/app/my-fastag/id1492581255">https://apps.apple.com/in/app/my-fastag/id1492581255</a> (accessed Jul. 03, 2023).</li>
+
+<li>“‎Park+ FASTag | RTO | Parivahan,” App Store, Jun. 30, 2023. <a href="https://apps.apple.com/in/app/park-fastag-rto-parivahan/id1244749178">https://apps.apple.com/in/app/park-fastag-rto-parivahan/id1244749178</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0dba8ee" class="outline-4">
+<h4 id="org0dba8ee"><span class="section-number-4">2.1.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<ul class="org-ul">
+<li>“New Patent Application for Car-to-Car Surveillance - Schneier on Security.” Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/08/new-patent-application-for-car-to-car-surveillance.html?utm_source=dlvr.it&amp;utm_medium=twitter">https://www.schneier.com/blog/archives/2024/08/new-patent-application-for-car-to-car-surveillance.html?utm_source=dlvr.it&amp;utm_medium=twitter</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Right to Repair Catches the Car - YouTube.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=QQ7ey1ITp3c&amp;list=WL&amp;index=28">https://www.youtube.com/watch?v=QQ7ey1ITp3c&amp;list=WL&amp;index=28</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why Your Car’s Key Fob Is So Hackable,” Gizmodo. Accessed: May 11, 2024. [Online]. Available: <a href="https://gizmodo.com/why-your-cars-key-fob-is-so-hackable-1851455426">https://gizmodo.com/why-your-cars-key-fob-is-so-hackable-1851455426</a></li>
+
+<li>K. J. for CalMatters, “Car Tracking Can Enable Domestic Abuse. Turning It Off Is Easier Said Than Done – The Markup.” Accessed: May 07, 2024. [Online]. Available: <a href="https://themarkup.org/privacy/2024/04/30/car-tracking-can-enable-domestic-abuse-turning-it-off-is-easier-said-than-done">https://themarkup.org/privacy/2024/04/30/car-tracking-can-enable-domestic-abuse-turning-it-off-is-easier-said-than-done</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc96a509" class="outline-3">
+<h3 id="orgc96a509"><span class="section-number-3">2.2.</span> Two</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgcefe518" class="outline-4">
+<h4 id="orgcefe518"><span class="section-number-4">2.2.1.</span> Cycle</h4>
+</div>
+<div id="outline-container-org26a4b8f" class="outline-4">
+<h4 id="org26a4b8f"><span class="section-number-4">2.2.2.</span> Bikes</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b55299" class="outline-2">
+<h2 id="org1b55299"><span class="section-number-2">3.</span> GoI Official</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>“NETC: National Electronic Toll Collection - RFID FASTag.” <a href="https://www.netc.org.in/">https://www.netc.org.in/</a> (accessed Jun. 23, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga17e346" class="outline-2">
+<h2 id="orga17e346"><span class="section-number-2">4.</span> Misc</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>I. Gupta, “IFF Raises Concerns Over Aadhaar Use For IRCTC Tatkal Booking,” MEDIANAMA. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/07/223-internet-freedom-foundation-aadhaar-irctc-tatkal-booking/">https://www.medianama.com/2025/07/223-internet-freedom-foundation-aadhaar-irctc-tatkal-booking/</a></li>
+
+<li>“Rs 3,000 FASTag Annual Pass: Highway Trips Without Additional Toll,” Outlook Money. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.outlookmoney.com/news/rs-3000-fastag-annual-pass-from-august-15-drive-200-highway-trips-without-additional-toll">https://www.outlookmoney.com/news/rs-3000-fastag-annual-pass-from-august-15-drive-200-highway-trips-without-additional-toll</a></li>
+
+<li>G. Mittal, “The key question missing in India’s debate over ‘taxi mafia’ and ride-hailing apps,” Scroll.in. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://scroll.in/article/1083596/the-key-question-missed-in-indias-debate-over-taxi-mafia-and-ride-hailing-apps">https://scroll.in/article/1083596/the-key-question-missed-in-indias-debate-over-taxi-mafia-and-ride-hailing-apps</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Raghav, “Zoomcar Cyberattack Exposes Personal Data of 84 Lakh Users,” MEDIANAMA. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/06/223-zoomcar-data-breach-84-lakh-users/">https://www.medianama.com/2025/06/223-zoomcar-data-breach-84-lakh-users/</a></li>
+
+<li>P. Certo, “Hiding Exploitation Behind an App,” OtherWords. Accessed: May 31, 2025. [Online]. Available: <a href="https://otherwords.org/hiding-exploitation-behind-an-app/">https://otherwords.org/hiding-exploitation-behind-an-app/</a></li>
+
+<li>Azdhan, “No GPS Tolling from May 1, 2025: Government Issues Clarification,” MEDIANAMA. Accessed: Apr. 20, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/04/223-govt-gps-satellite-fastag-toll-india-privacy-concerns/">https://www.medianama.com/2025/04/223-govt-gps-satellite-fastag-toll-india-privacy-concerns/</a></li>
+
+<li>C. Kohli, “Ola, Uber Deny Differential Pricing for iPhone Users, Govt Probes,” MEDIANAMA. Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/03/223-ola-uber-deny-differential-pricing-for-iphone-users-as-govt-investigates/">https://www.medianama.com/2025/03/223-ola-uber-deny-differential-pricing-for-iphone-users-as-govt-investigates/</a></li>
+
+<li>“Using WhatsApp to Crowdsource Data on Ride Hailing Companies’ Labor Lockouts.” Accessed: Feb. 25, 2025. [Online]. Available: <a href="https://gijn.org/stories/whatsapp-crowdsource-data-uber-lyft/">https://gijn.org/stories/whatsapp-crowdsource-data-uber-lyft/</a></li>
+
+<li>S. Lobo, “RBI Expands e-Mandate Framework to Include FASTag, NCMC,” MEDIANAMA. Accessed: Aug. 27, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/08/223-rbi-expands-e-mandate-framework-include-fastag-ncmc/">https://www.medianama.com/2024/08/223-rbi-expands-e-mandate-framework-include-fastag-ncmc/</a></li>
+
+<li>S. Lobo, “New FASTag rules: Link tags to vehicle reg no, one vehicle one tag,” MEDIANAMA. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/08/223-new-fastag-guidelines-applicable-1-august/">https://www.medianama.com/2024/08/223-new-fastag-guidelines-applicable-1-august/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Parasnis, “Toll Plazas may soon disappear, replaced with GPS chips,” MediaNama. Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/03/223-toll-plazas-disappear-replaced-gps-chips/">https://www.medianama.com/2024/03/223-toll-plazas-disappear-replaced-gps-chips/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

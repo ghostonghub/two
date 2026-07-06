@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CryptoCurrencies</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">CryptoCurrencies</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org52f2288">1. General</a></li>
+<li><a href="#org8023bff">2. STEMM</a>
+<ul>
+<li><a href="#org6b595fe">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org8b73202">2.1.1. Complexity Science</a></li>
+<li><a href="#org9b6bc34">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org068fc21">2.2. Biological Sciences, Misc</a>
+<ul>
+<li><a href="#org3118db5">2.2.1. Environment</a></li>
+</ul>
+</li>
+<li><a href="#orgc79b985">2.3. Basic Sciences, Misc</a></li>
+<li><a href="#org1075dd8">2.4. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org651b27f">2.4.1. CSE</a></li>
+</ul>
+</li>
+<li><a href="#org67771ae">2.5. Advanced Sciences, Misc</a></li>
+<li><a href="#orgc6b6d1b">2.6. Technology, Misc</a></li>
+<li><a href="#org746b132">2.7. Special Topics</a></li>
+<li><a href="#orgbf7a66b">2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org07d33de">3. Worldly Matters</a>
+<ul>
+<li><a href="#org269f6c6">3.1. Space and Time</a></li>
+<li><a href="#orgd1118f1">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org55ee252">3.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org31e6861">3.4. Humanities, Misc</a>
+<ul>
+<li><a href="#orgcb33c9b">3.4.1. People</a></li>
+</ul>
+</li>
+<li><a href="#org107b62b">3.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org43e17f3">3.5.1. Orgs</a></li>
+<li><a href="#org8f41147">3.5.2. Nation States</a></li>
+</ul>
+</li>
+<li><a href="#org1da278f">3.6. Business Studies, Misc</a>
+<ul>
+<li><a href="#org7b4f698">3.6.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3d84173">3.7. Security Studies, Misc</a></li>
+<li><a href="#orgcf40039">3.8. Communication, Misc</a>
+<ul>
+<li><a href="#orgdf6cb26">3.8.1. News</a></li>
+<li><a href="#orgaa22226">3.8.2. Journalism</a></li>
+</ul>
+</li>
+<li><a href="#orge457c3c">3.9. Special Topics</a>
+<ul>
+<li><a href="#org213b94b">3.9.1. Cloud Money</a></li>
+</ul>
+</li>
+<li><a href="#org412c764">3.10. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org42c01a0">4. Core</a>
+<ul>
+<li><a href="#org61bdd60">4.1. Courses</a></li>
+<li><a href="#org4a2de5d">4.2. Texts</a></li>
+<li><a href="#org8b54cea">4.3. BitCoin</a>
+<ul>
+<li><a href="#orgc4ffa36">4.3.1. General</a></li>
+<li><a href="#orgf41599b">4.3.2. STEMM</a></li>
+<li><a href="#org0d369f4">4.3.3. Worldly Matters</a></li>
+<li><a href="#orgaa5f2a5">4.3.4. Core</a></li>
+<li><a href="#org24a8a4e">4.3.5. Special Topics</a></li>
+<li><a href="#org733aeb5">4.3.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgecacfbb">4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org67c1ad7">5. Special Topics</a>
+<ul>
+<li><a href="#orge353bb9">5.1. Critical Studies</a></li>
+</ul>
+</li>
+<li><a href="#orgd4cf261">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org52f2288" class="outline-2">
+<h2 id="org52f2288"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org8023bff" class="outline-2">
+<h2 id="org8023bff"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6b595fe" class="outline-3">
+<h3 id="org6b595fe"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org8b73202" class="outline-4">
+<h4 id="org8b73202"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li><b>“Cryptofinance,”</b> CSH. <a href="https://www.csh.ac.at/complexity-science/cryptofinance/">https://www.csh.ac.at/complexity-science/cryptofinance/</a> (accessed Jun. 16, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“Bernhard Haslhofer | Research Profile.”</b> <a href="https://bernhardhaslhofer.info/">https://bernhardhaslhofer.info/</a> (accessed Jun. 16, 2023).
+<ul class="org-ul">
+<li>“Bernhard Haslhofer Nominated For Prestigious Houska Prize.” Accessed: Mar. 05, 2024. [Online]. Available: <a href="https://csh.ac.at/news/bernhard-haslhofer-nominated-for-prestigious-houska-prize/">https://csh.ac.at/news/bernhard-haslhofer-nominated-for-prestigious-houska-prize/</a></li>
+</ul></li>
+
+<li>P. Saggese, E. Segalla, M. Sigmund, B. Raunig, F. Zangerl, and B. Haslhofer, “Assessing the Solvency of Virtual Asset Service Providers: Are Current Standards Sufficient?,” arXiv.org. Accessed: Oct. 10, 2023. [Online]. Available: <a href="https://arxiv.org/abs/2309.16408v1">https://arxiv.org/abs/2309.16408v1</a></li>
+
+<li>C. Carpentier-Desjardins, M. Paquet-Clouston, S. Kitzler, and B. Haslhofer, “Mapping the DeFi Crime Landscape: An Evidence-based Picture,” arXiv.org. Accessed: Oct. 10, 2023. [Online]. Available: <a href="https://arxiv.org/abs/2310.04356v1">https://arxiv.org/abs/2310.04356v1</a></li>
+
+<li>J. E. Schatzmann and B. Haslhofer, <b>“Exploring investor behavior in Bitcoin: a study of the disposition effect,”</b> Digit Finance, Jul. 2023, doi: 10.1007/s42521-023-00086-w.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9b6bc34" class="outline-4">
+<h4 id="org9b6bc34"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Digital Currency Ecosystems * Complexity Science Hub.” Accessed: Mar. 19, 2026. [Online]. Available: <a href="https://csh.ac.at/research/research-topic/digital-currency-ecosystems/">https://csh.ac.at/research/research-topic/digital-currency-ecosystems/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Complexity Science Hub * News * Crypto Hacks: Price Drops Often Outweigh Direct Losses.” Accessed: Nov. 28, 2025. [Online]. Available: <a href="https://csh.ac.at/news/crypto-hacks-price-drops-often-outweigh-direct-losses/">https://csh.ac.at/news/crypto-hacks-price-drops-often-outweigh-direct-losses/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org068fc21" class="outline-3">
+<h3 id="org068fc21"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org3118db5" class="outline-4">
+<h4 id="org3118db5"><span class="section-number-4">2.2.1.</span> Environment</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Bitcoin boom comes with huge intensifying environmental footprint,” Mongabay Environmental News. Accessed: Jun. 26, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/06/bitcoin-boom-comes-with-huge-intensifying-environmental-footprint/">https://news.mongabay.com/2025/06/bitcoin-boom-comes-with-huge-intensifying-environmental-footprint/</a></li>
+
+<li>“Bitcoin boom comes with huge intensifying environmental footprint,” Mongabay Environmental News. Accessed: Jun. 26, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/06/bitcoin-boom-comes-with-huge-intensifying-environmental-footprint/">https://news.mongabay.com/2025/06/bitcoin-boom-comes-with-huge-intensifying-environmental-footprint/</a></li>
+
+<li>R. Scher, “As Cryptocurrency Becomes Mainstream, Its Carbon Footprint Can’t Be Ignored,” Truthout. <a href="https://truthout.org/articles/as-cryptocurrency-becomes-mainstream-its-carbon-footprint-cant-be-ignored/">https://truthout.org/articles/as-cryptocurrency-becomes-mainstream-its-carbon-footprint-cant-be-ignored/</a> (accessed Feb. 12, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc79b985" class="outline-3">
+<h3 id="orgc79b985"><span class="section-number-3">2.3.</span> Basic Sciences, Misc</h3>
+</div>
+<div id="outline-container-org1075dd8" class="outline-3">
+<h3 id="org1075dd8"><span class="section-number-3">2.4.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org651b27f" class="outline-4">
+<h4 id="org651b27f"><span class="section-number-4">2.4.1.</span> CSE</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ul class="org-ul">
+<li><a id="org7beb1e7"></a>Data Science<br />
+<ul class="org-ul">
+<li><a id="org031d949"></a>Analytics<br />
+<div class="outline-text-6" id="text-org031d949">
+<ul class="org-ul">
+<li>“Iknaio Cryptoasset Analytics,” Iknaio Cryptoasset Analytics. <a href="https://www.ikna.io/">https://www.ikna.io/</a> (accessed Jun. 30, 2023).</li>
+<li>CSH, “CSH Spin-Off Iknaio receives aws seed funding,” CSH, Jun. 29, 2023. <a href="https://www.csh.ac.at/csh-spin-off-iknaio-receives-aws-seed-funding/">https://www.csh.ac.at/csh-spin-off-iknaio-receives-aws-seed-funding/</a> (accessed Jun. 30, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3927622"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org5ad1cbb"></a>BlockChains<br />
+<ul class="org-ul">
+<li><a id="orgfd9acfe"></a>General<br /></li>
+<li><a id="orgd624696"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org8b4ad26"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org32ac083"></a>Complexity Science<br />
+<div class="outline-text-8" id="text-org32ac083">
+<ul class="org-ul">
+<li>“A Glimpse into the DeFi Ecosystem,” A Glimpse into the DeFi Ecosystem. Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://vis.csh.ac.at/defi-ecosystem/">https://vis.csh.ac.at/defi-ecosystem/</a></li>
+<li>S. Kitzler, S. Balietti, P. Saggese, B. Haslhofer, and M. Strohmaier, “The Governance of Decentralized Autonomous Organizations: A Study of Contributors’ Influence, Networks, and Shifts in Voting Power,” vol. 14745, Feb. 2025, Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://csh.ac.at/publication/the-governance-of-decentralized-autonomous-organizations-a-study-of-contributors-influence-networks-and-shifts-in-voting-power/">https://csh.ac.at/publication/the-governance-of-decentralized-autonomous-organizations-a-study-of-contributors-influence-networks-and-shifts-in-voting-power/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdd48987"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org16f8b5c"></a>Bulletin of the Atomic Scientists<br />
+<div class="outline-text-7" id="text-org16f8b5c">
+<ul class="org-ul">
+<li>“After the fall: Bitcoin’s true legacy may be Blockchain technology,” Bulletin of the Atomic Scientists. <a href="https://thebulletin.org/premium/2022-07/after-the-fall-bitcoins-true-legacy-may-be-blockchain-technology/">https://thebulletin.org/premium/2022-07/after-the-fall-bitcoins-true-legacy-may-be-blockchain-technology/</a> (accessed Jul. 12, 2022).</li>
+<li>“Blockchain beyond cryptocurrency: A revolution in information management and international security,” Bulletin of the Atomic Scientists. <a href="https://thebulletin.org/premium/2022-07/blockchain-beyond-cryptocurrency-a-revolution-in-information-management-and-international-security/">https://thebulletin.org/premium/2022-07/blockchain-beyond-cryptocurrency-a-revolution-in-information-management-and-international-security/</a> (accessed Jul. 12, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org0dc5446"></a>Wolfram<br />
+<div class="outline-text-7" id="text-org0dc5446">
+<ul class="org-ul">
+<li>“Stephen Wolfram and Dr. K: Blockchain &amp; Physics, PoEM, Thermoeconomics,” YouTube. Accessed: Nov. 15, 2024. [Online]. Available: <a href="http://www.youtube.com/playlist?list=PLSGKRp6O6_8N7-QQT14taRm-RfCFi-MZd">http://www.youtube.com/playlist?list=PLSGKRp6O6_8N7-QQT14taRm-RfCFi-MZd</a></li>
+<li>C. Busch, <b>“NKN | Network Infrastructure for Decentralized Internet,”</b> Feb. 17, 2020. <a href="https://nkn.org/">https://nkn.org/</a> (accessed May 16, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgff1cba3"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org7364a14"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orgc942840"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org0c61337"></a>India<br />
+<ul class="org-ul">
+<li><a id="org6309b01"></a>GoI Official<br />
+<ul class="org-ul">
+<li><a id="orgd02bae4"></a>AlgoBharat<br />
+<div class="outline-text-10" id="text-orgd02bae4">
+<ul class="org-ul">
+<li>“AlgoBharat |.” Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://algobharat.in/">https://algobharat.in/</a></li>
+<li>“About Us | AlgoBharat.” Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://algobharat.in/about-us/">https://algobharat.in/about-us/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org182acde"></a>Misc<br />
+<div class="outline-text-10" id="text-org182acde">
+<ul class="org-ul">
+<li>“Government launches Vishvasya-Blockchain Technology Stack; To offer Blockchain-as-a-Service with a geographically distributed infrastructure.” Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://pib.gov.in/pib.gov.in/Pressreleaseshare.aspx?PRID=2051934">https://pib.gov.in/pib.gov.in/Pressreleaseshare.aspx?PRID=2051934</a></li>
+<li>“MeitY launches national blockchain framework to enhance digital trust and governance,” Moneycontrol. Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://www.moneycontrol.com/technology/govt-launches-vishvasya-blockchain-technology-stack-a-national-blockchain-framework-to-enhance-digital-trust-and-governance-article-12814619.html">https://www.moneycontrol.com/technology/govt-launches-vishvasya-blockchain-technology-stack-a-national-blockchain-framework-to-enhance-digital-trust-and-governance-article-12814619.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc0a45f5"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orged8e12a"></a>Misc<br />
+<div class="outline-text-7" id="text-orged8e12a">
+<ul class="org-ul">
+<li>J. Dávila, Blockchain Radicals: How Capitalism Ruined Crypto and How to Fix It, New edition. Repeater, 2023.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org8529299"></a>Core<br />
+<ul class="org-ul">
+<li><a id="orgf19a0dd"></a>Practice<br />
+<div class="outline-text-7" id="text-orgf19a0dd">
+<ul class="org-ul">
+<li>L. Lantz and D. Cawrey, Mastering Blockchain: Unlocking the Power of Cryptocurrencies, Smart Contracts, and Decentralized Applications, First Edition. Shroff/O’Reilly, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="org584fdaf"></a>Ethereum<br />
+<ul class="org-ul">
+<li><a id="org1d22b96"></a>General<br /></li>
+<li><a id="org56ba3cb"></a>Practice<br />
+<div class="outline-text-8" id="text-org56ba3cb">
+<ul class="org-ul">
+<li>A. M. Antonopoulos and G. W. Ph.D, <i>Mastering Ethereum: Building Smart Contracts and DApps.</i> O’Reilly Media, Inc., 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org889728f"></a>Misc<br />
+<div class="outline-text-8" id="text-org889728f">
+<ul class="org-ul">
+<li>V. Buterin, Proof of Stake: The Making of Ethereum and the Philosophy of Blockchains. HarperCollins Publishers Ltd, 2022.</li>
+
+<li>C. Russo, The Infinite Machine: How an Army of Crypto-hackers Is Building the Next Internet with Ethereum. New York, NY: Harper Business, 2020.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org4d332bd"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org0a98f61"></a>Critical Studies<br />
+<ul class="org-ul">
+<li><a id="org0f17c0f"></a>Bruce Schneier<br />
+<div class="outline-text-8" id="text-org0f17c0f">
+<ul class="org-ul">
+<li><b>“On the Dangers of Cryptocurrencies and the Uselessness of Blockchain - Schneier on Security.”</b> <a href="https://www.schneier.com/blog/archives/2022/06/on-the-dangers-of-cryptocurrencies-and-the-uselessness-of-blockchain.html">https://www.schneier.com/blog/archives/2022/06/on-the-dangers-of-cryptocurrencies-and-the-uselessness-of-blockchain.html</a> (accessed Jun. 25, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org24b5679"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org1996ab6"></a>Blockchains For All<br />
+<ul class="org-ul">
+<li><a id="org6814bed"></a>General<br />
+<div class="outline-text-8" id="text-org6814bed">
+<ul class="org-ul">
+<li>“Blockchain,” Wikipedia. May 22, 2023. Accessed: Jul. 06, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Blockchain&amp;oldid=1156356537">https://en.wikipedia.org/w/index.php?title=Blockchain&amp;oldid=1156356537</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0ace7dc"></a>Dummies Series<br />
+<div class="outline-text-8" id="text-org0ace7dc">
+<ul class="org-ul">
+<li>T. Laurence, Blockchain for Dummies, 2ed | e. Wiley, 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="org08228a5"></a>Fair Tech<br />
+<div class="outline-text-8" id="text-org08228a5">
+<ul class="org-ul">
+<li>“Search:blockchain,” Electronic Frontier Foundation. Accessed: Feb. 01, 2024. [Online]. Available: <a href="https://www.eff.org/search/site/blockchain">https://www.eff.org/search/site/blockchain</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge4b9979"></a>STEMM<br /></li>
+<li><a id="orgc3c1ac0"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org4b2a99b"></a>Misc<br />
+<div class="outline-text-9" id="text-org4b2a99b">
+<ul class="org-ul">
+<li>P. D. Filippi and A. Wright, <b>Blockchain and the Law: The Rule of Code.</b> Harvard University Press, 2019.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org37a7203"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgc73be28"></a>Critical Studies<br />
+<div class="outline-text-9" id="text-orgc73be28">
+<ul class="org-ul">
+<li>Bruce Schneier, <b><a href="https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/">There's No Good Reason to Trust Blockchain Technology</a></b>.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org15130a8"></a>Misc<br />
+<div class="outline-text-8" id="text-org15130a8">
+<ul class="org-ul">
+<li>D. Tapscott and A. Tapscott, Blockchain Revolution. UK: Penguin, 2018.</li>
+<li>H. B. Review, D. Tapscott, M. Iansiti, and K. R. Lakhani, Blockchain: The Insights You Need from Harvard Business Review. Harvard Business Press, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Drescher, Blockchain Basics: A Non-Technical Introduction in 25 Steps, 1st edition. APRESS, 2017.</li>
+<li>M. Swan, Blockchain: Blueprint for a New Economy. O’Reilly Media, Inc., 2015.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga611c9a"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="orgf9b894b"></a>Book Series<br />
+<div class="outline-text-8" id="text-orgf9b894b">
+<ul class="org-ul">
+<li>“Blockchain Technologies.” <a href="http://www.amazon.in/-/dp/B08N114RZ1?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/-/dp/B08N114RZ1?ref=dbs_m_mng_rwt_0000_share</a> (accessed Jul. 04, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org0a5e36a"></a>Misc<br />
+<div class="outline-text-8" id="text-org0a5e36a">
+<ul class="org-ul">
+<li>A. K. D. India) Pal, D. Samanta, S. Bhattacharyya, and S. H. India) Islam, Eds., Blockchain Technology for Emerging Applications: A Comprehensive Approach. Amsterdam: Academic Press Inc, 2022.</li>
+<li>K. Werbach, The Blockchain and the New Architecture of Trust. MIT Press, 2018.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org4842165"></a>Miscellaneous<br />
+<div class="outline-text-6" id="text-org4842165">
+<ul class="org-ul">
+<li>H. Wang, H. Li, A. Smahi, M. Xiao, and S.-Y. R. Li, “GBT-CHAIN: A System Framework for Solving the General Trilemma in Permissioned Blockchains,” Distrib. Ledger Technol., vol. 3, no. 2, p. 9:1-9:15, Jun. 2024, doi: 10.1145/3615871.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0b1896e"></a>Everyday Computing<br />
+<ul class="org-ul">
+<li><a id="org0d6b725"></a>Apps<br />
+<div class="outline-text-6" id="text-org0d6b725">
+<ul class="org-ul">
+<li>“The 5 best crypto apps of 2022.” <a href="https://www.zdnet.com/article/best-crypto-app/">https://www.zdnet.com/article/best-crypto-app/</a> (accessed Jun. 15, 2022).</li>
+
+<li>“Best Crypto Apps and Exchanges for June 2022 | The Ascent by Motley Fool,” The Motley Fool, Jun. 01, 2021. <a href="https://www.fool.com/the-ascent/cryptocurrency/best-cryptocurrency-apps/">https://www.fool.com/the-ascent/cryptocurrency/best-cryptocurrency-apps/</a> (accessed Jun. 15, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1c22db1"></a>Wallets<br />
+<ul class="org-ul">
+<li><a id="orgbf8f5aa"></a>Fair Tech<br />
+<ul class="org-ul">
+<li><a id="orgc8d46a2"></a>Trezor<br />
+<ul class="org-ul">
+<li><a id="org70c68c4"></a>General<br />
+<ul class="org-ul">
+<li><a id="orgcb8e832"></a>Official WebSite<br />
+<div class="outline-text-10" id="text-orgcb8e832">
+<ul class="org-ul">
+<li><b>“Trezor Hardware Wallet (Official) | The original and most secure hardware wallet.”</b> <a href="https://trezor.io/">https://trezor.io/</a> (accessed Sep. 24, 2021).
+<ul class="org-ul">
+<li>'best' cryptocurrency wallet for most 'not too tech savvy' and/or passive investors.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc4e1464"></a>Bitcoin<br />
+<div class="outline-text-9" id="text-orgc4e1464">
+<ul class="org-ul">
+<li>SatoshiLabs, “Tesla and other institutions are a double-edged sword for Bitcoin,” Medium, Feb. 11, 2021. <a href="https://blog.trezor.io/tesla-and-other-institutions-are-a-double-edged-sword-for-bitcoin-f3671f2e5de">https://blog.trezor.io/tesla-and-other-institutions-are-a-double-edged-sword-for-bitcoin-f3671f2e5de</a> (accessed Jul. 22, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org4b70a6d"></a>Misc<br />
+<div class="outline-text-9" id="text-org4b70a6d">
+<ul class="org-ul">
+<li>“Step into the future of self-custody | Be first to see Trezor reveal.” Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://content.trezor.io/trezor-reveal">https://content.trezor.io/trezor-reveal</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org16ec2f3"></a>Misc<br />
+<div class="outline-text-8" id="text-org16ec2f3">
+<ul class="org-ul">
+<li><i>Samourai Wallet - Home.</i> <a href="https://samouraiwallet.com/">https://samouraiwallet.com/</a> (accessed Sep. 28, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgcc9469a"></a>Big Tech<br />
+<div class="outline-text-7" id="text-orgcc9469a">
+<ul class="org-ul">
+<li>“The Best Bitcoin Wallets for 2022,” PCMAG. <a href="https://www.pcmag.com/picks/the-best-bitcoin-wallets">https://www.pcmag.com/picks/the-best-bitcoin-wallets</a> (accessed Jun. 15, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge0dde84"></a>Misc<br />
+<div class="outline-text-7" id="text-orge0dde84">
+<ul class="org-ul">
+<li>“Proton Wallet: A secure, self-custodial Bitcoin wallet,” Proton. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://proton.me/wallet/">https://proton.me/wallet/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Samourai Wallet Developers Plead Guilty To Unlicensed Money Transmission,” The Rage. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://www.therage.co/samourai-wallet-developers-plead-guilty-to-unlicensed-money-transmission/">https://www.therage.co/samourai-wallet-developers-plead-guilty-to-unlicensed-money-transmission/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org248b46d"></a>Exchanges<br />
+<ul class="org-ul">
+<li><a id="orgaecc69b"></a>General<br /></li>
+<li><a id="org9743452"></a>Motley Fool<br />
+<div class="outline-text-7" id="text-org9743452">
+<ul class="org-ul">
+<li>“Best Crypto Apps and Exchanges for June 2022 | The Ascent by Motley Fool,” The Motley Fool, Jun. 01, 2021. <a href="https://www.fool.com/the-ascent/cryptocurrency/best-cryptocurrency-apps/">https://www.fool.com/the-ascent/cryptocurrency/best-cryptocurrency-apps/</a> (accessed Jun. 15, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orga6b3852"></a>India<br />
+<ul class="org-ul">
+<li><a id="org74b42e4"></a>Orgs<br />
+<div class="outline-text-8" id="text-org74b42e4">
+<ul class="org-ul">
+<li>“CoinSwitch Kuber: Buy Bitcoin and Cryptocurrency at India’s Leading Crypto Exchange.” <a href="https://coinswitch.co">https://coinswitch.co</a> (accessed Jun. 15, 2022).</li>
+
+<li>“Buy Bitcoin and Crypto at India’s Leading Exchange | ZebPay,” ZebPay | Buy Bitcoin &amp; Crypto Assets. <a href="https://zebpay.com/in/">https://zebpay.com/in/</a> (accessed Jun. 15, 2022).</li>
+
+<li>“Buy Bitcoin, Cryptocurrency at India’s Largest Exchange | Trading Platform,” WazirX. <a href="https://wazirx.com/">https://wazirx.com/</a> (accessed Jun. 15, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3f66b16"></a>Misc<br />
+<div class="outline-text-8" id="text-org3f66b16">
+<ul class="org-ul">
+<li>“CoinSwitch Kuber, CoinDCX and WazirX were the top crypto advertisers on digital mediums this year: Report,” Business Insider. <a href="https://www.businessinsider.in/advertising/brands/article/coinswitchkuber-coinswitch-co-and-coindcx-were-the-top-three-crypto-advertisers-on-digital-mediums-this-year-report/articleshow/88054122.cms">https://www.businessinsider.in/advertising/brands/article/coinswitchkuber-coinswitch-co-and-coindcx-were-the-top-three-crypto-advertisers-on-digital-mediums-this-year-report/articleshow/88054122.cms</a> (accessed Jun. 15, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org218f4be"></a>Misc<br />
+<div class="outline-text-7" id="text-org218f4be">
+<ul class="org-ul">
+<li>“Digital Currency Prices Plummet as Regulators Probe Collapse of FTX,” Democracy Now! <a href="https://www.democracynow.org/2022/11/15/headlines/digital_currency_prices_plummet_as_regulators_probe_collapse_of_ftx">https://www.democracynow.org/2022/11/15/headlines/digital_currency_prices_plummet_as_regulators_probe_collapse_of_ftx</a> (accessed Nov. 17, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgb6ae388"></a>Misc<br />
+<div class="outline-text-6" id="text-orgb6ae388">
+<ul class="org-ul">
+<li>“Cryptocurrency Reviews and Lab Tests,” PCMAG. <a href="https://www.pcmag.com/categories/cryptocurrency">https://www.pcmag.com/categories/cryptocurrency</a> (accessed Jun. 15, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org67771ae" class="outline-3">
+<h3 id="org67771ae"><span class="section-number-3">2.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgc6b6d1b" class="outline-3">
+<h3 id="orgc6b6d1b"><span class="section-number-3">2.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org746b132" class="outline-3">
+<h3 id="org746b132"><span class="section-number-3">2.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-orgbf7a66b" class="outline-3">
+<h3 id="orgbf7a66b"><span class="section-number-3">2.8.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-8">
+<ul class="org-ul">
+<li>“On reducing the cost of breaking RSA-2048 to 100,000 physical qubits,” Shtetl-Optimized. Accessed: Feb. 16, 2026. [Online]. Available: <a href="https://scottaaronson.blog/?p=9564">https://scottaaronson.blog/?p=9564</a></li>
+
+<li>“Security Principles for Designing an Unhackable Crypto Wallet – Communications of the ACM.” Accessed: Jul. 18, 2025. [Online]. Available: <a href="https://cacm.acm.org/blogcacm/security-principles-for-designing-an-unhackable-crypto-wallet/">https://cacm.acm.org/blogcacm/security-principles-for-designing-an-unhackable-crypto-wallet/</a></li>
+
+<li>Q. Mary and U. of London, “Mathematicians uncover the hidden patterns behind a $3.5 billion cryptocurrency collapse.” Accessed: Apr. 05, 2025. [Online]. Available: <a href="https://phys.org/news/2025-04-mathematicians-uncover-hidden-patterns-billion.html">https://phys.org/news/2025-04-mathematicians-uncover-hidden-patterns-billion.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org07d33de" class="outline-2">
+<h2 id="org07d33de"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org269f6c6" class="outline-3">
+<h3 id="org269f6c6"><span class="section-number-3">3.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orgd1118f1" class="outline-3">
+<h3 id="orgd1118f1"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org55ee252" class="outline-3">
+<h3 id="org55ee252"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-org31e6861" class="outline-3">
+<h3 id="org31e6861"><span class="section-number-3">3.4.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgcb33c9b" class="outline-4">
+<h4 id="orgcb33c9b"><span class="section-number-4">3.4.1.</span> People</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgda1152b"></a>Complexity Science<br />
+<div class="outline-text-5" id="text-orgda1152b">
+<ul class="org-ul">
+<li><b>“Bernhard Haslhofer | Research Profile.”</b> <a href="https://bernhardhaslhofer.info/">https://bernhardhaslhofer.info/</a> (accessed Jun. 16, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbdf14e9"></a>CSE: Conventional<br />
+<div class="outline-text-5" id="text-orgbdf14e9">
+<ul class="org-ul">
+<li>“Silvio Micali,” Wikipedia. Jun. 14, 2023. Accessed: Jun. 21, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Silvio_Micali&amp;oldid=1160056412">https://en.wikipedia.org/w/index.php?title=Silvio_Micali&amp;oldid=1160056412</a>
+<ul class="org-ul">
+<li><b>“Silvio Micali | MIT CSAIL.”</b> <a href="https://www.csail.mit.edu/person/silvio-micali">https://www.csail.mit.edu/person/silvio-micali</a> (accessed Jun. 21, 2023).</li>
+<li><b>“Silvio Micali - A.M. Turing Award Laureate.”</b> <a href="https://amturing.acm.org/award_winners/micali_9954407.cfm">https://amturing.acm.org/award_winners/micali_9954407.cfm</a> (accessed Jun. 21, 2023).</li>
+<li>“Silvio Micali - The Mathematics Genealogy Project.” <a href="https://mathgenealogy.org/id.php?id=77138">https://mathgenealogy.org/id.php?id=77138</a> (accessed Jun. 21, 2023).</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Arvind Narayanan — Princeton.” <a href="https://www.cs.princeton.edu/~arvindn/">https://www.cs.princeton.edu/~arvindn/</a> (accessed Jun. 16, 2023).</li>
+
+<li>“Neha Narula.” <a href="https://nehanarula.org/">https://nehanarula.org/</a> (accessed Jun. 16, 2023).
+<ul class="org-ul">
+<li>N. Narula, “Neha Narula: The future of money | TED Talk.” <a href="https://www.ted.com/talks/neha_narula_the_future_of_money">https://www.ted.com/talks/neha_narula_the_future_of_money</a> (accessed Jun. 16, 2023).</li>
+<li>“Neha Narula,” MIT Digital Currency Initiative, Jan. 30, 2023. <a href="https://dci.mit.edu/neha-narula">https://dci.mit.edu/neha-narula</a> (accessed Jun. 16, 2023).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org6ac7aa1"></a>CSE: Practice<br />
+<div class="outline-text-5" id="text-org6ac7aa1">
+<ul class="org-ul">
+<li>“Vitalik Buterin’s website.” <a href="https://vitalik.ca/">https://vitalik.ca/</a> (accessed Jun. 21, 2023).</li>
+
+<li>Andreas M. Antonopoulos, “aantonop – The bitcoin and open blockchain expert.” <a href="https://aantonop.com/">https://aantonop.com/</a> (accessed Jun. 21, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org107b62b" class="outline-3">
+<h3 id="org107b62b"><span class="section-number-3">3.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org43e17f3" class="outline-4">
+<h4 id="org43e17f3"><span class="section-number-4">3.5.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ul class="org-ul">
+<li>“MIT Digital Currency Initiative,” MIT Digital Currency Initiative, May 09, 2023. <a href="https://dci.mit.edu">https://dci.mit.edu</a> (accessed Jun. 16, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8f41147" class="outline-4">
+<h4 id="org8f41147"><span class="section-number-4">3.5.2.</span> Nation States</h4>
+<div class="outline-text-4" id="text-3-5-2">
+</div>
+<ul class="org-ul">
+<li><a id="org167ab1e"></a>India<br />
+<ul class="org-ul">
+<li><a id="org15d695c"></a>General<br /></li>
+<li><a id="orge83d558"></a>STEMM<br /></li>
+<li><a id="org170cc9b"></a>World<br />
+<ul class="org-ul">
+<li><a id="orgc8b9dfb"></a>Misc<br />
+<div class="outline-text-7" id="text-orgc8b9dfb">
+<ul class="org-ul">
+<li>Azdhan, “Raghav Chadha Calls for Cryptocurrency Legalisation in India,” MEDIANAMA. Accessed: Feb. 14, 2026. [Online]. Available: <a href="https://www.medianama.com/2026/02/223-raghav-chadha-cryptocurrency-legalisation-regulation-india/">https://www.medianama.com/2026/02/223-raghav-chadha-cryptocurrency-legalisation-regulation-india/</a></li>
+
+<li>C. Kohli, “India mandates video kyc for cryptocurrency transactions,” MEDIANAMA. Accessed: Jan. 13, 2026. [Online]. Available: <a href="https://www.medianama.com/2026/01/223-india-kyc-anti-money-laundering-cryptocurrency-transactions/">https://www.medianama.com/2026/01/223-india-kyc-anti-money-laundering-cryptocurrency-transactions/</a></li>
+
+<li>“The Crypto Puzzle | Economic and Political Weekly.” Accessed: Sep. 13, 2025. [Online]. Available: <a href="https://www.epw.in/journal/h-t-parekh-finance-column/crypto-puzzle.html">https://www.epw.in/journal/h-t-parekh-finance-column/crypto-puzzle.html</a></li>
+
+<li>S. Parasnis, “Could India Follow US In Holding Bitcoin As Strategic Asset?,” MEDIANAMA. Accessed: Mar. 08, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/03/223-could-india-follow-the-us-in-holding-bitcoin-strategic-asset-pros-cons/">https://www.medianama.com/2025/03/223-could-india-follow-the-us-in-holding-bitcoin-strategic-asset-pros-cons/</a></li>
+
+<li>T. H. Bureau, “CID apprehends accused in ₹95 crore cryptocurrency fraud,” The Hindu, Jan. 11, 2025. Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/telangana/cid-apprehends-accused-in-95-crore-cryptocurrency-fraud/article69085486.ece">https://www.thehindu.com/news/national/telangana/cid-apprehends-accused-in-95-crore-cryptocurrency-fraud/article69085486.ece</a></li>
+
+<li>S. Parasnis, “CoinSwitch launches Rs 600 Cr plan for WazirX hack users,” MEDIANAMA. Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/01/223-coinswitch-wazirx-users-recover-lost-funds/">https://www.medianama.com/2025/01/223-coinswitch-wazirx-users-recover-lost-funds/</a></li>
+
+<li>S. Parasnis, “WazirX restores account balances, reverses all trades after hack,” MEDIANAMA. Accessed: Aug. 10, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/08/223-wazirx-restores-account-balances-after-hack/">https://www.medianama.com/2024/08/223-wazirx-restores-account-balances-after-hack/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgadd982e"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org85919f2"></a>Critical Studies<br />
+<div class="outline-text-7" id="text-org85919f2">
+<ul class="org-ul">
+<li>T. R. F. &amp; N. W. Anuradha Nagaraj, “How cryptocurrency scammers are exploiting computer engineers from India and other Asian countries,” Scroll.in. <a href="https://scroll.in/article/1036622/how-cryptocurrency-scammers-are-exploiting-computer-engineers-from-india-and-other-asian-countries">https://scroll.in/article/1036622/how-cryptocurrency-scammers-are-exploiting-computer-engineers-from-india-and-other-asian-countries</a> (accessed Nov. 08, 2022).</li>
+
+<li>M. Mukherjee, Crypto Crimes: Inside India’s Best-Kept Secret. HarperCollins, 2024.</li>
+
+<li>“Digital Currency: Fog Beyond the Hype,” The India Forum, Nov. 10, 2021. <a href="https://www.theindiaforum.in/article/digital-currency-fog-beyond-hype">https://www.theindiaforum.in/article/digital-currency-fog-beyond-hype</a> (accessed Feb. 14, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc7e465e"></a>Misc<br />
+<div class="outline-text-6" id="text-orgc7e465e">
+<ul class="org-ul">
+<li>S. Parasnis, “Could India Follow US In Holding Bitcoin As Strategic Asset?,” MEDIANAMA. Accessed: Mar. 07, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/03/223-could-india-follow-the-us-in-holding-bitcoin-strategic-asset-pros-cons/">https://www.medianama.com/2025/03/223-could-india-follow-the-us-in-holding-bitcoin-strategic-asset-pros-cons/</a></li>
+
+<li>M. Mukherjee, “Wazir X: No One’s Problem, Everyone’s Money As Cryptocurrency Firm Hit By Cyberattack,” Frontline. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/economy/wazir-x-crypto-currency-finance-minister-nirmala-sitharaman-central-bank-trading/article68497082.ece">https://frontline.thehindu.com/economy/wazir-x-crypto-currency-finance-minister-nirmala-sitharaman-central-bank-trading/article68497082.ece</a></li>
+
+<li>S. Lobo, “India to follow G20 policy for crypto regulation: MoS Finance,” MEDIANAMA. Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/08/223-india-cryptocurrency-regulation-mos-finance/">https://www.medianama.com/2024/08/223-india-cryptocurrency-regulation-mos-finance/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Thaker, “Promise and peril in the Indian bitcoin economy,” The Caravan. <a href="https://caravanmagazine.in/reportage/bitcoin-india-after-demonetisation">https://caravanmagazine.in/reportage/bitcoin-india-after-demonetisation</a> (accessed Mar. 07, 2022).</li>
+
+<li>“Is Digital the Future of Money?,” The India Forum, Mar. 21, 2022. <a href="https://www.theindiaforum.in/article/digital-future-money">https://www.theindiaforum.in/article/digital-future-money</a> (accessed Mar. 30, 2022).</li>
+
+<li>“Site,” Economic and Political Weekly, pp. 7–8, Jun. 2015, Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://www.epw.in/search/site/cryptocurrency">https://www.epw.in/search/site/cryptocurrency</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1da278f" class="outline-3">
+<h3 id="org1da278f"><span class="section-number-3">3.6.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org7b4f698" class="outline-4">
+<h4 id="org7b4f698"><span class="section-number-4">3.6.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<ul class="org-ul">
+<li>S. Woodman, “Cryptocurrency giant Tether is wildly profitable. Can it do more to stop financial crime? - ICIJ.” Accessed: Dec. 03, 2025. [Online]. Available: <a href="https://www.icij.org/investigations/coin-laundry/cryptocurrency-giant-tether-is-wildly-profitable-can-it-do-more-to-stop-financial-crime/">https://www.icij.org/investigations/coin-laundry/cryptocurrency-giant-tether-is-wildly-profitable-can-it-do-more-to-stop-financial-crime/</a></li>
+<li>A. A. &amp; D. J. Snower, “The Stablecoin Threat,” Project Syndicate. Accessed: Nov. 18, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/stablecoins-too-big-to-fail-and-eroding-monetary-and-fiscal-policy-by-angus-armstrong-and-dennis-j-snower-2025-11">https://www.project-syndicate.org/commentary/stablecoins-too-big-to-fail-and-eroding-monetary-and-fiscal-policy-by-angus-armstrong-and-dennis-j-snower-2025-11</a></li>
+
+<li>“UK Jails Crypto Fraud Masters After Record 60,000-Bitcoin Seizure,” OCCRP. Accessed: Nov. 14, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/uk-jails-crypto-fraud-masters-after-record-60000-bitcoin-seizure">https://www.occrp.org/en/news/uk-jails-crypto-fraud-masters-after-record-60000-bitcoin-seizure</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3d84173" class="outline-3">
+<h3 id="org3d84173"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-orgcf40039" class="outline-3">
+<h3 id="orgcf40039"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-orgdf6cb26" class="outline-4">
+<h4 id="orgdf6cb26"><span class="section-number-4">3.8.1.</span> News</h4>
+<div class="outline-text-4" id="text-3-8-1">
+<ul class="org-ul">
+<li>“Cryptocurrency Prices, Charts, Daily Trends, Market Cap, and Highlights | Coinbase.” <a href="https://www.coinbase.com/explore">https://www.coinbase.com/explore</a> (accessed Jun. 30, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa22226" class="outline-4">
+<h4 id="orgaa22226"><span class="section-number-4">3.8.2.</span> Journalism</h4>
+<div class="outline-text-4" id="text-3-8-2">
+<ul class="org-ul">
+<li>“Investigating Cryptocurrency: Key Questions and Tips for Reporters.” Accessed: Oct. 10, 2023. [Online]. Available: <a href="https://gijn.org/investigating-cryptocurrency-key-questions-and-tips-for-reporters/">https://gijn.org/investigating-cryptocurrency-key-questions-and-tips-for-reporters/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge457c3c" class="outline-3">
+<h3 id="orge457c3c"><span class="section-number-3">3.9.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-3-9">
+</div>
+<div id="outline-container-org213b94b" class="outline-4">
+<h4 id="org213b94b"><span class="section-number-4">3.9.1.</span> Cloud Money</h4>
+<div class="outline-text-4" id="text-3-9-1">
+<ul class="org-ul">
+<li>B. Scott, <b>Cloudmoney (Lead Title): Cash, Cards, Crypto and the War for our Wallets.</b> London: Bodley Head, 2022.
+<ul class="org-ul">
+<li>“Cloudmoney — making the case for cash,” Financial Times, Jul. 01, 2022.</li>
+<li>“Going cashless is a bad idea, but it’s not a conspiracy | Aeon Essays,” Aeon. Accessed: Nov. 24, 2023. [Online]. Available: <a href="https://aeon.co/essays/going-cashless-is-a-bad-idea-but-its-not-a-conspiracy">https://aeon.co/essays/going-cashless-is-a-bad-idea-but-its-not-a-conspiracy</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org412c764" class="outline-3">
+<h3 id="org412c764"><span class="section-number-3">3.10.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-10">
+<ul class="org-ul">
+<li>“Accused Drug Lord Claims US Feds Tried to Shake Him Down for $4M in Crypto,” OCCRP. Accessed: Jun. 27, 2026. [Online]. Available: <a href="https://www.occrp.org/en/news/accused-drug-lord-claims-feds-tried-to-shake-him-down-for-4m-in-crypto">https://www.occrp.org/en/news/accused-drug-lord-claims-feds-tried-to-shake-him-down-for-4m-in-crypto</a></li>
+
+<li>“Law enforcement, banks warn of money laundering gaps in major US crypto bill - ICIJ.” Accessed: Jun. 25, 2026. [Online]. Available: <a href="https://www.icij.org/investigations/coin-laundry/law-enforcement-banks-warn-of-money-laundering-gaps-in-major-us-crypto-bill/">https://www.icij.org/investigations/coin-laundry/law-enforcement-banks-warn-of-money-laundering-gaps-in-major-us-crypto-bill/</a></li>
+
+<li>S. Woodman, “Canada revokes dozens of crypto firms’ registrations - ICIJ.” Accessed: Apr. 03, 2026. [Online]. Available: <a href="https://www.icij.org/investigations/coin-laundry/canada-revokes-dozens-of-crypto-firms-registrations/">https://www.icij.org/investigations/coin-laundry/canada-revokes-dozens-of-crypto-firms-registrations/</a></li>
+
+<li>S. Woodman, “As crypto industry expands, U.S. slashes office examining dirty money safeguards of cryptocurrency exchanges - ICIJ.” Accessed: Feb. 18, 2026. [Online]. Available: <a href="https://www.icij.org/investigations/coin-laundry/as-crypto-industry-expands-u-s-slashes-office-examining-dirty-money-safeguards-of-cryptocurrency-exchanges/">https://www.icij.org/investigations/coin-laundry/as-crypto-industry-expands-u-s-slashes-office-examining-dirty-money-safeguards-of-cryptocurrency-exchanges/</a></li>
+
+<li>“Rep. Ro Khanna: Calls to ‘Tear Down ICE’ &amp; Probe Trump-UAE $500M Crypto Deal,” Democracy Now! Accessed: Feb. 07, 2026. [Online]. Available: <a href="https://www.democracynow.org/2026/2/5/ro_khanna_abolishing_ice_trump_crypto">https://www.democracynow.org/2026/2/5/ro_khanna_abolishing_ice_trump_crypto</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Roubini, “The Coming Crypto Apocalypse,” Project Syndicate. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/crypto-apocalypse-is-coming-by-nouriel-roubini-2026-02">https://www.project-syndicate.org/commentary/crypto-apocalypse-is-coming-by-nouriel-roubini-2026-02</a></li>
+
+<li>T. Ferguson, J. Chen, M. Lalisse, and P. Jorgensen, “Move Fast and Break Everything: Crypto and the Democrats,” Institute for New Economic Thinking. Accessed: Jan. 15, 2026. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/move-fast-and-break-everything-crypto-and-the-democrats">https://www.ineteconomics.org/perspectives/blog/move-fast-and-break-everything-crypto-and-the-democrats</a></li>
+
+<li>“Ubiquity: Digital Economy: Some Underestimated Benefits of the Cryptocurrency Mania.” Accessed: Dec. 06, 2025. [Online]. Available: <a href="https://ubiquity.acm.org/article.cfm?id=3773026">https://ubiquity.acm.org/article.cfm?id=3773026</a></li>
+
+<li>“The Coin Laundry, a global cryptocurrency investigation.” Accessed: Dec. 03, 2025. [Online]. Available: <a href="https://www.icij.org/investigations/coin-laundry/">https://www.icij.org/investigations/coin-laundry/</a></li>
+
+<li>S. Ellefson, “Undercover crypto transactions, shady multimillion-dollar schemes, and more Coin Laundry stories from ICIJ’s partners - ICIJ.” Accessed: Nov. 27, 2025. [Online]. Available: <a href="https://www.icij.org/investigations/coin-laundry/undercover-crypto-transactions-shady-multimillion-dollar-schemes-and-more-coin-laundry-stories-from-icijs-partners/">https://www.icij.org/investigations/coin-laundry/undercover-crypto-transactions-shady-multimillion-dollar-schemes-and-more-coin-laundry-stories-from-icijs-partners/</a></li>
+
+<li>K. Scannell, “Feds seize $15 billion in crypto from ‘pig butchering’ scheme involving forced labor camps | CNN Politics,” CNN. Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://www.cnn.com/2025/10/14/politics/cryptocurrency-investment-scheme-charges-forced-labor-camps">https://www.cnn.com/2025/10/14/politics/cryptocurrency-investment-scheme-charges-forced-labor-camps</a></li>
+
+<li>A. E. Wilmarth, “Time Bomb: How Uninsured Stablecoins and Crypto Derivatives Threaten Financial and Economic Stability,” Institute for New Economic Thinking. Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/time-bomb-how-uninsured-stablecoins-and-crypto-derivatives-threaten-financial-and-economic-stability">https://www.ineteconomics.org/perspectives/blog/time-bomb-how-uninsured-stablecoins-and-crypto-derivatives-threaten-financial-and-economic-stability</a></li>
+
+<li>L. Parramore, “Economist Chris Hughes on the Fed, Crypto, and the Danger of Trump’s Vision,” Institute for New Economic Thinking. Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/economist-chris-hughes-on-the-fed-crypto-and-the-danger-of-trumps-vision">https://www.ineteconomics.org/perspectives/blog/economist-chris-hughes-on-the-fed-crypto-and-the-danger-of-trumps-vision</a></li>
+
+<li>S. Ellefson, “Cryptocurrency exchange Garantax lives on despite sanctions, new reports unveils - ICIJ.” Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://www.icij.org/news/2025/09/cryptocurrency-exchange-garantax-lives-on-despite-sanctions-new-reports-unveils/">https://www.icij.org/news/2025/09/cryptocurrency-exchange-garantax-lives-on-despite-sanctions-new-reports-unveils/</a></li>
+
+<li>“Monthly Review | Crypto Convulsions, Digital Delusions, and the Inexorable Logic of Finance Capitalism,” Monthly Review. Accessed: Sep. 08, 2025. [Online]. Available: <a href="https://monthlyreview.org/2022/12/01/crypto-convulsions-digital-delusions-and-the-inexorable-logic-of-finance-capitalism/">https://monthlyreview.org/2022/12/01/crypto-convulsions-digital-delusions-and-the-inexorable-logic-of-finance-capitalism/</a></li>
+
+<li>M. Sledge, “Democrats Have a Gerontocracy Problem. The Crypto Industry Is Using That to Its Advantage.,” The Intercept. Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://theintercept.com/2025/09/04/brad-sherman-primary-crypto-jake-rakov/">https://theintercept.com/2025/09/04/brad-sherman-primary-crypto-jake-rakov/</a></li>
+
+<li>C. O’Neil and mathbabe, “The impending crypto market crash,” mathbabe. Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://mathbabe.org/2025/09/02/the-impending-crypto-market-crash/">https://mathbabe.org/2025/09/02/the-impending-crypto-market-crash/</a></li>
+
+<li>L. Parramore, “Jim Chanos on Crypto, AI, and Casino Capitalism,” Institute for New Economic Thinking. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/jim-chanos-on-crypto-ai-and-casino-capitalism">https://www.ineteconomics.org/perspectives/blog/jim-chanos-on-crypto-ai-and-casino-capitalism</a></li>
+
+<li>“Will Stablecoins Impact the US Treasury Market?,” MIT Digital Currency Initiative. Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/posts/stablecoins-treasuries">https://www.dci.mit.edu/posts/stablecoins-treasuries</a></li>
+
+<li>M. Sledge, “Donald Trump Is Mostly a Crypto Billionaire Now, Group Says,” The Intercept. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://theintercept.com/2025/08/09/trump-crypto-billionaire-accountable/">https://theintercept.com/2025/08/09/trump-crypto-billionaire-accountable/</a></li>
+
+<li>S. Johnson, “The Crypto Crises Are Coming,” Project Syndicate. Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/us-crypto-legislation-lacks-sufficient-regulatory-safeguards-by-simon-johnson-2025-08">https://www.project-syndicate.org/commentary/us-crypto-legislation-lacks-sufficient-regulatory-safeguards-by-simon-johnson-2025-08</a></li>
+
+<li>“Official backing for crypto creating conditions for financial crisis,” World Socialist Web Site. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/07/30/dhfs-j30.html">https://www.wsws.org/en/articles/2025/07/30/dhfs-j30.html</a></li>
+
+<li>“Crypto market capitalisation hits $4 trillion,” World Socialist Web Site. Accessed: Jul. 24, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/07/23/lbhu-j23.html">https://www.wsws.org/en/articles/2025/07/23/lbhu-j23.html</a></li>
+
+<li>Reuters, “GENIUS Act: Trump signs stablecoin law as crypto industry aims for mainstream adoption,” The Hindu, Jul. 18, 2025. Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/international/trump-signs-stablecoin-law-as-crypto-industry-aims-for-mainstream-adoption/article69829254.ece">https://www.thehindu.com/news/international/trump-signs-stablecoin-law-as-crypto-industry-aims-for-mainstream-adoption/article69829254.ece</a></li>
+<li>Reuters, “Crypto sector breaches $4 trillion in market value during pivotal week,” The Hindu, Jul. 19, 2025. Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/technology/crypto-sector-breaches-4-trillion-in-market-value-during-pivotal-week/article69830358.ece">https://www.thehindu.com/sci-tech/technology/crypto-sector-breaches-4-trillion-in-market-value-during-pivotal-week/article69830358.ece</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Landmark cryptocurrency legislation passes US House, to be signed into law by President Trump - ICIJ.” Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://www.icij.org/news/2025/07/landmark-cryptocurrency-legislation-passes-u-s-house-to-be-signed-into-law-by-president-trump/">https://www.icij.org/news/2025/07/landmark-cryptocurrency-legislation-passes-u-s-house-to-be-signed-into-law-by-president-trump/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>A. I. With, “The Crypto State.” Accessed: Jul. 18, 2025. [Online]. Available: <a href="https://jacobin.com/2025/06/the-crypto-state">https://jacobin.com/2025/06/the-crypto-state</a></li>
+
+<li>Y. Varoufakis, “Defusing the Stablecoin Time Bomb,” Project Syndicate. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/private-stablecoins-are-a-formula-for-financial-crisis-by-yanis-varoufakis-2025-07">https://www.project-syndicate.org/commentary/private-stablecoins-are-a-formula-for-financial-crisis-by-yanis-varoufakis-2025-07</a></li>
+
+<li>BY, “Crypto Owners May Get Priority in the Event of Bank Failures.” Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://jacobin.com/2025/06/genius-act-crypto-bank-regulation">https://jacobin.com/2025/06/genius-act-crypto-bank-regulation</a></li>
+
+<li>“‘Mt. Everest of Corruption’: Crypto Investors Buy Access to President; Trump Expands Bitcoin Holdings,” Democracy Now! Accessed: Jun. 02, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/5/28/trump_crypto">https://www.democracynow.org/2025/5/28/trump_crypto</a></li>
+
+<li>“Trump’s Newest Grift: Molly White on First Family’s Cryptocurrency Empire &amp; Gutting of Regulations,” Democracy Now! Accessed: May 07, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/5/6/molly_white_crypto_trump_memecoin_ethics">https://www.democracynow.org/2025/5/6/molly_white_crypto_trump_memecoin_ethics</a></li>
+
+<li>T. I. Briefing, “Trump’s Very Stable Genius Coin,” The Intercept. Accessed: Apr. 26, 2025. [Online]. Available: <a href="https://theintercept.com/2025/04/25/briefing-podcast-trump-crypto-meme-coin/">https://theintercept.com/2025/04/25/briefing-podcast-trump-crypto-meme-coin/</a></li>
+
+<li>B. Schneier, “Cryptocurrency Thefts Get Physical,” Schneier on Security. Accessed: Apr. 26, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/04/cryptocurrency-thefts-get-physical.html">https://www.schneier.com/blog/archives/2025/04/cryptocurrency-thefts-get-physical.html</a></li>
+
+<li>“Trump’s CFPB Is Opening the Gates for Fintech and Crypto.” Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://jacobin.com/2025/04/trump-cfpb-deregulation-vought-finance">https://jacobin.com/2025/04/trump-cfpb-deregulation-vought-finance</a></li>
+
+<li>M. Sledge, “Congress’s Biggest Financial Priority Is ‘Stablecoin.’ What the Hell Is That?,” The Intercept. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://theintercept.com/2025/04/21/congress-crypto-stablecoin-trump/">https://theintercept.com/2025/04/21/congress-crypto-stablecoin-trump/</a></li>
+
+<li>“MIT Bitcoin Expo.” Accessed: Mar. 27, 2025. [Online]. Available: <a href="https://mitbtcexpo.org/">https://mitbtcexpo.org/</a></li>
+
+<li>“Trump’s Crypto-Invested AI Czar Cleared to Oversee Crypto.” Accessed: Mar. 16, 2025. [Online]. Available: <a href="https://jacobin.com/2025/03/crypto-ai-czar-ethics-trump">https://jacobin.com/2025/03/crypto-ai-czar-ethics-trump</a></li>
+
+<li>M. Sledge, “Here’s How Much the Guests at Trump’s Crypto Summit Donated to His Inauguration,” The Intercept. Accessed: Mar. 08, 2025. [Online]. Available: <a href="https://theintercept.com/2025/03/07/white-house-crypto-summit-trump-donors/">https://theintercept.com/2025/03/07/white-house-crypto-summit-trump-donors/</a></li>
+
+<li>M. Sledge, “‘Opportunism and Fear’: Crypto Industry Sets Its Sights on Governors’ Mansions,” The Intercept. Accessed: Feb. 28, 2025. [Online]. Available: <a href="https://theintercept.com/2025/02/27/crypto-elections-campaign-governor-nj-ny/">https://theintercept.com/2025/02/27/crypto-elections-campaign-governor-nj-ny/</a></li>
+
+<li>R. Cooper, “The Crypto Plot Against America’s Gold Reserves,” The American Prospect. Accessed: Dec. 01, 2024. [Online]. Available: <a href="https://prospect.org/api/content/96987036-ab74-11ef-a511-12163087a831/">https://prospect.org/api/content/96987036-ab74-11ef-a511-12163087a831/</a></li>
+
+<li>L. Yarovaya, “Crypto gains momentum as markets eye Trump election – four things to consider before you invest,” The Conversation. Accessed: Oct. 31, 2024. [Online]. Available: <a href="http://theconversation.com/crypto-gains-momentum-as-markets-eye-trump-election-four-things-to-consider-before-you-invest-241731">http://theconversation.com/crypto-gains-momentum-as-markets-eye-trump-election-four-things-to-consider-before-you-invest-241731</a></li>
+
+<li>D. Schweizer and J. Proelss, “Where Harris and Trump stand on cryptocurrencies — and how it could sway some American voters,” The Conversation. Accessed: Aug. 16, 2024. [Online]. Available: <a href="http://theconversation.com/where-harris-and-trump-stand-on-cryptocurrencies-and-how-it-could-sway-some-american-voters-236186">http://theconversation.com/where-harris-and-trump-stand-on-cryptocurrencies-and-how-it-could-sway-some-american-voters-236186</a></li>
+
+<li>“Pluralistic: ‘Carbon neutral’ Bitcoin operation founded by coal plant operator wasn’t actually carbon neutral (09 Aug 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Aug. 10, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/08/09/terawulf/">https://pluralistic.net/2024/08/09/terawulf/</a></li>
+
+<li>L. Segura, “Bitcoin Bros and the MAGA Faithful Converge in Nashville — and Embrace an Alternate Reality,” The Intercept. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://theintercept.com/2024/08/03/trump-nashville-bitcoin-conference/">https://theintercept.com/2024/08/03/trump-nashville-bitcoin-conference/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org42c01a0" class="outline-2">
+<h2 id="org42c01a0"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org61bdd60" class="outline-3">
+<h3 id="org61bdd60"><span class="section-number-3">4.1.</span> Courses</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>G. Gary, “Blockchain and Money,” MIT OpenCourseWare. <a href="https://ocw.mit.edu/courses/sloan-school-of-management/15-s12-blockchain-and-money-fall-2018/">https://ocw.mit.edu/courses/sloan-school-of-management/15-s12-blockchain-and-money-fall-2018/</a> (accessed Mar. 05, 2022).</li>
+<li>“Bitcoin and Cryptocurrency Technologies,” Coursera. <a href="https://www.coursera.org/learn/cryptocurrency">https://www.coursera.org/learn/cryptocurrency</a> (accessed Jun. 16, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4a2de5d" class="outline-3">
+<h3 id="org4a2de5d"><span class="section-number-3">4.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>A. Narayanan, J. Bonneau, E. Felten, A. Miller, and S. Goldfeder, <b>Bitcoin and Cryptocurrency Technologies: A Comprehensive Introduction.</b> Princeton University Press, 2016.
+<ul class="org-ul">
+<li>“Bitcoin and Cryptocurrency Technologies.” <a href="https://bitcoinbook.cs.princeton.edu/">https://bitcoinbook.cs.princeton.edu/</a> (accessed Jun. 16, 2023).</li>
+</ul></li>
+<li>F. Schar and A. Berentsen, Bitcoin, Blockchain, and Cryptoassets: A Comprehensive Introduction. MIT Press, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8b54cea" class="outline-3">
+<h3 id="org8b54cea"><span class="section-number-3">4.3.</span> BitCoin</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgc4ffa36" class="outline-4">
+<h4 id="orgc4ffa36"><span class="section-number-4">4.3.1.</span> General</h4>
+</div>
+<div id="outline-container-orgf41599b" class="outline-4">
+<h4 id="orgf41599b"><span class="section-number-4">4.3.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-4-3-2">
+</div>
+<ul class="org-ul">
+<li><a id="orgd568044"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org085d71a"></a>Complexity Science<br /></li>
+<li><a id="orgb093aa8"></a>B. Haslhofer<br />
+<div class="outline-text-6" id="text-orgb093aa8">
+<ul class="org-ul">
+<li>G. Kappos, H. Yousaf, R. Stütz, S. Rollet, B. Haslhofer, and S. Meiklejohn, “How to Peel a Million: Validating and Expanding Bitcoin Clusters.” arXiv, May 27, 2022. doi: 10.48550/arXiv.2205.13882.</li>
+</ul>
+</div>
+</li>
+<li><a id="orge718d55"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orga2f283a"></a>Biological Sciences, Misc<br /></li>
+<li><a id="org1f965da"></a>Basic Sciences, Misc<br /></li>
+<li><a id="org5d2816e"></a>Mathematical, Computational Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org6bb6b96"></a>Statistical Modeling, Causal Inference, and Social Science<br />
+<div class="outline-text-6" id="text-org6bb6b96">
+<ul class="org-ul">
+<li>“Arguing about bitcoin | Statistical Modeling, Causal Inference, and Social Science.” Accessed: Sep. 23, 2024. [Online]. Available: <a href="https://statmodeling.stat.columbia.edu/2024/09/22/arguing-about-bitcoin/">https://statmodeling.stat.columbia.edu/2024/09/22/arguing-about-bitcoin/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0f3d0c5"></a>N. N. Taleb<br />
+<div class="outline-text-6" id="text-org0f3d0c5">
+<ul class="org-ul">
+<li>N. N. Taleb, <b>Bitcoin</b>, Medium, 22-Jan-2018. [Online]. Available: <a href="https://medium.com/opacity/bitcoin-1537e616a074">https://medium.com/opacity/bitcoin-1537e616a074</a>. [Accessed: 10-Feb-2020].</li>
+<li>N. N. Taleb, <b>“Bitcoin, Currencies, and Bubbles,”</b> arXiv:2106.14204 [physics, q-fin], Jun. 2021, Accessed: Jun. 30, 2021. [Online]. Available: <a href="http://arxiv.org/abs/2106.14204">http://arxiv.org/abs/2106.14204</a></li>
+<li><b>“‘It’s not even good for money laundering’: ‘Black Swan’ author Nassim Taleb lashes out at Bitcoin and says it’s ‘transformed into a cult,’”</b> Fortune. <a href="https://fortune.com/2023/06/09/bitcoin-black-swan-author-nassim-taleb/">https://fortune.com/2023/06/09/bitcoin-black-swan-author-nassim-taleb/</a> (accessed Jun. 13, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgcb5bebd"></a>Advanced Sciences, Misc<br /></li>
+<li><a id="org29c8c1a"></a>Technology, Misc<br />
+<ul class="org-ul">
+<li><a id="org03fade1"></a>Bruce Schneier<br />
+<div class="outline-text-6" id="text-org03fade1">
+<ul class="org-ul">
+<li><b>“Bitcoin’s Greatest Feature Is Also Its Existential Threat.”</b> Wired. Accessed March 10, 2021. <a href="https://www.wired.com/story/opinion-bitcoins-greatest-feature-is-also-its-existential-threat/">https://www.wired.com/story/opinion-bitcoins-greatest-feature-is-also-its-existential-threat/</a>.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org4b06971"></a>Special Topics<br /></li>
+<li><a id="org918076e"></a>Misc<br />
+<div class="outline-text-5" id="text-org918076e">
+<ul class="org-ul">
+<li>“Evaluating usage of the Whirlpool Bitcoin privacy protocol,” MIT Digital Currency Initiative. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/dci-news/coinjoin-timing-questions">https://www.dci.mit.edu/dci-news/coinjoin-timing-questions</a></li>
+
+<li>S. DeDeo, <b>“The Bitcoin Paradox,”</b> Nautilus, Dec. 14, 2017. <a href="http://nautil.us/issue/55/trust/the-bitcoin-paradox">http://nautil.us/issue/55/trust/the-bitcoin-paradox</a> (accessed Mar. 26, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org0d369f4" class="outline-4">
+<h4 id="org0d369f4"><span class="section-number-4">4.3.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-4-3-3">
+</div>
+<ul class="org-ul">
+<li><a id="orgbf12c44"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="orge77d5f5"></a>India<br />
+<div class="outline-text-6" id="text-orge77d5f5">
+<ul class="org-ul">
+<li>S. Parasnis, “Could India Follow US In Holding Bitcoin As Strategic Asset?,” MEDIANAMA. Accessed: Mar. 07, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/03/223-could-india-follow-the-us-in-holding-bitcoin-strategic-asset-pros-cons/">https://www.medianama.com/2025/03/223-could-india-follow-the-us-in-holding-bitcoin-strategic-asset-pros-cons/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7fa98a7"></a>Misc<br />
+<div class="outline-text-5" id="text-org7fa98a7">
+<ul class="org-ul">
+<li>J. McKenzie, “Is bitcoin driving a green transformation, or fueling a mirage?,” Bulletin of the Atomic Scientists. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/03/is-bitcoin-driving-a-green-transformation-or-fueling-a-mirage/">https://thebulletin.org/2025/03/is-bitcoin-driving-a-green-transformation-or-fueling-a-mirage/</a></li>
+<li>“Bitcoin hits $120,000: A fever chart of the capitalist crisis,” World Socialist Web Site. Accessed: Jul. 16, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/07/16/fzea-j16.html">https://www.wsws.org/en/articles/2025/07/16/fzea-j16.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgaa5f2a5" class="outline-4">
+<h4 id="orgaa5f2a5"><span class="section-number-4">4.3.4.</span> Core</h4>
+<div class="outline-text-4" id="text-4-3-4">
+</div>
+<ul class="org-ul">
+<li><a id="org32a0420"></a>Practice<br />
+<div class="outline-text-5" id="text-org32a0420">
+<ul class="org-ul">
+<li>A. M. Antonopoulos, <b>Mastering Bitcoin: Unlocking Digital Cryptocurrencies.</b> O’Reilly Media, Inc., 2014.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6b5e900"></a>Misc<br />
+<div class="outline-text-5" id="text-org6b5e900">
+<ul class="org-ul">
+<li>S. Ammous, <b>The Bitcoin Standard: The Decentralized Alternative to Central Banking.</b> John Wiley &amp; Sons, 2018.
+<ul class="org-ul">
+<li>A highly opinionated pro Bitcoin book.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org24a8a4e" class="outline-4">
+<h4 id="org24a8a4e"><span class="section-number-4">4.3.5.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-4-3-5">
+</div>
+<ul class="org-ul">
+<li><a id="orgb6aa492"></a>Trezor<br />
+<div class="outline-text-5" id="text-orgb6aa492">
+<ul class="org-ul">
+<li>SatoshiLabs, “Tesla and other institutions are a double-edged sword for Bitcoin,” Medium, Feb. 11, 2021. <a href="https://blog.trezor.io/tesla-and-other-institutions-are-a-double-edged-sword-for-bitcoin-f3671f2e5de">https://blog.trezor.io/tesla-and-other-institutions-are-a-double-edged-sword-for-bitcoin-f3671f2e5de</a> (accessed Jul. 22, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org82d596e"></a>Popular Resources<br />
+<ul class="org-ul">
+<li><a id="org24a1622"></a>PCMAG<br />
+<div class="outline-text-6" id="text-org24a1622">
+<ul class="org-ul">
+<li>“Bitcoin for Beginners: Simple Tips to Get Started With Crypto,” PCMAG. <a href="https://www.pcmag.com/how-to/how-to-buy-sell-and-manage-bitcoin">https://www.pcmag.com/how-to/how-to-buy-sell-and-manage-bitcoin</a> (accessed Jun. 15, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org733aeb5" class="outline-4">
+<h4 id="org733aeb5"><span class="section-number-4">4.3.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-3-6">
+<ul class="org-ul">
+<li>“Trump signs executive order establishing ‘Strategic Bitcoin Reserve.’” Accessed: Mar. 08, 2025. [Online]. Available: <a href="https://techxplore.com/news/2025-03-trump-strategic-bitcoin-reserve.html">https://techxplore.com/news/2025-03-trump-strategic-bitcoin-reserve.html</a></li>
+
+<li>“Tackling sticky questions about cryptocurrency and Open Source from a legal perspective - Voices of Open Source,” Jul. 20, 2022. <a href="https://blog.opensource.org/tackling-sticky-questions-about-cryptocurrency-and-open-source-from-a-legal-perspective/">https://blog.opensource.org/tackling-sticky-questions-about-cryptocurrency-and-open-source-from-a-legal-perspective/</a> (accessed Jul. 21, 2022).</li>
+
+<li>S. Roberts, “How ‘Trustless’ Is Bitcoin, Really?,” The New York Times, Jun. 07, 2022. Accessed: Jun. 10, 2022. [Online]. Available: <a href="https://www.nytimes.com/2022/06/06/science/bitcoin-nakamoto-blackburn-crypto.html">https://www.nytimes.com/2022/06/06/science/bitcoin-nakamoto-blackburn-crypto.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgecacfbb" class="outline-3">
+<h3 id="orgecacfbb"><span class="section-number-3">4.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li><b>Universa’s Taleb on Inflation, Global Financial Markets, &amp; Crypto</b>, (Jun. 08, 2023). Accessed: Jun. 13, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=mYUjqXAv2iU">https://www.youtube.com/watch?v=mYUjqXAv2iU</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org67c1ad7" class="outline-2">
+<h2 id="org67c1ad7"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orge353bb9" class="outline-3">
+<h3 id="orge353bb9"><span class="section-number-3">5.1.</span> Critical Studies</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>C. O’Neil and mathbabe, “The impending crypto market crash,” mathbabe. Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://mathbabe.org/2025/09/02/the-impending-crypto-market-crash/">https://mathbabe.org/2025/09/02/the-impending-crypto-market-crash/</a></li>
+
+<li><b>“On the Dangers of Cryptocurrencies and the Uselessness of Blockchain - Schneier on Security.”</b> <a href="https://www.schneier.com/blog/archives/2022/06/on-the-dangers-of-cryptocurrencies-and-the-uselessness-of-blockchain.html">https://www.schneier.com/blog/archives/2022/06/on-the-dangers-of-cryptocurrencies-and-the-uselessness-of-blockchain.html</a> (accessed Jun. 25, 2022).</li>
+
+<li><b>“The Crypto Syllabus,”</b> The Crypto Syllabus. <a href="https://the-crypto-syllabus.com/">https://the-crypto-syllabus.com/</a> (accessed Jan. 17, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd4cf261" class="outline-2">
+<h2 id="orgd4cf261"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“Are Crypto Ecosystems (De)centralizing? A Framework for Longitudinal Analysis – Communications of the ACM.” Accessed: Dec. 03, 2025. [Online]. Available: <a href="https://cacm.acm.org/research/are-crypto-ecosystems-decentralizing-a-framework-for-longitudinal-analysis/">https://cacm.acm.org/research/are-crypto-ecosystems-decentralizing-a-framework-for-longitudinal-analysis/</a></li>
+
+<li>“Characterizing Cryptocurrency-Themed Malicious Browser Extensions – Communications of the ACM.” Accessed: Oct. 24, 2025. [Online]. Available: <a href="https://cacm.acm.org/research-highlights/characterizing-cryptocurrency-themed-malicious-browser-extensions/">https://cacm.acm.org/research-highlights/characterizing-cryptocurrency-themed-malicious-browser-extensions/</a></li>
+
+<li>B. Schneier, “Cryptocurrency ATMs,” Schneier on Security. Accessed: Oct. 17, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/10/cryptocurrency-atms.html">https://www.schneier.com/blog/archives/2025/10/cryptocurrency-atms.html</a></li>
+
+<li>A. E. Wilmarth, “Time Bomb: How Uninsured Stablecoins and Crypto Derivatives Threaten Financial and Economic Stability,” Institute for New Economic Thinking. Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/time-bomb-how-uninsured-stablecoins-and-crypto-derivatives-threaten-financial-and-economic-stability">https://www.ineteconomics.org/perspectives/blog/time-bomb-how-uninsured-stablecoins-and-crypto-derivatives-threaten-financial-and-economic-stability</a></li>
+
+<li>“Cryptanalysis of Curl-P and Other Attacks on the IOTA Cryptocurrency,” MIT Digital Currency Initiative. Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/projects/cryptanalysis-of-curl-p-and-other-attacks-on-the-iota-cryptocurrency">https://www.dci.mit.edu/projects/cryptanalysis-of-curl-p-and-other-attacks-on-the-iota-cryptocurrency</a></li>
+
+<li>“The GENUS Act is Now Law. What’s Missing?,” MIT Digital Currency Initiative. Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/posts/stablecoins-genius-act">https://www.dci.mit.edu/posts/stablecoins-genius-act</a></li>
+
+<li>“Trezor Safe 5 | Secure Crypto Hardware Wallet.” Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://trezor.io/trezor-safe-5">https://trezor.io/trezor-safe-5</a></li>
+<li>“WalletConnect is now available for Trezor users: Bringing hardware wallet security to thousands of onchain apps — WalletConnect.” Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://walletconnect.network/blog/walletconnect-is-now-available-for-trezor-users">https://walletconnect.network/blog/walletconnect-is-now-available-for-trezor-users</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Will Stablecoins Impact the US Treasury Market?,” MIT Digital Currency Initiative. Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/posts/stablecoins-treasuries">https://www.dci.mit.edu/posts/stablecoins-treasuries</a></li>
+
+<li>B. Scott, “The Whale of Mass Destruction.” Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://www.asomo.co/p/the-whale-of-mass-destruction-bitcoin-tbtf">https://www.asomo.co/p/the-whale-of-mass-destruction-bitcoin-tbtf</a></li>
+
+<li>“Mastering,” Vinteum. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://vinteum.org/mastering/">https://vinteum.org/mastering/</a></li>
+
+<li>“Stablecoins and the Limits of Existing Analogies,” MIT Digital Currency Initiative. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/dci-news/stablecoin-analogies">https://www.dci.mit.edu/dci-news/stablecoin-analogies</a></li>
+
+<li>“1:1 Redemptions for Some, Not All,” MIT Digital Currency Initiative. Accessed: Jul. 17, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/dci-news/stablecoin-redemptions-for-some-not-all">https://www.dci.mit.edu/dci-news/stablecoin-redemptions-for-some-not-all</a></li>
+
+<li>T. M. P. Reader, “The Last Currency: On Crypto and the Banality of Extinction,” The MIT Press Reader. Accessed: May 27, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-last-currency-on-crypto-and-the-banality-of-extinction/">https://thereader.mitpress.mit.edu/the-last-currency-on-crypto-and-the-banality-of-extinction/</a></li>
+
+<li>“Self-Custody or Bust,” MIT Digital Currency Initiative. Accessed: May 24, 2025. [Online]. Available: <a href="https://www.dci.mit.edu/dci-news/self-custody-or-bust">https://www.dci.mit.edu/dci-news/self-custody-or-bust</a></li>
+
+<li>B. Schneier, “North Korean Hackers Steal $1.5B in Cryptocurrency,” Schneier on Security. Accessed: Feb. 26, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/02/north-korean-hackers-steal-1-5b-in-cryptocurrency.html">https://www.schneier.com/blog/archives/2025/02/north-korean-hackers-steal-1-5b-in-cryptocurrency.html</a></li>
+
+<li>U. of Vaasa, “Avoiding the next collapse: Study unveils the factors behind cryptocurrency exchange failures.” Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://phys.org/news/2025-01-collapse-unveils-factors-cryptocurrency-exchange.html">https://phys.org/news/2025-01-collapse-unveils-factors-cryptocurrency-exchange.html</a></li>
+
+<li>“The speculative Bitcoin frenzy,” World Socialist Web Site. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/12/11/bijs-d11.html">https://www.wsws.org/en/articles/2024/12/11/bijs-d11.html</a></li>
+
+<li>“BAT Roadmap 3.0: The On-Chain Era,” Brave. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://brave.com/blog/bat-roadmap-3-0/">https://brave.com/blog/bat-roadmap-3-0/</a></li>
+
+<li>“Crypto Won Big in the 2024 Election.” Accessed: Nov. 21, 2024. [Online]. Available: <a href="https://jacobin.com/2024/11/crypto-political-influence-trump-regulations">https://jacobin.com/2024/11/crypto-political-influence-trump-regulations</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“faircoin,” faircoin. Accessed: Sep. 30, 2024. [Online]. Available: <a href="https://fair-coin.org/en">https://fair-coin.org/en</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Criminal Gang Physically Assaulting People for Their Cryptocurrency - Schneier on Security.” Accessed: Jul. 19, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/07/criminal-gang-physically-assaulting-people-for-their-cryptocurrency.html">https://www.schneier.com/blog/archives/2024/07/criminal-gang-physically-assaulting-people-for-their-cryptocurrency.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. A. R. C. Texas and P. by J. D. for TIME, “Inside the ‘Nightmare’ Health Crisis of a Texas Bitcoin Town,” TIME. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://time.com/6982015/bitcoin-mining-texas-health/">https://time.com/6982015/bitcoin-mining-texas-health/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bitcoin mining’s toll on El Salvador leaves communities without water,” Global Voices. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://globalvoices.org/2024/05/31/bitcoin-minings-toll-on-el-salvador-leaves-communities-without-water/">https://globalvoices.org/2024/05/31/bitcoin-minings-toll-on-el-salvador-leaves-communities-without-water/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“GIJC23 – Cryptocurrency.” Accessed: Apr. 09, 2024. [Online]. Available: <a href="https://gijn.org/resource/gijc23-cryptocurrency/">https://gijn.org/resource/gijc23-cryptocurrency/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Maitra, “Sam Bankman-Fried gets 25 year jail term over FTX fraud,” MediaNama. Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/03/223-sam-bankman-fried-25-years-jail-term-ftx-fraud/">https://www.medianama.com/2024/03/223-sam-bankman-fried-25-years-jail-term-ftx-fraud/</a></li>
+<li>“FTX Founder Sam Bankman-Fried Sentenced to 25 Years for Defrauding Customers,” Democracy Now! Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/3/29/headlines/ftx_founder_sam_bankman_fried_sentenced_to_25_years_for_defrauding_customers">https://www.democracynow.org/2024/3/29/headlines/ftx_founder_sam_bankman_fried_sentenced_to_25_years_for_defrauding_customers</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Tokens,” Verso. Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://www.versobooks.com/en-gb/products/2957-tokens">https://www.versobooks.com/en-gb/products/2957-tokens</a></li>
+
+<li>Regine, “Tokens. The Future of Money in the Age of the Platform,” We Make Money Not Art. Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://we-make-money-not-art.com/tokens-the-future-of-money-in-the-age-of-the-platform/">https://we-make-money-not-art.com/tokens-the-future-of-money-in-the-age-of-the-platform/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>BlackRock’s bitcoin ETF is a validation of crypto’s technology, says Morgan Creek’s Mark Yusko, (Jun. 23, 2023). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=06lfRmze1BE">https://www.youtube.com/watch?v=06lfRmze1BE</a></li>
+<li>Fidelity Reportedly Ready to Launch a Spot Bitcoin ETF, (Jun. 28, 2023). Accessed: Jul. 01, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LnHTZkt8iE0">https://www.youtube.com/watch?v=LnHTZkt8iE0</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>A. M. Antonopoulos, O. Osuntokun, and R. Pickhardt, <b>Mastering the Lightning Network: A Second Layer Blockchain Protocol for Instant Bitcoin Payments.</b> O’Reilly Media, Incorporated, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Antonopoulos, <b>The Internet of Money Volume Three: A Collection of Talks by Andreas M. Antonopoulos.</b> Merkle Bloom LLC, 2019.</li>
+<li>A. M. Antonopoulos, <b>The Internet of Money: Talks by Andreas M. Antonopoulos.</b> Merkle Bloom LLC, 2016.</li>
+<li>A. M. Antonopoulos, <b>The Internet of Money: Volume Two.</b> Merkle Bloom LLC, 2017.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. T. Review, “It Is Okay to Opt out of the Crypto Revolution.” <a href="https://cacm.acm.org/opinion/articles/260663-it-is-okay-to-opt-out-of-the-crypto-revolution/fulltext">https://cacm.acm.org/opinion/articles/260663-it-is-okay-to-opt-out-of-the-crypto-revolution/fulltext</a> (accessed May 05, 2022).</li>
+
+<li>“Capitalism, Power and Innovation: Intellectual Monopoly Capitalism Uncovered,” Routledge &amp; CRC Press. <a href="https://www.routledge.com/Capitalism-Power-and-Innovation-Intellectual-Monopoly-Capitalism-Uncovered/Rikap/p/book/9780367357634">https://www.routledge.com/Capitalism-Power-and-Innovation-Intellectual-Monopoly-Capitalism-Uncovered/Rikap/p/book/9780367357634</a> (accessed Jan. 17, 2022).</li>
+
+<li>“Introduction: The unintended—and undermanaged—consequences of blockchain and cryptocurrency,” Bulletin of the Atomic Scientists. <a href="https://thebulletin.org/premium/2022-07/introduction-the-unintended-and-undermanaged-consequences-of-blockchain-and-cryptocurrency/">https://thebulletin.org/premium/2022-07/introduction-the-unintended-and-undermanaged-consequences-of-blockchain-and-cryptocurrency/</a> (accessed Jul. 12, 2022).</li>
+
+<li>P. Howson, Let Them Eat Crypto: The Blockchain Scam That’s Ruining the World, 1st edition. Pluto Press, 2023.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everyday Computing - Food</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Everyday Computing - Food</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org70abdb9">1. General</a></li>
+<li><a href="#org761187a">2. STEMM</a>
+<ul>
+<li><a href="#org4bc9bd1">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfb44154">3. Worldly Matters</a>
+<ul>
+<li><a href="#org8e168a7">3.1. Misc</a>
+<ul>
+<li><a href="#org27dedfe">3.1.1. Misc</a></li>
+<li><a href="#orge4b252e">3.1.2. The Caravan Magazine</a></li>
+<li><a href="#org4cc7eb8">3.1.3. The India Forum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2b5cc2d">4. Core</a>
+<ul>
+<li><a href="#orgea894db">4.1. Apps</a></li>
+</ul>
+</li>
+<li><a href="#org7f45dc7">5. Arts</a>
+<ul>
+<li><a href="#org0fbfeff">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc32d218">6. Special Topics</a>
+<ul>
+<li><a href="#org70d0b1a">6.1. MediaNama</a>
+<ul>
+<li><a href="#orgf1a5aa6">6.1.1. Apps</a></li>
+<li><a href="#org7e481a9">6.1.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9cdad30">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org70abdb9" class="outline-2">
+<h2 id="org70abdb9"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org761187a" class="outline-2">
+<h2 id="org761187a"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org4bc9bd1" class="outline-3">
+<h3 id="org4bc9bd1"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgfb44154" class="outline-2">
+<h2 id="orgfb44154"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org8e168a7" class="outline-3">
+<h3 id="org8e168a7"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org27dedfe" class="outline-4">
+<h4 id="org27dedfe"><span class="section-number-4">3.1.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>A. Singh, “Swiggy And Zomato Hike Platform Fees Yet Again - What It Means,” MEDIANAMA. Accessed: Sep. 07, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/09/223-swiggy-zomato-platform-fees/">https://www.medianama.com/2025/09/223-swiggy-zomato-platform-fees/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge4b252e" class="outline-4">
+<h4 id="orge4b252e"><span class="section-number-4">3.1.2.</span> The Caravan Magazine</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“How tech platforms further casteist notions of food in Chennai.” Accessed: Jul. 01, 2024. [Online]. Available: <a href="https://caravanmagazine.in/caste/brahmin-food-businesses-tech-chennai">https://caravanmagazine.in/caste/brahmin-food-businesses-tech-chennai</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4cc7eb8" class="outline-4">
+<h4 id="org4cc7eb8"><span class="section-number-4">3.1.3.</span> The India Forum</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>“Can there be Fair Competition in the Food Delivery Market?,” The India Forum. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/forum/can-there-be-fair-competition-food-delivery-market">https://www.theindiaforum.in/forum/can-there-be-fair-competition-food-delivery-market</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b5cc2d" class="outline-2">
+<h2 id="org2b5cc2d"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgea894db" class="outline-3">
+<h3 id="orgea894db"><span class="section-number-3">4.1.</span> Apps</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“‎Zomato: Food Delivery &amp; Dining,” App Store, Jun. 30, 2023. <a href="https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896">https://apps.apple.com/in/app/zomato-food-delivery-dining/id434613896</a> (accessed Jul. 03, 2023).</li>
+<li>“‎Swiggy Food &amp; Grocery Delivery,” App Store, Jul. 02, 2023. <a href="https://apps.apple.com/in/app/swiggy-food-grocery-delivery/id989540920">https://apps.apple.com/in/app/swiggy-food-grocery-delivery/id989540920</a> (accessed Jul. 03, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‎Licious: Fish, Chicken &amp; Meat,” App Store, Jun. 22, 2023. <a href="https://apps.apple.com/in/app/licious-fish-chicken-meat/id1052440342">https://apps.apple.com/in/app/licious-fish-chicken-meat/id1052440342</a> (accessed Jul. 03, 2023).</li>
+<li>“‎bigbasket &amp; bbnow: Grocery App,” App Store, Jun. 24, 2023. <a href="https://apps.apple.com/in/app/bigbasket-bbnow-grocery-app/id660683603">https://apps.apple.com/in/app/bigbasket-bbnow-grocery-app/id660683603</a> (accessed Jul. 03, 2023).</li>
+<li>“‎Zepto: 10 Min Grocery Delivery,” App Store, Jun. 27, 2023. <a href="https://apps.apple.com/in/app/zepto-10-min-grocery-delivery/id1575323645">https://apps.apple.com/in/app/zepto-10-min-grocery-delivery/id1575323645</a> (accessed Jul. 03, 2023).</li>
+<li>“‎Blinkit: Grocery in minutes,” App Store, Jul. 01, 2023. <a href="https://apps.apple.com/in/app/blinkit-grocery-in-minutes/id960335206">https://apps.apple.com/in/app/blinkit-grocery-in-minutes/id960335206</a> (accessed Jul. 03, 2023).</li>
+<li>“‎Dunzo: Grocery Delivery App,” App Store, Jun. 25, 2023. <a href="https://apps.apple.com/in/app/dunzo-grocery-delivery-app/id1032391728">https://apps.apple.com/in/app/dunzo-grocery-delivery-app/id1032391728</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7f45dc7" class="outline-2">
+<h2 id="org7f45dc7"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org0fbfeff" class="outline-3">
+<h3 id="org0fbfeff"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgc32d218" class="outline-2">
+<h2 id="orgc32d218"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org70d0b1a" class="outline-3">
+<h3 id="org70d0b1a"><span class="section-number-3">6.1.</span> MediaNama</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgf1a5aa6" class="outline-4">
+<h4 id="orgf1a5aa6"><span class="section-number-4">6.1.1.</span> Apps</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>“Swiggy,” MediaNama. Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://www.medianama.com/tag/swiggy/">https://www.medianama.com/tag/swiggy/</a></li>
+<li>“Zepto,” MediaNama. Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://www.medianama.com/tag/zepto/">https://www.medianama.com/tag/zepto/</a></li>
+<li>“Zomato,” MediaNama. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://www.medianama.com/tag/zomato/">https://www.medianama.com/tag/zomato/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7e481a9" class="outline-4">
+<h4 id="org7e481a9"><span class="section-number-4">6.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<ul class="org-ul">
+<li>K. Pandey, “Tobacco Products on Quick Commerce apps; Legal and Age Concerns,” MEDIANAMA. Accessed: Nov. 13, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/11/223-quick-commerce-companies-have-separate-apps-to-deliver-tobacco-but-it-is-a-policy-regulation-minefield/">https://www.medianama.com/2024/11/223-quick-commerce-companies-have-separate-apps-to-deliver-tobacco-but-it-is-a-policy-regulation-minefield/</a></li>
+
+<li>S. Lobo, “CCI found Zomato, Swiggy flouting competition laws: Report,” MEDIANAMA. Accessed: Nov. 12, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/11/223-cci-finds-zomato-swiggy-violating-competition-laws-report/">https://www.medianama.com/2024/11/223-cci-finds-zomato-swiggy-violating-competition-laws-report/</a></li>
+<li>S. Lobo, “Zomato introduces new feature to reduce food waste,” MEDIANAMA. Accessed: Nov. 12, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/11/223-zomato-introduces-new-feature-to-reduce-food-waste/">https://www.medianama.com/2024/11/223-zomato-introduces-new-feature-to-reduce-food-waste/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>V. Sanzgiri, “Zomato To Continue Experimenting With Platform Fees,” MEDIANAMA. Accessed: Aug. 10, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/08/223-zomato-to-continue-experimenting-with-platform-fees-says-gig-workers-laws-unlikely-to-affect-profit/">https://www.medianama.com/2024/08/223-zomato-to-continue-experimenting-with-platform-fees-says-gig-workers-laws-unlikely-to-affect-profit/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. Gupta, “Eternal (Zomato) Ends Quick, Everyday Services Amid Profit Woes,” MEDIANAMA. Accessed: May 03, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/05/223-eternal-zomato-quick-everyday-earnings-q4fy25/">https://www.medianama.com/2025/05/223-eternal-zomato-quick-everyday-earnings-q4fy25/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Pandey, “FSSAI, quick commerce platforms to meet over food safety: Report,” MEDIANAMA. Accessed: Nov. 07, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/11/223-fssai-quick-commerce-platforms-meet-food-safety-standard/">https://www.medianama.com/2024/11/223-fssai-quick-commerce-platforms-meet-food-safety-standard/</a></li>
+
+<li>V. Tiwari, “NRAI Flags Private Label Concerns in Zomato, Swiggy’s Quick Commerce,” MEDIANAMA. Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/01/223-nrai-cci-zomato-swiggy-private-labels-fdi-violations/">https://www.medianama.com/2025/01/223-nrai-cci-zomato-swiggy-private-labels-fdi-violations/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. Gupta, “Swiggy faces heat as customers allege inflated delivery distances,” MEDIANAMA. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/12/223-swiggy-criticism-reddit-customers-inflated-delivery-times-overcharging/">https://www.medianama.com/2024/12/223-swiggy-criticism-reddit-customers-inflated-delivery-times-overcharging/</a></li>
+
+<li>S. Parasnis, “Ecommerce giants face CCPA action over missing expiry dates on products,” MEDIANAMA. Accessed: Oct. 25, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/10/223-missing-expiry-date-consumer-protection-authority-notice-ecommerce-companies/">https://www.medianama.com/2024/10/223-missing-expiry-date-consumer-protection-authority-notice-ecommerce-companies/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Bansal, “Maharashtra Govt Cracks Down On Food E-Comm Companies,” MEDIANAMA. Accessed: Jul. 04, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/07/223-maharashtra-govt-food-delivery-e-commerce-companies/">https://www.medianama.com/2025/07/223-maharashtra-govt-food-delivery-e-commerce-companies/</a></li>
+
+<li>A. Bansal, “How Zomato’s Opaque Ad Model Is Affecting Small Restaurants,” MEDIANAMA. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/06/223-zomato-opaque-ad-model-small-restaurants-unsustainable-spending/">https://www.medianama.com/2025/06/223-zomato-opaque-ad-model-small-restaurants-unsustainable-spending/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org9cdad30" class="outline-2">
+<h2 id="org9cdad30"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>P. G. Krishnan, “ONDC is losing,” The Ken. Accessed: May 09, 2025. [Online]. Available: <a href="https://the-ken.com/the-nutgraf/ondc-is-losing/">https://the-ken.com/the-nutgraf/ondc-is-losing/</a></li>
+<li>S. K. Singh, “Hygiene issues flagged at Zomato’s facility in Hyderabad,” The Hindu, Oct. 30, 2024. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Hyderabad/hygiene-issues-flagged-at-zomatos-hyperpure-facility-in-hyderabad/article68811889.ece">https://www.thehindu.com/news/cities/Hyderabad/hygiene-issues-flagged-at-zomatos-hyperpure-facility-in-hyderabad/article68811889.ece</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

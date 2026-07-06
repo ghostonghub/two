@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ICT, Environment, Ecology</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">ICT, Environment, Ecology</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf28e4c7">1. General</a></li>
+<li><a href="#orgc84d434">2. STEMM</a>
+<ul>
+<li><a href="#orgb9f42d9">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org2b00d13">2.1.1. International Institute for Applied Systems Analysis</a></li>
+<li><a href="#org41297f8">2.1.2. Complexity Science</a></li>
+<li><a href="#orgfd4103d">2.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgab46cff">2.2. Biological Sciences, Misc</a>
+<ul>
+<li><a href="#org0e20da9">2.2.1. The Ecologist</a></li>
+<li><a href="#org7809b06">2.2.2. GreenPeace</a></li>
+</ul>
+</li>
+<li><a href="#org2faefa5">2.3. Technology, Misc</a>
+<ul>
+<li><a href="#org72935ab">2.3.1. Tools</a></li>
+<li><a href="#orgbe5f6b6">2.3.2. Smartphones</a></li>
+<li><a href="#org094cc04">2.3.3. Data Centers</a></li>
+<li><a href="#orged9095b">2.3.4. Cloud</a></li>
+</ul>
+</li>
+<li><a href="#org09a9dc3">2.4. AI</a></li>
+<li><a href="#org3382525">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org654dbde">3. Worldly Matters</a>
+<ul>
+<li><a href="#org34890c3">3.1. Space and Time</a>
+<ul>
+<li><a href="#org23c4c59">3.1.1. History</a></li>
+</ul>
+</li>
+<li><a href="#org3a7bede">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a>
+<ul>
+<li><a href="#orgf463383">3.2.1. Rare Metals</a></li>
+</ul>
+</li>
+<li><a href="#org6cd4ad9">3.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org0c0c801">3.4. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org1be9acc">3.4.1. Orgs</a></li>
+<li><a href="#org5cf1583">3.4.2. Special Groups</a></li>
+<li><a href="#org0a76934">3.4.3. Nation States</a></li>
+<li><a href="#org71c0671">3.4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3f48f6c">3.5. Business Studies, Misc</a></li>
+<li><a href="#org77d1b89">3.6. Humanities, Misc</a></li>
+<li><a href="#orga8cf8ee">3.7. Security Studies, Misc</a></li>
+<li><a href="#org8217161">3.8. Communication, Misc</a></li>
+<li><a href="#orgc4a2d0d">3.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org764316c">4. Core</a></li>
+<li><a href="#org6e39a19">5. Special Topics</a>
+<ul>
+<li><a href="#org762e4f1">5.1. E-Waste</a></li>
+<li><a href="#orgb085b17">5.2. Local Futures</a></li>
+<li><a href="#org13f26f2">5.3. Texts</a></li>
+<li><a href="#org18fbfe3">5.4. Articles, Essays</a></li>
+</ul>
+</li>
+<li><a href="#org9c39597">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgf28e4c7" class="outline-2">
+<h2 id="orgf28e4c7"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgc84d434" class="outline-2">
+<h2 id="orgc84d434"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb9f42d9" class="outline-3">
+<h3 id="orgb9f42d9"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org2b00d13" class="outline-4">
+<h4 id="org2b00d13"><span class="section-number-4">2.1.1.</span> International Institute for Applied Systems Analysis</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>T.-T. W. in 2050, <b>“The Digital Revolution and Sustainable Development: Opportunities and Challenges. Report prepared by the World in 2050 initiative.”</b> Accessed: Dec. 28, 2023. [Online]. Available: <a href="http://www.iiasa.ac.at/web/home/research/twi/TWI2050.html">http://www.iiasa.ac.at/web/home/research/twi/TWI2050.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org41297f8" class="outline-4">
+<h4 id="org41297f8"><span class="section-number-4">2.1.2.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="org14913c3"></a>Santa Fe Institute<br />
+<div class="outline-text-5" id="text-org14913c3">
+<ul class="org-ul">
+<li>C. Kempes, D. H. Wolpert, and P. F. Stadler, <b>The Energetics of Computing in Life and Machines.</b> Santa Fe Institute Press, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga44aa30"></a>Complexity Science Hub Vienna<br />
+<div class="outline-text-5" id="text-orga44aa30">
+<ul class="org-ul">
+<li>“Stochastic Thermodynamics May Be Key To Understanding Energy Costs Of Computation.” Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://csh.ac.at/news/stochastic-thermodynamics-may-be-key-to-understanding-energy-costs-of-computation/">https://csh.ac.at/news/stochastic-thermodynamics-may-be-key-to-understanding-energy-costs-of-computation/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgfd4103d" class="outline-4">
+<h4 id="orgfd4103d"><span class="section-number-4">2.1.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgab46cff" class="outline-3">
+<h3 id="orgab46cff"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org0e20da9" class="outline-4">
+<h4 id="org0e20da9"><span class="section-number-4">2.2.1.</span> The Ecologist</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Gaia, cyborgs and the memory industry.” Accessed: Feb. 28, 2025. [Online]. Available: <a href="https://theecologist.org/2025/feb/27/gaia-cyborgs-and-memory-industry">https://theecologist.org/2025/feb/27/gaia-cyborgs-and-memory-industry</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7809b06" class="outline-4">
+<h4 id="org7809b06"><span class="section-number-4">2.2.2.</span> GreenPeace</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>“Urge the tech suppliers to clean up its act,” Greenpeace International. Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/act/supply-change/">https://www.greenpeace.org/international/act/supply-change/</a></li>
+<li>“Failure to transition to renewables could cost electronics manufacturers up to USD 11 billion by 2030: study,” Greenpeace East Asia. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.greenpeace.org/eastasia/press/8523/failure-to-transition-to-renewables-could-cost-electronics-manufacturers-up-to-usd-11-billion-by-2030-study/">https://www.greenpeace.org/eastasia/press/8523/failure-to-transition-to-renewables-could-cost-electronics-manufacturers-up-to-usd-11-billion-by-2030-study/</a></li>
+<li>“Nature Crime Files – Sweden,” Greenpeace International. Accessed: May 22, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/publication/67018/nature-crime-files-sweden/">https://www.greenpeace.org/international/publication/67018/nature-crime-files-sweden/</a></li>
+<li>“Report: Online shopping harms nature, climate, and Europe’s only recognised Indigenous People,” Greenpeace International. Accessed: May 22, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/67031/report-online-shopping-harms-nature-climate-and-europes-only-recognised-indigenous-people/">https://www.greenpeace.org/international/press-release/67031/report-online-shopping-harms-nature-climate-and-europes-only-recognised-indigenous-people/</a></li>
+<li>“From Smart to Senseless: The Global Impact of Ten Years of Smartphones - Greenpeace USA.” <a href="https://www.greenpeace.org/usa/research/from-smart-to-senseless-the-global-impact-of-ten-years-of-smartphones/">https://www.greenpeace.org/usa/research/from-smart-to-senseless-the-global-impact-of-ten-years-of-smartphones/</a> (accessed Apr. 27, 2022).</li>
+<li>“Greenpeace #ClickClean.” <a href="http://www.clickclean.org/international/en/">http://www.clickclean.org/international/en/</a> (accessed Apr. 27, 2022).</li>
+<li>“Oil in the Cloud,” Greenpeace USA. <a href="https://www.greenpeace.org/usa/reports/oil-in-the-cloud/">https://www.greenpeace.org/usa/reports/oil-in-the-cloud/</a> (accessed Apr. 27, 2022).</li>
+<li>“Microsoft, Google, Amazon – Who’s the Biggest Climate Hypocrite?,” Greenpeace USA, Jan. 27, 2020. <a href="https://www.greenpeace.org/usa/microsoft-google-amazon-energy-oil-ai-climate-hypocrite/">https://www.greenpeace.org/usa/microsoft-google-amazon-energy-oil-ai-climate-hypocrite/</a> (accessed Apr. 27, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2faefa5" class="outline-3">
+<h3 id="org2faefa5"><span class="section-number-3">2.3.</span> Technology, Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org72935ab" class="outline-4">
+<h4 id="org72935ab"><span class="section-number-4">2.3.1.</span> Tools</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>F. Lastname, “Green Algorithms,” Green Algorithms. Accessed: Jul. 21, 2024. [Online]. Available: <a href="http://www.green-algorithms.org/">http://www.green-algorithms.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe5f6b6" class="outline-4">
+<h4 id="orgbe5f6b6"><span class="section-number-4">2.3.2.</span> Smartphones</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>“From Smart to Senseless: The Global Impact of Ten Years of Smartphones - Greenpeace USA.” <a href="https://www.greenpeace.org/usa/research/from-smart-to-senseless-the-global-impact-of-ten-years-of-smartphones/">https://www.greenpeace.org/usa/research/from-smart-to-senseless-the-global-impact-of-ten-years-of-smartphones/</a> (accessed Apr. 27, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org094cc04" class="outline-4">
+<h4 id="org094cc04"><span class="section-number-4">2.3.3.</span> Data Centers</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<ul class="org-ul">
+<li>“The Problem of Inefficient Cooling in Smaller Data Centers,” Data Center Knowledge | News and analysis for the data center industry, Dec. 04, 2015. <a href="https://www.datacenterknowledge.com/archives/2015/12/04/the-problem-of-inefficient-cooling-in-smaller-data-centers">https://www.datacenterknowledge.com/archives/2015/12/04/the-problem-of-inefficient-cooling-in-smaller-data-centers</a> (accessed Apr. 27, 2022).</li>
+<li>N. Jones, “How to stop data centres from gobbling up the world’s electricity,” Nature, vol. 561, no. 7722, pp. 163–166, Sep. 2018, doi: 10.1038/d41586-018-06610-y.</li>
+<li>D. S. B. the first to comment, “What happens to mechanical and electrical equipment during data center decommissioning?” <a href="https://www.datacenterdynamics.com/en/analysis/what-happens-mechanical-and-electrical-equipment-during-data-center-decommissioning/">https://www.datacenterdynamics.com/en/analysis/what-happens-mechanical-and-electrical-equipment-during-data-center-decommissioning/</a> (accessed Apr. 27, 2022).</li>
+<li><b>“Climate Neutral Data Centre Pact – The Green Deal need Green Infrastructure.”</b> <a href="https://www.climateneutraldatacentre.net/">https://www.climateneutraldatacentre.net/</a> (accessed Apr. 27, 2022).</li>
+<li>S. G. Monserrate, “The Cloud Is Material: On the Environmental Impacts of Computation and Data Storage,” MIT Case Studies in Social and Ethical Responsibilities of Computing, no. Winter 2022, Jan. 2022, doi: 10.21428/2c646de5.031d4553.
+<ul class="org-ul">
+<li>“The Staggering Ecological Impacts of Computation and the Cloud,” The MIT Press Reader, Feb. 14, 2022. <a href="https://thereader.mitpress.mit.edu/the-staggering-ecological-impacts-of-computation-and-the-cloud/">https://thereader.mitpress.mit.edu/the-staggering-ecological-impacts-of-computation-and-the-cloud/</a> (accessed Feb. 27, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged9095b" class="outline-4">
+<h4 id="orged9095b"><span class="section-number-4">2.3.4.</span> Cloud</h4>
+<div class="outline-text-4" id="text-2-3-4">
+<ul class="org-ul">
+<li>S. G. Monserrate, “The Cloud Is Material: On the Environmental Impacts of Computation and Data Storage,” MIT Case Studies in Social and Ethical Responsibilities of Computing, no. Winter 2022, Jan. 2022, doi: 10.21428/2c646de5.031d4553.
+<ul class="org-ul">
+<li>“The Staggering Ecological Impacts of Computation and the Cloud,” The MIT Press Reader, Feb. 14, 2022. <a href="https://thereader.mitpress.mit.edu/the-staggering-ecological-impacts-of-computation-and-the-cloud/">https://thereader.mitpress.mit.edu/the-staggering-ecological-impacts-of-computation-and-the-cloud/</a> (accessed Feb. 27, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org09a9dc3" class="outline-3">
+<h3 id="org09a9dc3"><span class="section-number-3">2.4.</span> AI</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>AI, Environment, Ecology: <a href="https://tinyurl.com/yf9k5n95">https://tinyurl.com/yf9k5n95</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3382525" class="outline-3">
+<h3 id="org3382525"><span class="section-number-3">2.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org654dbde" class="outline-2">
+<h2 id="org654dbde"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org34890c3" class="outline-3">
+<h3 id="org34890c3"><span class="section-number-3">3.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org23c4c59" class="outline-4">
+<h4 id="org23c4c59"><span class="section-number-4">3.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>N. Ensmenger, “The Environmental History of Computing,” Technology and Culture, vol. 59, no. 4, pp. S7–S33, 2018, doi: 10.1353/tech.2018.0148.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a7bede" class="outline-3">
+<h3 id="org3a7bede"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgf463383" class="outline-4">
+<h4 id="orgf463383"><span class="section-number-4">3.2.1.</span> Rare Metals</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ul class="org-ul">
+<li><a id="org1256d62"></a>General<br /></li>
+<li><a id="org7aaae3a"></a>Bulletin of the Atomic Scientists<br />
+<div class="outline-text-5" id="text-org7aaae3a">
+<ul class="org-ul">
+<li>J. McKenzie, “The greenest way to mine metals for batteries could be with plants,” Bulletin of the Atomic Scientists. Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/03/the-greenest-way-to-mine-metals-for-batteries-could-be-with-plants/">https://thebulletin.org/2024/03/the-greenest-way-to-mine-metals-for-batteries-could-be-with-plants/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9fc5c33"></a>Texts<br />
+<div class="outline-text-5" id="text-org9fc5c33">
+<ul class="org-ul">
+<li>G. Pitron, The Rare Metals War: the dark side of clean energy and digital technologies. London: Scribe Publications, 2023.</li>
+<li>S. Kara, Cobalt Red:How the Blood of the Congo Powers Our Lives. St. Martin’s Press, 2023.</li>
+</ul>
+</div>
+</li>
+<li><a id="org578a7ed"></a>Misc<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6cd4ad9" class="outline-3">
+<h3 id="org6cd4ad9"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>B. Szerszynski, Nature, Technology and the Sacred, 1st edition. Malden, MA: Wiley-Blackwell, 2004.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c0c801" class="outline-3">
+<h3 id="org0c0c801"><span class="section-number-3">3.4.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org1be9acc" class="outline-4">
+<h4 id="org1be9acc"><span class="section-number-4">3.4.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>“Green Software Foundation.” Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://greensoftware.foundation/">https://greensoftware.foundation/</a></li>
+<li>“Coalition for Digital Environmental Sustainability | CODES.” Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.codes.global/">https://www.codes.global/</a></li>
+<li>“Research Coordination Network - Network for the Digital Economy and the Environment.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://ndeercn.org/">https://ndeercn.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5cf1583" class="outline-4">
+<h4 id="org5cf1583"><span class="section-number-4">3.4.2.</span> Special Groups</h4>
+<div class="outline-text-4" id="text-3-4-2">
+</div>
+<ul class="org-ul">
+<li><a id="org47a035a"></a>Indigenous People<br />
+<div class="outline-text-5" id="text-org47a035a">
+<ul class="org-ul">
+<li>J. Salazar, “The Intersection of Traditional Knowledge and Modern Tech: Indigenous Approaches to Sustainability,” IEEE Computer Society. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.computer.org/publications/tech-news/trends/indigenous-sustainability/">https://www.computer.org/publications/tech-news/trends/indigenous-sustainability/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org0a76934" class="outline-4">
+<h4 id="org0a76934"><span class="section-number-4">3.4.3.</span> Nation States</h4>
+<div class="outline-text-4" id="text-3-4-3">
+</div>
+<ul class="org-ul">
+<li><a id="org9380389"></a>India<br />
+<div class="outline-text-5" id="text-org9380389">
+<ul class="org-ul">
+<li>R. Krishnamurthy, “India’s digital thirst: How Bengaluru’s tech dreams are colliding with a worsening water crisis,” Down To Earth. Accessed: Nov. 13, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/indias-digital-thirst-how-bengalurus-tech-dreams-are-colliding-with-a-worsening-water-crisis">https://www.downtoearth.org.in/science-technology/indias-digital-thirst-how-bengalurus-tech-dreams-are-colliding-with-a-worsening-water-crisis</a></li>
+<li>R. Krishnamurthy, “India’s digital thirst: Data centres are rising in water-scarce regions — and locals are paying the price,” Down To Earth. Accessed: Nov. 13, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/indias-digital-thirst-data-centres-are-rising-in-water-scarce-regions-and-locals-are-paying-the-price">https://www.downtoearth.org.in/science-technology/indias-digital-thirst-data-centres-are-rising-in-water-scarce-regions-and-locals-are-paying-the-price</a></li>
+<li>R. Krishnamurthy, “India’s digital thirst: A booming data centre corridor in Uttar Pradesh’s GB Nagar is running on empty wells,” Down To Earth. Accessed: Nov. 13, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/indias-digital-thirst-a-booming-data-centre-corridor-in-uttar-pradeshs-gb-nagar-is-running-on-empty-wells">https://www.downtoearth.org.in/water/indias-digital-thirst-a-booming-data-centre-corridor-in-uttar-pradeshs-gb-nagar-is-running-on-empty-wells</a></li>
+<li>R. Krishnamurthy, “India’s digital thirst: What data centre giants aren’t saying about their water use,” Down To Earth. Accessed: Nov. 13, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/indias-digital-thirst-what-data-centre-giants-arent-saying-about-their-water-use">https://www.downtoearth.org.in/science-technology/indias-digital-thirst-what-data-centre-giants-arent-saying-about-their-water-use</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Krishnamurthy, “India’s digital thirst: How Bengaluru’s tech dreams are colliding with a worsening water crisis,” Down To Earth. Accessed: Nov. 07, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/indias-digital-thirst-how-bengalurus-tech-dreams-are-colliding-with-a-worsening-water-crisis">https://www.downtoearth.org.in/science-technology/indias-digital-thirst-how-bengalurus-tech-dreams-are-colliding-with-a-worsening-water-crisis</a></li>
+
+<li>R. Krishnamurthy, “India’s digital thirst: Data centres are rising in water-scarce regions — and locals are paying the price,” Down To Earth. Accessed: Nov. 09, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/indias-digital-thirst-data-centres-are-rising-in-water-scarce-regions-and-locals-are-paying-the-price">https://www.downtoearth.org.in/science-technology/indias-digital-thirst-data-centres-are-rising-in-water-scarce-regions-and-locals-are-paying-the-price</a></li>
+<li>R. Krishnamurthy, “India’s digital thirst: How Bengaluru’s tech dreams are colliding with a worsening water crisis,” Down To Earth. Accessed: Nov. 09, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/indias-digital-thirst-how-bengalurus-tech-dreams-are-colliding-with-a-worsening-water-crisis">https://www.downtoearth.org.in/science-technology/indias-digital-thirst-how-bengalurus-tech-dreams-are-colliding-with-a-worsening-water-crisis</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org71c0671" class="outline-4">
+<h4 id="org71c0671"><span class="section-number-4">3.4.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<ul class="org-ul">
+<li>“Digital Degrowth,” Pluto Press. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.plutobooks.com/9780745349879/digital-degrowth">https://www.plutobooks.com/9780745349879/digital-degrowth</a></li>
+<li>“The faulty science, doomism, and flawed conclusions of ‘Deep Adaptation,’” openDemocracy. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.opendemocracy.net/en/oureconomy/faulty-science-doomism-and-flawed-conclusions-deep-adaptation/">https://www.opendemocracy.net/en/oureconomy/faulty-science-doomism-and-flawed-conclusions-deep-adaptation/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f48f6c" class="outline-3">
+<h3 id="org3f48f6c"><span class="section-number-3">3.5.</span> Business Studies, Misc</h3>
+</div>
+<div id="outline-container-org77d1b89" class="outline-3">
+<h3 id="org77d1b89"><span class="section-number-3">3.6.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-orga8cf8ee" class="outline-3">
+<h3 id="orga8cf8ee"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org8217161" class="outline-3">
+<h3 id="org8217161"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orgc4a2d0d" class="outline-3">
+<h3 id="orgc4a2d0d"><span class="section-number-3">3.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>“Greenpeace confronts Nvidia’s GTC Conference with Billboards: ‘Jensen, Choose Your Future,’” Greenpeace International. Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/82171/greenpeace-confronts-nvidias-gtc-conference-with-billboards-jensen-choose-your-future/">https://www.greenpeace.org/international/press-release/82171/greenpeace-confronts-nvidias-gtc-conference-with-billboards-jensen-choose-your-future/</a></li>
+
+<li>“Intersections of Digital Rights and Environmental and Climate Justice,” Mozilla Foundation, Jul. 13, 2022. <a href="https://foundation.mozilla.org/en/blog/intersections-of-digital-rights-and-environmental-and-climate-justice/">https://foundation.mozilla.org/en/blog/intersections-of-digital-rights-and-environmental-and-climate-justice/</a> (accessed Aug. 04, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org764316c" class="outline-2">
+<h2 id="org764316c"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>S. Murugesan and G. R. Gangadharan, <i>Harnessing Green IT: Principles and Practices.</i> John Wiley &amp; Sons, 2012.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6e39a19" class="outline-2">
+<h2 id="org6e39a19"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org762e4f1" class="outline-3">
+<h3 id="org762e4f1"><span class="section-number-3">5.1.</span> E-Waste</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>E-Waste: <a href="https://tinyurl.com/yukfa8un">https://tinyurl.com/yukfa8un</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb085b17" class="outline-3">
+<h3 id="orgb085b17"><span class="section-number-3">5.2.</span> Local Futures</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li><b>“Putting technology in its place,”</b> Local Futures, Jan. 25, 2022. <a href="https://www.localfutures.org/putting-technology-in-its-place/">https://www.localfutures.org/putting-technology-in-its-place/</a> (accessed Jan. 27, 2022).</li>
+<li>K. Kheel, “Overview of Digital Technology by Kate Kheel,” Local Futures. Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://www.localfutures.org/overview-of-digital-technology/">https://www.localfutures.org/overview-of-digital-technology/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org13f26f2" class="outline-3">
+<h3 id="org13f26f2"><span class="section-number-3">5.3.</span> Texts</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“Digital Degrowth,” Pluto Press. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.plutobooks.com/9780745349879/digital-degrowth">https://www.plutobooks.com/9780745349879/digital-degrowth</a></li>
+<li>S. Lange and T. Santarius, Smart Green World?: Making Digitalization Work for Sustainability, 1st edition. London; New York, NY: Routledge, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18fbfe3" class="outline-3">
+<h3 id="org18fbfe3"><span class="section-number-3">5.4.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>Kate, “Overview of Digital Technology: Marking Four Global Days of Action, June 2024,” Safe Tech International. Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://safetechinternational.org/overview-of-digital-technology-marking-four-global-days-of-action-june-2024/">https://safetechinternational.org/overview-of-digital-technology-marking-four-global-days-of-action-june-2024/</a></li>
+<li>“Making Information Tech Greener Can Help Address the Climate Crisis.” <a href="https://spectrum.ieee.org/making-information-tech-greener#toggle-gdpr">https://spectrum.ieee.org/making-information-tech-greener#toggle-gdpr</a> (accessed Nov. 11, 2021).</li>
+<li>P. J. B. the first to comment, “European cloud providers pledge to go climate neutral by 2030.” <a href="https://www.datacenterdynamics.com/en/analysis/european-cloud-providers-pledge-go-climate-neutral-2030/">https://www.datacenterdynamics.com/en/analysis/european-cloud-providers-pledge-go-climate-neutral-2030/</a> (accessed Apr. 27, 2022).</li>
+<li>“Global hourly enterprise server downtime cost 2019,” Statista. <a href="https://www.statista.com/statistics/753938/worldwide-enterprise-server-hourly-downtime-cost/">https://www.statista.com/statistics/753938/worldwide-enterprise-server-hourly-downtime-cost/</a> (accessed Apr. 27, 2022).</li>
+<li>I. Burrington, “The Environmental Toll of a Netflix Binge,” The Atlantic, Dec. 16, 2015. <a href="https://www.theatlantic.com/technology/archive/2015/12/there-are-no-clean-clouds/420744/">https://www.theatlantic.com/technology/archive/2015/12/there-are-no-clean-clouds/420744/</a> (accessed Apr. 27, 2022).</li>
+<li>“Google’s Plan to Replenish 120% of Its Water Use Doesn’t Quite Add Up,” Gizmodo. <a href="https://gizmodo.com/google-s-plan-to-use-120-less-water-doesn-t-quite-add-1847647300">https://gizmodo.com/google-s-plan-to-use-120-less-water-doesn-t-quite-add-1847647300</a> (accessed Apr. 27, 2022).</li>
+<li>“Big data ecologies | ephemera.” <a href="http://ephemerajournal.org/contribution/big-data-ecologies">http://ephemerajournal.org/contribution/big-data-ecologies</a> (accessed Apr. 27, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c39597" class="outline-2">
+<h2 id="org9c39597"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>B. F. Fuels, “Europeans agree: Time to Put Limits on Big Tech Data Centres,” Beyond Fossil Fuels. Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://beyondfossilfuels.org/2025/10/27/europeans-agree-time-to-put-limits-on-big-tech-data-centres/">https://beyondfossilfuels.org/2025/10/27/europeans-agree-time-to-put-limits-on-big-tech-data-centres/</a></li>
+
+<li>B. West, “Hyperscale data centres will ‘turbocharge emissions.’” Accessed: Oct. 14, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/14/hyperscale-data-centres-will-turbocharge-emissions">https://theecologist.org/2025/oct/14/hyperscale-data-centres-will-turbocharge-emissions</a></li>
+
+<li>“Data Centers Are Already Increasing Your Energy Bills. We Have the Receipts.,” The Equation. Accessed: Oct. 01, 2025. [Online]. Available: <a href="https://blog.ucs.org/mike-jacobs/data-centers-are-already-increasing-your-energy-bills/">https://blog.ucs.org/mike-jacobs/data-centers-are-already-increasing-your-energy-bills/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Dib and P. J. Arandia, “Countries are struggling to meet the rising energy demands of data centers,” Rest of World. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://restofworld.org/2025/ai-energy-supply-data-centers/">https://restofworld.org/2025/ai-energy-supply-data-centers/</a></li>
+
+<li>C. Rikap and S. Weko, “A green transition orchestrated from Big Tech clouds?,” Globalizations, vol. 0, no. 0, pp. 1–20, doi: 10.1080/14747731.2025.2548716.</li>
+
+<li>“Digital Sustainable Co-Transformation: the 2nd Greenpeace-hosted Digital Transformation Conference for non-profits,” Greenpeace International. Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/78380/technology-digital-transformation-nonprofits-conference-2025/">https://www.greenpeace.org/international/story/78380/technology-digital-transformation-nonprofits-conference-2025/</a></li>
+
+<li>“Tips for Researching Massive Water Consumption by Data Centers.” Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://gijn.org/stories/researching-water-consumption-data-centers/">https://gijn.org/stories/researching-water-consumption-data-centers/</a></li>
+
+<li>H. Smuts, “Data that is stored and not used has a carbon footprint. How companies can manage dark data better,” Down To Earth. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/data-that-is-stored-and-not-used-has-a-carbon-footprint-how-companies-can-manage-dark-data-better">https://www.downtoearth.org.in/science-technology/data-that-is-stored-and-not-used-has-a-carbon-footprint-how-companies-can-manage-dark-data-better</a></li>
+
+<li>M. Halsey, The Green IT Guide: How to Make Your IT Systems and Business Sustainable and Carbon Neutral. Berkeley, CA: Apress, 2025. doi: 10.1007/979-8-8688-1233-0.</li>
+
+<li>“Powering the Future: Why Michigan’s Data Center Debate is Critical for Clean Energy and Your Wallet,” The Equation. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://blog.ucs.org/lee-shaver/powering-the-future-why-michigans-data-center-debate-is-critical-for-clean-energy-and-your-wallet/">https://blog.ucs.org/lee-shaver/powering-the-future-why-michigans-data-center-debate-is-critical-for-clean-energy-and-your-wallet/</a></li>
+
+<li>“Empowering Users to Make Sustainability-Forward Decisions for Computing Services – Communications of the ACM.” Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://cacm.acm.org/sustainability-and-computing/empowering-users-to-make-sustainability-forward-decisions-for-computing-services/">https://cacm.acm.org/sustainability-and-computing/empowering-users-to-make-sustainability-forward-decisions-for-computing-services/</a></li>
+
+<li>“Data Centers Are Not a License to Drill,” The Equation. Accessed: Feb. 19, 2026. [Online]. Available: <a href="https://blog.ucs.org/laura-peterson/data-centers-are-not-a-license-to-drill/">https://blog.ucs.org/laura-peterson/data-centers-are-not-a-license-to-drill/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

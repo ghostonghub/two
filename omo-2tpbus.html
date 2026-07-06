@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Buses</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Buses</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org774950a">1. General</a></li>
+<li><a href="#org3973536">2. STEMM</a>
+<ul>
+<li><a href="#org1a902de">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8f4d536">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgbfdb9cc">3.1. Nation States</a>
+<ul>
+<li><a href="#org64237bd">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#orga299af5">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org13491f0">4. Arts</a>
+<ul>
+<li><a href="#org41d064e">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb141986">5. Special Topics</a></li>
+<li><a href="#org4bb8836">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org774950a" class="outline-2">
+<h2 id="org774950a"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org3973536" class="outline-2">
+<h2 id="org3973536"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1a902de" class="outline-3">
+<h3 id="org1a902de"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org8f4d536" class="outline-2">
+<h2 id="org8f4d536"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgbfdb9cc" class="outline-3">
+<h3 id="orgbfdb9cc"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org64237bd" class="outline-4">
+<h4 id="org64237bd"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org536cf94"></a>General<br /></li>
+<li><a id="org7981091"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org5e2145e"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org96211b7"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org68b6d00"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-3-1">
+<ul class="org-ul">
+<li>A. Bhattacharya, “India’s electric bus push has a deadly blind spot,” Rest of World. Accessed: Jan. 30, 2026. [Online]. Available: <a href="https://restofworld.org/2026/india-electric-bus-accidents/">https://restofworld.org/2026/india-electric-bus-accidents/</a></li>
+
+<li>M. Nabi, “Delhi’s New Bus Pass Draws A Line Between Belonging And Exclusion,” Feminism in India. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/08/20/delhis-new-bus-pass-draws-a-line-between-belonging-and-exclusion/">https://feminisminindia.com/2025/08/20/delhis-new-bus-pass-draws-a-line-between-belonging-and-exclusion/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org0fb35d8"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org5e75483"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org75d7cf4"></a>Special Topics<br /></li>
+<li><a id="org55beca6"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-6">
+<ul class="org-ul">
+<li>A. B. World Rest of, “Why India’s electric bus push is leading to fatal crashes,” Scroll.in. Accessed: Feb. 16, 2026. [Online]. Available: <a href="https://scroll.in/article/1090465/why-indias-electric-bus-push-is-leading-to-fatal-crashes">https://scroll.in/article/1090465/why-indias-electric-bus-push-is-leading-to-fatal-crashes</a></li>
+
+<li>“Fare-Free Future: Women’s Perspectives on Public Bus Transport in Mumbai,” Greenpeace India. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/">https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“BUS SURVEY,” Greenpeace India. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/16862/bus-survey/">https://www.greenpeace.org/india/en/story/16862/bus-survey/</a></li>
+<li>“94% Women respondents demand Fare Free Public Bus Transport Ahead of Maharashtra Assembly polls- Greenpeace India Report.,” Greenpeace India. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16880/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india/">https://www.greenpeace.org/india/en/press/16880/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india/</a></li>
+<li>“Fare-Free Future: Women’s Perspectives on Public Bus Transport in Mumbai,” Greenpeace India. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/">https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/</a></li>
+<li>“Demand Manifesto: Maharashtra State Elections,” Greenpeace India. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16909/demand-manifesto-maharashtra-state-elections/">https://www.greenpeace.org/india/en/publication/16909/demand-manifesto-maharashtra-state-elections/</a></li>
+
+<li>“Uber’s big plan for India: buses,” Rest of World. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://restofworld.org/2024/uber-shuttle-india-shared-bus/">https://restofworld.org/2024/uber-shuttle-india-shared-bus/</a></li>
+<li>C. Philip, “Bhubaneswar launches electric double-decker buses: How the initiative can be a step towards sustainable mobility,” Down To Earth. Accessed: Feb. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/energy/bhubaneswar-launches-electric-double-decker-buses-how-the-initative-can-be-a-step-towards-sustainable-mobility">https://www.downtoearth.org.in/energy/bhubaneswar-launches-electric-double-decker-buses-how-the-initative-can-be-a-step-towards-sustainable-mobility</a></li>
+
+<li>“The sorry state of state bus transport in India.” Accessed: Jan. 25, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/infographics/the-sorry-state-of-state-bus-transport-in-india-93983">https://www.downtoearth.org.in/infographics/the-sorry-state-of-state-bus-transport-in-india-93983</a></li>
+
+<li>“Free Bus Rides Offer Indian Women New Option for Work, and Play,” Bloomberg.com, Nov. 06, 2023. Accessed: Nov. 10, 2023. [Online]. Available: <a href="https://www.bloomberg.com/news/articles/2023-11-06/india-inside-shakti-the-free-bus-ride-program-for-women-in-karnataka-delhi">https://www.bloomberg.com/news/articles/2023-11-06/india-inside-shakti-the-free-bus-ride-program-for-women-in-karnataka-delhi</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Gupta, “How India moves: DEVI buses a safe and comfortable ride, Delhi’s women tell DTE,” Down To Earth. Accessed: Jun. 23, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/air/how-india-moves-devi-buses-a-safe-and-comfortable-ride-delhis-women-tell-dte">https://www.downtoearth.org.in/air/how-india-moves-devi-buses-a-safe-and-comfortable-ride-delhis-women-tell-dte</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga299af5" class="outline-3">
+<h3 id="orga299af5"><span class="section-number-3">3.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org13491f0" class="outline-2">
+<h2 id="org13491f0"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org41d064e" class="outline-3">
+<h3 id="org41d064e"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgb141986" class="outline-2">
+<h2 id="orgb141986"><span class="section-number-2">5.</span> Special Topics</h2>
+</div>
+<div id="outline-container-org4bb8836" class="outline-2">
+<h2 id="org4bb8836"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>don-anair, “Electric School Buses: The Best Choice for Our Kids and Communities,” The Equation. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/don-anair/electric-school-buses-the-best-choice-for-our-kids-and-communities/">https://blog.ucsusa.org/don-anair/electric-school-buses-the-best-choice-for-our-kids-and-communities/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

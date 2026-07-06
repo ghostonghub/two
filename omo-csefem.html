@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Feminism, Women Studies, Computer Science and Engineering, Misc</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Feminism, Women Studies, Computer Science and Engineering, Misc</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6556dd4">1. General</a></li>
+<li><a href="#org4949275">2. Fair Tech</a></li>
+<li><a href="#orgcee9a3f">3. STEMM</a>
+<ul>
+<li><a href="#org78056c0">3.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org88231eb">3.1.1. Complexity Science</a></li>
+<li><a href="#org8a08ef6">3.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd1d2034">3.2. Biological Sciences, Misc</a></li>
+<li><a href="#org6ae0247">3.3. Basic Sciences, Misc</a></li>
+<li><a href="#org3793064">3.4. Mathematical, Computational Sciences, Misc</a></li>
+<li><a href="#orgfabdf7a">3.5. Advanced Sciences, Misc</a></li>
+<li><a href="#org3568740">3.6. Technology, Misc</a></li>
+<li><a href="#org9478c79">3.7. Special Topics</a></li>
+<li><a href="#org2db56c6">3.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4ec6b9b">4. Worldly Matters</a>
+<ul>
+<li><a href="#orgfad974d">4.1. Space and Time</a>
+<ul>
+<li><a href="#orgb04d9a1">4.1.1. History</a></li>
+</ul>
+</li>
+<li><a href="#org07dde5c">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org78dc72b">4.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org3033524">4.4. Humanities, Misc</a>
+<ul>
+<li><a href="#orgb3712f9">4.4.1. People</a></li>
+</ul>
+</li>
+<li><a href="#orgca1e8a9">4.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org3c45301">4.5.1. Events</a></li>
+<li><a href="#orga2a2f68">4.5.2. Orgs</a></li>
+<li><a href="#org4bc8bb7">4.5.3. Nation States</a></li>
+</ul>
+</li>
+<li><a href="#org0abc6ef">4.6. Business Studies, Misc</a>
+<ul>
+<li><a href="#org811c263">4.6.1. Management, Work</a></li>
+</ul>
+</li>
+<li><a href="#org5d24880">4.7. Security Studies, Misc</a></li>
+<li><a href="#orgc260b54">4.8. Communication, Misc</a></li>
+<li><a href="#org91daea7">4.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc7d526e">5. Core</a>
+<ul>
+<li><a href="#org92d35bb">5.1. Education</a></li>
+<li><a href="#org521b46d">5.2. Everday Computing</a></li>
+<li><a href="#org1ab14ec">5.3. BlockChain</a></li>
+<li><a href="#org62913af">5.4. Data Science</a>
+<ul>
+<li><a href="#org625ad91">5.4.1. Texts</a></li>
+<li><a href="#org55c459e">5.4.2. Internet Resources</a></li>
+</ul>
+</li>
+<li><a href="#org6d747f0">5.5. Artificial Intelligence</a>
+<ul>
+<li><a href="#org3f4d686">5.5.1. General</a></li>
+<li><a href="#orgc8b45ee">5.5.2. Worldly Matters</a></li>
+<li><a href="#org2b2ef9a">5.5.3. Special Topics</a></li>
+<li><a href="#org9382bd7">5.5.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8ed6f37">5.6. Top Orgs</a>
+<ul>
+<li><a href="#org70e5082">5.6.1. ACM</a></li>
+<li><a href="#org3ce9191">5.6.2. IEEE</a></li>
+</ul>
+</li>
+<li><a href="#org9040829">5.7. Fair Tech Orgs</a>
+<ul>
+<li><a href="#orged8d13b">5.7.1. Free Software Foundation</a></li>
+<li><a href="#orga1910d4">5.7.2. Software Freedom Conservancy</a></li>
+<li><a href="#orgbdb5ad8">5.7.3. IT for Change</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org10f0029">6. Arts</a>
+<ul>
+<li><a href="#orgcf4c3b4">6.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6406598">7. Special Topics</a>
+<ul>
+<li><a href="#org6d4b483">7.1. Texts</a></li>
+<li><a href="#org6d34d81">7.2. Internet Resources</a></li>
+<li><a href="#orgf789c7c">7.3. Articles, Essays</a>
+<ul>
+<li><a href="#orgf541e86">7.3.1. Journals</a></li>
+<li><a href="#org49576e3">7.3.2. The Conversation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0e44cb9">8. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org6556dd4" class="outline-2">
+<h2 id="org6556dd4"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org4949275" class="outline-2">
+<h2 id="org4949275"><span class="section-number-2">2.</span> Fair Tech</h2>
+</div>
+<div id="outline-container-orgcee9a3f" class="outline-2">
+<h2 id="orgcee9a3f"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org78056c0" class="outline-3">
+<h3 id="org78056c0"><span class="section-number-3">3.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org88231eb" class="outline-4">
+<h4 id="org88231eb"><span class="section-number-4">3.1.1.</span> Complexity Science</h4>
+</div>
+<div id="outline-container-org8a08ef6" class="outline-4">
+<h4 id="org8a08ef6"><span class="section-number-4">3.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“Complexity Science Hub * News * The Story Behind The Paper.” Accessed: Apr. 03, 2024. [Online]. Available: <a href="https://csh.ac.at/news/the-story-behind-the-paper/">https://csh.ac.at/news/the-story-behind-the-paper/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd1d2034" class="outline-3">
+<h3 id="orgd1d2034"><span class="section-number-3">3.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-org6ae0247" class="outline-3">
+<h3 id="org6ae0247"><span class="section-number-3">3.3.</span> Basic Sciences, Misc</h3>
+</div>
+<div id="outline-container-org3793064" class="outline-3">
+<h3 id="org3793064"><span class="section-number-3">3.4.</span> Mathematical, Computational Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgfabdf7a" class="outline-3">
+<h3 id="orgfabdf7a"><span class="section-number-3">3.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-org3568740" class="outline-3">
+<h3 id="org3568740"><span class="section-number-3">3.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org9478c79" class="outline-3">
+<h3 id="org9478c79"><span class="section-number-3">3.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-org2db56c6" class="outline-3">
+<h3 id="org2db56c6"><span class="section-number-3">3.8.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org4ec6b9b" class="outline-2">
+<h2 id="org4ec6b9b"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgfad974d" class="outline-3">
+<h3 id="orgfad974d"><span class="section-number-3">4.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgb04d9a1" class="outline-4">
+<h4 id="orgb04d9a1"><span class="section-number-4">4.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgc4530f4"></a>General<br /></li>
+<li><a id="org486b8c1"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org51e7f78"></a>Texts<br />
+<div class="outline-text-6" id="text-org51e7f78">
+<ul class="org-ul">
+<li>G. C. Townsend, Ed., Rendering History: The Women of ACM-W, 1st ed., vol. 58. New York, NY, USA: Association for Computing Machinery, 2024.</li>
+<li>“Rendering History: The Women of ACM-W (ACM Books) : Townsend, Gloria Childress: Amazon.in: Books.” Accessed: May 22, 2024. [Online]. Available: <a href="https://www.amazon.in/Rendering-History-Women-ACM-W-Books/dp/B0D1H91K2F">https://www.amazon.in/Rendering-History-Women-ACM-W-Books/dp/B0D1H91K2F</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdc6482b"></a>Articles, Essays<br />
+<div class="outline-text-6" id="text-orgdc6482b">
+<ul class="org-ul">
+<li>“Vanderbilt computer scientist shares personal story of resilience and strength in new book from the Women of Association for Computing Machinery,” School of Engineering. Accessed: May 22, 2024. [Online]. Available: <a href="https://engineering.vanderbilt.edu/2024/05/13/vanderbilt-computer-scientist-shares-personal-story-of-resilience-and-strength-in-new-book-from-the-women-of-association-for-computing-machinery/">https://engineering.vanderbilt.edu/2024/05/13/vanderbilt-computer-scientist-shares-personal-story-of-resilience-and-strength-in-new-book-from-the-women-of-association-for-computing-machinery/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc712930"></a>Misc<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org07dde5c" class="outline-3">
+<h3 id="org07dde5c"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org78dc72b" class="outline-3">
+<h3 id="org78dc72b"><span class="section-number-3">4.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-org3033524" class="outline-3">
+<h3 id="org3033524"><span class="section-number-3">4.4.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orgb3712f9" class="outline-4">
+<h4 id="orgb3712f9"><span class="section-number-4">4.4.1.</span> People</h4>
+</div>
+</div>
+<div id="outline-container-orgca1e8a9" class="outline-3">
+<h3 id="orgca1e8a9"><span class="section-number-3">4.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org3c45301" class="outline-4">
+<h4 id="org3c45301"><span class="section-number-4">4.5.1.</span> Events</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<ul class="org-ul">
+<li>“CIS-A2K/Events/She Leads - Meta.” Accessed: May 14, 2024. [Online]. Available: <a href="https://meta.wikimedia.org/wiki/CIS-A2K/Events/She_Leads">https://meta.wikimedia.org/wiki/CIS-A2K/Events/She_Leads</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga2a2f68" class="outline-4">
+<h4 id="orga2a2f68"><span class="section-number-4">4.5.2.</span> Orgs</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<ul class="org-ul">
+<li>“IEEE Women In Engineering | IEEE WIE,” IEEE Women in Engineering. <a href="https://wie.ieee.org/">https://wie.ieee.org/</a> (accessed Jun. 24, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“@oxwocs,” Linktree. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://linktr.ee/oxwocs">https://linktr.ee/oxwocs</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4bc8bb7" class="outline-4">
+<h4 id="org4bc8bb7"><span class="section-number-4">4.5.3.</span> Nation States</h4>
+<div class="outline-text-4" id="text-4-5-3">
+</div>
+<ul class="org-ul">
+<li><a id="org63c2754"></a>India<br />
+<ul class="org-ul">
+<li><a id="org833bd64"></a>General<br /></li>
+<li><a id="org2c8edbc"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org1848c39"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org398e8ba"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org38bcf95"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org8afd9da"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org8b6321f"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org9744339"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orgec75c48"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgb3950ba"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgc34096c"></a>Heinrich Böll Stiftung<br />
+<div class="outline-text-7" id="text-orgc34096c">
+<ul class="org-ul">
+<li>“Digital India through a gender lens | Heinrich Böll Stiftung | India Office.” Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://in.boell.org/en/2018/08/01/digital-india-through-gender-lens">https://in.boell.org/en/2018/08/01/digital-india-through-gender-lens</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd61af1f"></a>Violence<br />
+<div class="outline-text-7" id="text-orgd61af1f">
+<ul class="org-ul">
+<li>“Online Gender Based Violence.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://sflc.in/online-gender-based-violence/">https://sflc.in/online-gender-based-violence/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0e4ce2f"></a>Misc<br />
+<div class="outline-text-6" id="text-org0e4ce2f">
+<ul class="org-ul">
+<li>A. Sahgal, “Performing Care: Women And Digital Solidarity,” Feminism in India. Accessed: Nov. 26, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/11/26/performing-care-women-and-digital-solidarity/">https://feminisminindia.com/2025/11/26/performing-care-women-and-digital-solidarity/</a></li>
+
+<li>Prakriti, “Cyber Abuse Compels Women And LGBTQIA+ To Be Silent And Eventually Offline: New Study On TFGBV,” Feminism in India. Accessed: Nov. 20, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/11/20/cyber-abuse-compels-women-and-lgbtqia-to-be-silent-and-eventually-offline-reading-the-tech-gender-violence-report/">https://feminisminindia.com/2025/11/20/cyber-abuse-compels-women-and-lgbtqia-to-be-silent-and-eventually-offline-reading-the-tech-gender-violence-report/</a></li>
+
+<li>R. Priyadarsi, A. Ansh, and R. P. and A. Ansh, “The Alarming Rise Of Digital Misogyny In India,” Feminism in India. Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://feminisminindia.com/?p=180617">https://feminisminindia.com/?p=180617</a></li>
+<li>F. J. Rambhai, “‘A Cyborg Manifesto’: The Politics Of Cyborg And The Feminist Critique,” Feminism in India. Accessed: Apr. 08, 2025. [Online]. Available: <a href="https://feminisminindia.com/?p=185003">https://feminisminindia.com/?p=185003</a></li>
+
+<li>A. Raghavan, “The Algorithm’s Tradwife: How Platform Capitalism Monetises Women’s Subordination In India,” Feminism in India. Accessed: Nov. 12, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/11/12/the-algorithms-tradwife-how-platform-capitalism-monetises-womens-subordination-in-india/">https://feminisminindia.com/2025/11/12/the-algorithms-tradwife-how-platform-capitalism-monetises-womens-subordination-in-india/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0abc6ef" class="outline-3">
+<h3 id="org0abc6ef"><span class="section-number-3">4.6.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-org811c263" class="outline-4">
+<h4 id="org811c263"><span class="section-number-4">4.6.1.</span> Management, Work</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<ul class="org-ul">
+<li>“A Four-Stage Approach for Hiring Women on Your Engineering Team – Communications of the ACM.” Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://cacm.acm.org/blogcacm/a-four-stage-approach-for-hiring-women-on-your-engineering-team/">https://cacm.acm.org/blogcacm/a-four-stage-approach-for-hiring-women-on-your-engineering-team/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5d24880" class="outline-3">
+<h3 id="org5d24880"><span class="section-number-3">4.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-orgc260b54" class="outline-3">
+<h3 id="orgc260b54"><span class="section-number-3">4.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-org91daea7" class="outline-3">
+<h3 id="org91daea7"><span class="section-number-3">4.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-9">
+<ul class="org-ul">
+<li>“Beyond the Pipeline: A Gender Lens on Priorities and Exit Triggers in the High-Tech Industry – Communications of the ACM.” Accessed: Jun. 25, 2026. [Online]. Available: <a href="https://cacm.acm.org/research/beyond-the-pipeline-a-gender-lens-on-priorities-and-exit-triggers-in-the-high-tech-industry/">https://cacm.acm.org/research/beyond-the-pipeline-a-gender-lens-on-priorities-and-exit-triggers-in-the-high-tech-industry/</a></li>
+
+<li>R. Chandran, “Immigrant women founders face double hurdle in Silicon Valley,” Rest of World. Accessed: Feb. 10, 2026. [Online]. Available: <a href="https://restofworld.org/2026/immigrant-women-founders-vc/">https://restofworld.org/2026/immigrant-women-founders-vc/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc7d526e" class="outline-2">
+<h2 id="orgc7d526e"><span class="section-number-2">5.</span> Core</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org92d35bb" class="outline-3">
+<h3 id="org92d35bb"><span class="section-number-3">5.1.</span> Education</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Pioneering Women Program | ANU School of Computing.” Accessed: Aug. 14, 2024. [Online]. Available: <a href="https://comp.anu.edu.au/join/pwp/">https://comp.anu.edu.au/join/pwp/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org521b46d" class="outline-3">
+<h3 id="org521b46d"><span class="section-number-3">5.2.</span> Everday Computing</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>V. Blue, <i>The Smart Girl’s Guide to Privacy: Practical Tips for Staying Safe Online.</i> No Starch Press, 2015.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1ab14ec" class="outline-3">
+<h3 id="org1ab14ec"><span class="section-number-3">5.3.</span> BlockChain</h3>
+</div>
+<div id="outline-container-org62913af" class="outline-3">
+<h3 id="org62913af"><span class="section-number-3">5.4.</span> Data Science</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-org625ad91" class="outline-4">
+<h4 id="org625ad91"><span class="section-number-4">5.4.1.</span> Texts</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<ul class="org-ul">
+<li>C. D’Ignazio and L. F. Klein, <b>Data Feminism.</b> MIT Press, 2020.</li>
+<li>C. C. Perez, <b>Invisible Women: Data Bias in a World Designed for Men.</b> Abrams, Incorporated, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org55c459e" class="outline-4">
+<h4 id="org55c459e"><span class="section-number-4">5.4.2.</span> Internet Resources</h4>
+<div class="outline-text-4" id="text-5-4-2">
+<ul class="org-ul">
+<li>B. Herre, P. Arriagada, E. Ortiz-Ospina, H. Ritchie, J. Hasell, and M. Roser, “Women’s Rights,” Our World in Data, May 2023, Accessed: Jun. 30, 2023. [Online]. Available: <a href="https://ourworldindata.org/women-rights">https://ourworldindata.org/women-rights</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6d747f0" class="outline-3">
+<h3 id="org6d747f0"><span class="section-number-3">5.5.</span> Artificial Intelligence</h3>
+<div class="outline-text-3" id="text-5-5">
+</div>
+<div id="outline-container-org3f4d686" class="outline-4">
+<h4 id="org3f4d686"><span class="section-number-4">5.5.1.</span> General</h4>
+</div>
+<div id="outline-container-orgc8b45ee" class="outline-4">
+<h4 id="orgc8b45ee"><span class="section-number-4">5.5.2.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-5-5-2">
+</div>
+<ul class="org-ul">
+<li><a id="orgb5b2855"></a>People<br />
+<div class="outline-text-5" id="text-orgb5b2855">
+<ul class="org-ul">
+<li>“Dr Heidy Khlaaf.” Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://www.heidyk.com/">https://www.heidyk.com/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org2b2ef9a" class="outline-4">
+<h4 id="org2b2ef9a"><span class="section-number-4">5.5.3.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-5-5-3">
+</div>
+<ul class="org-ul">
+<li><a id="org034ae5c"></a>Texts<br />
+<div class="outline-text-5" id="text-org034ae5c">
+<ul class="org-ul">
+<li>“New Book - Feminist AI: Critical Perspectives on Algorithms, Data and Intelligent Machines.” Accessed: Jan. 31, 2024. [Online]. Available: <a href="http://lcfi.ac.uk/news-and-events/news/2023/oct/4/new-book-feminist-ai-critical-perspectives-algorit/">http://lcfi.ac.uk/news-and-events/news/2023/oct/4/new-book-feminist-ai-critical-perspectives-algorit/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org134e333"></a>Articles, Essays<br />
+<div class="outline-text-5" id="text-org134e333">
+<ul class="org-ul">
+<li>K. Wiggers, “Women in AI: Miriam Vogel stresses the need for responsible AI,” TechCrunch. Accessed: May 30, 2024. [Online]. Available: <a href="https://techcrunch.com/2024/05/26/women-in-ai-miriam-vogel-stresses-the-need-for-responsible-ai/">https://techcrunch.com/2024/05/26/women-in-ai-miriam-vogel-stresses-the-need-for-responsible-ai/</a></li>
+<li>K. Wiggers, “Women in AI: Claire Leibowicz, AI and media integrity expert at PAI,” TechCrunch. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://techcrunch.com/2024/03/09/women-in-ai-claire-leibowicz-ai-and-media-integrity-expert-at-pai/">https://techcrunch.com/2024/03/09/women-in-ai-claire-leibowicz-ai-and-media-integrity-expert-at-pai/</a></li>
+<li>K. Wiggers, “Women in AI: Sandra Wachter, professor of data ethics at Oxford,” TechCrunch. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://techcrunch.com/2024/03/09/women-in-ai-sandra-watcher-professor-of-data-ethics-at-oxford/">https://techcrunch.com/2024/03/09/women-in-ai-sandra-watcher-professor-of-data-ethics-at-oxford/</a></li>
+<li>K. W. and D.-M. Davis, “The women in AI making a difference,” TechCrunch. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://techcrunch.com/2024/03/10/the-women-in-ai-making-a-difference/">https://techcrunch.com/2024/03/10/the-women-in-ai-making-a-difference/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf755c6d"></a>Internet Resources<br />
+<div class="outline-text-5" id="text-orgf755c6d">
+<ul class="org-ul">
+<li>“2025,” Women in AI Ethics™. Accessed: Mar. 02, 2025. [Online]. Available: <a href="https://womeninaiethics.org/the-list/of-2025/">https://womeninaiethics.org/the-list/of-2025/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org9382bd7" class="outline-4">
+<h4 id="org9382bd7"><span class="section-number-4">5.5.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-5-4">
+<ul class="org-ul">
+<li>N. Hertz, “The AI Labor Shock Is Coming for Women,” Project Syndicate. Accessed: Nov. 12, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/women-white-collar-workers-will-bear-brunt-of-ai-induced-job-displacement-by-noreena-hertz-2025-11">https://www.project-syndicate.org/commentary/women-white-collar-workers-will-bear-brunt-of-ai-induced-job-displacement-by-noreena-hertz-2025-11</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8ed6f37" class="outline-3">
+<h3 id="org8ed6f37"><span class="section-number-3">5.6.</span> Top Orgs</h3>
+<div class="outline-text-3" id="text-5-6">
+</div>
+<div id="outline-container-org70e5082" class="outline-4">
+<h4 id="org70e5082"><span class="section-number-4">5.6.1.</span> ACM</h4>
+<div class="outline-text-4" id="text-5-6-1">
+<ul class="org-ul">
+<li>“Spotlighting The Greek ACM-W Chapter in the ACW-Professional Chapter’s Corner | ACM-W supporting, celebrating, and advocating for Women in Computing.” Accessed: Jun. 23, 2025. [Online]. Available: <a href="https://women.acm.org/spotlighting-the-greek-acm-w-chapter-in-the-acw-professional-chapters-corner/">https://women.acm.org/spotlighting-the-greek-acm-w-chapter-in-the-acw-professional-chapters-corner/</a></li>
+<li>F. Hermans and A. Schlesinger, “A Case for Feminism in Programming Language Design,” in Proceedings of the 2024 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software, in Onward! ’24. New York, NY, USA: Association for Computing Machinery, Oct. 2024, pp. 205–222. doi: 10.1145/3689492.3689809.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3ce9191" class="outline-4">
+<h4 id="org3ce9191"><span class="section-number-4">5.6.2.</span> IEEE</h4>
+<div class="outline-text-4" id="text-5-6-2">
+<ul class="org-ul">
+<li>J. Roller, “Driving Female STEM Engagement: The IT Workshop for Young Teenagers,” IEEE Computer Society. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://www.computer.org/publictions/tech-news/insider-membership-news/driving-stem-engagement/">https://www.computer.org/publictions/tech-news/insider-membership-news/driving-stem-engagement/</a></li>
+<li>L. Tweed, “Computing’s Top 30: Anastasija Collen,” IEEE Computer Society. Accessed: May 17, 2025. [Online]. Available: <a href="https://www.computer.org/publications/tech-news/insider-membership-news/top-30-collen/">https://www.computer.org/publications/tech-news/insider-membership-news/top-30-collen/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9040829" class="outline-3">
+<h3 id="org9040829"><span class="section-number-3">5.7.</span> Fair Tech Orgs</h3>
+<div class="outline-text-3" id="text-5-7">
+</div>
+<div id="outline-container-orged8d13b" class="outline-4">
+<h4 id="orged8d13b"><span class="section-number-4">5.7.1.</span> Free Software Foundation</h4>
+<div class="outline-text-4" id="text-5-7-1">
+<ul class="org-ul">
+<li>“Meet the Free Software Community — Free Software Foundation — Working together for free software.” Accessed: Mar. 09, 2025. [Online]. Available: <a href="https://www.fsf.org/working-together/profiles/meet-the-free-software-community">https://www.fsf.org/working-together/profiles/meet-the-free-software-community</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga1910d4" class="outline-4">
+<h4 id="orga1910d4"><span class="section-number-4">5.7.2.</span> Software Freedom Conservancy</h4>
+<div class="outline-text-4" id="text-5-7-2">
+<ul class="org-ul">
+<li>“Remembering and Honoring Marina Zhurakhinskaya, Founder of Outreachy,” Software Freedom Conservancy. Accessed: Mar. 09, 2025. [Online]. Available: <a href="https://sfconservancy.org/news/2022/jun/14/remembering-marina/">https://sfconservancy.org/news/2022/jun/14/remembering-marina/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbdb5ad8" class="outline-4">
+<h4 id="orgbdb5ad8"><span class="section-number-4">5.7.3.</span> IT for Change</h4>
+<div class="outline-text-4" id="text-5-7-3">
+<ul class="org-ul">
+<li>“IT for Change at CSW 2025 Side Event – Gender Equality in the Platform Economy | IT for Change.” Accessed: Mar. 08, 2025. [Online]. Available: <a href="https://itforchange.net/node/2666">https://itforchange.net/node/2666</a></li>
+<li>“Pathways to Gender Equality in the Platform Economy: A Policy Agenda for Beijing+30 and Beyond | IT for Change.” Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://itforchange.net/pathways-to-gender-equality-platform-economy-a-policy-agenda-for-beijing30-and-beyond">https://itforchange.net/pathways-to-gender-equality-platform-economy-a-policy-agenda-for-beijing30-and-beyond</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org10f0029" class="outline-2">
+<h2 id="org10f0029"><span class="section-number-2">6.</span> Arts</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgcf4c3b4" class="outline-3">
+<h3 id="orgcf4c3b4"><span class="section-number-3">6.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org6406598" class="outline-2">
+<h2 id="org6406598"><span class="section-number-2">7.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org6d4b483" class="outline-3">
+<h3 id="org6d4b483"><span class="section-number-3">7.1.</span> Texts</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>E. Drage and K. McInerney, Eds., The Good Robot: Why Technology Needs Feminism, Paperback edition. London New York Oxford New Delhi Sydney: Bloomsbury Academic, 2024.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6d34d81" class="outline-3">
+<h3 id="org6d34d81"><span class="section-number-3">7.2.</span> Internet Resources</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>“Take Back The Tech | Take Back The Tech.” Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.takebackthetech.net/">https://www.takebackthetech.net/</a></li>
+<li>“Feminist Tech Exchange Platform (FTX).” Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://ftx.apc.org">https://ftx.apc.org</a></li>
+<li>“Where are we watching? | Global Information Society Watch.” Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.giswatch.org/">https://www.giswatch.org/</a></li>
+<li>“GenderIT | GenderIT.org.” Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.genderit.org/">https://www.genderit.org/</a></li>
+<li>“erotics – Sex, Rights and the Internet.” Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://erotics.apc.org/">https://erotics.apc.org/</a></li>
+<li>“Association for Progressive Communications.” Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.apc.org/en">https://www.apc.org/en</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf789c7c" class="outline-3">
+<h3 id="orgf789c7c"><span class="section-number-3">7.3.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-orgf541e86" class="outline-4">
+<h4 id="orgf541e86"><span class="section-number-4">7.3.1.</span> Journals</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<ul class="org-ul">
+<li>K. McInerney, “From Cyborg Irony to Oriental Fantasy: The Racial Limits of Cyborg Feminisms in Ex Machina and Ghost in the Shell,” Signs: Journal of Women in Culture and Society, vol. 50, no. 2, pp. 397–419, Jan. 2025, doi: 10.1086/733017.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org49576e3" class="outline-4">
+<h4 id="org49576e3"><span class="section-number-4">7.3.2.</span> The Conversation</h4>
+<div class="outline-text-4" id="text-7-3-2">
+<ul class="org-ul">
+<li>J. Cimpian, “Gender balance in computer science and engineering is improving at elite universities but getting worse elsewhere,” The Conversation. Accessed: Jan. 09, 2025. [Online]. Available: <a href="http://theconversation.com/gender-balance-in-computer-science-and-engineering-is-improving-at-elite-universities-but-getting-worse-elsewhere-244365">http://theconversation.com/gender-balance-in-computer-science-and-engineering-is-improving-at-elite-universities-but-getting-worse-elsewhere-244365</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0e44cb9" class="outline-2">
+<h2 id="org0e44cb9"><span class="section-number-2">8.</span> Misc</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>L. Gershon, “How Indonesia’s Feminists Use the Internet,” JSTOR Daily. Accessed: Jul. 01, 2026. [Online]. Available: <a href="https://daily.jstor.org/how-indonesias-feminists-use-the-internet/">https://daily.jstor.org/how-indonesias-feminists-use-the-internet/</a></li>
+
+<li>I. C. S. Team, “IEEE CS Juniors: Girls.comp Day,” IEEE Computer Society. Accessed: Feb. 21, 2026. [Online]. Available: <a href="https://www.computer.org/publications/tech-news/insider-membership-news/cs-juniors-girls-comp">https://www.computer.org/publications/tech-news/insider-membership-news/cs-juniors-girls-comp</a></li>
+
+<li>“Navigating Challenges, Opportunities, and Uncertainties as Women in Data Science | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Nov. 19, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/navigating-challenges-opportunities-and-uncertainties-as-women-in-data-science/">https://www.siam.org/publications/siam-news/articles/navigating-challenges-opportunities-and-uncertainties-as-women-in-data-science/</a></li>
+
+<li>H. Sunwal, “Feminist Joy In Online Spaces: Solidarity And Resistance Through Memes, Reels And DMs,” Feminism in India. Accessed: Oct. 03, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/10/03/feminist-joy-in-online-spaces-solidarity-and-resistance-through-memes-reels-and-dms/">https://feminisminindia.com/2025/10/03/feminist-joy-in-online-spaces-solidarity-and-resistance-through-memes-reels-and-dms/</a></li>
+
+<li>C. A. Johnson, “‘Whisper networks’ don’t work as well online as off − here’s why women are better able to look out for each other in person,” The Conversation. Accessed: Oct. 01, 2025. [Online]. Available: <a href="http://theconversation.com/whisper-networks-dont-work-as-well-online-as-off-heres-why-women-are-better-able-to-look-out-for-each-other-in-person-265182">http://theconversation.com/whisper-networks-dont-work-as-well-online-as-off-heres-why-women-are-better-able-to-look-out-for-each-other-in-person-265182</a></li>
+
+<li>“Turkey’s brain drain is taking its female coders with it,” Rest of World. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://restofworld.org/2025/turkeys-brain-drain-is-taking-its-female-coders-with-it/">https://restofworld.org/2025/turkeys-brain-drain-is-taking-its-female-coders-with-it/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

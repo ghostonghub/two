@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Bubble, Eco Crash, Misc</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">AI Bubble, Eco Crash, Misc</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3dcfbc0">1. General</a></li>
+<li><a href="#orge47eea9">2. Big Picture</a>
+<ul>
+<li><a href="#org018aadf">2.1. Post Modernism, Post Development, Misc</a></li>
+<li><a href="#orgd07ef60">2.2. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orgb799fb2">2.2.1. Complexity Science</a></li>
+<li><a href="#org8bd8c99">2.2.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6de44b4">3. STEMM</a>
+<ul>
+<li><a href="#orgb42cf1a">3.1. Biological Sciences, Misc</a></li>
+<li><a href="#org38f1e44">3.2. Basic Sciences, Misc</a>
+<ul>
+<li><a href="#org50bd545">3.2.1. Physics</a></li>
+</ul>
+</li>
+<li><a href="#org14e4879">3.3. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org06d3bae">3.3.1. Computer Science and Engineering</a></li>
+</ul>
+</li>
+<li><a href="#orgf588ed0">3.4. Advanced Sciences, Misc</a></li>
+<li><a href="#orgd538a27">3.5. Technology, Misc</a></li>
+<li><a href="#orgc1a6025">3.6. Special Topics</a></li>
+<li><a href="#org3717ef3">3.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org5a42228">4. Worldly Matters</a>
+<ul>
+<li><a href="#org2440034">4.1. Space and Time</a></li>
+<li><a href="#org6674d1e">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org0575804">4.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#orge2c9cda">4.4. Humanities, Misc</a></li>
+<li><a href="#org0169524">4.5. Economics, Misc</a>
+<ul>
+<li><a href="#org320fbbd">4.5.1. Institute for New Economic Thinking</a></li>
+<li><a href="#org4ff3048">4.5.2. Economic and Political Weekly</a></li>
+</ul>
+</li>
+<li><a href="#orge2794b1">4.6. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org1ef7dad">4.6.1. Politics</a></li>
+<li><a href="#orgd8d1828">4.6.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org40cb487">4.7. Business Studies, Misc</a></li>
+<li><a href="#orgd12dfbb">4.8. Security Studies, Misc</a></li>
+<li><a href="#org0dff4d1">4.9. Communication, Misc</a>
+<ul>
+<li><a href="#orge205bdc">4.9.1. Journalism</a></li>
+</ul>
+</li>
+<li><a href="#org4fe94ee">4.10. Special Topics</a>
+<ul>
+<li><a href="#orgadd6164">4.10.1. <b>AI Now</b></a></li>
+<li><a href="#orgfe4f48e">4.10.2. Project Syndicate</a></li>
+</ul>
+</li>
+<li><a href="#org28cc872">4.11. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org34d14d2">5. Arts</a>
+<ul>
+<li><a href="#orgff6c392">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd89b53f">6. Special Topics</a>
+<ul>
+<li><a href="#org1c069a6">6.1. AI QnA</a>
+<ul>
+<li><a href="#orgb89a359">6.1.1. Q</a></li>
+<li><a href="#org32a0061">6.1.2. A</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org958194e">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org3dcfbc0" class="outline-2">
+<h2 id="org3dcfbc0"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orge47eea9" class="outline-2">
+<h2 id="orge47eea9"><span class="section-number-2">2.</span> Big Picture</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org018aadf" class="outline-3">
+<h3 id="org018aadf"><span class="section-number-3">2.1.</span> Post Modernism, Post Development, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>R. Heinberg, “Why Artificial Intelligence Must Be Stopped Now by Richard Heinberg,” Local Futures. Accessed: Dec. 08, 2025. [Online]. Available: <a href="https://www.localfutures.org/why-artificial-intelligence-must-be-stopped-now/">https://www.localfutures.org/why-artificial-intelligence-must-be-stopped-now/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd07ef60" class="outline-3">
+<h3 id="orgd07ef60"><span class="section-number-3">2.2.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgb799fb2" class="outline-4">
+<h4 id="orgb799fb2"><span class="section-number-4">2.2.1.</span> Complexity Science</h4>
+</div>
+<div id="outline-container-org8bd8c99" class="outline-4">
+<h4 id="org8bd8c99"><span class="section-number-4">2.2.2.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org6de44b4" class="outline-2">
+<h2 id="org6de44b4"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb42cf1a" class="outline-3">
+<h3 id="orgb42cf1a"><span class="section-number-3">3.1.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-org38f1e44" class="outline-3">
+<h3 id="org38f1e44"><span class="section-number-3">3.2.</span> Basic Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org50bd545" class="outline-4">
+<h4 id="org50bd545"><span class="section-number-4">3.2.1.</span> Physics</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgb2cec06"></a>Bulletin of the Atomic Scientists<br />
+<div class="outline-text-5" id="text-orgb2cec06">
+<ul class="org-ul">
+<li>S. Goudarzi, “When it all comes crashing down: The aftermath of the AI boom,” Bulletin of the Atomic Scientists. Accessed: Dec. 05, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/12/when-it-all-comes-crashing-down-the-aftermath-of-the-ai-boom/">https://thebulletin.org/2025/12/when-it-all-comes-crashing-down-the-aftermath-of-the-ai-boom/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org14e4879" class="outline-3">
+<h3 id="org14e4879"><span class="section-number-3">3.3.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org06d3bae" class="outline-4">
+<h4 id="org06d3bae"><span class="section-number-4">3.3.1.</span> Computer Science and Engineering</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div>
+<ul class="org-ul">
+<li><a id="org88c8ed1"></a><b>Geoffrey Hinton</b><br />
+<div class="outline-text-5" id="text-org88c8ed1">
+<ul class="org-ul">
+<li>C. Criddle, “Computer scientist Geoffrey Hinton: ‘AI will make a few people much richer and most people poorer,’” Financial Times, Sep. 05, 2025.</li>
+</ul>
+</div>
+</li>
+<li><a id="org159b22c"></a><b>Cathy O'Neil</b><br />
+<div class="outline-text-5" id="text-org159b22c">
+<ul class="org-ul">
+<li>“The AI Bubble,” mathbabe. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://mathbabe.org/2025/04/16/the-ai-bubble/">https://mathbabe.org/2025/04/16/the-ai-bubble/</a></li>
+<li>“Silicon Valley drinks its own Kool aid on AI,” mathbabe. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://mathbabe.org/2025/04/21/silicon-valley-drinks-its-own-kool-aid-on-ai/">https://mathbabe.org/2025/04/21/silicon-valley-drinks-its-own-kool-aid-on-ai/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org031f94a"></a><b>Cory Doctorow</b><br />
+<div class="outline-text-5" id="text-org031f94a">
+<ul class="org-ul">
+<li>“Pluralistic: What kind of bubble is AI? (19 Dec 2023) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Dec. 20, 2023. [Online]. Available: <a href="https://pluralistic.net/2023/12/19/bubblenomics">https://pluralistic.net/2023/12/19/bubblenomics</a></li>
+<li>“Pluralistic: The real (economic) AI apocalypse is nigh (27 Sep 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 28, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/09/27/econopocalypse/">https://pluralistic.net/2025/09/27/econopocalypse/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf588ed0" class="outline-3">
+<h3 id="orgf588ed0"><span class="section-number-3">3.4.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgd538a27" class="outline-3">
+<h3 id="orgd538a27"><span class="section-number-3">3.5.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-orgc1a6025" class="outline-3">
+<h3 id="orgc1a6025"><span class="section-number-3">3.6.</span> Special Topics</h3>
+</div>
+<div id="outline-container-org3717ef3" class="outline-3">
+<h3 id="org3717ef3"><span class="section-number-3">3.7.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org5a42228" class="outline-2">
+<h2 id="org5a42228"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org2440034" class="outline-3">
+<h3 id="org2440034"><span class="section-number-3">4.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-org6674d1e" class="outline-3">
+<h3 id="org6674d1e"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org0575804" class="outline-3">
+<h3 id="org0575804"><span class="section-number-3">4.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-orge2c9cda" class="outline-3">
+<h3 id="orge2c9cda"><span class="section-number-3">4.4.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-org0169524" class="outline-3">
+<h3 id="org0169524"><span class="section-number-3">4.5.</span> Economics, Misc</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org320fbbd" class="outline-4">
+<h4 id="org320fbbd"><span class="section-number-4">4.5.1.</span> Institute for New Economic Thinking</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<ul class="org-ul">
+<li>S. Storm, “The AI Bubble and the U.S. Economy: How Long Do ‘Hallucinations’ Last?,” Institute for New Economic Thinking. Accessed: Oct. 03, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/the-ai-bubble-and-the-u-s-economy-how-long-do-hallucinations-last">https://www.ineteconomics.org/perspectives/blog/the-ai-bubble-and-the-u-s-economy-how-long-do-hallucinations-last</a></li>
+<li>L. Parramore, “Jim Chanos on Crypto, AI, and Casino Capitalism,” Institute for New Economic Thinking. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/jim-chanos-on-crypto-ai-and-casino-capitalism">https://www.ineteconomics.org/perspectives/blog/jim-chanos-on-crypto-ai-and-casino-capitalism</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4ff3048" class="outline-4">
+<h4 id="org4ff3048"><span class="section-number-4">4.5.2.</span> Economic and Political Weekly</h4>
+<div class="outline-text-4" id="text-4-5-2">
+</div>
+<ul class="org-ul">
+<li><a id="orgb6057d7"></a><b>C. P. Chandrasekhar</b><br />
+<div class="outline-text-5" id="text-orgb6057d7">
+<ul class="org-ul">
+<li>“Riding the AI Bubble | Economic and Political Weekly.” Accessed: Nov. 15, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/46/comment/riding-ai-bubble.html">https://www.epw.in/journal/2025/46/comment/riding-ai-bubble.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge2794b1" class="outline-3">
+<h3 id="orge2794b1"><span class="section-number-3">4.6.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-org1ef7dad" class="outline-4">
+<h4 id="org1ef7dad"><span class="section-number-4">4.6.1.</span> Politics</h4>
+<div class="outline-text-4" id="text-4-6-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgcccc268"></a>Jacobin<br />
+<div class="outline-text-5" id="text-orgcccc268">
+<ul class="org-ul">
+<li>BY, “If the AI Bubble Pops, It Won’t Be the End.” Accessed: Sep. 07, 2025. [Online]. Available: <a href="https://jacobin.com/2025/09/artificial-intelligence-bubble-meta-zuckerberg">https://jacobin.com/2025/09/artificial-intelligence-bubble-meta-zuckerberg</a></li>
+<li>BY, “The AI Revolution Might Be Running Out of Steam.” Accessed: Sep. 22, 2025. [Online]. Available: <a href="https://jacobin.com/2025/09/meta-zuckerberg-openai-altman-ai-bubble">https://jacobin.com/2025/09/meta-zuckerberg-openai-altman-ai-bubble</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org48d5d99"></a>World Socialist Web Site<br />
+<div class="outline-text-5" id="text-org48d5d99">
+<ul class="org-ul">
+<li>“Stock market bubble gets even bigger,” World Socialist Web Site. Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/01/06/wrfd-j06.html">https://www.wsws.org/en/articles/2025/01/06/wrfd-j06.html</a></li>
+<li>“Unprecedented ‘circular deals’ inflate AI bubble,” World Socialist Web Site. Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/10/10/dbeh-o10.html">https://www.wsws.org/en/articles/2025/10/10/dbeh-o10.html</a></li>
+<li>“Trump, China tariffs and the Wall Street bubble,” World Socialist Web Site. Accessed: Oct. 15, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/10/15/blrd-o15.html">https://www.wsws.org/en/articles/2025/10/15/blrd-o15.html</a></li>
+<li>“Debt now moving to centre of AI boom,” World Socialist Web Site. Accessed: Nov. 20, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/11/20/uvnd-n20.html">https://www.wsws.org/en/articles/2025/11/20/uvnd-n20.html</a></li>
+<li>“Markets and US economy increasingly dependent on AI boom,” World Socialist Web Site. Accessed: Nov. 26, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/11/25/lhfp-n25.html">https://www.wsws.org/en/articles/2025/11/25/lhfp-n25.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgd8d1828" class="outline-4">
+<h4 id="orgd8d1828"><span class="section-number-4">4.6.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org40cb487" class="outline-3">
+<h3 id="org40cb487"><span class="section-number-3">4.7.</span> Business Studies, Misc</h3>
+</div>
+<div id="outline-container-orgd12dfbb" class="outline-3">
+<h3 id="orgd12dfbb"><span class="section-number-3">4.8.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org0dff4d1" class="outline-3">
+<h3 id="org0dff4d1"><span class="section-number-3">4.9.</span> Communication, Misc</h3>
+<div class="outline-text-3" id="text-4-9">
+</div>
+<div id="outline-container-orge205bdc" class="outline-4">
+<h4 id="orge205bdc"><span class="section-number-4">4.9.1.</span> Journalism</h4>
+<div class="outline-text-4" id="text-4-9-1">
+</div>
+<ul class="org-ul">
+<li><a id="org302819e"></a>GIJN<br />
+<div class="outline-text-5" id="text-org302819e">
+<ul class="org-ul">
+<li>“X’s Right-Wing Bias in UK, Tigray’s Illicit Gold Rush, Financial Risks of AI Bubble, and What People Ask ChatGPT.” Accessed: Nov. 22, 2025. [Online]. Available: <a href="https://gijn.org/stories/politically-biased-algorithms-tigrays-gold-rush/">https://gijn.org/stories/politically-biased-algorithms-tigrays-gold-rush/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgeed1a94"></a>NewsClick<br />
+<ul class="org-ul">
+<li><a id="org33aa9f5"></a><b>Prabhat Patnaik</b><br />
+<div class="outline-text-6" id="text-org33aa9f5">
+<ul class="org-ul">
+<li>“Multiplier Effects of ‘Bubbles’ Under Neo-Liberal Capitalism,” NewsClick. Accessed: Oct. 29, 2025. [Online]. Available: <a href="https://www.newsclick.in/multiplier-effects-bubbles-under-neo-liberal-capitalism">https://www.newsclick.in/multiplier-effects-bubbles-under-neo-liberal-capitalism</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4fe94ee" class="outline-3">
+<h3 id="org4fe94ee"><span class="section-number-3">4.10.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-4-10">
+</div>
+<div id="outline-container-orgadd6164" class="outline-4">
+<h4 id="orgadd6164"><span class="section-number-4">4.10.1.</span> <b>AI Now</b></h4>
+<div class="outline-text-4" id="text-4-10-1">
+<ul class="org-ul">
+<li>S. M. W. and A. Kak, “Opinion | You May Already Be Bailing Out the AI Business,” Wall Street Journal, Nov. 12, 2025. Accessed: Nov. 16, 2025. [Online]. Available: <a href="https://www.wsj.com/opinion/you-may-already-be-bailing-out-the-ai-business-dd67d452">https://www.wsj.com/opinion/you-may-already-be-bailing-out-the-ai-business-dd67d452</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe4f48e" class="outline-4">
+<h4 id="orgfe4f48e"><span class="section-number-4">4.10.2.</span> Project Syndicate</h4>
+<div class="outline-text-4" id="text-4-10-2">
+<ul class="org-ul">
+<li>“Will 2026 Bring Financial Crisis?,” Project Syndicate. Accessed: Nov. 28, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/onpoint/will-2026-bring-financial-crisis">https://www.project-syndicate.org/onpoint/will-2026-bring-financial-crisis</a></li>
+<li>D. Moyo, “Are We in a Financial Bubble?,” Project Syndicate. Accessed: Oct. 21, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/ai-bubble-market-signals-to-watch-by-dambisa-moyo-2025-10">https://www.project-syndicate.org/commentary/ai-bubble-market-signals-to-watch-by-dambisa-moyo-2025-10</a></li>
+<li>W. H. Janeway, “What Will Remain After the AI and Crypto Bubbles?,” Project Syndicate. Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/onpoint/ai-crypto-bubbles-american-innovation-ecosystem-breaking-down-by-william-h-janeway-2025-08">https://www.project-syndicate.org/onpoint/ai-crypto-bubbles-american-innovation-ecosystem-breaking-down-by-william-h-janeway-2025-08</a></li>
+<li>H. J. Allen, “Will the AI Bubble Trigger a Financial Crisis?,” Project Syndicate. Accessed: Oct. 17, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/ai-bubble-will-it-cause-a-financial-crisis-by-hilary-j-allen-2025-10">https://www.project-syndicate.org/commentary/ai-bubble-will-it-cause-a-financial-crisis-by-hilary-j-allen-2025-10</a></li>
+<li>C. B. Frey, “The AI Bubble’s Shaky Math,” Project Syndicate. Accessed: Nov. 21, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/ai-bubble-returns-and-benefits-uncertain-as-systemic-risk-grows-by-carl-benedikt-frey-2025-11">https://www.project-syndicate.org/commentary/ai-bubble-returns-and-benefits-uncertain-as-systemic-risk-grows-by-carl-benedikt-frey-2025-11</a></li>
+<li>“Will the AI Boom Continue?,” Project Syndicate. Accessed: Nov. 22, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/onpoint/will-the-ai-boom-continue">https://www.project-syndicate.org/onpoint/will-the-ai-boom-continue</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org28cc872" class="outline-3">
+<h3 id="org28cc872"><span class="section-number-3">4.11.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-11">
+<ul class="org-ul">
+<li>S. Storm, “The U.S. Is Betting the Economy on ‘Scaling’ AI: Where Is the Intelligence When One Needs It?,” Institute for New Economic Thinking. Accessed: Dec. 15, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/research/research-papers/the-u-s-is-betting-the-economy-on-scaling-ai-where-is-the-intelligence-when-one-needs-it">https://www.ineteconomics.org/research/research-papers/the-u-s-is-betting-the-economy-on-scaling-ai-where-is-the-intelligence-when-one-needs-it</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>O. M. Amble Marc Andrusko, Seema, “The AI Application Spending Report: Where Startup Dollars Really Go,” Andreessen Horowitz. Accessed: Oct. 03, 2025. [Online]. Available: <a href="https://a16z.com/the-ai-application-spending-report-where-startup-dollars-really-go/">https://a16z.com/the-ai-application-spending-report-where-startup-dollars-really-go/</a></li>
+<li>S. Blum, “Did Sam Altman Accidentally Admit That the AI Bubble Is Here?,” Inc. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://www.inc.com/sam-blum/sam-altman-open-ai-bubble-is-here/91226419">https://www.inc.com/sam-blum/sam-altman-open-ai-bubble-is-here/91226419</a></li>
+<li>C. B. Frey, “Opinion | The 1970s Gave Us Industrial Decline. A.I. Could Bring Something Worse.,” The New York Times, Aug. 19, 2025. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.nytimes.com/2025/08/19/opinion/ai-job-loss-deindustrialization.html">https://www.nytimes.com/2025/08/19/opinion/ai-job-loss-deindustrialization.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org34d14d2" class="outline-2">
+<h2 id="org34d14d2"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgff6c392" class="outline-3">
+<h3 id="orgff6c392"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgd89b53f" class="outline-2">
+<h2 id="orgd89b53f"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org1c069a6" class="outline-3">
+<h3 id="org1c069a6"><span class="section-number-3">6.1.</span> AI QnA</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgb89a359" class="outline-4">
+<h4 id="orgb89a359"><span class="section-number-4">6.1.1.</span> Q</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>How likely is the economy expected to crash due to the AI bubble ? How big will it
+be. When will it happen. What are potential investment avenues to
+exploit the crisis for large rapid financial gains if it happens.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org32a0061" class="outline-4">
+<h4 id="org32a0061"><span class="section-number-4">6.1.2.</span> A</h4>
+<div class="outline-text-4" id="text-6-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="orgcbfd164"></a>Google Gemini<br />
+<div class="outline-text-5" id="text-orgcbfd164">
+<ul class="org-ul">
+<li>“AI Bubble Crash Investment Strategies,” Google Docs. Accessed: Nov. 28, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/13E4JcXZhTVVNyp51iB8xcFLRTK9oUpbut4altROnkLA/edit?usp=drivesdk&amp;usp=embed_facebook">https://docs.google.com/document/d/13E4JcXZhTVVNyp51iB8xcFLRTK9oUpbut4altROnkLA/edit?usp=drivesdk&amp;usp=embed_facebook</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0ad3d65"></a>X (formerly Twitter)'s AI - Grok<br />
+<div class="outline-text-5" id="text-org0ad3d65">
+<ul class="org-ul">
+<li>“AI Bubble: Crash Likelihood and Investments | Shared Grok Conversation.” Accessed: Nov. 28, 2025. [Online]. Available: <a href="https://grok.com/share/c2hhcmQtMg_b733c809-d4a2-406a-bf80-aae68dbf4d44">https://grok.com/share/c2hhcmQtMg_b733c809-d4a2-406a-bf80-aae68dbf4d44</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org958194e" class="outline-2">
+<h2 id="org958194e"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

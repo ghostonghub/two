@@ -1,0 +1,1814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Transport</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Transport</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgaeb72a0">1. General</a></li>
+<li><a href="#org4a0e587">2. STEMM</a>
+<ul>
+<li><a href="#org6bab7ba">2.1. Systems Sciences</a>
+<ul>
+<li><a href="#org3915505">2.1.1. Complexity Science</a></li>
+<li><a href="#orgebdee23">2.1.2. IIASA</a></li>
+<li><a href="#org261bd79">2.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb428d60">2.2. Environment</a>
+<ul>
+<li><a href="#org35db1be">2.2.1. Orgs</a></li>
+<li><a href="#org722c5bc">2.2.2. GreenPeace International</a></li>
+<li><a href="#orga8f9acb">2.2.3. Mongabay</a></li>
+<li><a href="#orga9b128d">2.2.4. Physics</a></li>
+<li><a href="#orgae8c0af">2.2.5. Down To Earth</a></li>
+<li><a href="#orga96ca7b">2.2.6. The New Lede</a></li>
+<li><a href="#org3de829a">2.2.7. Special Topics</a></li>
+<li><a href="#org666fa13">2.2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org75150d0">2.3. CSE</a>
+<ul>
+<li><a href="#orga628e53">2.3.1. General</a></li>
+<li><a href="#org3110b66">2.3.2. STEMM</a></li>
+<li><a href="#org9172a55">2.3.3. Worldly Matters</a></li>
+<li><a href="#org27a03c1">2.3.4. Special Topics</a></li>
+<li><a href="#org4ef04f7">2.3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfdc3a91">2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb028acd">3. Worldly Matters</a>
+<ul>
+<li><a href="#org2486184">3.1. Space and Time</a></li>
+<li><a href="#orgae5359e">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#orge89be8e">3.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org538f4f2">3.4. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#orgbd13716">3.4.1. Orgs</a></li>
+<li><a href="#org08b3571">3.4.2. Feminism</a></li>
+<li><a href="#org106edfc">3.4.3. Nation States</a></li>
+</ul>
+</li>
+<li><a href="#orge1cc54c">3.5. Business Studies, Misc</a></li>
+<li><a href="#orga397ff7">3.6. Humanities, Misc</a></li>
+<li><a href="#org8de4a7f">3.7. Security Studies, Misc</a></li>
+<li><a href="#orgbf56e14">3.8. Communication, Misc</a></li>
+<li><a href="#orga579fb7">3.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfd57765">4. Core</a>
+<ul>
+<li><a href="#orge8a476c">4.1. Education</a></li>
+<li><a href="#org69b65a3">4.2. Electric Vehicles</a></li>
+<li><a href="#org8a9ccc3">4.3. Modes</a>
+<ul>
+<li><a href="#orga2c6da1">4.3.1. Cycles</a></li>
+<li><a href="#orgc4bf727">4.3.2. Cars</a></li>
+<li><a href="#orge34233f">4.3.3. Buses</a></li>
+<li><a href="#org6ed0989">4.3.4. Trains</a></li>
+<li><a href="#orgfe92600">4.3.5. Ships</a></li>
+<li><a href="#org2648be8">4.3.6. Planes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org57daee8">5. Arts</a>
+<ul>
+<li><a href="#org50bc9f0">5.1. Music</a>
+<ul>
+<li><a href="#org8f397f1">5.1.1. Cycle</a></li>
+<li><a href="#org3d0d6cc">5.1.2. Bike</a></li>
+<li><a href="#orgd58ffdd">5.1.3. Car Songs</a></li>
+<li><a href="#orgb56db33">5.1.4. Bus</a></li>
+<li><a href="#org311fd6b">5.1.5. Shikara</a></li>
+<li><a href="#org2f3c82f">5.1.6. Ship</a></li>
+<li><a href="#org11a5af0">5.1.7. Airplane</a></li>
+<li><a href="#org332bd95">5.1.8. Train</a></li>
+<li><a href="#orgbd0d685">5.1.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgde1b0a2">5.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf4e3e9c">6. Special Topics</a></li>
+<li><a href="#orgcea897c">7. Misc</a>
+<ul>
+<li><a href="#org0282146">7.1. Misc</a></li>
+<li><a href="#org246ee09">7.2. Transnational Institute</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgaeb72a0" class="outline-2">
+<h2 id="orgaeb72a0"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org4a0e587" class="outline-2">
+<h2 id="org4a0e587"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org6bab7ba" class="outline-3">
+<h3 id="org6bab7ba"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org3915505" class="outline-4">
+<h4 id="org3915505"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org875b3f8"></a>Complexity Science Hub Vienna<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<ul class="org-ul">
+<li>“A maximum entropy approach for the modelling of car-sharing parking dynamics,” CSH. Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://www.csh.ac.at/publication/a-maximum-entropy-approach-for-the-modelling-of-car-sharing-parking-dynamics/">https://www.csh.ac.at/publication/a-maximum-entropy-approach-for-the-modelling-of-car-sharing-parking-dynamics/</a></li>
+<li>“Cities Moving,” Cities Moving. Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://vis.csh.ac.at/citiesmoving/">https://vis.csh.ac.at/citiesmoving/</a></li>
+
+<li>“Complexity Science Hub * News * Urban Highways Cut Opportunities For Social Relationships, Says Study.” Accessed: Mar. 07, 2025. [Online]. Available: <a href="https://csh.ac.at/news/urban-highways-cut-opportunities-for-social-relationships-says-study/">https://csh.ac.at/news/urban-highways-cut-opportunities-for-social-relationships-says-study/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfcbd27d"></a>Misc<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<ul class="org-ul">
+<li>“The machine learning model that can predict a city’s traffic,” Engineers Ireland. Accessed: Dec. 13, 2023. [Online]. Available: <a href="https://www.engineersireland.ie/Engineers-Journal/News/the-machine-learning-model-that-can-predict-a-citys-traffic">https://www.engineersireland.ie/Engineers-Journal/News/the-machine-learning-model-that-can-predict-a-citys-traffic</a></li>
+
+<li>cxdig, “Trends in urban flows: A transfer entropy approach,” Complexity Digest. Accessed: Jan. 18, 2025. [Online]. Available: <a href="https://comdig.unam.mx/2025/01/17/trends-in-urban-flows-a-transfer-entropy-approach/">https://comdig.unam.mx/2025/01/17/trends-in-urban-flows-a-transfer-entropy-approach/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>cxdig, “Urban highways are barriers to social ties,” Complexity Digest. Accessed: Mar. 08, 2025. [Online]. Available: <a href="https://comdig.unam.mx/2025/03/07/urban-highways-are-barriers-to-social-ties/">https://comdig.unam.mx/2025/03/07/urban-highways-are-barriers-to-social-ties/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgebdee23" class="outline-4">
+<h4 id="orgebdee23"><span class="section-number-4">2.1.2.</span> IIASA</h4>
+</div>
+<div id="outline-container-org261bd79" class="outline-4">
+<h4 id="org261bd79"><span class="section-number-4">2.1.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>cxdig, “Human mobility in the metaverse mirrors patterns in the physical world,” Complexity Digest. Accessed: Apr. 08, 2026. [Online]. Available: <a href="https://comdig.cssociety.org/2026/04/07/human-mobility-in-the-metaverse-mirrors-patterns-in-the-physical-world/">https://comdig.cssociety.org/2026/04/07/human-mobility-in-the-metaverse-mirrors-patterns-in-the-physical-world/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Metros Cut Car Use In European Cities – Trams Fall Short.” Accessed: Nov. 11, 2025. [Online]. Available: <a href="https://csh.ac.at/news/metros-cut-car-use-in-european-cities-trams-fall-short/">https://csh.ac.at/news/metros-cut-car-use-in-european-cities-trams-fall-short/</a></li>
+
+<li>cxdig, “Spatial econometrics to estimate traffic reduction by transforming office space into housing and other land uses: The case for Barcelona,” Complexity Digest. Accessed: Apr. 08, 2025. [Online]. Available: <a href="https://comdig.unam.mx/2025/04/07/spatial-econometrics-to-estimate-traffic-reduction-by-transforming-office-space-into-housing-and-other-land-uses-the-case-for-barcelona/">https://comdig.unam.mx/2025/04/07/spatial-econometrics-to-estimate-traffic-reduction-by-transforming-office-space-into-housing-and-other-land-uses-the-case-for-barcelona/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb428d60" class="outline-3">
+<h3 id="orgb428d60"><span class="section-number-3">2.2.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org35db1be" class="outline-4">
+<h4 id="org35db1be"><span class="section-number-4">2.2.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Home,” Tyre Extinguishers. Accessed: Aug. 19, 2024. [Online]. Available: <a href="https://tyreextinguishers.com/">https://tyreextinguishers.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org722c5bc" class="outline-4">
+<h4 id="org722c5bc"><span class="section-number-4">2.2.2.</span> GreenPeace International</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>“Our top 6 ingredients for greener and fairer transport systems,” Greenpeace International. Accessed: May 01, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/65980/our-top-6-ingredients-for-greener-and-fairer-transport-systems/">https://www.greenpeace.org/international/story/65980/our-top-6-ingredients-for-greener-and-fairer-transport-systems/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga8f9acb" class="outline-4">
+<h4 id="orga8f9acb"><span class="section-number-4">2.2.3.</span> Mongabay</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<ul class="org-ul">
+<li>“Rolling towards circularity? Tracking the trace of tires,” Mongabay Environmental News. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/video/2024/01/environmental-impact-of-tires/">https://news.mongabay.com/video/2024/01/environmental-impact-of-tires/</a></li>
+<li>S. Mowbray, “Rolling car tires into the global circular economy,” Mongabay Environmental News. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/2023/08/rolling-car-tires-into-the-global-circular-economy/">https://news.mongabay.com/2023/08/rolling-car-tires-into-the-global-circular-economy/</a></li>
+<li>R. Castagnino, “Andrea Vidaurre: Leading the clean transportation revolution,” Mongabay Environmental News. Accessed: Aug. 03, 2024. [Online]. Available: <a href="https://news.mongabay.com/video/2024/08/andrea-vidaurre-leading-the-clean-transportation-revolution/">https://news.mongabay.com/video/2024/08/andrea-vidaurre-leading-the-clean-transportation-revolution/</a></li>
+
+<li>“The road to road resilience is paved with mindful construction and design say experts.” Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/08/the-road-to-road-resilience-is-paved-with-mindful-construction-and-design-say-experts/">https://india.mongabay.com/2024/08/the-road-to-road-resilience-is-paved-with-mindful-construction-and-design-say-experts/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga9b128d" class="outline-4">
+<h4 id="orga9b128d"><span class="section-number-4">2.2.4.</span> Physics</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<ul class="org-ul">
+<li>J. McKenzie, “Green challenge: can the shipping industry clean up its act?,” Physics World. Accessed: Jul. 10, 2024. [Online]. Available: <a href="https://physicsworld.com/green-challenge-can-the-shipping-industry-clean-up-its-act/">https://physicsworld.com/green-challenge-can-the-shipping-industry-clean-up-its-act/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae8c0af" class="outline-4">
+<h4 id="orgae8c0af"><span class="section-number-4">2.2.5.</span> Down To Earth</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<ul class="org-ul">
+<li>R. J. Saxena Priyanshi, “Sustainable aviation fuels are crucial for global Net Zero,” Down To Earth. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/sustainable-aviation-fuels-are-crucial-for-global-net-zero">https://www.downtoearth.org.in/climate-change/sustainable-aviation-fuels-are-crucial-for-global-net-zero</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga96ca7b" class="outline-4">
+<h4 id="orga96ca7b"><span class="section-number-4">2.2.6.</span> The New Lede</h4>
+<div class="outline-text-4" id="text-2-2-6">
+<ul class="org-ul">
+<li>C. Gillam, “Deadline looms for California airports to stop using PFAS firefighting foams,” The New Lede. Accessed: Aug. 10, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/08/__trashed/">https://www.thenewlede.org/2024/08/__trashed/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3de829a" class="outline-4">
+<h4 id="org3de829a"><span class="section-number-4">2.2.7.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-2-2-7">
+</div>
+<ol class="org-ol">
+<li><a id="orgf4d74db"></a>Green Vehicle<br />
+<div class="outline-text-5" id="text-2-2-7-1">
+<ul class="org-ul">
+<li><i>“Green vehicle,”</i> Wikipedia. Jun. 01, 2021. Accessed: Jun. 30, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Green_vehicle&amp;oldid=1026348714">https://en.wikipedia.org/w/index.php?title=Green_vehicle&amp;oldid=1026348714</a></li>
+
+<li>O. US EPA, <i>“Green Vehicle Guide,”</i> US EPA, Jul. 22, 2015. <a href="https://www.epa.gov/greenvehicles">https://www.epa.gov/greenvehicles</a> (accessed Jun. 30, 2021).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org666fa13" class="outline-4">
+<h4 id="org666fa13"><span class="section-number-4">2.2.8.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-2-8">
+<ul class="org-ul">
+<li>K. Pandey, “The long road to regulating earth use for highways and railways,” Mongabay-India. Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/07/the-long-road-to-regulating-earth-use-for-highways-and-railways/">https://india.mongabay.com/2025/07/the-long-road-to-regulating-earth-use-for-highways-and-railways/</a></li>
+
+<li>N. N. December 2024, “How tyres are turning green,” Chemistry World. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/features/how-tyres-are-turning-green/4020618.article">https://www.chemistryworld.com/features/how-tyres-are-turning-green/4020618.article</a></li>
+
+<li>Unmasking the environmental road of tires, (Jan. 10, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=zDccR4sCyqI">https://www.youtube.com/watch?v=zDccR4sCyqI</a></li>
+
+<li>V. Gewin, “Tire Microplastics, and Their Chemicals, Might Be In Your Food,” Civil Eats. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://civileats.com/2024/07/16/tracking-tire-plastics-and-chemicals-from-road-to-plate/">https://civileats.com/2024/07/16/tracking-tire-plastics-and-chemicals-from-road-to-plate/</a></li>
+
+<li>J. Williams, “The huge impact of private jets,” The Earthbound Report, Jul. 06, 2022. <a href="https://earthbound.report/2022/07/06/the-huge-impact-of-private-jets/">https://earthbound.report/2022/07/06/the-huge-impact-of-private-jets/</a> (accessed Jul. 23, 2022).</li>
+
+<li>“3 Reasons why flights are far cheaper than trains and why that has to change,” Greenpeace International. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/78154/3-reasons-why-flights-are-far-cheaper-than-trains-and-why-that-has-to-change/">https://www.greenpeace.org/international/story/78154/3-reasons-why-flights-are-far-cheaper-than-trains-and-why-that-has-to-change/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Increase in electric vehicles could create unwanted pollution hotspots,” IIASA - International Institute for Applied Systems Analysis. Accessed: Dec. 22, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/dec-2024/increase-in-electric-vehicles-could-create-unwanted-pollution-hotspots">https://iiasa.ac.at/news/dec-2024/increase-in-electric-vehicles-could-create-unwanted-pollution-hotspots</a></li>
+
+<li>“Nearly Half of US Breathes Unhealthy Levels of Pollution—Cars and Trucks Largely to Blame,” The Equation. Accessed: May 22, 2025. [Online]. Available: <a href="https://blog.ucs.org/cecilia-moura/nearly-half-of-us-breathes-unhealthy-levels-of-pollution-cars-and-trucks-largely-to-blame/">https://blog.ucs.org/cecilia-moura/nearly-half-of-us-breathes-unhealthy-levels-of-pollution-cars-and-trucks-largely-to-blame/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Our beef with major shipping firms.” Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jan/10/our-beef-major-shipping-firms">https://theecologist.org/2025/jan/10/our-beef-major-shipping-firms</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org75150d0" class="outline-3">
+<h3 id="org75150d0"><span class="section-number-3">2.3.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orga628e53" class="outline-4">
+<h4 id="orga628e53"><span class="section-number-4">2.3.1.</span> General</h4>
+</div>
+<div id="outline-container-org3110b66" class="outline-4">
+<h4 id="org3110b66"><span class="section-number-4">2.3.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgf4f9ced"></a>AI<br />
+<div class="outline-text-5" id="text-2-3-2-1">
+<ul class="org-ul">
+<li>H. Dia, Ed., Handbook on Artificial Intelligence and Transport. Cheltenham, UK ; Northampton, MA, USA: Edward Elgar Publishing Ltd, 2023.</li>
+
+<li>B. Schneier, “AI vs. Human Drivers,” Schneier on Security. Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/12/ai-vs-human-drivers.html">https://www.schneier.com/blog/archives/2025/12/ai-vs-human-drivers.html</a></li>
+
+<li>A. Diwakar, “Dubai’s robotaxi dreams are coming for human drivers,” Rest of World. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://restofworld.org/2025/uae-robotaxi-cab-driver/">https://restofworld.org/2025/uae-robotaxi-cab-driver/</a></li>
+
+<li>Y.-L. Liu, “China’s vision for a driverless future is miles ahead of everyone else’s,” Rest of World. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://restofworld.org/2025/china-ai-powered-self-driving-cars/">https://restofworld.org/2025/china-ai-powered-self-driving-cars/</a></li>
+
+<li>K. Lo, “Silicon Valley led the quest for driverless cars. But Chinese robotaxis are catching up fast,” Rest of World. Accessed: Jun. 10, 2025. [Online]. Available: <a href="https://restofworld.org/2025/robotaxi-waymo-apollo-go/">https://restofworld.org/2025/robotaxi-waymo-apollo-go/</a></li>
+
+<li>R. Gupta and N. L. Bayen Kathy Jang, Eugene Vinitsky, Adit Shah, Jonathan W. Lee, Alexandre M., “Scaling Up Reinforcement Learning for Traffic Smoothing: A 100-AV Highway Deployment,” The Berkeley Artificial Intelligence Research Blog. Accessed: Mar. 25, 2025. [Online]. Available: <a href="http://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/">http://bair.berkeley.edu/blog/2025/03/25/rl-av-smoothing/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9172a55" class="outline-4">
+<h4 id="org9172a55"><span class="section-number-4">2.3.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-2-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgc359002"></a>Politics: Left<br />
+<ol class="org-ol">
+<li><a id="org5f9c389"></a>RLS<br />
+<div class="outline-text-6" id="text-2-3-3-1-1">
+<ul class="org-ul">
+<li>“An introduction to the world of platform-based taxi work - RLS Southasia.” Accessed: Mar. 15, 2024. [Online]. Available: <a href="https://www.rosalux.in/details-resources/1168.html">https://www.rosalux.in/details-resources/1168.html</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgb7efac9"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="org3dd6edb"></a>India<br />
+<div class="outline-text-6" id="text-2-3-3-2-1">
+<ul class="org-ul">
+<li>“Saheli Cards and Surveillance in Public Welfare,” The India Forum. Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://www.theindiaforum.in/forum/saheli-cards-and-surveillance-public-welfare">https://www.theindiaforum.in/forum/saheli-cards-and-surveillance-public-welfare</a></li>
+
+<li>“Data Highways, Rights Roadblocks: An explainer on the National Transport Repository,” Internet Freedom Foundation. Accessed: Sep. 01, 2025. [Online]. Available: <a href="https://internetfreedom.in/data-highways-rights-roadblocks-an-explainer-on-the-national-transport-repository/">https://internetfreedom.in/data-highways-rights-roadblocks-an-explainer-on-the-national-transport-repository/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. K. Das, “MapmyIndia and DMRC Partner for Real-Time Metro Info,” MEDIANAMA. Accessed: Nov. 02, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/11/223-dmrc-mapmyindia-mou-real-time-updates/">https://www.medianama.com/2025/11/223-dmrc-mapmyindia-mou-real-time-updates/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org27a03c1" class="outline-4">
+<h4 id="org27a03c1"><span class="section-number-4">2.3.4.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-2-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org4360f50"></a>Fair Tech<br />
+<div class="outline-text-5" id="text-2-3-4-1">
+<ul class="org-ul">
+<li>C. Sanchez, “Car Makers Shouldn’t Be Selling Our Driving History to Data Brokers and Insurance Companies,” Electronic Frontier Foundation. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/06/car-makers-shouldnt-be-selling-our-driving-history-data-brokers-and-insurance">https://www.eff.org/deeplinks/2024/06/car-makers-shouldnt-be-selling-our-driving-history-data-brokers-and-insurance</a></li>
+<li>T. Klosowski, “Should I Use My State’s Digital Driver’s License?,” Electronic Frontier Foundation. Accessed: Oct. 12, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/10/should-i-use-my-states-digital-drivers-license">https://www.eff.org/deeplinks/2024/10/should-i-use-my-states-digital-drivers-license</a></li>
+
+<li>“Pluralistic: Cleantech has an enshittification problem (26 Jun 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/06/26/unplanned-obsolescence/">https://pluralistic.net/2024/06/26/unplanned-obsolescence/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4a50033"></a>Everyday Computing<br />
+<ol class="org-ol">
+<li><a id="orga29e211"></a>Public<br />
+<ul class="org-ul">
+<li><a id="org68c3308"></a>Planes<br />
+<ul class="org-ul">
+<li><a id="orgc5174c9"></a>General<br /></li>
+<li><a id="org2c56a37"></a>GoI Official<br />
+<ul class="org-ul">
+<li><a id="orge4c580b"></a>DigiYatra<br />
+<ul class="org-ul">
+<li><a id="orge3a4e9b"></a>General<br />
+<div class="outline-text-10" id="text-orge3a4e9b">
+<ul class="org-ul">
+<li>“DigiYatra,” Wikipedia. Feb. 11, 2024. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=DigiYatra&amp;oldid=1206314470">https://en.wikipedia.org/w/index.php?title=DigiYatra&amp;oldid=1206314470</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3355001"></a>GoI Official<br />
+<div class="outline-text-10" id="text-org3355001">
+<ul class="org-ul">
+<li>“Digi Yatra- A New Digital Experience for Air Travellers| National Portal of India.” Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.india.gov.in/spotlight/digi-yatra-new-digital-experience-air-travellers">https://www.india.gov.in/spotlight/digi-yatra-new-digital-experience-air-travellers</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org90badd8"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orge141d6b"></a>Critical Studies<br />
+<div class="outline-text-11" id="text-orge141d6b">
+<ul class="org-ul">
+<li>“Resist Surveillance Tech, Reject Digi Yatra,” Internet Freedom Foundation. Accessed: Mar. 10, 2024. [Online]. Available: <a href="https://internetfreedom.in/reject-digiyatra/">https://internetfreedom.in/reject-digiyatra/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge65e28d"></a>Misc<br />
+<div class="outline-text-10" id="text-orge65e28d">
+<ul class="org-ul">
+<li>J. Chandra, “Digi Yatra could be expanded to hotels, rail travel and public places: CEO,” The Hindu, Jun. 18, 2024. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/digi-yatra-could-be-expanded-to-hotels-rail-travel-and-public-places-ceo/article68300903.ece">https://www.thehindu.com/news/national/digi-yatra-could-be-expanded-to-hotels-rail-travel-and-public-places-ceo/article68300903.ece</a></li>
+
+<li>S. NT, “No central storage of passenger data under Digi Yatra: India’s Civil Aviation Ministry,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2023/03/223-digi-yatra-civil-aviation-ministry-data-storage-rti/">https://www.medianama.com/2023/03/223-digi-yatra-civil-aviation-ministry-data-storage-rti/</a></li>
+<li>S. NT, “Digi Yatra does not come under RTI: India’s Civil Aviation Ministry,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2023/03/223-civil-aviation-ministry-digi-yatra-right-to-information/">https://www.medianama.com/2023/03/223-civil-aviation-ministry-digi-yatra-right-to-information/</a></li>
+<li>A. Ganesan, “NITI Aayog on Digi Yatra and Responsble AI: Key takeaways,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2022/11/223-niti-aayog-digi-yatra-report-facial-recognition/">https://www.medianama.com/2022/11/223-niti-aayog-digi-yatra-report-facial-recognition/</a></li>
+<li>Medianama, “MediaNama Daily: Aviation Ministry’s Digi Yatra is experiencing some turbulence,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2023/03/223-medianama-daily-digi-yatra/">https://www.medianama.com/2023/03/223-medianama-daily-digi-yatra/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Chandra, “Watch | What is DigiYatra, and why were people complaining about it in airports?,” The Hindu, Jan. 19, 2024. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/watch-what-is-digiyatra-and-why-were-complaining-about-it-in-airports/article67755970.ece">https://www.thehindu.com/news/national/watch-what-is-digiyatra-and-why-were-complaining-about-it-in-airports/article67755970.ece</a></li>
+<li>J. Chandra, “Centre’s Digi Yatra enrolment takes off as airport security staff sign up flyers without their consent,” The Hindu, Jan. 05, 2024. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/passengers-say-cisf-and-airport-staff-are-collecting-biometric-data-without-consent/article67710134.ece">https://www.thehindu.com/news/national/passengers-say-cisf-and-airport-staff-are-collecting-biometric-data-without-consent/article67710134.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“DigiYatra: The Promise and Perils of India’s New Airport Biometric System,” The Wire. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://thewire.in/tech/digiyatra-the-promise-and-perils-of-indias-new-airport-biometric-system">https://thewire.in/tech/digiyatra-the-promise-and-perils-of-indias-new-airport-biometric-system</a></li>
+
+<li>“DigiYatra: who owns your data?,” Internet Freedom Foundation (IFF). Accessed: Nov. 19, 2025. [Online]. Available: <a href="https://internetfreedom.in/digiyatra-who-owns-your-data/">https://internetfreedom.in/digiyatra-who-owns-your-data/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgc7b1a62"></a>Tools<br />
+<div class="outline-text-8" id="text-orgc7b1a62">
+<ul class="org-ul">
+<li>“‎Goibibo: Hotel, Flight Booking,” App Store, Jul. 09, 2023. <a href="https://apps.apple.com/us/app/goibibo-hotel-flight-booking/id631927169">https://apps.apple.com/us/app/goibibo-hotel-flight-booking/id631927169</a> (accessed Jul. 20, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‎MakeMyTrip Flight, Hotel, Bus,” App Store, Jun. 26, 2023. <a href="https://apps.apple.com/us/app/makemytrip-flight-hotel-bus/id530488359">https://apps.apple.com/us/app/makemytrip-flight-hotel-bus/id530488359</a> (accessed Jul. 20, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org2f5f7a3"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgf31c06c"></a>Ships<br /></li>
+<li><a id="org4ebe548"></a>Trains<br />
+<div class="outline-text-7" id="text-org4ebe548">
+<ul class="org-ul">
+<li>V. Sanzgiri, “Mass Surveillance? Railway coaches to get face-detection cameras,” MediaNama. Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/02/223-indian-railway-coaches-cameras/">https://www.medianama.com/2024/02/223-indian-railway-coaches-cameras/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org63c9e42"></a>Metro<br /></li>
+<li><a id="orgc394046"></a>Buses<br />
+<ul class="org-ul">
+<li><a id="orgd1fd6ad"></a>Tools<br />
+<div class="outline-text-8" id="text-orgd1fd6ad">
+<ul class="org-ul">
+<li>“‎redBus - Bus Booking App,” App Store, Jun. 12, 2023. <a href="https://apps.apple.com/us/app/redbus-bus-booking-app/id733712604">https://apps.apple.com/us/app/redbus-bus-booking-app/id733712604</a> (accessed Jul. 20, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc3e00ab"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org46e7d19"></a>Private<br />
+<ul class="org-ul">
+<li><a id="org6e601d5"></a>Cars<br />
+<ul class="org-ul">
+<li><a id="orgfbe3806"></a>General<br /></li>
+<li><a id="org7d1ca79"></a>Privacy And Security<br />
+<ul class="org-ul">
+<li><a id="orgf382252"></a>General<br />
+<div class="outline-text-9" id="text-orgf382252">
+<ul class="org-ul">
+<li><b>It’s Official: Cars Are the Worst Product Category We Have Ever Reviewed for Privacy, *Privacy Not Included: A Buyer’s Guide for Connected Products,”</b> Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/its-official-cars-are-the-worst-product-category-we-have-ever-reviewed-for-privacy/">https://foundation.mozilla.org/en/privacynotincluded/articles/its-official-cars-are-the-worst-product-category-we-have-ever-reviewed-for-privacy/</a> (accessed Sep. 07, 2023).</li>
+<li>“*Privacy Not Included: A Buyer’s Guide for Connected Products,” Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/after-researching-cars-and-privacy-heres-what-keeps-us-up-at-night/">https://foundation.mozilla.org/en/privacynotincluded/articles/after-researching-cars-and-privacy-heres-what-keeps-us-up-at-night/</a> (accessed Sep. 07, 2023).</li>
+<li>“*Privacy Not Included: A Buyer’s Guide for Connected Products,” Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/what-data-does-my-car-collect-about-me-and-where-does-it-go/">https://foundation.mozilla.org/en/privacynotincluded/articles/what-data-does-my-car-collect-about-me-and-where-does-it-go/</a> (accessed Sep. 07, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>“‘Is This Even Legal?’ Our Top Cars-And-Privacy Question, Answered.,”</b> Mozilla Foundation. Accessed: Oct. 18, 2023. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/is-this-even-legal-our-top-cars-and-privacy-question-answered/">https://foundation.mozilla.org/en/blog/is-this-even-legal-our-top-cars-and-privacy-question-answered/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“If You’ve Got a New Car, It’s a Data Privacy Nightmare,” Gizmodo, Sep. 06, 2023. <a href="https://gizmodo.com/mozilla-new-cars-data-privacy-report-1850805416">https://gizmodo.com/mozilla-new-cars-data-privacy-report-1850805416</a> (accessed Sep. 07, 2023).</li>
+<li>“Internet-Connected Cars Fail Privacy and Security Tests Conducted By Mozilla - Slashdot,” Sep. 06, 2023. <a href="https://yro.slashdot.org/story/23/09/06/2035237/internet-connected-cars-fail-privacy-and-security-tests-conducted-by-mozilla">https://yro.slashdot.org/story/23/09/06/2035237/internet-connected-cars-fail-privacy-and-security-tests-conducted-by-mozilla</a> (accessed Sep. 07, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Klosowski, “How to Figure Out What Your Car Knows About You (and Opt Out of Sharing When You Can),” Electronic Frontier Foundation. Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can">https://www.eff.org/deeplinks/2024/03/how-figure-out-what-your-car-knows-about-you-and-opt-out-sharing-when-you-can</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pluralistic: Your car spies on you and rats you out to insurance companies (12 Mar 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/03/12/market-failure/">https://pluralistic.net/2024/03/12/market-failure/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7dc93d4"></a>Brands<br />
+<ul class="org-ul">
+<li><a id="org46552d5"></a>Volkswagen<br />
+<div class="outline-text-10" id="text-org46552d5">
+<ul class="org-ul">
+<li>“*Privacy Not Included review: Volkswagen,” Mozilla Foundation. <a href="https://foundation.mozilla.org/en/privacynotincluded/volkswagen/">https://foundation.mozilla.org/en/privacynotincluded/volkswagen/</a> (accessed Sep. 07, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3316373"></a>Misc<br />
+<div class="outline-text-9" id="text-org3316373">
+<ul class="org-ul">
+<li>T. Klosowski, “Senators Expose Car Companies’ Terrible Data Privacy Practices,” Electronic Frontier Foundation. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/07/senators-expose-car-companies-terrible-data-privacy-practices">https://www.eff.org/deeplinks/2024/07/senators-expose-car-companies-terrible-data-privacy-practices</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga07f4d8"></a>Cabs<br />
+<ul class="org-ul">
+<li><a id="org14ccb9c"></a>Electric<br />
+<div class="outline-text-9" id="text-org14ccb9c">
+<ul class="org-ul">
+<li>“‎BluSmart: Safe Electric Cabs,” App Store, Jun. 27, 2023. <a href="https://apps.apple.com/in/app/blusmart-safe-electric-cabs/id1460355618">https://apps.apple.com/in/app/blusmart-safe-electric-cabs/id1460355618</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd25f884"></a>Misc<br />
+<div class="outline-text-9" id="text-orgd25f884">
+<ul class="org-ul">
+<li>“‎Uber - Request a ride,” App Store, Jun. 26, 2023. <a href="https://apps.apple.com/in/app/uber-request-a-ride/id368677368">https://apps.apple.com/in/app/uber-request-a-ride/id368677368</a> (accessed Jul. 03, 2023).</li>
+
+<li>“‎Ola Cabs,” App Store, Jun. 14, 2023. <a href="https://apps.apple.com/in/app/ola-cabs/id539179365">https://apps.apple.com/in/app/ola-cabs/id539179365</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org483c329"></a>GoI Official<br />
+<div class="outline-text-8" id="text-org483c329">
+<ul class="org-ul">
+<li>“‎NextGen mParivahan,” App Store, Jun. 08, 2023. <a href="https://apps.apple.com/in/app/nextgen-mparivahan/id1450914131">https://apps.apple.com/in/app/nextgen-mparivahan/id1450914131</a> (accessed Jul. 03, 2023).</li>
+
+<li>“‎My FASTag,” App Store, Oct. 29, 2022. <a href="https://apps.apple.com/in/app/my-fastag/id1492581255">https://apps.apple.com/in/app/my-fastag/id1492581255</a> (accessed Jul. 03, 2023).</li>
+
+<li>“‎Park+ FASTag | RTO | Parivahan,” App Store, Jun. 30, 2023. <a href="https://apps.apple.com/in/app/park-fastag-rto-parivahan/id1244749178">https://apps.apple.com/in/app/park-fastag-rto-parivahan/id1244749178</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1dd1ef5"></a>Misc<br />
+<div class="outline-text-8" id="text-org1dd1ef5">
+<ul class="org-ul">
+<li>“New Patent Application for Car-to-Car Surveillance - Schneier on Security.” Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/08/new-patent-application-for-car-to-car-surveillance.html?utm_source=dlvr.it&amp;utm_medium=twitter">https://www.schneier.com/blog/archives/2024/08/new-patent-application-for-car-to-car-surveillance.html?utm_source=dlvr.it&amp;utm_medium=twitter</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Right to Repair Catches the Car - YouTube.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=QQ7ey1ITp3c&amp;list=WL&amp;index=28">https://www.youtube.com/watch?v=QQ7ey1ITp3c&amp;list=WL&amp;index=28</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why Your Car’s Key Fob Is So Hackable,” Gizmodo. Accessed: May 11, 2024. [Online]. Available: <a href="https://gizmodo.com/why-your-cars-key-fob-is-so-hackable-1851455426">https://gizmodo.com/why-your-cars-key-fob-is-so-hackable-1851455426</a></li>
+
+<li>K. J. for CalMatters, “Car Tracking Can Enable Domestic Abuse. Turning It Off Is Easier Said Than Done – The Markup.” Accessed: May 07, 2024. [Online]. Available: <a href="https://themarkup.org/privacy/2024/04/30/car-tracking-can-enable-domestic-abuse-turning-it-off-is-easier-said-than-done">https://themarkup.org/privacy/2024/04/30/car-tracking-can-enable-domestic-abuse-turning-it-off-is-easier-said-than-done</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org1404e0c"></a>Two<br />
+<ul class="org-ul">
+<li><a id="orgcd8fbac"></a>Cycle<br /></li>
+<li><a id="org603dc63"></a>Bikes<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org0243cdd"></a>GoI Official<br />
+<div class="outline-text-6" id="text-2-3-4-2-3">
+<ul class="org-ul">
+<li>“NETC: National Electronic Toll Collection - RFID FASTag.” <a href="https://www.netc.org.in/">https://www.netc.org.in/</a> (accessed Jun. 23, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org7ef88e8"></a>Misc<br />
+<div class="outline-text-6" id="text-2-3-4-2-4">
+<ul class="org-ul">
+<li>I. Gupta, “IFF Raises Concerns Over Aadhaar Use For IRCTC Tatkal Booking,” MEDIANAMA. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/07/223-internet-freedom-foundation-aadhaar-irctc-tatkal-booking/">https://www.medianama.com/2025/07/223-internet-freedom-foundation-aadhaar-irctc-tatkal-booking/</a></li>
+
+<li>“Rs 3,000 FASTag Annual Pass: Highway Trips Without Additional Toll,” Outlook Money. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.outlookmoney.com/news/rs-3000-fastag-annual-pass-from-august-15-drive-200-highway-trips-without-additional-toll">https://www.outlookmoney.com/news/rs-3000-fastag-annual-pass-from-august-15-drive-200-highway-trips-without-additional-toll</a></li>
+
+<li>G. Mittal, “The key question missing in India’s debate over ‘taxi mafia’ and ride-hailing apps,” Scroll.in. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://scroll.in/article/1083596/the-key-question-missed-in-indias-debate-over-taxi-mafia-and-ride-hailing-apps">https://scroll.in/article/1083596/the-key-question-missed-in-indias-debate-over-taxi-mafia-and-ride-hailing-apps</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Raghav, “Zoomcar Cyberattack Exposes Personal Data of 84 Lakh Users,” MEDIANAMA. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/06/223-zoomcar-data-breach-84-lakh-users/">https://www.medianama.com/2025/06/223-zoomcar-data-breach-84-lakh-users/</a></li>
+
+<li>P. Certo, “Hiding Exploitation Behind an App,” OtherWords. Accessed: May 31, 2025. [Online]. Available: <a href="https://otherwords.org/hiding-exploitation-behind-an-app/">https://otherwords.org/hiding-exploitation-behind-an-app/</a></li>
+
+<li>Azdhan, “No GPS Tolling from May 1, 2025: Government Issues Clarification,” MEDIANAMA. Accessed: Apr. 20, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/04/223-govt-gps-satellite-fastag-toll-india-privacy-concerns/">https://www.medianama.com/2025/04/223-govt-gps-satellite-fastag-toll-india-privacy-concerns/</a></li>
+
+<li>C. Kohli, “Ola, Uber Deny Differential Pricing for iPhone Users, Govt Probes,” MEDIANAMA. Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/03/223-ola-uber-deny-differential-pricing-for-iphone-users-as-govt-investigates/">https://www.medianama.com/2025/03/223-ola-uber-deny-differential-pricing-for-iphone-users-as-govt-investigates/</a></li>
+
+<li>“Using WhatsApp to Crowdsource Data on Ride Hailing Companies’ Labor Lockouts.” Accessed: Feb. 25, 2025. [Online]. Available: <a href="https://gijn.org/stories/whatsapp-crowdsource-data-uber-lyft/">https://gijn.org/stories/whatsapp-crowdsource-data-uber-lyft/</a></li>
+
+<li>S. Lobo, “RBI Expands e-Mandate Framework to Include FASTag, NCMC,” MEDIANAMA. Accessed: Aug. 27, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/08/223-rbi-expands-e-mandate-framework-include-fastag-ncmc/">https://www.medianama.com/2024/08/223-rbi-expands-e-mandate-framework-include-fastag-ncmc/</a></li>
+
+<li>S. Lobo, “New FASTag rules: Link tags to vehicle reg no, one vehicle one tag,” MEDIANAMA. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/08/223-new-fastag-guidelines-applicable-1-august/">https://www.medianama.com/2024/08/223-new-fastag-guidelines-applicable-1-august/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Parasnis, “Toll Plazas may soon disappear, replaced with GPS chips,” MediaNama. Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/03/223-toll-plazas-disappear-replaced-gps-chips/">https://www.medianama.com/2024/03/223-toll-plazas-disappear-replaced-gps-chips/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4ef04f7" class="outline-4">
+<h4 id="org4ef04f7"><span class="section-number-4">2.3.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-5">
+<ul class="org-ul">
+<li>“Pluralistic: Big Tech joins the race to build the world’s heaviest airplane (09 Dec 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/12/09/temporarily-embarrassed-founders/">https://pluralistic.net/2025/12/09/temporarily-embarrassed-founders/</a></li>
+
+<li>“Automotive Grade Linux Launches Open Source SoDeV Reference Platform to Accelerate Software Defined Vehicles.” Accessed: Dec. 06, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/press/agl_sodev">https://www.linuxfoundation.org/press/agl_sodev</a></li>
+
+<li>D. Maass, “How to Identify Automated License Plate Readers at the U.S.-Mexico Border,” Electronic Frontier Foundation. Accessed: Dec. 03, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/11/how-identify-automated-license-plate-readers-us-mexico-border">https://www.eff.org/deeplinks/2025/11/how-identify-automated-license-plate-readers-us-mexico-border</a></li>
+
+<li>“AI license plate reader tech is an Orwellian nightmare,” Proton. Accessed: Nov. 27, 2025. [Online]. Available: <a href="https://proton.me/blog/ai-license-plate-reader">https://proton.me/blog/ai-license-plate-reader</a></li>
+
+<li>B. Schneier, “Automatic License Plate Readers Are Coming to Schools,” Schneier on Security. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/08/automatic-license-plate-readers-are-coming-to-schools.html">https://www.schneier.com/blog/archives/2025/08/automatic-license-plate-readers-are-coming-to-schools.html</a></li>
+
+<li>R. Chandran, “The app going against Uber by putting people over algorithms,” Rest of World. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://restofworld.org/2025/uber-alternative-indrive-expansion/">https://restofworld.org/2025/uber-alternative-indrive-expansion/</a></li>
+
+<li>B. Schneier, “Airlines Secretly Selling Passenger Data to the Government,” Schneier on Security. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/06/airlines-secretly-selling-passenger-data-to-the-government.html">https://www.schneier.com/blog/archives/2025/06/airlines-secretly-selling-passenger-data-to-the-government.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Schneier, “Hacking Digital License Plates,” Schneier on Security. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/12/hacking-digital-license-plates.html">https://www.schneier.com/blog/archives/2024/12/hacking-digital-license-plates.html</a></li>
+
+<li>S. Lyons, “How AI can save lives on Indian roads,” 360. Accessed: Jan. 18, 2025. [Online]. Available: <a href="https://360info.org/how-ai-can-save-lives-on-indian-roads/">https://360info.org/how-ai-can-save-lives-on-indian-roads/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Vehicle cybersecurity: the journey towards ISO 21434 compliance,” Ubuntu. Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://ubuntu.com/blog/vehicle-cybersecurity-the-journey-towards-iso-21434-compliance">https://ubuntu.com/blog/vehicle-cybersecurity-the-journey-towards-iso-21434-compliance</a></li>
+
+<li>Y. Zhou, X. C. Liu, B. Chen, T. Grubesic, R. Wei, and D. Wallace, “A data-driven framework for agent-based modeling of vehicular travel using publicly available data,” Computers, Environment and Urban Systems, vol. 110, p. 102095, Jun. 2024, doi: 10.1016/j.compenvurbsys.2024.102095.</li>
+
+<li>“Global Auto Dealer Management Systems Hacked – Communications of the ACM.” Accessed: Aug. 06, 2024. [Online]. Available: <a href="https://cacm.acm.org/news/global-auto-dealer-management-systems-hacked/">https://cacm.acm.org/news/global-auto-dealer-management-systems-hacked/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfdc3a91" class="outline-3">
+<h3 id="orgfdc3a91"><span class="section-number-3">2.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>“The most efficient cargo ships are the ones that take diverse routes,” Northeastern Global News. Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://news.northeastern.edu/2026/03/13/oil-tanker-efficiency/">https://news.northeastern.edu/2026/03/13/oil-tanker-efficiency/</a></li>
+
+<li>E. Alonso-Epelde, X. García-Muros, and M. González-Eguino, “How can we alleviate transport poverty? Insights from a cluster analysis for Spain,” Transport Policy, vol. 175, p. 103863, Jan. 2026, doi: 10.1016/j.tranpol.2025.103863.</li>
+<li>D. Cole, “‘The car belongs in Berlin’: city backpedaling on bike-friendly policies, critics say,” The Guardian, Nov. 13, 2025. Accessed: Nov. 25, 2025. [Online]. Available: <a href="https://www.theguardian.com/world/2025/nov/13/berlin-bicycle-and-pedestrian-car-friendly-transport">https://www.theguardian.com/world/2025/nov/13/berlin-bicycle-and-pedestrian-car-friendly-transport</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Delgado-Lindeman, R. Cordera, J. L. Moura, and A. Rodriguez, “Characteristics and effects of low emission zones in Europe. A systematic literature review,” Eur. Transp. Res. Rev., vol. 17, no. 1, pp. 1–30, Dec. 2025, doi: 10.1186/s12544-025-00749-2.</li>
+<li>“Transport poverty and the price of transition,” Hertie School. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://www.hertie-school.org/en/datasciencelab/news/detail/content/transport-poverty-and-the-price-of-transition">https://www.hertie-school.org/en/datasciencelab/news/detail/content/transport-poverty-and-the-price-of-transition</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Wander, E. Blumenberg, M. Brozen, and T. L. Butler, “The promise of Universal Basic Mobility,” Transport Reviews, vol. 0, no. 0, pp. 1–21, doi: 10.1080/01441647.2025.2574358.</li>
+
+<li>M. Arnz et al., “Quantifying minimum mobility and transport needs: The who, the where and the why,” Energy Research &amp; Social Science, vol. 128, p. 104306, Oct. 2025, doi: 10.1016/j.erss.2025.104306.</li>
+
+<li>L. Mai, X. Tian, and Y. Zhao, “Air taxis will soon be in our skies — if batteries can be made safer,” Nature, vol. 645, no. 8079, pp. 36–38, Sep. 2025, doi: 10.1038/d41586-025-02758-6.</li>
+
+<li>“New self-assembling material could be the key to recyclable EV batteries,” MIT News | Massachusetts Institute of Technology. Accessed: Sep. 04, 2025. [Online]. Available: <a href="https://news.mit.edu/2025/new-self-assembling-material-could-be-key-recyclable-ev-batteries-0828">https://news.mit.edu/2025/new-self-assembling-material-could-be-key-recyclable-ev-batteries-0828</a></li>
+
+<li>don-anair, “Trump’s Latest Move to Deny Climate Science and What it Means for Vehicle Standards,” The Equation. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://blog.ucs.org/don-anair/trumps-latest-move-to-deny-climate-science-and-what-it-means-for-vehicle-standards/">https://blog.ucs.org/don-anair/trumps-latest-move-to-deny-climate-science-and-what-it-means-for-vehicle-standards/</a></li>
+
+<li>B. S. O. &amp; J. V. C. / T. Conversation, “One of the biggest microplastic pollution sources isn’t straws or grocery bags – it’s your tires,” Popular Science. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://theconversation.com/one-of-the-biggest-microplastic-pollution-sources-isnt-straws-or-grocery-bags-its-your-tires-259440">https://theconversation.com/one-of-the-biggest-microplastic-pollution-sources-isnt-straws-or-grocery-bags-its-your-tires-259440</a></li>
+
+<li>T. M. P. Reader, “What if Every Roadkill Had a Memorial?,” The MIT Press Reader. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/what-if-every-roadkill-had-a-memorial/">https://thereader.mitpress.mit.edu/what-if-every-roadkill-had-a-memorial/</a></li>
+
+<li>I. Schlosser, V. Marin, R. Milton, E. Arcaute, and M. Batty, “Active travel modelling: a methodological approach to networks for walking and cycling commuting analysis,” J. Phys. Complex., vol. 6, no. 2, p. 025013, Jun. 2025, doi: 10.1088/2632-072X/add257.</li>
+
+<li>“Reflections on a Century of Traffic Modeling | SIAM,” Society for Industrial and Applied Mathematics. Accessed: May 01, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/reflections-on-a-century-of-traffic-modeling/">https://www.siam.org/publications/siam-news/articles/reflections-on-a-century-of-traffic-modeling/</a></li>
+
+<li>“The reason that even hands-free calls are risky for drivers | Psyche Ideas,” Psyche. Accessed: Dec. 01, 2024. [Online]. Available: <a href="https://psyche.co/ideas/the-reason-that-even-hands-free-calls-are-risky-for-drivers">https://psyche.co/ideas/the-reason-that-even-hands-free-calls-are-risky-for-drivers</a></li>
+
+<li>“Trucking Industry Disinformation Will Cost Lives,” The Equation. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/dave-cooke/trucking-industry-disinformation-will-cost-lives/">https://blog.ucsusa.org/dave-cooke/trucking-industry-disinformation-will-cost-lives/</a></li>
+<li>“A Trip Down Memory ‘Train’: A Brief History of Public Transit,” The Equation. Accessed: Mar. 26, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/kshen/a-trip-down-memory-train-a-brief-history-of-public-transit/">https://blog.ucsusa.org/kshen/a-trip-down-memory-train-a-brief-history-of-public-transit/</a></li>
+
+<li>“Fossil Fuels Must Go: Re-inventing US Transportation,” The Equation. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/cecilia-moura/fossil-fuels-must-go-re-inventing-us-transportation/">https://blog.ucsusa.org/cecilia-moura/fossil-fuels-must-go-re-inventing-us-transportation/</a></li>
+
+<li>“None of the European cities that lowered the speed limit to 30 km/h regrets it,” European Data Journalism Network - EDJNet. Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://www.europeandatajournalism.eu/cp_data_news/none-of-the-european-cities-that-lowered-the-speed-limit-to-30-km-h-regrets-it/">https://www.europeandatajournalism.eu/cp_data_news/none-of-the-european-cities-that-lowered-the-speed-limit-to-30-km-h-regrets-it/</a></li>
+
+<li>F. Holst, “Early Retirement of Old Vehicles Won’t Save the Planet: A Study,” IOP Publishing. Accessed: May 17, 2024. [Online]. Available: <a href="https://ioppublishing.org/news/early-retirement-of-old-vehicles-wont-save-the-planet-a-study/">https://ioppublishing.org/news/early-retirement-of-old-vehicles-wont-save-the-planet-a-study/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Accessed: May 19, 2024. [Online]. Available: <a href="https://atlas.itdp.org/">https://atlas.itdp.org/</a></li>
+
+<li>T. Freeman, “Drowsiness-detecting earbuds could help drivers stay safe at the wheel,” Physics World. Accessed: Aug. 23, 2024. [Online]. Available: <a href="https://physicsworld.com/a/drowsiness-detecting-earbuds-could-help-drivers-stay-safe-at-the-wheel/">https://physicsworld.com/a/drowsiness-detecting-earbuds-could-help-drivers-stay-safe-at-the-wheel/</a></li>
+
+<li>T. Verkade and M. te Brömmelstroet, Movement: how to take back our streets and transform our lives. Scribe, 2022.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb028acd" class="outline-2">
+<h2 id="orgb028acd"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2486184" class="outline-3">
+<h3 id="org2486184"><span class="section-number-3">3.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orgae5359e" class="outline-3">
+<h3 id="orgae5359e"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-orge89be8e" class="outline-3">
+<h3 id="orge89be8e"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-org538f4f2" class="outline-3">
+<h3 id="org538f4f2"><span class="section-number-3">3.4.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgbd13716" class="outline-4">
+<h4 id="orgbd13716"><span class="section-number-4">3.4.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>“Home,” International Council on Clean Transportation. Accessed: Nov. 01, 2025. [Online]. Available: <a href="https://theicct.org/">https://theicct.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org08b3571" class="outline-4">
+<h4 id="org08b3571"><span class="section-number-4">3.4.2.</span> Feminism</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>A.-M. Masoom, “There Is A Crucial Need To Address Women’s Experiences Of Harassment In Public Transportation,” Feminism in India. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/04/08/there-is-a-crucial-need-to-address-womens-experiences-of-harassment-in-public-transportation/">https://feminisminindia.com/2024/04/08/there-is-a-crucial-need-to-address-womens-experiences-of-harassment-in-public-transportation/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Home • The Global Alliance for Feminist Transport,” The Global Alliance for Feminist Transport. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://feminist-transport.org/">https://feminist-transport.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org106edfc" class="outline-4">
+<h4 id="org106edfc"><span class="section-number-4">3.4.3.</span> Nation States</h4>
+<div class="outline-text-4" id="text-3-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgcb65418"></a>India<br />
+<ol class="org-ol">
+<li><a id="org1510b1c"></a>General<br /></li>
+<li><a id="org9af98c2"></a>Official GOI<br />
+<div class="outline-text-6" id="text-3-4-3-1-2">
+<ul class="org-ul">
+<li><b>“DULT – Centre for Society and Policy.”</b> <a href="https://csp.iisc.ac.in/dult/">https://csp.iisc.ac.in/dult/</a> (accessed Apr. 12, 2022).
+<ul class="org-ul">
+<li>'Deriving comprehensive insights on specific travel challenges
+faced by women in the city of Bengaluru, across transport modes
+and enhancement of existing policies and plans by incorporating
+data driven gender inclusive interventions.'</li>
+</ul></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“NETC: National Electronic Toll Collection - RFID FASTag.” <a href="https://www.netc.org.in/">https://www.netc.org.in/</a> (accessed Jun. 23, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbdd9a70"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgf951f48"></a>Systems Sciences<br />
+<ul class="org-ul">
+<li><a id="org9f59bfa"></a>IIASA<br />
+<div class="outline-text-8" id="text-org9f59bfa">
+<ul class="org-ul">
+<li>“Decarbonizing India’s road transportation brings major co-benefits, notably reducing air pollution,” IIASA - International Institute for Applied Systems Analysis. Accessed: Nov. 07, 2023. [Online]. Available: <a href="https://iiasa.ac.at/news/aug-2023/decarbonizing-indias-road-transportation-brings-major-co-benefits-notably-reducing">https://iiasa.ac.at/news/aug-2023/decarbonizing-indias-road-transportation-brings-major-co-benefits-notably-reducing</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgeb2722a"></a>Computer Science and Engineering<br />
+<div class="outline-text-7" id="text-orgeb2722a">
+<ul class="org-ul">
+<li>“Saheli Cards and Surveillance in Public Welfare,” The India Forum. Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://www.theindiaforum.in/forum/saheli-cards-and-surveillance-public-welfare">https://www.theindiaforum.in/forum/saheli-cards-and-surveillance-public-welfare</a></li>
+
+<li>“Data Highways, Rights Roadblocks: An explainer on the National Transport Repository,” Internet Freedom Foundation. Accessed: Sep. 01, 2025. [Online]. Available: <a href="https://internetfreedom.in/data-highways-rights-roadblocks-an-explainer-on-the-national-transport-repository/">https://internetfreedom.in/data-highways-rights-roadblocks-an-explainer-on-the-national-transport-repository/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. K. Das, “MapmyIndia and DMRC Partner for Real-Time Metro Info,” MEDIANAMA. Accessed: Nov. 02, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/11/223-dmrc-mapmyindia-mou-real-time-updates/">https://www.medianama.com/2025/11/223-dmrc-mapmyindia-mou-real-time-updates/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org58b3df7"></a>Codes<br />
+<div class="outline-text-7" id="text-org58b3df7">
+<p>
+AN 	Andaman and Nicobar Islands
+AP 	Andhra Pradesh
+AR 	Arunachal Pradesh
+AS 	Assam
+BR 	Bihar
+CG 	Chhattisgarh
+CH 	Chandigarh
+DD 	Dadra and Nagar Haveli and Daman and Diu
+DL 	Delhi
+GA 	Goa
+GJ 	Gujarat
+HP 	Himachal Pradesh
+HR 	Haryana
+JH 	Jharkhand
+JK 	Jammu and Kashmir
+KA 	Karnataka
+KL 	Kerala
+LA 	Ladakh
+LD 	Lakshadweep
+MH 	Maharashtra
+ML 	Meghalaya
+MN 	Manipur
+MP 	Madhya Pradesh
+MZ 	Mizoram
+NL 	Nagaland
+OD 	Odisha
+PB 	Punjab
+PY 	Puducherry
+RJ 	Rajasthan
+SK 	Sikkim
+TG 	Telangana
+TN 	Tamil Nadu
+TR 	Tripura
+UK 	Uttarakhand
+UP 	Uttar Pradesh
+WB 	West Bengal
+</p>
+</div>
+</li>
+<li><a id="org2da7a5f"></a>Misc<br />
+<div class="outline-text-7" id="text-org2da7a5f">
+<ul class="org-ul">
+<li>B. Maitra, “How India moves: Rethinking urban mobility through science, policy &amp; human-centric design,” Down To Earth. Accessed: Jul. 18, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/air/how-india-moves-rethinking-urban-mobility-through-science-policy-human-centric-design">https://www.downtoearth.org.in/air/how-india-moves-rethinking-urban-mobility-through-science-policy-human-centric-design</a></li>
+
+<li>S. N. Roy Anumita Roychowdhury,Shubham Srivastava,Sayan, “How India moves: Our analysis of 40 cities reveals a brutally simple answer — it does not,” Down To Earth. Accessed: Jul. 10, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/air/how-india-moves-our-analysis-of-40-cities-reveals-a-brutally-simple-answer-it-does-not">https://www.downtoearth.org.in/air/how-india-moves-our-analysis-of-40-cities-reveals-a-brutally-simple-answer-it-does-not</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org118906a"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orga996bec"></a>Feminism<br />
+<div class="outline-text-7" id="text-orga996bec">
+<ul class="org-ul">
+<li>M. Samra, “Commuting In Colour, Living In Grey: Life Of Pink Auto Drivers In Ranchi,” Feminism in India. Accessed: Jun. 02, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/06/02/commuting-in-colour-living-in-grey-life-of-pink-auto-drivers-in-ranchi/">https://feminisminindia.com/2025/06/02/commuting-in-colour-living-in-grey-life-of-pink-auto-drivers-in-ranchi/</a></li>
+
+<li>A. Ray, “When Women Drive Women: The Story Of Uber Moto Women Initiative,” Feminism in India. Accessed: Jan. 29, 2025. [Online]. Available: <a href="https://feminisminindia.com/?p=181491">https://feminisminindia.com/?p=181491</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org146d4d3"></a>Misc<br />
+<div class="outline-text-7" id="text-org146d4d3">
+<ul class="org-ul">
+<li>K. Kakvi, “The Black Wind: How India is becoming the World’s Waste Tyre Furnace.” Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://www.reporters-collective.in/trc/india-is-becoming-worlds-waste-tyre-furnace">https://www.reporters-collective.in/trc/india-is-becoming-worlds-waste-tyre-furnace</a></li>
+
+<li>“Union abruptly terminates strike at MRF Tyre factory in Tamil Nadu,” World Socialist Web Site. Accessed: Oct. 17, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/10/17/zouv-o17.html">https://www.wsws.org/en/articles/2025/10/17/zouv-o17.html</a></li>
+
+<li>K. Pandey, “From policy to pushback, India’s ‘greenlash’ over ethanol-blended petrol,” Mongabay-India. Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/09/from-policy-to-pushback-indias-greenlash-over-ethanol-blended-petrol/">https://india.mongabay.com/2025/09/from-policy-to-pushback-indias-greenlash-over-ethanol-blended-petrol/</a></li>
+
+<li>I. Ink, “UNICORN: Creature of the new millennium,” Independent Ink. Accessed: Sep. 01, 2025. [Online]. Available: <a href="https://www.independentink.in/post/unicorn-creature-of-the-new-millennium">https://www.independentink.in/post/unicorn-creature-of-the-new-millennium</a></li>
+
+<li>“Pushing the pedal on girl power.” Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://beta.ruralindiaonline.org/article/pushing-the-pedal-on-girl-power">https://beta.ruralindiaonline.org/article/pushing-the-pedal-on-girl-power</a></li>
+
+<li>S. P. University Tribhuvan Sahkari University &amp;. Pratik Modi, BML Munjal, “India’s new taxi cooperative aims to empower drivers, challenge ride-hailing apps,” Scroll.in. Accessed: Aug. 24, 2025. [Online]. Available: <a href="https://scroll.in/article/1085649/indias-new-taxi-cooperative-aims-to-empower-drivers-challenge-ride-hailing-apps">https://scroll.in/article/1085649/indias-new-taxi-cooperative-aims-to-empower-drivers-challenge-ride-hailing-apps</a></li>
+
+<li>“​Assuaging concerns: On India and ethanol-blended fuel,” The Hindu, Aug. 11, 2025. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/assuaging-concerns-on-india-and-ethanol-blended-fuel/article69920420.ece">https://www.thehindu.com/opinion/editorial/assuaging-concerns-on-india-and-ethanol-blended-fuel/article69920420.ece</a></li>
+
+<li>B. T. Foundation Thomson Reuters, “Drivers fear engine damage, mileage drop as India increases ethanol in petrol to 20%,” Scroll.in. Accessed: Aug. 10, 2025. [Online]. Available: <a href="https://scroll.in/article/1085321/drivers-fear-engine-damage-mileage-drop-as-india-increases-ethanol-in-petrol-to-20">https://scroll.in/article/1085321/drivers-fear-engine-damage-mileage-drop-as-india-increases-ethanol-in-petrol-to-20</a></li>
+
+<li>S. F. Desk, “Ethanol blend in petrol is damaging your vehicle: Manufacturers, consumers flag concerns,” The South First. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://thesouthfirst.com/news/ethanol-blend-in-petrol-is-damaging-your-vehicle-manufacturers-consumers-flag-concerns/">https://thesouthfirst.com/news/ethanol-blend-in-petrol-is-damaging-your-vehicle-manufacturers-consumers-flag-concerns/</a></li>
+
+<li>V. Gavimath, “Will CCTS move the needle for a clean transport sector?,” Down To Earth. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/will-ccts-move-the-needle-for-a-clean-transport-sector">https://www.downtoearth.org.in/climate-change/will-ccts-move-the-needle-for-a-clean-transport-sector</a></li>
+
+<li>A. Bhattacharya, “Tesla finally enters India after a decade of false starts,” Rest of World. Accessed: Jul. 17, 2025. [Online]. Available: <a href="https://restofworld.org/2025/tesla-ev-india-mumbai-showroom/">https://restofworld.org/2025/tesla-ev-india-mumbai-showroom/</a></li>
+
+<li>S. Majumder and P. G. Thakurta, An Unflattering Story About Ola’s Bhavish Aggarwal. Paranjoy, 2025.</li>
+
+<li>K. Naik, “Goa’s ‘taxi mafia’: What tourists need to know,” Scroll.in. Accessed: Jul. 04, 2025. [Online]. Available: <a href="https://scroll.in/article/1083476/goas-taxi-mafia-what-tourists-need-to-know">https://scroll.in/article/1083476/goas-taxi-mafia-what-tourists-need-to-know</a></li>
+
+<li>F. N. Desk, “Delhi’s Car Scrappage Guidelines: Environmental Saviour or Economic Disaster?,” Frontline. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/news/delhi-fuel-ban-vehicle-scrappage-policy-concern-dossier/article69764192.ece">https://frontline.thehindu.com/news/delhi-fuel-ban-vehicle-scrappage-policy-concern-dossier/article69764192.ece</a></li>
+
+<li>“Karnataka Bike Taxi Ban: Lessons From Brazil’s Struggles on Gig Work,” NewsClick. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://www.newsclick.in/karnataka-bike-taxi-ban-lessons-brazils-struggles-gig-work">https://www.newsclick.in/karnataka-bike-taxi-ban-lessons-brazils-struggles-gig-work</a></li>
+
+<li>G. Mittal, “The key question missing in India’s debate over ‘taxi mafia’ and ride-hailing apps,” Scroll.in. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://scroll.in/article/1083596/the-key-question-missed-in-indias-debate-over-taxi-mafia-and-ride-hailing-apps">https://scroll.in/article/1083596/the-key-question-missed-in-indias-debate-over-taxi-mafia-and-ride-hailing-apps</a></li>
+
+<li>I. A. World Rest of, “Why Ola and Uber are copying India’s new ride-hailing app,” Scroll.in. Accessed: May 09, 2025. [Online]. Available: <a href="https://scroll.in/article/1082024/why-ola-and-uber-are-copying-indias-new-ride-hailing-app">https://scroll.in/article/1082024/why-ola-and-uber-are-copying-indias-new-ride-hailing-app</a></li>
+
+<li>“The Indian company forcing Uber to change its business model,” Rest of World. Accessed: May 03, 2025. [Online]. Available: <a href="https://restofworld.org/2025/uber-ola-copy-india-zero-commission-ride-hailing-app/">https://restofworld.org/2025/uber-ola-copy-india-zero-commission-ride-hailing-app/</a></li>
+
+<li>“Inside the spectacular rise and crash of India’s largest EV company,” Rest of World. Accessed: May 01, 2025. [Online]. Available: <a href="https://restofworld.org/2025/bhavish-aggarwal-ola-ev-india/">https://restofworld.org/2025/bhavish-aggarwal-ola-ev-india/</a></li>
+
+<li>“Uber wades into a fierce price war to stay competitive in India,” Rest of World. Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://restofworld.org/2025/uber-india-price-war/">https://restofworld.org/2025/uber-india-price-war/</a></li>
+
+<li>“Illegal charging stations are powering Delhi’s e-rickshaw revolution,” Rest of World. Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://restofworld.org/2025/delhi-illegal-ev-charging-stations/">https://restofworld.org/2025/delhi-illegal-ev-charging-stations/</a></li>
+
+<li>S. Manocha, “Thackersey Group Transforms Lives of Ten Families and Animals Through Support of E-Rickshaw Imitative - Blog,” PETA India. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/thackersey-group-transforms-lives-of-ten-families-and-animals-through-support-of-e-rickshaw-imitative/">https://www.petaindia.com/blog/thackersey-group-transforms-lives-of-ten-families-and-animals-through-support-of-e-rickshaw-imitative/</a></li>
+
+<li>“Stalinist-led CITU orders end to Samsung India strike leaving 23 suspended workers in the lurch,” World Socialist Web Site. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/03/27/ikgl-m27.html">https://www.wsws.org/en/articles/2025/03/27/ikgl-m27.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Buses are free for women in Delhi: What can the world learn from it?,” Greenpeace International. Accessed: Mar. 06, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/73276/buses-are-free-for-women-in-delhi-what-can-the-world-learn-from-it/">https://www.greenpeace.org/international/story/73276/buses-are-free-for-women-in-delhi-what-can-the-world-learn-from-it/</a></li>
+<li>“Transcript: Buses are free for women in Delhi: what can the world learn from that?,” Greenpeace International. Accessed: Mar. 06, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/podcasts/73270/transcript-buses-are-free-for-women-in-delhi-what-can-the-world-learn-from-that/">https://www.greenpeace.org/international/podcasts/73270/transcript-buses-are-free-for-women-in-delhi-what-can-the-world-learn-from-that/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. T. E. Staff, “AAD 2025: India must support localised manufacturing of EVs, say experts,” Down To Earth. Accessed: Feb. 28, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/energy/aad-2025-india-must-support-localised-manufacturing-of-evs-say-experts">https://www.downtoearth.org.in/energy/aad-2025-india-must-support-localised-manufacturing-of-evs-say-experts</a></li>
+
+<li>“Indian Samsung workers strike against multinational giant’s campaign of arbitrary suspensions,” World Socialist Web Site. Accessed: Feb. 26, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/02/26/cidm-f26.html">https://www.wsws.org/en/articles/2025/02/26/cidm-f26.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge292899"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org96196ee"></a>Public Transport<br />
+<ul class="org-ul">
+<li><a id="orgc4f317f"></a>Buses<br />
+<ul class="org-ul">
+<li><a id="org64b650e"></a>General<br /></li>
+<li><a id="org86c7b64"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgdbb0925"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgb69817d"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orgc80d972"></a>Misc<br />
+<div class="outline-text-10" id="text-orgc80d972">
+<ul class="org-ul">
+<li>A. Bhattacharya, “India’s electric bus push has a deadly blind spot,” Rest of World. Accessed: Jan. 30, 2026. [Online]. Available: <a href="https://restofworld.org/2026/india-electric-bus-accidents/">https://restofworld.org/2026/india-electric-bus-accidents/</a></li>
+
+<li>M. Nabi, “Delhi’s New Bus Pass Draws A Line Between Belonging And Exclusion,” Feminism in India. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/08/20/delhis-new-bus-pass-draws-a-line-between-belonging-and-exclusion/">https://feminisminindia.com/2025/08/20/delhis-new-bus-pass-draws-a-line-between-belonging-and-exclusion/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgebcfa90"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org9e98788"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org471f6d6"></a>Special Topics<br /></li>
+<li><a id="orgdec658c"></a>Misc<br />
+<div class="outline-text-9" id="text-orgdec658c">
+<ul class="org-ul">
+<li>A. B. World Rest of, “Why India’s electric bus push is leading to fatal crashes,” Scroll.in. Accessed: Feb. 16, 2026. [Online]. Available: <a href="https://scroll.in/article/1090465/why-indias-electric-bus-push-is-leading-to-fatal-crashes">https://scroll.in/article/1090465/why-indias-electric-bus-push-is-leading-to-fatal-crashes</a></li>
+
+<li>“Fare-Free Future: Women’s Perspectives on Public Bus Transport in Mumbai,” Greenpeace India. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/">https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“BUS SURVEY,” Greenpeace India. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/16862/bus-survey/">https://www.greenpeace.org/india/en/story/16862/bus-survey/</a></li>
+<li>“94% Women respondents demand Fare Free Public Bus Transport Ahead of Maharashtra Assembly polls- Greenpeace India Report.,” Greenpeace India. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16880/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india/">https://www.greenpeace.org/india/en/press/16880/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india/</a></li>
+<li>“Fare-Free Future: Women’s Perspectives on Public Bus Transport in Mumbai,” Greenpeace India. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/">https://www.greenpeace.org/india/en/publication/16879/94-women-respondents-demand-fare-free-public-bus-transport-ahead-of-maharashtra-assembly-polls-greenpeace-india-report/</a></li>
+<li>“Demand Manifesto: Maharashtra State Elections,” Greenpeace India. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16909/demand-manifesto-maharashtra-state-elections/">https://www.greenpeace.org/india/en/publication/16909/demand-manifesto-maharashtra-state-elections/</a></li>
+
+<li>“Uber’s big plan for India: buses,” Rest of World. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://restofworld.org/2024/uber-shuttle-india-shared-bus/">https://restofworld.org/2024/uber-shuttle-india-shared-bus/</a></li>
+<li>C. Philip, “Bhubaneswar launches electric double-decker buses: How the initiative can be a step towards sustainable mobility,” Down To Earth. Accessed: Feb. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/energy/bhubaneswar-launches-electric-double-decker-buses-how-the-initative-can-be-a-step-towards-sustainable-mobility">https://www.downtoearth.org.in/energy/bhubaneswar-launches-electric-double-decker-buses-how-the-initative-can-be-a-step-towards-sustainable-mobility</a></li>
+
+<li>“The sorry state of state bus transport in India.” Accessed: Jan. 25, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/infographics/the-sorry-state-of-state-bus-transport-in-india-93983">https://www.downtoearth.org.in/infographics/the-sorry-state-of-state-bus-transport-in-india-93983</a></li>
+
+<li>“Free Bus Rides Offer Indian Women New Option for Work, and Play,” Bloomberg.com, Nov. 06, 2023. Accessed: Nov. 10, 2023. [Online]. Available: <a href="https://www.bloomberg.com/news/articles/2023-11-06/india-inside-shakti-the-free-bus-ride-program-for-women-in-karnataka-delhi">https://www.bloomberg.com/news/articles/2023-11-06/india-inside-shakti-the-free-bus-ride-program-for-women-in-karnataka-delhi</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Gupta, “How India moves: DEVI buses a safe and comfortable ride, Delhi’s women tell DTE,” Down To Earth. Accessed: Jun. 23, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/air/how-india-moves-devi-buses-a-safe-and-comfortable-ride-delhis-women-tell-dte">https://www.downtoearth.org.in/air/how-india-moves-devi-buses-a-safe-and-comfortable-ride-delhis-women-tell-dte</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org96456e8"></a>Taxi<br />
+<div class="outline-text-8" id="text-org96456e8">
+<ul class="org-ul">
+<li>“An introduction to the world of platform-based taxi work - RLS Southasia.” Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.rosalux.in/details-resources/1168.html">https://www.rosalux.in/details-resources/1168.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org777a4a9"></a>3-Wheelers<br />
+<div class="outline-text-8" id="text-org777a4a9">
+<ul class="org-ul">
+<li>“Making India’s 3-wheelers electric.” Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/infographics/making-india-s-3-wheelers-electric-94641">https://www.downtoearth.org.in/infographics/making-india-s-3-wheelers-electric-94641</a></li>
+<li>“ELECTRIC-AUTOS.” Accessed: Nov. 06, 2023. [Online]. Available: <a href="https://www.cseindia.org/electric-autos-three-wheeled-transition-to-zero-emission-mobility-in-delhi-11804">https://www.cseindia.org/electric-autos-three-wheeled-transition-to-zero-emission-mobility-in-delhi-11804</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org637ada8"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org60188f7"></a>Music<br /></li>
+<li><a id="org6a38e84"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgd0ee651"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org74ba1c7"></a>Popular Resources<br />
+<ul class="org-ul">
+<li><a id="orgb04bf39"></a>Magazines<br />
+<div class="outline-text-8" id="text-orgb04bf39">
+<ul class="org-ul">
+<li><i>“Autocar India,”</i> Autocar India. <a href="https://www.autocarindia.com">https://www.autocarindia.com</a> (accessed Jun. 30, 2021).</li>
+
+<li><i>“carandbike - Car and Bike Prices, News, Reviews, Comparison; Upcoming Car Models, Buy/Sell Used Vehicles.”</i> <a href="https://www.carandbike.com/">https://www.carandbike.com/</a> (accessed Jun. 30, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org998a581"></a>GreenPeace<br />
+<div class="outline-text-7" id="text-org998a581">
+<ul class="org-ul">
+<li>“Pre-Budget Push: Greenpeace India Proposes Climate Tickets in New Urban Mobility Draft Policy,” Greenpeace India. Accessed: Jan. 23, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/17367/pre-budget-push-greenpeace-india-proposes-climate-tickets-in-new-urban-mobility-draft-policy/">https://www.greenpeace.org/india/en/press/17367/pre-budget-push-greenpeace-india-proposes-climate-tickets-in-new-urban-mobility-draft-policy/</a></li>
+<li>“Citizen’s Policy for Affordable Public Transport in India,” Greenpeace India. Accessed: Jan. 23, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/17340/citizens-policy-for-affordable-public-transport-in-india/">https://www.greenpeace.org/india/en/publication/17340/citizens-policy-for-affordable-public-transport-in-india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org848ec43"></a>Plane Crash, Jun 12, 2025<br />
+<ul class="org-ul">
+<li><a id="org3fb2168"></a>Misc<br />
+<div class="outline-text-8" id="text-org3fb2168">
+<ul class="org-ul">
+<li>A. Elham, “Air India crash: what do we know about the Boeing 787 Dreamliner involved? Expert Q&amp;A,” The Conversation. Accessed: Jun. 14, 2025. [Online]. Available: <a href="http://theconversation.com/air-india-crash-what-do-we-know-about-the-boeing-787-dreamliner-involved-expert-qanda-258853">http://theconversation.com/air-india-crash-what-do-we-know-about-the-boeing-787-dreamliner-involved-expert-qanda-258853</a></li>
+<li>H. Vally, “News of the Air India plane crash is traumatic. Here’s how to make sense of the risk,” The Conversation. Accessed: Jun. 14, 2025. [Online]. Available: <a href="http://theconversation.com/news-of-the-air-india-plane-crash-is-traumatic-heres-how-to-make-sense-of-the-risk-258907">http://theconversation.com/news-of-the-air-india-plane-crash-is-traumatic-heres-how-to-make-sense-of-the-risk-258907</a></li>
+<li>N. Heap, “Speculation about the cause of Air India crash is rife. An aviation expert explains why it’s a problem,” The Conversation. Accessed: Jun. 14, 2025. [Online]. Available: <a href="http://theconversation.com/speculation-about-the-cause-of-air-india-crash-is-rife-an-aviation-expert-explains-why-its-a-problem-258911">http://theconversation.com/speculation-about-the-cause-of-air-india-crash-is-rife-an-aviation-expert-explains-why-its-a-problem-258911</a></li>
+<li>E. Smith, “Just one man survived the Air India crash. What’s it like to survive a mass disaster?,” The Conversation. Accessed: Jun. 14, 2025. [Online]. Available: <a href="http://theconversation.com/just-one-man-survived-the-air-india-crash-whats-it-like-to-survive-a-mass-disaster-258905">http://theconversation.com/just-one-man-survived-the-air-india-crash-whats-it-like-to-survive-a-mass-disaster-258905</a></li>
+<li>F. N. Desk, “Air India Plane Crash Updates: Over 200 Feared Dead,” Frontline. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/news/ahmedabad-air-india-plane-crash-update-deaths-injured/article69686987.ece">https://frontline.thehindu.com/news/ahmedabad-air-india-plane-crash-update-deaths-injured/article69686987.ece</a></li>
+<li>A. E. Conversation The, “Air India crash: What is the Boeing 787 Dreamliner’s safety record? An expert explains,” Scroll.in. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://scroll.in/article/1083478/air-india-crash-what-is-the-boeing-787-dreamliners-safety-record-an-expert-explains">https://scroll.in/article/1083478/air-india-crash-what-is-the-boeing-787-dreamliners-safety-record-an-expert-explains</a></li>
+<li>F. N. Desk, “A Catastrophe Foretold: The Crumbling Confidence in Boeing’s Dreamliner,” Frontline. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/news/air-india-flight-ai171-crash-boeing-787-ahmedabad-2025/article69688127.ece">https://frontline.thehindu.com/news/air-india-flight-ai171-crash-boeing-787-ahmedabad-2025/article69688127.ece</a></li>
+<li>F. N. Desk, “Air India Plane Crash Updates: Over 200 Feared Dead,” Frontline. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/news/ahmedabad-air-india-plane-crash-update-deaths-injured/article69686987.ece">https://frontline.thehindu.com/news/ahmedabad-air-india-plane-crash-update-deaths-injured/article69686987.ece</a></li>
+<li>“Ahmedabad Plane Crash: Air India’s London-bound Flight Crashes Near Airport,” Outlook Money. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.outlookmoney.com/news/ahmedabad-plane-crash-air-indias-london-bound-flight-crashes-near-airport">https://www.outlookmoney.com/news/ahmedabad-plane-crash-air-indias-london-bound-flight-crashes-near-airport</a></li>
+<li>“How Air India bled out under Praful Patel.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://themorningcontext.com/business/how-air-india-bled-out-under-praful-patel">https://themorningcontext.com/business/how-air-india-bled-out-under-praful-patel</a></li>
+<li>“An Aviation Expert Explains Why Wanton Speculation on the Cause of the Air India Crash Is a Problem,” The Wire. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://thewire.in/media/an-aviation-expert-speculation-air-india-crash-ahmedabad">https://thewire.in/media/an-aviation-expert-speculation-air-india-crash-ahmedabad</a></li>
+<li>M. Tkacik, “One of the Dreamliners That Gave a Boeing Manager Nightmares Just Crashed,” The American Prospect. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://prospect.org/api/content/0a62509a-47d3-11f0-88ce-1248ae80e59d/">https://prospect.org/api/content/0a62509a-47d3-11f0-88ce-1248ae80e59d/</a></li>
+<li>G. C. Junior, “What do we know about the Air India crash? How did one man survive? What now? An aviation safety expert explains,” The Conversation. Accessed: Jun. 13, 2025. [Online]. Available: <a href="http://theconversation.com/what-do-we-know-about-the-air-india-crash-how-did-one-man-survive-what-now-an-aviation-safety-expert-explains-258910">http://theconversation.com/what-do-we-know-about-the-air-india-crash-how-did-one-man-survive-what-now-an-aviation-safety-expert-explains-258910</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgab8564f"></a>General<br />
+<div class="outline-text-8" id="text-orgab8564f">
+<ul class="org-ul">
+<li>“Air India Flight 171,” Wikipedia. Jun. 14, 2025. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Air_India_Flight_171&amp;oldid=1295518303">https://en.wikipedia.org/w/index.php?title=Air_India_Flight_171&amp;oldid=1295518303</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org07916eb"></a>The Caravan Magazine<br />
+<div class="outline-text-8" id="text-org07916eb">
+<ul class="org-ul">
+<li>“Praful Patel and the fall of Air India.” Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://caravanmagazine.in/reportage/tailspin">https://caravanmagazine.in/reportage/tailspin</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org46b9dc0"></a>World Socialist Web Site<br />
+<div class="outline-text-8" id="text-org46b9dc0">
+<ul class="org-ul">
+<li>“Boeing 787 Dreamliner crashes and explodes in India, killing at least 274,” World Socialist Web Site. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/06/14/npfh-j14.html">https://www.wsws.org/en/articles/2025/06/14/npfh-j14.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org915d86e"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgb146a91"></a>Boeing<br />
+<ul class="org-ul">
+<li><a id="orgce9944b"></a>General<br />
+<div class="outline-text-10" id="text-orgce9944b">
+<ul class="org-ul">
+<li>“Boeing,” Wikipedia. May 06, 2024. Accessed: May 07, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Boeing&amp;oldid=1222580005">https://en.wikipedia.org/w/index.php?title=Boeing&amp;oldid=1222580005</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2192a6c"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org42fdbbe"></a>Critical Studies<br />
+<div class="outline-text-11" id="text-org42fdbbe">
+<ul class="org-ul">
+<li>“Pluralistic: Boeing’s deliberately defective fleet of flying sky-wreckage (01 May 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: May 07, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/05/01/boeing-boeing/">https://pluralistic.net/2024/05/01/boeing-boeing/</a></li>
+
+<li>“Failure of Boeing spacecraft strands 2 astronauts on the International Space Station,” World Socialist Web Site. Accessed: Sep. 01, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/28/uwdq-a28.html">https://www.wsws.org/en/articles/2024/08/28/uwdq-a28.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org6c32057"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="org5fcb5cb"></a>Misc<br />
+<div class="outline-text-11" id="text-org5fcb5cb">
+<ul class="org-ul">
+<li>“Boeing workers connect strike to capitalism and war,” World Socialist Web Site. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/08/07/pzqa-a07.html">https://www.wsws.org/en/articles/2025/08/07/pzqa-a07.html</a></li>
+
+<li>“Thousands of Boeing fighter jet workers strike in St. Louis,” World Socialist Web Site. Accessed: Aug. 05, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/08/04/kpnn-a04.html">https://www.wsws.org/en/articles/2025/08/04/kpnn-a04.html</a></li>
+
+<li>“US officials probe allegations Boeing workers falsified inspection records,” Al Jazeera. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.aljazeera.com/economy/2024/5/7/us-officials-probe-claims-boeing-workers-falsified-inspection-records">https://www.aljazeera.com/economy/2024/5/7/us-officials-probe-claims-boeing-workers-falsified-inspection-records</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Astronaut Suni Williams Prepares for Crew Flight Test - NASA.” Accessed: May 07, 2024. [Online]. Available: <a href="https://www.nasa.gov/image-detail/afs-8-101-536/">https://www.nasa.gov/image-detail/afs-8-101-536/</a></li>
+<li>R. Tribou and O. Sentinel, “Boeing’s first Starliner mission with humans set for historic Space Coast launch tonight.” Accessed: May 07, 2024. [Online]. Available: <a href="https://phys.org/news/2024-05-boeing-starliner-mission-humans-historic.html">https://phys.org/news/2024-05-boeing-starliner-mission-humans-historic.html</a></li>
+<li>Reuters, “Sunita Williams-piloted Boeing Starliner test flight postponed over Atlas rocket glitch,” The Hindu, May 07, 2024. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/science/sunita-williams-piloted-boeing-starliner-test-flight-postponed-over-atlas-rocket-glitch/article68148122.ece">https://www.thehindu.com/sci-tech/science/sunita-williams-piloted-boeing-starliner-test-flight-postponed-over-atlas-rocket-glitch/article68148122.ece</a></li>
+<li>“Boeing postpones launch of Starliner space capsule after technical fault,” Al Jazeera. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.aljazeera.com/economy/2024/5/7/boeing-postpones-launch-of-starliner-spaceship-over-valve-issue">https://www.aljazeera.com/economy/2024/5/7/boeing-postpones-launch-of-starliner-spaceship-over-valve-issue</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgec0b977"></a>Popular Science<br />
+<div class="outline-text-11" id="text-orgec0b977">
+<ul class="org-ul">
+<li>A. Paul, “Boeing allegedly overcharged the military 8,000% for airplane soap dispensers,” Popular Science. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.popsci.com/technology/boeing-soap-dispensers-audit/">https://www.popsci.com/technology/boeing-soap-dispensers-audit/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org33584a2"></a>Jacobin<br />
+<div class="outline-text-11" id="text-org33584a2">
+<ul class="org-ul">
+<li>“Boeing Machinists Are on Strike.” Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://jacobin.com/2024/09/boeing-machinists-strike-washington-pensions">https://jacobin.com/2024/09/boeing-machinists-strike-washington-pensions</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org792f628"></a>World Socialist Web Site<br />
+<div class="outline-text-11" id="text-org792f628">
+<ul class="org-ul">
+<li>“Vote ‘NO’ on the Boeing sellout contract! Organize the rank and file against the sellouts in the IAM bureaucracy!,” World Socialist Web Site. Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/10/pers-s10.html">https://www.wsws.org/en/articles/2024/09/10/pers-s10.html</a></li>
+<li>“The role of the Biden administration in the Boeing sellout,” World Socialist Web Site. Accessed: Nov. 10, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/11/09/cngx-n09.html">https://www.wsws.org/en/articles/2024/11/09/cngx-n09.html</a></li>
+<li>“Overriding strike vote by 33,000 Boeing workers, IAM bureaucrats schedule vote on non-existent contract,” World Socialist Web Site. Accessed: Sep. 04, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/04/zkss-s04.html">https://www.wsws.org/en/articles/2024/09/04/zkss-s04.html</a></li>
+<li>“Boeing locks out private firefighters after contract talks break down,” World Socialist Web Site. Accessed: May 07, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/05/07/boei-m07.html">https://www.wsws.org/en/articles/2024/05/07/boei-m07.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org487cb57"></a>The Conversation<br />
+<div class="outline-text-11" id="text-org487cb57">
+<ul class="org-ul">
+<li>M. E. Fossum, “The Boeing Starliner has returned to Earth without its crew – a former astronaut details what that means for NASA, Boeing and the astronauts still up in space,” The Conversation. Accessed: Sep. 08, 2024. [Online]. Available: <a href="http://theconversation.com/the-boeing-starliner-has-returned-to-earth-without-its-crew-a-former-astronaut-details-what-that-means-for-nasa-boeing-and-the-astronauts-still-up-in-space-238507">http://theconversation.com/the-boeing-starliner-has-returned-to-earth-without-its-crew-a-former-astronaut-details-what-that-means-for-nasa-boeing-and-the-astronauts-still-up-in-space-238507</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga43b858"></a>Democracy Now<br />
+<div class="outline-text-11" id="text-orga43b858">
+<ul class="org-ul">
+<li>“Three Boeing Accidents over Past Two Days Draw More Scrutiny on Embattled Company,” Democracy Now! Accessed: May 11, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/5/10/headlines/three_boeing_accidents_over_past_two_days_draw_more_scrutiny_on_embattled_company">https://www.democracynow.org/2024/5/10/headlines/three_boeing_accidents_over_past_two_days_draw_more_scrutiny_on_embattled_company</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org2149ea5"></a>Misc<br />
+<div class="outline-text-6" id="text-3-4-3-1-8">
+<ul class="org-ul">
+<li>“Ethanol in Your Petrol Tank: Promise, Problems, and the Fight for Choice,” Countercurrents. Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://countercurrents.org/2025/09/ethanol-in-your-petrol-tank-promise-problems-and-the-fight-for-choice/">https://countercurrents.org/2025/09/ethanol-in-your-petrol-tank-promise-problems-and-the-fight-for-choice/</a></li>
+
+<li>S. Patel, “NHAI FASTag Annual Pass: Benefits, Issues &amp; Unequal Toll Savings,” Frontline. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/nhai-fastag-annual-pass-toll-savings-issues/article69950872.ece">https://frontline.thehindu.com/the-nation/nhai-fastag-annual-pass-toll-savings-issues/article69950872.ece</a></li>
+
+<li>J. Deeksha, “Why Bengaluru traffic is among the worst in India,” Scroll.in. Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://scroll.in/article/1085588/why-bengaluru-has-among-the-worst-traffic-in-india">https://scroll.in/article/1085588/why-bengaluru-has-among-the-worst-traffic-in-india</a></li>
+
+<li>“How India move,” Down To Earth. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/how-india-move">https://www.downtoearth.org.in/how-india-move</a></li>
+
+<li>“From 50 Years Ago: Transport Statistics in India: An Evaluation | Economic and Political Weekly.” Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/32/50-years-ago/50-years-ago-transport-statistics-india-evaluation.html">https://www.epw.in/journal/2025/32/50-years-ago/50-years-ago-transport-statistics-india-evaluation.html</a></li>
+
+<li>“Tatkal Tickets To Be Available Only To Aadhaar-Verified Users Starting July,” Outlook Money. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.outlookmoney.com/news/tatkal-tickets-to-be-available-only-to-aadhaar-verified-users-starting-july">https://www.outlookmoney.com/news/tatkal-tickets-to-be-available-only-to-aadhaar-verified-users-starting-july</a></li>
+
+<li>S. Narain, “How India moves: Must we promote private EVs?,” Down To Earth. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/editorial/how-india-moves-must-we-promote-private-evs">https://www.downtoearth.org.in/editorial/how-india-moves-must-we-promote-private-evs</a></li>
+
+<li>T. H. Bureau, “No diesel, petrol delivery fleets in NCR from 2026,” The Hindu, Jun. 04, 2025. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/delhi-clean-mobility/article69657919.ece">https://www.thehindu.com/news/cities/Delhi/delhi-clean-mobility/article69657919.ece</a></li>
+
+<li>D. T. E. Staff, “How India moves,” Down To Earth. Accessed: May 20, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/air/how-india-moves">https://www.downtoearth.org.in/air/how-india-moves</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Uber wades into a fierce price war to stay competitive in India,” Rest of World. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://restofworld.org/2025/uber-india-price-war/">https://restofworld.org/2025/uber-india-price-war/</a></li>
+
+<li>M. Mohanty, “Delhi EV Policy 2.0: It’s bold, but not yet beautiful,” Down To Earth. Accessed: Mar. 26, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/energy/delhi-ev-policy-20-its-bold-but-not-yet-beautiful">https://www.downtoearth.org.in/energy/delhi-ev-policy-20-its-bold-but-not-yet-beautiful</a></li>
+
+<li>K. Pandey, “Budget boosts EV battery manufacturing plans, but a big leap needed for success [Commentary],” Mongabay-India. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/03/budget-boosts-ev-battery-manufacturing-plans-but-a-big-leap-needed-for-success-commentary/">https://india.mongabay.com/2025/03/budget-boosts-ev-battery-manufacturing-plans-but-a-big-leap-needed-for-success-commentary/</a></li>
+
+<li>“Tesla looks to India at a moment of crisis,” Rest of World. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://restofworld.org/2025/tesla-india-sales-stock-decline/">https://restofworld.org/2025/tesla-india-sales-stock-decline/</a></li>
+
+<li>“A Seat at the Table Remains Unoccupied Without a Seat on the Bus,” Greenpeace India. Accessed: Mar. 09, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/17497/a-seat-at-the-table-remains-unoccupied-without-a-seat-on-the-bus/">https://www.greenpeace.org/india/en/story/17497/a-seat-at-the-table-remains-unoccupied-without-a-seat-on-the-bus/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Tandon, “In the fare-play business, Namma Metro has misplaced its priorities,” Mongabay-India. Accessed: Feb. 20, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/02/in-the-fare-play-business-namma-metro-has-misplaced-its-priorities/">https://india.mongabay.com/2025/02/in-the-fare-play-business-namma-metro-has-misplaced-its-priorities/</a></li>
+<li>“Letter to BMRCL to rollback Namma Metro Fare-Hike,” Greenpeace India. Accessed: Feb. 20, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/17430/letter-to-bmrcl-to-rollback-namma-metro-fare-hike/">https://www.greenpeace.org/india/en/publication/17430/letter-to-bmrcl-to-rollback-namma-metro-fare-hike/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Letter to BMRCL to rollback Namma Metro Fare-Hike,” Greenpeace India. Accessed: Feb. 19, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/17430/letter-to-bmrcl-to-rollback-namma-metro-fare-hike/">https://www.greenpeace.org/india/en/publication/17430/letter-to-bmrcl-to-rollback-namma-metro-fare-hike/</a></li>
+
+<li>R. Pandey, “India’s SUV boom presents a complex set of challenges,” Down To Earth. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/energy/indias-suv-boom-presents-a-complex-set-of-challenges">https://www.downtoearth.org.in/energy/indias-suv-boom-presents-a-complex-set-of-challenges</a></li>
+
+<li>A. Ray, “When Women Drive Women: The Story Of Uber Moto Women Initiative,” Feminism in India. Accessed: Jan. 29, 2025. [Online]. Available: <a href="https://feminisminindia.com/?p=181491">https://feminisminindia.com/?p=181491</a></li>
+
+<li>S. Lyons, “How AI can save lives on Indian roads,” 360. Accessed: Jan. 18, 2025. [Online]. Available: <a href="https://360info.org/how-ai-can-save-lives-on-indian-roads/">https://360info.org/how-ai-can-save-lives-on-indian-roads/</a></li>
+
+<li>N. Mandayam and A. Shah, “Hyundai’s slow EV ramp-up in India hurts its decarbonisation efforts, Greenpeace says,” Reuters, Jan. 14, 2025. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://www.reuters.com/business/autos-transportation/hyundais-slow-ev-ramp-up-india-hurts-its-decarbonisation-efforts-greenpeace-says-2025-01-14/">https://www.reuters.com/business/autos-transportation/hyundais-slow-ev-ramp-up-india-hurts-its-decarbonisation-efforts-greenpeace-says-2025-01-14/</a></li>
+
+<li>“Hyundai’s Rising Emissions In Key Markets Like India Risks Fueling Climate Disaster,” Greenpeace East Asia. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://www.greenpeace.org/eastasia/press/8761/hyundais-rising-emissions-in-key-markets-like-india-risks-fueling-climate-disaster/">https://www.greenpeace.org/eastasia/press/8761/hyundais-rising-emissions-in-key-markets-like-india-risks-fueling-climate-disaster/</a></li>
+
+<li>T. H. Bureau, “IIT Madras collaborates with Renault Nissan Tech to develop talent and innovation,” The Hindu, Dec. 27, 2024. Accessed: Dec. 28, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/tamil-nadu/iit-madras-collaborates-with-renault-nissan-tech-to-develop-talent-and-innovation/article69033375.ece">https://www.thehindu.com/news/national/tamil-nadu/iit-madras-collaborates-with-renault-nissan-tech-to-develop-talent-and-innovation/article69033375.ece</a></li>
+
+<li>S. V. Institute Central Road Research, “India has the world’s highest number of traffic deaths. Could AI help save lives?,” Scroll.in. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://scroll.in/article/1076265/india-has-the-worlds-highest-number-of-traffic-deaths-could-ai-help-save-lives">https://scroll.in/article/1076265/india-has-the-worlds-highest-number-of-traffic-deaths-could-ai-help-save-lives</a></li>
+
+<li>“Women Reclaim Public Spaces with Zero Fare ‘Pink Tickets’ yet Safety and Accessibility Gaps Remain, says Greenpeace Report.,” Greenpeace India. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16992/women-reclaim-public-spaces-with-zero-fare-pink-tickets-yet-safety-and-accessibility-gaps-remain-says-greenpeace-report/">https://www.greenpeace.org/india/en/press/16992/women-reclaim-public-spaces-with-zero-fare-pink-tickets-yet-safety-and-accessibility-gaps-remain-says-greenpeace-report/</a></li>
+
+<li>“Fare-Free Future: Ride the Justice Route,” Greenpeace India. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16993/fare-free-future-ride-the-justice-route/">https://www.greenpeace.org/india/en/publication/16993/fare-free-future-ride-the-justice-route/</a></li>
+<li>“Women Reclaim Public Spaces with Zero Fare ‘Pink Tickets’ yet Safety and Accessibility Gaps Remain, says Greenpeace Report.,” Greenpeace India. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16992/women-reclaim-public-spaces-with-zero-fare-pink-tickets-yet-safety-and-accessibility-gaps-remain-says-greenpeace-report/">https://www.greenpeace.org/india/en/press/16992/women-reclaim-public-spaces-with-zero-fare-pink-tickets-yet-safety-and-accessibility-gaps-remain-says-greenpeace-report/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Maruti Suzuki India workers jailed for life on frame-up murder charges speak to the WSWS,” World Socialist Web Site. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/07/16/tukc-j16.html">https://www.wsws.org/en/articles/2024/07/16/tukc-j16.html</a></li>
+<li>“Framed-up Maruti Suzuki India workers demand release of Bogdan Syrotiuk,” World Socialist Web Site. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/07/16/hoae-j16.html">https://www.wsws.org/en/articles/2024/07/16/hoae-j16.html</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>M. B. &amp; M. S. Abdulla, “India’s roads are deadly – design fixes could make them safer for everyone,” Scroll.in. Accessed: Jul. 18, 2024. [Online]. Available: <a href="https://scroll.in/article/1070253/indias-roads-are-deadly-design-fixes-could-make-them-safer-for-everyone">https://scroll.in/article/1070253/indias-roads-are-deadly-design-fixes-could-make-them-safer-for-everyone</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Maruti Suzuki India workers jailed for life on frame-up murder charges speak to the WSWS,” World Socialist Web Site. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/07/16/tukc-j16.html">https://www.wsws.org/en/articles/2024/07/16/tukc-j16.html</a></li>
+<li>“Framed-up Maruti Suzuki India workers demand release of Bogdan Syrotiuk,” World Socialist Web Site. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/07/16/hoae-j16.html">https://www.wsws.org/en/articles/2024/07/16/hoae-j16.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“The Indian EV startup navigating short-lived government subsidies,” Rest of World. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://restofworld.org/2024/3-minutes-with-prashant-vashishtha/">https://restofworld.org/2024/3-minutes-with-prashant-vashishtha/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Paliath, “How injuries Impact Women In Automobile Supply Chain.” Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://www.indiaspend.com/industry/how-injuries-impact-women-in-automobile-supply-chain-914225">https://www.indiaspend.com/industry/how-injuries-impact-women-in-automobile-supply-chain-914225</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The design-obsessed Indian scooter company with global ambitions,” Rest of World. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://restofworld.org/2024/ather-ev-scooters-india/">https://restofworld.org/2024/ather-ev-scooters-india/</a></li>
+
+<li>R. Chowdhury, “How do autorickshaw drivers (in Kolkata) perceive sexual harassment on public transport?,” Scroll.in. Accessed: Apr. 03, 2024. [Online]. Available: <a href="https://scroll.in/article/1065774/how-do-autorickshaw-drivers-in-kolkata-perceive-sexual-harassment-on-public-transport">https://scroll.in/article/1065774/how-do-autorickshaw-drivers-in-kolkata-perceive-sexual-harassment-on-public-transport</a></li>
+
+<li>“Zero Emission Vehicle (ZEV) Mandate Policy Report.” Accessed: Nov. 06, 2023. [Online]. Available: <a href="https://www.cseindia.org/zero-emission-vehicle-zev-mandate-policy-report-11813">https://www.cseindia.org/zero-emission-vehicle-zev-mandate-policy-report-11813</a></li>
+
+<li>“MOBILITY CRISIS - Agenda for Action 2010.” Accessed: Nov. 06, 2023. [Online]. Available: <a href="https://www.cseindia.org/mobility-crisis-agenda-for-action-2010-1431">https://www.cseindia.org/mobility-crisis-agenda-for-action-2010-1431</a></li>
+
+<li>“The need for bus queue shelters in Delhi,” Greenpeace India. Accessed: Apr. 01, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/16153/the-need-for-bus-queue-shelters-in-delhi/">https://www.greenpeace.org/india/en/story/16153/the-need-for-bus-queue-shelters-in-delhi/</a></li>
+
+<li>“Our top 6 ingredients for greener and fairer transport systems,” Greenpeace India. Accessed: Apr. 01, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/16618/our-top-6-ingredients-for-greener-and-fairer-transport-systems/">https://www.greenpeace.org/india/en/story/16618/our-top-6-ingredients-for-greener-and-fairer-transport-systems/</a></li>
+
+<li>“Is eVTOL a boon or bane? It depends on how we put it to use.” Accessed: May 23, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/science-technology/is-evtol-a-boon-or-bane-it-depends-on-how-we-put-it-to-use-96280">https://www.downtoearth.org.in/blog/science-technology/is-evtol-a-boon-or-bane-it-depends-on-how-we-put-it-to-use-96280</a></li>
+
+<li>K. Kabeer, “No Transport for Poor Indians,” Centre for Financial Accountability. Accessed: May 30, 2024. [Online]. Available: <a href="https://www.cenfa.org/no-transport-for-poor-indians/">https://www.cenfa.org/no-transport-for-poor-indians/</a></li>
+
+<li>“No Transport for Poor Indians,” The Wire. Accessed: May 30, 2024. [Online]. Available: <a href="https://thewire.in/government/no-transport-for-poor-indians">https://thewire.in/government/no-transport-for-poor-indians</a></li>
+
+<li>“Costlier, Shoddier, Fewer Passengers &amp; Losing Money: Beyond Vande Bharat &amp; Bullet Trains, The Reality Of The Railways.” Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://article-14.com/post/costlier-shoddier-fewer-passengers-losing-money-beyond-vande-bharat-bullet-trains-the-reality-of-the-railways-6653f6961744e">https://article-14.com/post/costlier-shoddier-fewer-passengers-losing-money-beyond-vande-bharat-bullet-trains-the-reality-of-the-railways-6653f6961744e</a></li>
+
+<li>“New Government’s Agenda: Battle the car bulge.” Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/governance/new-government-s-agenda-battle-the-car-bulge-96576">https://www.downtoearth.org.in/news/governance/new-government-s-agenda-battle-the-car-bulge-96576</a></li>
+
+<li>“India,” International Council on Clean Transportation. Accessed: Sep. 01, 2025. [Online]. Available: <a href="https://theicct.org/region/india/">https://theicct.org/region/india/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge1cc54c" class="outline-3">
+<h3 id="orge1cc54c"><span class="section-number-3">3.5.</span> Business Studies, Misc</h3>
+</div>
+<div id="outline-container-orga397ff7" class="outline-3">
+<h3 id="orga397ff7"><span class="section-number-3">3.6.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-org8de4a7f" class="outline-3">
+<h3 id="org8de4a7f"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-orgbf56e14" class="outline-3">
+<h3 id="orgbf56e14"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orga579fb7" class="outline-3">
+<h3 id="orga579fb7"><span class="section-number-3">3.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>I. Ghosh, “Tesla is losing the EV race. Its stock keeps winning,” Rest of World. Accessed: Jan. 16, 2026. [Online]. Available: <a href="https://restofworld.org/2026/tesla-car-2025/">https://restofworld.org/2026/tesla-car-2025/</a></li>
+
+<li>H. M. Treasury, “Private jet tax should be sky high.” Accessed: Nov. 26, 2025. [Online]. Available: <a href="https://theecologist.org/2025/nov/24/private-jet-tax-should-be-sky-high">https://theecologist.org/2025/nov/24/private-jet-tax-should-be-sky-high</a></li>
+
+<li>B. Ghosh, “Why BYD can’t do for China what Ford did for America,” Rest of World. Accessed: Nov. 12, 2025. [Online]. Available: <a href="https://restofworld.org/2025/byd-china-soft-power/">https://restofworld.org/2025/byd-china-soft-power/</a></li>
+
+<li>A. Bhattacharya, “China won the electric car race. Up next: freight trucks,” Rest of World. Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://restofworld.org/2025/china-electric-freight-trucks/">https://restofworld.org/2025/china-electric-freight-trucks/</a></li>
+
+<li>April 2025, “Industry, infrastructure and transport.” Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://oxford.shorthandstories.com/industry-infrastructure-and-transport/">https://oxford.shorthandstories.com/industry-infrastructure-and-transport/</a></li>
+
+<li>“Free public transport in Ukraine.” Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://theecologist.org/2025/aug/27/free-public-transport-ukraine">https://theecologist.org/2025/aug/27/free-public-transport-ukraine</a></li>
+
+<li>“3 Reasons why flights are far cheaper than trains and why that has to change,” Greenpeace International. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/78154/3-reasons-why-flights-are-far-cheaper-than-trains-and-why-that-has-to-change/">https://www.greenpeace.org/international/story/78154/3-reasons-why-flights-are-far-cheaper-than-trains-and-why-that-has-to-change/</a></li>
+
+<li>C. Thompson, “The Invention of ‘Jaywalking,’” Medium. Accessed: Aug. 04, 2025. [Online]. Available: <a href="https://marker.medium.com/the-invention-of-jaywalking-afd48f994c05">https://marker.medium.com/the-invention-of-jaywalking-afd48f994c05</a></li>
+
+<li>“Massachusetts’ Freedom to Move Act Can Get Transportation on Track,” The Equation. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://blog.ucs.org/kshen/massachusetts-freedom-to-move-act-can-get-transportation-on-track/">https://blog.ucs.org/kshen/massachusetts-freedom-to-move-act-can-get-transportation-on-track/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Mobility as a Project for a Dignified Life - Rosa-Luxemburg-Stiftung.” Accessed: Jun. 26, 2025. [Online]. Available: <a href="https://www.rosalux.de/en/news/id/53548/mobility-as-a-project-for-a-dignified-life">https://www.rosalux.de/en/news/id/53548/mobility-as-a-project-for-a-dignified-life</a></li>
+
+<li>“Laws of Gravity Catching up With Tesla,” NewsClick. Accessed: Apr. 02, 2025. [Online]. Available: <a href="https://www.newsclick.in/laws-gravity-catching-tesla">https://www.newsclick.in/laws-gravity-catching-tesla</a></li>
+
+<li>“Transportation Professionals Saw Elon Musk’s Lies and Disdain for the Public Firsthand.,” The Equation. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://blog.ucs.org/steven-higashide/transportation-professionals-saw-elon-musks-lies-and-disdain-for-the-public-firsthand/">https://blog.ucs.org/steven-higashide/transportation-professionals-saw-elon-musks-lies-and-disdain-for-the-public-firsthand/</a></li>
+
+<li>“The User-Pay Myth: We ALL Pay for Our Roads, Not Just Drivers,” The Equation. Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://blog.ucs.org/dave-cooke/the-user-pay-myth-we-all-pay-for-our-roads-not-just-drivers/">https://blog.ucs.org/dave-cooke/the-user-pay-myth-we-all-pay-for-our-roads-not-just-drivers/</a></li>
+
+<li>“A Research Agenda for Transport Equity and Mobility Justice.” Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://www.e-elgar.com/shop/gbp/a-research-agenda-for-transport-equity-and-mobility-justice-9781802201871.html">https://www.e-elgar.com/shop/gbp/a-research-agenda-for-transport-equity-and-mobility-justice-9781802201871.html</a></li>
+
+<li>M. N. Lomas Olivier Hoedeman,Barbara Schuster, Joel Tölgyes,Sacha Dierckx,Oldřich Sklenář,Dieter Plehwe,Alessandro Montebugnoli,Simone Furzi,John Burant,Pedro L., “Race 2 Paris | Transnational Institute.” Accessed: Jan. 27, 2025. [Online]. Available: <a href="https://www.tni.org/en/publication/race-2-paris">https://www.tni.org/en/publication/race-2-paris</a></li>
+
+<li>don-anair, “Rolling Back Vehicle Standards Is Bad for Drivers, the Auto Industry, and Anything that Breathes,” The Equation. Accessed: Jan. 23, 2025. [Online]. Available: <a href="https://blog.ucsusa.org/don-anair/rolling-back-vehicle-standards-is-bad-for-drivers-the-auto-industry-and-anything-that-breathes/">https://blog.ucsusa.org/don-anair/rolling-back-vehicle-standards-is-bad-for-drivers-the-auto-industry-and-anything-that-breathes/</a></li>
+
+<li>“Warning strikes at nine VW plants in Germany,” World Socialist Web Site. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/12/04/aapr-d04.html">https://www.wsws.org/en/articles/2024/12/04/aapr-d04.html</a></li>
+
+<li>“How public transport reshapes cities.” Accessed: Sep. 18, 2024. [Online]. Available: <a href="https://caravanmagazine.in/communities/public-transport-reshapes-cities">https://caravanmagazine.in/communities/public-transport-reshapes-cities</a></li>
+
+<li>D. Vetter, “This Scottish City Just Banned SUV And Airline Ads. Here’s Why,” Forbes. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.forbes.com/sites/davidrvetter/2024/05/30/this-scottish-city-just-banned-suv-and-airline-ads-heres-why/">https://www.forbes.com/sites/davidrvetter/2024/05/30/this-scottish-city-just-banned-suv-and-airline-ads-heres-why/</a></li>
+<li>“Abolish fossil fuel tax breaks.” Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://theecologist.org/2023/mar/27/abolish-fossil-fuel-tax-breaks">https://theecologist.org/2023/mar/27/abolish-fossil-fuel-tax-breaks</a></li>
+<li>Munkacsoport, “Residents can accept higher parking fees,” Residents can accept higher parking fees. Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://www.levego.hu/en/related-documents/residents-can-accept-higher-parking-fees/">https://www.levego.hu/en/related-documents/residents-can-accept-higher-parking-fees/</a></li>
+<li>Munkacsoport, “For road toll in Budapest!,” For road toll in Budapest! Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://www.levego.hu/en/campaigns/utdijat-budapestre/">https://www.levego.hu/en/campaigns/utdijat-budapestre/</a></li>
+<li>“Internalisation of transport external costs - European Commission.” Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://transport.ec.europa.eu/transport-themes/sustainable-transport/internalisation-transport-external-costs_en">https://transport.ec.europa.eu/transport-themes/sustainable-transport/internalisation-transport-external-costs_en</a></li>
+
+<li>Would you buy a cow for a glass of milk? Use car sharing!, (Feb. 08, 2022). Accessed: Apr. 17, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=yy5uUbiq3EQ">https://www.youtube.com/watch?v=yy5uUbiq3EQ</a></li>
+
+<li>“Low Emission Zones.” Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://urbanaccessregulations.eu/low-emission-zones-main">https://urbanaccessregulations.eu/low-emission-zones-main</a></li>
+<li>Munkacsoport, “Clean Air Action Group,” Clean Air Action Group. Accessed: Apr. 17, 2024. [Online]. Available: <a href="https://www.levego.hu/en/">https://www.levego.hu/en/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>L. Ravensbergen and T. Schwanen, “Care-driven informality: The case of community transport,” The Geographical Journal, vol. n/a, no. n/a, doi: 10.1111/geoj.12552.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfd57765" class="outline-2">
+<h2 id="orgfd57765"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge8a476c" class="outline-3">
+<h3 id="orge8a476c"><span class="section-number-3">4.1.</span> Education</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><i>“Transportation Courses | MIT OpenCourseWare | Free Online Course Materials.”</i> <a href="https://ocw.mit.edu/courses/transportation-courses/">https://ocw.mit.edu/courses/transportation-courses/</a> (accessed Jun. 30, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org69b65a3" class="outline-3">
+<h3 id="org69b65a3"><span class="section-number-3">4.2.</span> Electric Vehicles</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Electric Vehicles: <a href="https://tinyurl.com/2k4f2a84">https://tinyurl.com/2k4f2a84</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8a9ccc3" class="outline-3">
+<h3 id="org8a9ccc3"><span class="section-number-3">4.3.</span> Modes</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orga2c6da1" class="outline-4">
+<h4 id="orga2c6da1"><span class="section-number-4">4.3.1.</span> Cycles</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>Cycling: <a href="https://tinyurl.com/2mt7efnn">https://tinyurl.com/2mt7efnn</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc4bf727" class="outline-4">
+<h4 id="orgc4bf727"><span class="section-number-4">4.3.2.</span> Cars</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li>Cars: <a href="https://tinyurl.com/5e97ts3r">https://tinyurl.com/5e97ts3r</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge34233f" class="outline-4">
+<h4 id="orge34233f"><span class="section-number-4">4.3.3.</span> Buses</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<ul class="org-ul">
+<li>Buses: <a href="https://tinyurl.com/454an94d">https://tinyurl.com/454an94d</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ed0989" class="outline-4">
+<h4 id="org6ed0989"><span class="section-number-4">4.3.4.</span> Trains</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<ul class="org-ul">
+<li>Trains: <a href="https://tinyurl.com/y48exb44">https://tinyurl.com/y48exb44</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe92600" class="outline-4">
+<h4 id="orgfe92600"><span class="section-number-4">4.3.5.</span> Ships</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<ul class="org-ul">
+<li>Ships: <a href="https://tinyurl.com/4d6fd65y">https://tinyurl.com/4d6fd65y</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2648be8" class="outline-4">
+<h4 id="org2648be8"><span class="section-number-4">4.3.6.</span> Planes</h4>
+<div class="outline-text-4" id="text-4-3-6">
+<ul class="org-ul">
+<li>Planes: <a href="https://tinyurl.com/5t2vvcjx">https://tinyurl.com/5t2vvcjx</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org57daee8" class="outline-2">
+<h2 id="org57daee8"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org50bc9f0" class="outline-3">
+<h3 id="org50bc9f0"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org8f397f1" class="outline-4">
+<h4 id="org8f397f1"><span class="section-number-4">5.1.1.</span> Cycle</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>Lyrical: Dheemi Dheemi | 1947: Earth | A.R. Rahman | Hariharan | Aamir Khan, (May 17, 2017). Accessed: Jul. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=gKdu6QVGOC8">https://www.youtube.com/watch?v=gKdu6QVGOC8</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3d0d6cc" class="outline-4">
+<h4 id="org3d0d6cc"><span class="section-number-4">5.1.2.</span> Bike</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>Friendship Special - Yeh Dosti Hum Nahi Todenge | Dharmendra | Amitabh | Sholay -HD Video | Hit Song, (Aug. 01, 2021). Accessed: Jul. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=qfCt1UZAXMQ">https://www.youtube.com/watch?v=qfCt1UZAXMQ</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd58ffdd" class="outline-4">
+<h4 id="orgd58ffdd"><span class="section-number-4">5.1.3.</span> Car Songs</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<ul class="org-ul">
+<li>Aati Kya Khandala | Ghulam | Aamir Khan &amp; Rani Mukherjee | Alka Yagnik | 90’s Blockbuster Songs, (Jun. 15, 2019). Accessed: Jul. 02, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=yIFMTfgJzY0">https://www.youtube.com/watch?v=yIFMTfgJzY0</a></li>
+<li>“Aaja Meri Gaadi Main Baith Jaa (Miss 420) - YouTube.” <a href="https://www.youtube.com/watch?v=7aF0qsGEi-g">https://www.youtube.com/watch?v=7aF0qsGEi-g</a> (accessed Jul. 02, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb56db33" class="outline-4">
+<h4 id="orgb56db33"><span class="section-number-4">5.1.4.</span> Bus</h4>
+</div>
+<div id="outline-container-org311fd6b" class="outline-4">
+<h4 id="org311fd6b"><span class="section-number-4">5.1.5.</span> Shikara</h4>
+<div class="outline-text-4" id="text-5-1-5">
+<ul class="org-ul">
+<li>Taarif Karoon Kya Uski with lyrics | तारीफ़ करूं क्या उसकी के बोल | Kashmir Ki Kali | Shammi Kapoor, (Jan. 18, 2017). Accessed: Jul. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=m3RQGG4fGeU">https://www.youtube.com/watch?v=m3RQGG4fGeU</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f3c82f" class="outline-4">
+<h4 id="org2f3c82f"><span class="section-number-4">5.1.6.</span> Ship</h4>
+<div class="outline-text-4" id="text-5-1-6">
+<ul class="org-ul">
+<li>Céline Dion - My Heart Will Go On | Love Theme from the movie “Titanic,” (Mar. 02, 2018). Accessed: Jul. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=gZXKl36YS9k">https://www.youtube.com/watch?v=gZXKl36YS9k</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org11a5af0" class="outline-4">
+<h4 id="org11a5af0"><span class="section-number-4">5.1.7.</span> Airplane</h4>
+</div>
+<div id="outline-container-org332bd95" class="outline-4">
+<h4 id="org332bd95"><span class="section-number-4">5.1.8.</span> Train</h4>
+<div class="outline-text-4" id="text-5-1-8">
+<ul class="org-ul">
+<li>“Kasto Mazza | Parineeta | Saif Ali Khan &amp; Vidya Balan | Sonu Nigam &amp; Shreya Ghoshal - YouTube.” <a href="https://www.youtube.com/watch?v=deTVgOf2cWs">https://www.youtube.com/watch?v=deTVgOf2cWs</a> (accessed Jul. 04, 2023).</li>
+<li>Chaiyya Chaiyya - Lyrical Video | Dil Se | Sukhwinder Singh | A R Rahman | Ishtar Music, (Jun. 26, 2021). Accessed: Jul. 04, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=9yGukg6SSZ4">https://www.youtube.com/watch?v=9yGukg6SSZ4</a></li>
+<li>Shemaroo Musical Maestros, Hathon Ki Chand Lakeeron Ka | Vidhata (1982) | Suresh Wadkar | Anwar | Dilip Kumar | Shammi Kapoor, (Jan. 19, 2025). Accessed: Apr. 01, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=G-IP-Snum5w">https://www.youtube.com/watch?v=G-IP-Snum5w</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbd0d685" class="outline-4">
+<h4 id="orgbd0d685"><span class="section-number-4">5.1.9.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-9">
+<ul class="org-ul">
+<li>“So Gaya Yeh Jahan - Madhuri Dixit, Anil Kapoor, Chunky | Alka Yagnik, Shabbir Kumar | Tezaab Song - YouTube.” <a href="https://www.youtube.com/watch?v=L4FmY6tuCcs">https://www.youtube.com/watch?v=L4FmY6tuCcs</a> (accessed Jul. 04, 2023).</li>
+
+<li>OFFICIAL: Best Travelling Songs of Bollywood | Road Trip Songs | T-SERIES, (Sep. 29, 2014). Accessed: Jul. 02, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=T5eQ-Vo_3EQ">https://www.youtube.com/watch?v=T5eQ-Vo_3EQ</a></li>
+
+<li>Non Stop Road Trip Love Hits - Full Album | 3 Hour Non-Stop Romantic Songs | 50 Superhit Love Songs, (Feb. 09, 2023). Accessed: Jul. 02, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=gErAmJR1UOk">https://www.youtube.com/watch?v=gErAmJR1UOk</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgde1b0a2" class="outline-3">
+<h3 id="orgde1b0a2"><span class="section-number-3">5.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“Watch as the rhythms of traffic create a mesmerising score | Aeon Videos,” Aeon. Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://aeon.co/videos/watch-as-the-rhythms-of-traffic-create-a-mesmerising-score">https://aeon.co/videos/watch-as-the-rhythms-of-traffic-create-a-mesmerising-score</a></li>
+
+<li>T. O. Staff, “New Uber Feature Allows Women To Request Nonthreatening Eunuch Driver,” The Onion. Accessed: Sep. 18, 2025. [Online]. Available: <a href="https://theonion.com/new-uber-feature-allows-women-to-request-nonthreatening-eunuch-driver/">https://theonion.com/new-uber-feature-allows-women-to-request-nonthreatening-eunuch-driver/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf4e3e9c" class="outline-2">
+<h2 id="orgf4e3e9c"><span class="section-number-2">6.</span> Special Topics</h2>
+</div>
+<div id="outline-container-orgcea897c" class="outline-2">
+<h2 id="orgcea897c"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org0282146" class="outline-3">
+<h3 id="org0282146"><span class="section-number-3">7.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>“Greenpeace calls on Toyota to stop greenwashing biofuel vehicles - Greenpeace East Asia.” Accessed: Nov. 22, 2025. [Online]. Available: <a href="https://www.greenpeace.org/eastasia/press/68477/greenpeace-calls-on-toyota-to-stop-greenwashing-biofuel-vehicles/">https://www.greenpeace.org/eastasia/press/68477/greenpeace-calls-on-toyota-to-stop-greenwashing-biofuel-vehicles/</a></li>
+
+<li>JSE, “Let us now praise United Airlines,” Quomodocumque. Accessed: Nov. 09, 2025. [Online]. Available: <a href="https://quomodocumque.wordpress.com/2025/11/08/let-us-now-praise-united-airlines/">https://quomodocumque.wordpress.com/2025/11/08/let-us-now-praise-united-airlines/</a></li>
+
+<li>“An Indigenous-led solar canoe initiative expands across the Amazon,” Mongabay Environmental News. Accessed: Sep. 01, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/09/an-indigenous-led-solar-canoe-initiative-expands-across-the-amazon/">https://news.mongabay.com/2025/09/an-indigenous-led-solar-canoe-initiative-expands-across-the-amazon/</a></li>
+
+<li>“Home,” International Council on Clean Transportation. Accessed: Sep. 01, 2025. [Online]. Available: <a href="https://theicct.org/">https://theicct.org/</a></li>
+
+<li>locusmag, “Commentary: Cory Doctorow: The Swivel-Eyed Loons Have a Point,” Locus Online. Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://locusmag.com/2023/05/commentary-cory-doctorow-the-swivel-eyed-loons-have-a-point/">https://locusmag.com/2023/05/commentary-cory-doctorow-the-swivel-eyed-loons-have-a-point/</a></li>
+
+<li>D. Guillery, “Why Egalitarian Philosophers (and the Rest of Us) Should Be More Concerned About Roads | Blog of the APA.” Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://blog.apaonline.org/2025/08/11/why-egalitarian-philosophers-and-the-rest-of-us-should-be-more-concerned-about-roads/">https://blog.apaonline.org/2025/08/11/why-egalitarian-philosophers-and-the-rest-of-us-should-be-more-concerned-about-roads/</a></li>
+
+<li>“Sylvain Chassang on Rethinking Individual Transport Policy,” Princeton University - Department of Economics. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://economics.princeton.edu/news/sylvain-chassang-on-rethinking-individual-transport-policy/">https://economics.princeton.edu/news/sylvain-chassang-on-rethinking-individual-transport-policy/</a></li>
+
+<li>“How Much Transit Investment Is Needed to Get Back to ‘Normal’?,” The Equation. Accessed: May 21, 2025. [Online]. Available: <a href="https://blog.ucs.org/kshen/how-much-transit-investment-is-needed-to-get-back-to-normal/">https://blog.ucs.org/kshen/how-much-transit-investment-is-needed-to-get-back-to-normal/</a></li>
+
+<li>“Whoopsie, Tesla Recalled Nearly Every Cybertruck Because It Used the Wrong Glue,” Popular Mechanics. Accessed: Mar. 23, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/cars/hybrid-electric/a64254591/tesla-cybertruck-recall-2025-detaching-body-panel/">https://www.popularmechanics.com/cars/hybrid-electric/a64254591/tesla-cybertruck-recall-2025-detaching-body-panel/</a></li>
+
+<li>“Tesla loses ground as Chinese EVs dominate global markets,” Rest of World. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://restofworld.org/2025/tesla-loses-ground-chinese-ev-dominate-global-markets/">https://restofworld.org/2025/tesla-loses-ground-chinese-ev-dominate-global-markets/</a></li>
+
+<li>C. Jasper, “Musk forced to halt Cybertruck deliveries as parts fall off,” The Telegraph, Mar. 16, 2025. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://www.telegraph.co.uk/business/2025/03/16/musk-forced-halt-cybertuck-deliveries-as-parts-fall-off/">https://www.telegraph.co.uk/business/2025/03/16/musk-forced-halt-cybertuck-deliveries-as-parts-fall-off/</a></li>
+
+<li>F. Diaz-Maurin, “The DC plane crash: Was the helicopter crew practicing for disaster before it became involved in one?,” Bulletin of the Atomic Scientists. Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/01/the-dc-plane-crash-was-the-helicopter-crew-practicing-for-disaster-before-it-became-involved-in-one/">https://thebulletin.org/2025/01/the-dc-plane-crash-was-the-helicopter-crew-practicing-for-disaster-before-it-became-involved-in-one/</a></li>
+
+<li>Telekocsi, (Feb. 07, 2022). Accessed: Apr. 17, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=6maKnxOwu8Q">https://www.youtube.com/watch?v=6maKnxOwu8Q</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org246ee09" class="outline-3">
+<h3 id="org246ee09"><span class="section-number-3">7.2.</span> Transnational Institute</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>M. N. Lomas Olivier Hoedeman,Barbara Schuster, Joel Tölgyes,Sacha Dierckx,Oldřich Sklenář,Dieter Plehwe,Alessandro Montebugnoli,Simone Furzi,John Burant,Pedro L., “Race 2 Paris | Transnational Institute.” Accessed: Nov. 30, 2024. [Online]. Available: <a href="https://www.tni.org/en/publication/race-2-paris">https://www.tni.org/en/publication/race-2-paris</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

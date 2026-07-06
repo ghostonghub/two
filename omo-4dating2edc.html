@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everyday Computing - Dating</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Everyday Computing - Dating</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org230da2d">1. General</a></li>
+<li><a href="#org04d88db">2. Safety</a></li>
+<li><a href="#orgbfbac2a">3. <b>Fair Tech</b></a>
+<ul>
+<li><a href="#org2525372">3.1. Misc</a></li>
+<li><a href="#org58e00b6">3.2. LGBTQ+</a></li>
+<li><a href="#org9dd25e0">3.3. Racism</a></li>
+</ul>
+</li>
+<li><a href="#orgc4528dc">4. CSE</a>
+<ul>
+<li><a href="#org222e592">4.1. AI</a>
+<ul>
+<li><a href="#orgb68488a">4.1.1. Tools</a></li>
+<li><a href="#orgc14bee6">4.1.2. Fair Tech</a></li>
+<li><a href="#org99503c8">4.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgefc6978">4.2. Data Science</a></li>
+<li><a href="#orge8088e3">4.3. Privacy And Security</a></li>
+</ul>
+</li>
+<li><a href="#orge044d58">5. Sources</a>
+<ul>
+<li><a href="#org4c20b30">5.1. Fashion</a></li>
+<li><a href="#orga18a041">5.2. Business</a></li>
+<li><a href="#orgf02215a">5.3. Pop Tech</a></li>
+</ul>
+</li>
+<li><a href="#org3a4b4ca">6. World</a>
+<ul>
+<li><a href="#org2678489">6.1. Nation States</a>
+<ul>
+<li><a href="#org1f51293">6.1.1. India</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org7da9b0f">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org230da2d" class="outline-2">
+<h2 id="org230da2d"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org04d88db" class="outline-2">
+<h2 id="org04d88db"><span class="section-number-2">2.</span> Safety</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>“Online Dating and Dating App Safety Tips | RAINN.” Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.rainn.org/articles/online-dating-and-dating-app-safety-tips">https://www.rainn.org/articles/online-dating-and-dating-app-safety-tips</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbfbac2a" class="outline-2">
+<h2 id="orgbfbac2a"><span class="section-number-2">3.</span> <b>Fair Tech</b></h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2525372" class="outline-3">
+<h3 id="org2525372"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>T. Tech, “The Many Hands On Your Intimate Data,” Tactical Tech. Accessed: May 16, 2024. [Online]. Available: <a href="https://tacticaltech.org/resources/glass-room-hands-on-data/">https://tacticaltech.org/resources/glass-room-hands-on-data/</a></li>
+<li>rainey Reitman, “Six Heartbreaking Truths about Online Dating Privacy,” Electronic Frontier Foundation. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2012/02/six-heartbreaking-truths-about-online-dating-privacy">https://www.eff.org/deeplinks/2012/02/six-heartbreaking-truths-about-online-dating-privacy</a></li>
+<li>“‘Everything But Your Mother’s Maiden Name’: Mozilla Research Finds Majority of Dating Apps More Data-hungry and Invasive than Ever,” Mozilla Foundation. Accessed: Apr. 25, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/everything-but-your-mothers-maiden-name-mozilla-research-finds-majority-of-dating-apps-more-data-hungry-and-invasive-than-ever/">https://foundation.mozilla.org/en/blog/everything-but-your-mothers-maiden-name-mozilla-research-finds-majority-of-dating-apps-more-data-hungry-and-invasive-than-ever/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org58e00b6" class="outline-3">
+<h3 id="org58e00b6"><span class="section-number-3">3.2.</span> LGBTQ+</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>D. Barnett, “Security Tips for Online LGBTQ+ Dating,” Electronic Frontier Foundation. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2021/06/security-tips-online-lgbtq-dating">https://www.eff.org/deeplinks/2021/06/security-tips-online-lgbtq-dating</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9dd25e0" class="outline-3">
+<h3 id="org9dd25e0"><span class="section-number-3">3.3.</span> Racism</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Are Dating Apps Racist? Here’s What Tinder And Others Can Do To Protect Users Of Color,” Mozilla Foundation. Accessed: Mar. 19, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/dating-apps-racist-tinder-hinge/">https://foundation.mozilla.org/en/blog/dating-apps-racist-tinder-hinge/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4528dc" class="outline-2">
+<h2 id="orgc4528dc"><span class="section-number-2">4.</span> CSE</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org222e592" class="outline-3">
+<h3 id="org222e592"><span class="section-number-3">4.1.</span> AI</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgb68488a" class="outline-4">
+<h4 id="orgb68488a"><span class="section-number-4">4.1.1.</span> Tools</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Chat with an AI Partner Who Appreciates You,” EVA AI. Accessed: Dec. 01, 2023. [Online]. Available: <a href="https://evaapp.ai/">https://evaapp.ai/</a></li>
+<li>“Romantic AI – Official Website.” Accessed: Dec. 01, 2023. [Online]. Available: <a href="https://romanticai.com/">https://romanticai.com/</a></li>
+<li>“Replika,” replika.com. Accessed: Dec. 01, 2023. [Online]. Available: <a href="https://replika.com">https://replika.com</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc14bee6" class="outline-4">
+<h4 id="orgc14bee6"><span class="section-number-4">4.1.2.</span> Fair Tech</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“*Privacy Not Included: A Buyer’s Guide for Connected Products,” Mozilla Foundation. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/privacynotincluded/articles/happy-valentines-day-romantic-ai-chatbots-dont-have-your-privacy-at-heart/">https://foundation.mozilla.org/en/privacynotincluded/articles/happy-valentines-day-romantic-ai-chatbots-dont-have-your-privacy-at-heart/</a></li>
+<li>“Creepy.exe: Mozilla Urges Public to Swipe Left on Romantic AI Chatbots Due to Major Privacy Red Flags,” Mozilla Foundation. Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/creepyexe-mozilla-urges-public-to-swipe-left-on-romantic-ai-chatbots-due-to-major-privacy-red-flags/">https://foundation.mozilla.org/en/blog/creepyexe-mozilla-urges-public-to-swipe-left-on-romantic-ai-chatbots-due-to-major-privacy-red-flags/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org99503c8" class="outline-4">
+<h4 id="org99503c8"><span class="section-number-4">4.1.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>S. Dutta, “Sima Aunty 2.0: How AI Is Revolutionising Online Dating,” Feminism in India. Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/03/01/sima-aunty-2-0-how-ai-is-revolutionising-online-dating/">https://feminisminindia.com/2024/03/01/sima-aunty-2-0-how-ai-is-revolutionising-online-dating/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgefc6978" class="outline-3">
+<h3 id="orgefc6978"><span class="section-number-3">4.2.</span> Data Science</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>M. A. Turner Emily A. Vogels and Erica, “The Virtues and Downsides of Online Dating,” Pew Research Center: Internet, Science &amp; Tech. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.pewresearch.org/internet/2020/02/06/the-virtues-and-downsides-of-online-dating/">https://www.pewresearch.org/internet/2020/02/06/the-virtues-and-downsides-of-online-dating/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge8088e3" class="outline-3">
+<h3 id="orge8088e3"><span class="section-number-3">4.3.</span> Privacy And Security</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>A. Ram, “Love And Cybersecurity: Protecting Intimacy In The Digital Age,” Feminism in India. Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/02/28/love-and-cybersecurity-protecting-intimacy-in-the-digital-age/">https://feminisminindia.com/2024/02/28/love-and-cybersecurity-protecting-intimacy-in-the-digital-age/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge044d58" class="outline-2">
+<h2 id="orge044d58"><span class="section-number-2">5.</span> Sources</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org4c20b30" class="outline-3">
+<h3 id="org4c20b30"><span class="section-number-3">5.1.</span> Fashion</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>J. M. published, “The Best Dating Sites, Once and For All,” Marie Claire Magazine. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.marieclaire.com/culture/a37912551/best-dating-sites-apps/">https://www.marieclaire.com/culture/a37912551/best-dating-sites-apps/</a></li>
+<li>“Dating Apps Have Entered Their Anti-Ghosting Era,” ELLE. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.elle.com/uk/life-and-culture/culture/g31147560/best-dating-apps/">https://www.elle.com/uk/life-and-culture/culture/g31147560/best-dating-apps/</a></li>
+<li>C. Nast, “How to Find the Best Dating Apps (and Get the Most Out of Them),” Vogue. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.vogue.com/article/best-dating-apps-long-term-short-term-lgbtq">https://www.vogue.com/article/best-dating-apps-long-term-short-term-lgbtq</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga18a041" class="outline-3">
+<h3 id="orga18a041"><span class="section-number-3">5.2.</span> Business</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“9 Best Dating Apps Of 2024: Reviews And Costs,” Forbes Health. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.forbes.com/health/dating/best-dating-apps/">https://www.forbes.com/health/dating/best-dating-apps/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf02215a" class="outline-3">
+<h3 id="orgf02215a"><span class="section-number-3">5.3.</span> Pop Tech</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“The Best Dating Apps for 2024,” PCMAG. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.pcmag.com/picks/the-best-dating-apps">https://www.pcmag.com/picks/the-best-dating-apps</a></li>
+<li>“Best Dating Sites,” CNET. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.cnet.com/tech/services-and-software/best-online-dating-apps/">https://www.cnet.com/tech/services-and-software/best-online-dating-apps/</a></li>
+<li>K. K. from J. C. last updated, “Best dating apps for 2024,” Tom’s Guide. Accessed: Jan. 02, 2024. [Online]. Available: <a href="https://www.tomsguide.com/best-picks/best-dating-apps">https://www.tomsguide.com/best-picks/best-dating-apps</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a4b4ca" class="outline-2">
+<h2 id="org3a4b4ca"><span class="section-number-2">6.</span> World</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org2678489" class="outline-3">
+<h3 id="org2678489"><span class="section-number-3">6.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org1f51293" class="outline-4">
+<h4 id="org1f51293"><span class="section-number-4">6.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>“How dating apps exploit India’s loosely formed definition of ‘personal information,’” ThePrint, Mar. 27, 2022. <a href="https://theprint.in/pageturner/excerpt/how-dating-apps-exploit-indias-loosely-formed-definition-of-personal-information/889370/">https://theprint.in/pageturner/excerpt/how-dating-apps-exploit-indias-loosely-formed-definition-of-personal-information/889370/</a> (accessed Apr. 03, 2022).</li>
+<li>S. Aryal, “Gendered Landscape Of Love: Online Dating, Gender Roles And Expectations,” Feminism in India. Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/02/16/gendered-landscape-of-love-online-dating-gender-roles-and-expectations/">https://feminisminindia.com/2024/02/16/gendered-landscape-of-love-online-dating-gender-roles-and-expectations/</a></li>
+<li>A. Chatterjee, “Dystopic Online Dating Spaces And Trans Women,” Feminism in India. Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/02/15/dystopic-online-dating-spaces-and-trans-women/">https://feminisminindia.com/2024/02/15/dystopic-online-dating-spaces-and-trans-women/</a></li>
+<li>M. Mabood, “The Perils Of Online Dating And An Urgent Call For Safety Measures,” Feminism in India. Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/02/16/the-perils-of-online-dating-and-an-urgent-call-for-safety-measures/">https://feminisminindia.com/2024/02/16/the-perils-of-online-dating-and-an-urgent-call-for-safety-measures/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org7da9b0f" class="outline-2">
+<h2 id="org7da9b0f"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>M. Agrawal, “Kangana Ranaut Calls Dating App Users ‘Neech’: ‘Good Woman’ Lens, Shame And Women’s Choice In India,” Feminism in India. Accessed: Sep. 15, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/09/15/kangana-ranaut-calls-dating-app-users-neech-good-woman-lens-shame-and-a-fight-for-womens-choice-in-india/">https://feminisminindia.com/2025/09/15/kangana-ranaut-calls-dating-app-users-neech-good-woman-lens-shame-and-a-fight-for-womens-choice-in-india/</a></li>
+
+<li>M. Beltran, “A hidden network handles chats for OnlyFans stars. AI could soon take over,” Rest of World. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://restofworld.org/2025/onlyfans-ai-dm-bots/">https://restofworld.org/2025/onlyfans-ai-dm-bots/</a></li>
+
+<li>K. Pandey, “Report Finds Meta AI Allowed Romantic Chats With Minors,” MEDIANAMA. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/08/223-meta-ai-romantic-chats-with-minors/">https://www.medianama.com/2025/08/223-meta-ai-romantic-chats-with-minors/</a></li>
+
+<li>“Investigating the Systemic Failures Enabling Abuse on Dating Apps.” Accessed: Apr. 17, 2025. [Online]. Available: <a href="https://gijn.org/stories/investigating-systemic-failure-enabling-abuse-dating-apps/">https://gijn.org/stories/investigating-systemic-failure-enabling-abuse-dating-apps/</a></li>
+
+<li>“Dating App Giant Match Group Is Being Sued for Conning Users.” Accessed: Feb. 18, 2025. [Online]. Available: <a href="https://jacobin.com/2025/02/dating-apps-match-group-lawsuit">https://jacobin.com/2025/02/dating-apps-match-group-lawsuit</a></li>
+
+<li>“Dating app connections | The University of Manchester.” Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://sites.manchester.ac.uk/dating-app-connections/">https://sites.manchester.ac.uk/dating-app-connections/</a></li>
+<li>University of Manchester Sociology department, Why use dating apps?, (Sep. 12, 2024). Accessed: Nov. 23, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=h2314dq2hz4">https://www.youtube.com/watch?v=h2314dq2hz4</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. for O. Research and  the M. Sciences, “Online dating sites: The size of the potential dating pool makes all the difference.” Accessed: Sep. 12, 2024. [Online]. Available: <a href="https://phys.org/news/2024-09-online-dating-sites-size-potential.html">https://phys.org/news/2024-09-online-dating-sites-size-potential.html</a></li>
+
+<li>K. Coleman, “Tinder vs Bumble: Which Is the Right One for You?,” PIA VPN Blog. Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://www.privateinternetaccess.com/blog/tinder-vs-bumble/">https://www.privateinternetaccess.com/blog/tinder-vs-bumble/</a></li>
+
+<li>Sabine Hossenfelder, The Supermodel Scam: How a Prof who Looked for Love Ended up in Prison, (Apr. 20, 2024). Accessed: Jul. 24, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Y82KJWFdWZw">https://www.youtube.com/watch?v=Y82KJWFdWZw</a></li>
+
+<li>S. NT, “Video: On Mozilla’s latest report about data privacy on dating apps,” MEDIANAMA. Accessed: May 19, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/05/223-video-mozilla-report-data-privacy-dating-apps/">https://www.medianama.com/2024/05/223-video-mozilla-report-data-privacy-dating-apps/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Spinney, “‘The science isn’t there’: do dating apps really help us find our soulmate?,” The Observer, Apr. 28, 2024. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://www.theguardian.com/technology/2024/apr/28/the-science-isnt-there-do-dating-apps-really-help-us-find-our-soulmate">https://www.theguardian.com/technology/2024/apr/28/the-science-isnt-there-do-dating-apps-really-help-us-find-our-soulmate</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“When Love and the Algorithm Don’t Mix,” TIME. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://time.com/6694129/dating-app-inequality-essay/">https://time.com/6694129/dating-app-inequality-essay/</a></li>
+
+<li>Tweet and WhatsApp, “Powerful Women Heading Up Dating Apps Are Framed as Young and Sexy,” Live Wire, Nov. 06, 2022. <a href="https://livewire.thewire.in/gender-and-sexuality/powerful-women-heading-up-dating-apps-are-framed-as-young-and-sexy/">https://livewire.thewire.in/gender-and-sexuality/powerful-women-heading-up-dating-apps-are-framed-as-young-and-sexy/</a> (accessed Nov. 07, 2022).</li>
+<li>L. C. and P. Collings, “EFF to Grindr: This Pride Month, Put Safety and Privacy Over Profits,” Electronic Frontier Foundation. Accessed: Jun. 27, 2026. [Online]. Available: <a href="https://www.eff.org/deeplinks/2026/06/grindr-put-queer-safety-and-privacy-over-profits">https://www.eff.org/deeplinks/2026/06/grindr-put-queer-safety-and-privacy-over-profits</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

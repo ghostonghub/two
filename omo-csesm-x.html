@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>X (formerly Twitter)</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">X (formerly Twitter)</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3e6f1db">1. General</a></li>
+<li><a href="#orgfdb41fa">2. STEMM</a>
+<ul>
+<li><a href="#org17df444">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orge42b99b">2.1.1. Complexity Science</a></li>
+<li><a href="#orgc7bbe5b">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org18365e0">2.2. Biological Sciences, Misc</a></li>
+<li><a href="#org2dcaf9a">2.3. Basic Sciences, Misc</a></li>
+<li><a href="#org32e08be">2.4. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org8cdd8fb">2.4.1. Computer Science and Engineering</a></li>
+</ul>
+</li>
+<li><a href="#orgc0c6264">2.5. Advanced Sciences, Misc</a></li>
+<li><a href="#orga34c63c">2.6. Technology, Misc</a></li>
+<li><a href="#org8c3d899">2.7. Special Topics</a></li>
+<li><a href="#org9a8926a">2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge4579d8">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgaa13297">3.1. Space and Time</a></li>
+<li><a href="#orgec99fb0">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org620ca70">3.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org7267b11">3.4. Humanities, Misc</a></li>
+<li><a href="#orgd7fd7bd">3.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org571f43a">3.5.1. Special Groups</a></li>
+<li><a href="#orgf30dacf">3.5.2. Social Studies</a></li>
+<li><a href="#orgb52f918">3.5.3. Politics</a></li>
+</ul>
+</li>
+<li><a href="#org7b66db1">3.6. Security Studies, Misc</a></li>
+<li><a href="#org8b8b9b6">3.7. Business Studies, Misc</a>
+<ul>
+<li><a href="#org06af471">3.7.1. Management</a></li>
+</ul>
+</li>
+<li><a href="#orgef623f1">3.8. Communication, Misc</a>
+<ul>
+<li><a href="#org02b4f75">3.8.1. Journalism</a></li>
+<li><a href="#orge453b18">3.8.2. Current Affairs</a></li>
+<li><a href="#orgfd95fc8">3.8.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org061ac0b">3.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8e7d47b">4. Core</a>
+<ul>
+<li><a href="#orgeaeb0fc">4.1. Texts</a>
+<ul>
+<li><a href="#orgd2bef06">4.1.1. Dummies</a></li>
+<li><a href="#org693897b">4.1.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0c69fa8">5. Arts</a>
+<ul>
+<li><a href="#org22c62bf">5.1. Literature</a></li>
+</ul>
+</li>
+<li><a href="#org94df275">6. Special Topics</a>
+<ul>
+<li><a href="#orgd356bbd">6.1. Critical Studies</a></li>
+</ul>
+</li>
+<li><a href="#orgbd80523">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org3e6f1db" class="outline-2">
+<h2 id="org3e6f1db"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Twitter,” Wikipedia. Nov. 07, 2022. Accessed: Nov. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Twitter&amp;oldid=1120456102">https://en.wikipedia.org/w/index.php?title=Twitter&amp;oldid=1120456102</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfdb41fa" class="outline-2">
+<h2 id="orgfdb41fa"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org17df444" class="outline-3">
+<h3 id="org17df444"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orge42b99b" class="outline-4">
+<h4 id="orge42b99b"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>L. Tarrade, J.-P. Chevrot, and J.-P. Magué, “How position in the network determines the fate of lexical innovations on Twitter,” PLOS Complex Systems, vol. 1, no. 1, p. e0000005, Sep. 2024, doi: 10.1371/journal.pcsy.0000005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc7bbe5b" class="outline-4">
+<h4 id="orgc7bbe5b"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>Z. Tufekci, <b>Twitter and Tear Gas: The Power and Fragility of Networked Protest.</b> Yale University Press, 2018.</li>
+<li>“Twitter transformed science communication during the pandemic. Will it last?” <a href="https://www.science.org/content/article/twitter-transformed-science-communication-pandemic-will-last">https://www.science.org/content/article/twitter-transformed-science-communication-pandemic-will-last</a> (accessed Mar. 25, 2022).</li>
+<li>“As Musk reshapes Twitter, academics ponder taking flight.” <a href="https://www.science.org/content/article/musk-reshapes-twitter-academics-ponder-taking-flight">https://www.science.org/content/article/musk-reshapes-twitter-academics-ponder-taking-flight</a> (accessed Nov. 05, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org18365e0" class="outline-3">
+<h3 id="org18365e0"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-org2dcaf9a" class="outline-3">
+<h3 id="org2dcaf9a"><span class="section-number-3">2.3.</span> Basic Sciences, Misc</h3>
+</div>
+<div id="outline-container-org32e08be" class="outline-3">
+<h3 id="org32e08be"><span class="section-number-3">2.4.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org8cdd8fb" class="outline-4">
+<h4 id="org8cdd8fb"><span class="section-number-4">2.4.1.</span> Computer Science and Engineering</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgfd2e113"></a>Tech Support<br />
+<div class="outline-text-5" id="text-orgfd2e113">
+<ul class="org-ul">
+<li>“How to Hide Twitter’s ‘What’s happening’&amp; ‘Who to Follow’ Suggestions,” Techdows, Aug. 07, 2019. <a href="https://techdows.com/2019/08/how-to-block-twitters-trends-and-who-to-follow-suggestions.html">https://techdows.com/2019/08/how-to-block-twitters-trends-and-who-to-follow-suggestions.html</a> (accessed Oct. 03, 2022).</li>
+
+<li>“Find Fediverse accounts of your Twitter followings.” <a href="https://fedifinder.glitch.me/">https://fedifinder.glitch.me/</a> (accessed Nov. 07, 2022).</li>
+
+<li>“Why Twitter still has those terrible Trends,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/07/28/1056535/twitter-trending-misinformation-conspiracies/">https://www.technologyreview.com/2022/07/28/1056535/twitter-trending-misinformation-conspiracies/</a> (accessed Jul. 29, 2022).</li>
+
+<li>A. Press, “Twitter Unveils Version of Site That Can Bypass Russia Block.” <a href="https://cacm.acm.org/news/259304-twitter-unveils-version-of-site-that-can-bypass-russia-block/fulltext">https://cacm.acm.org/news/259304-twitter-unveils-version-of-site-that-can-bypass-russia-block/fulltext</a> (accessed Mar. 16, 2022).</li>
+
+<li>“Failures in Twitter’s Two-Factor Authentication System - Schneier on Security.” <a href="https://www.schneier.com/blog/archives/2022/11/failures-in-twitters-two-factor-authentication-system.html">https://www.schneier.com/blog/archives/2022/11/failures-in-twitters-two-factor-authentication-system.html</a> (accessed Nov. 18, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb436386"></a>RnD<br />
+<div class="outline-text-5" id="text-orgb436386">
+<ul class="org-ul">
+<li>M. Mattei, M. Pratelli, G. Caldarelli, M. Petrocchi, and F. Saracco, “Bow-Tie Structures of Twitter Discursive Communities,” arXiv:2202.03316 [physics], Feb. 2022, Accessed: Mar. 19, 2022. [Online]. Available: <a href="http://arxiv.org/abs/2202.03316">http://arxiv.org/abs/2202.03316</a></li>
+
+<li>G. Corsi, “Evaluating Twitter’s algorithmic amplification of low-credibility content: an observational study,” EPJ Data Sci., vol. 13, no. 1, Art. no. 1, Dec. 2024, doi: 10.1140/epjds/s13688-024-00456-3.</li>
+
+<li>M. Mattei, M. Pratelli, G. Caldarelli, M. Petrocchi, and F. Saracco, “Bow-Tie Structures of Twitter Discursive Communities,” arXiv:2202.03316 [physics], Feb. 2022, Accessed: Mar. 19, 2022. [Online]. Available: <a href="http://arxiv.org/abs/2202.03316">http://arxiv.org/abs/2202.03316</a></li>
+
+<li><b>“Viral news – true and untrue – moves equally through Twitter,”</b> Cornell Chronicle. <a href="https://news.cornell.edu/stories/2021/11/viral-news-true-and-untrue-moves-equally-through-twitter">https://news.cornell.edu/stories/2021/11/viral-news-true-and-untrue-moves-equally-through-twitter</a> (accessed Nov. 13, 2021).</li>
+</ul>
+</div>
+</li>
+<li><a id="org427e5f3"></a>Data Science<br />
+<div class="outline-text-5" id="text-org427e5f3">
+<ul class="org-ul">
+<li>M. Russell, Mining the Social Web: Analyzing Data from Facebook, Twitter, LinkedIn, and Other Social Media Sites. O’Reilly Media, Inc., 2011.</li>
+
+<li>M. Russell, 21 Recipes for Mining Twitter. O’Reilly Media, Inc., 2011.</li>
+
+<li>K. Makice, Twitter API – Up and Running: Learn How to Build Applications with the Twitter API, 1st edition. Sebastopol, Calif: O′Reilly, 2009.</li>
+
+<li>J. Leibiusky, G. Eisbruch, and D. Simonassi, Getting Started with Storm: Continuous Streaming Computation with Twitter’s Cluster Technology, 1st edition. O’Reilly Media, 2012.</li>
+
+<li>K. Makice, Twitter API: Up and Running: Learn How to Build Applications with the Twitter API. O’Reilly Media, Inc., 2009.</li>
+
+<li>Z. C. Steinert-Threlkeld, <b>Twitter as Data.</b> Cambridge University Press, 2017.</li>
+
+<li>S. Kumar, F. Morstatter, and H. Liu, <b>Twitter Data Analytics.</b> Springer Science &amp; Business Media, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="org738c916"></a>AI<br />
+<div class="outline-text-5" id="text-org738c916">
+<ul class="org-ul">
+<li>D. Eadline, “Colossus AI Hits 200,000 GPUs as Musk Ramps Up AI Ambitions,” HPCwire. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.hpcwire.com/2025/05/13/colossus-ai-hits-200000-gpus-as-musk-ramps-up-ai-ambitions/">https://www.hpcwire.com/2025/05/13/colossus-ai-hits-200000-gpus-as-musk-ramps-up-ai-ambitions/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc0c6264" class="outline-3">
+<h3 id="orgc0c6264"><span class="section-number-3">2.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-orga34c63c" class="outline-3">
+<h3 id="orga34c63c"><span class="section-number-3">2.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org8c3d899" class="outline-3">
+<h3 id="org8c3d899"><span class="section-number-3">2.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-org9a8926a" class="outline-3">
+<h3 id="org9a8926a"><span class="section-number-3">2.8.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orge4579d8" class="outline-2">
+<h2 id="orge4579d8"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgaa13297" class="outline-3">
+<h3 id="orgaa13297"><span class="section-number-3">3.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orgec99fb0" class="outline-3">
+<h3 id="orgec99fb0"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org620ca70" class="outline-3">
+<h3 id="org620ca70"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-org7267b11" class="outline-3">
+<h3 id="org7267b11"><span class="section-number-3">3.4.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-orgd7fd7bd" class="outline-3">
+<h3 id="orgd7fd7bd"><span class="section-number-3">3.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org571f43a" class="outline-4">
+<h4 id="org571f43a"><span class="section-number-4">3.5.1.</span> Special Groups</h4>
+<div class="outline-text-4" id="text-3-5-1">
+</div>
+<ul class="org-ul">
+<li><a id="org5d12d7d"></a>Seniors<br />
+<div class="outline-text-5" id="text-org5d12d7d">
+<ul class="org-ul">
+<li>M. Collier, <b>Facebook, Twitter, &amp; Instagram For Seniors For Dummies.</b> John Wiley &amp; Sons, 2018.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgf30dacf" class="outline-4">
+<h4 id="orgf30dacf"><span class="section-number-4">3.5.2.</span> Social Studies</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ul class="org-ul">
+<li>M. W. Macy, Y. Mejova, and I. Weber, Twitter: A Digital Socioscope. Cambridge University Press, 2015.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb52f918" class="outline-4">
+<h4 id="orgb52f918"><span class="section-number-4">3.5.3.</span> Politics</h4>
+<div class="outline-text-4" id="text-3-5-3">
+<ul class="org-ul">
+<li>Y. Ouyang and R. W. Waterman, Trump, Twitter, and the American Democracy: Political Communication in the Digital Age. Springer Nature, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7b66db1" class="outline-3">
+<h3 id="org7b66db1"><span class="section-number-3">3.6.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org8b8b9b6" class="outline-3">
+<h3 id="org8b8b9b6"><span class="section-number-3">3.7.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-org06af471" class="outline-4">
+<h4 id="org06af471"><span class="section-number-4">3.7.1.</span> Management</h4>
+<div class="outline-text-4" id="text-3-7-1">
+</div>
+<ul class="org-ul">
+<li><a id="org265a645"></a>Marketing<br />
+<div class="outline-text-5" id="text-org265a645">
+<ul class="org-ul">
+<li>K. Lacy, Twitter Marketing For Dummies. John Wiley &amp; Sons, 2011.</li>
+<li>B. Petersel and E. Schindler, The Complete Idiot’s Guide to Twitter Marketing. Penguin, 2012.</li>
+<li>H. Thomases, Twitter Marketing: An Hour a Day. John Wiley &amp; Sons, 2009.</li>
+<li>J. Comm, Twitter Power 2.0: How to Dominate Your Market One Tweet at a Time. John Wiley &amp; Sons, 2010.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgef623f1" class="outline-3">
+<h3 id="orgef623f1"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-org02b4f75" class="outline-4">
+<h4 id="org02b4f75"><span class="section-number-4">3.8.1.</span> Journalism</h4>
+<div class="outline-text-4" id="text-3-8-1">
+<ul class="org-ul">
+<li>“Journalism’s Hostage Relationship With Twitter,” The Wire. <a href="https://thewire.in/media/journalisms-hostage-relationship-with-twitter">https://thewire.in/media/journalisms-hostage-relationship-with-twitter</a> (accessed May 03, 2022).</li>
+<li>Tweet and WhatsApp, “Elon Musk Is Wrong: Research Shows Content Rules on Twitter Help Preserve Free Speech From Bots and Other Manipulation,” Live Wire, Nov. 02, 2022. <a href="https://livewire.thewire.in/out-and-about/elon-musk-is-wrong-research-shows-content-rules-on-twitter-help-preserve-free-speech-from-bots-and-other-manipulation/">https://livewire.thewire.in/out-and-about/elon-musk-is-wrong-research-shows-content-rules-on-twitter-help-preserve-free-speech-from-bots-and-other-manipulation/</a> (accessed Nov. 03, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge453b18" class="outline-4">
+<h4 id="orge453b18"><span class="section-number-4">3.8.2.</span> Current Affairs</h4>
+<div class="outline-text-4" id="text-3-8-2">
+<ul class="org-ul">
+<li>“Why Elon Musk’s 2 Weeks at Twitter Heralds India’s Brush With Digital Demonetisation,” The Wire. <a href="https://thewire.in/tech/elon-musk-twitter-digital-demonetisation">https://thewire.in/tech/elon-musk-twitter-digital-demonetisation</a> (accessed Nov. 10, 2022).</li>
+
+<li>T. C. Timothy Graham, “Verified bots and fake accounts? Twitter’s paid blue tick verification service has a fatal flaw,” Scroll.in. <a href="https://scroll.in/article/1036819/verified-bots-and-fake-accounts-twitters-paid-blue-tick-verification-service-has-a-fatal-flaw">https://scroll.in/article/1036819/verified-bots-and-fake-accounts-twitters-paid-blue-tick-verification-service-has-a-fatal-flaw</a> (accessed Nov. 08, 2022).</li>
+
+<li>“Here’s how a Twitter engineer says it will break in the coming weeks,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/11/08/1062886/heres-how-a-twitter-engineer-says-it-will-break-in-the-coming-weeks/">https://www.technologyreview.com/2022/11/08/1062886/heres-how-a-twitter-engineer-says-it-will-break-in-the-coming-weeks/</a> (accessed Nov. 10, 2022).</li>
+
+<li>Tweet and WhatsApp, “Mass Migration From Twitter Is Likely To Be an Uphill Battle – Just Ask Ex-tumblr Users,” Live Wire, Nov. 05, 2022. <a href="https://livewire.thewire.in/out-and-about/mass-migration-from-twitter-is-likely-to-be-an-uphill-battle-just-ask-ex-tumblr-users/">https://livewire.thewire.in/out-and-about/mass-migration-from-twitter-is-likely-to-be-an-uphill-battle-just-ask-ex-tumblr-users/</a> (accessed Nov. 06, 2022).</li>
+
+<li>T. C. Casey Fiesler, “For those planning to leave Twitter because of Elon Musk, a word of caution,” Scroll.in. <a href="https://scroll.in/article/1036613/a-word-of-advice-for-those-planning-to-leave-twitter-because-of-elon-musk">https://scroll.in/article/1036613/a-word-of-advice-for-those-planning-to-leave-twitter-because-of-elon-musk</a> (accessed Nov. 06, 2022).</li>
+
+<li>“Is Elon Musk the best or the worst for Twitter? | Scheer Intelligence,” KCRW, Nov. 03, 2022. <a href="https://www.kcrw.com/culture/shows/scheer-intelligence/is-elon-musk-the-best-or-the-worst-for-twitter">https://www.kcrw.com/culture/shows/scheer-intelligence/is-elon-musk-the-best-or-the-worst-for-twitter</a> (accessed Nov. 05, 2022).</li>
+
+<li>R. Farrow, “The Search for Dirt on the Twitter Whistle-Blower,” The New Yorker, Sep. 13, 2022. Accessed: Sep. 15, 2022. [Online]. Available: <a href="https://www.newyorker.com/news/news-desk/the-search-for-dirt-on-the-twitter-whistle-blower">https://www.newyorker.com/news/news-desk/the-search-for-dirt-on-the-twitter-whistle-blower</a></li>
+
+<li>“India Versus Twitter Versus Elon Musk Versus Society,” The Wire. <a href="https://thewire.in/tech/india-versus-twitter-versus-elon-musk-versus-society">https://thewire.in/tech/india-versus-twitter-versus-elon-musk-versus-society</a> (accessed Jul. 29, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfd95fc8" class="outline-4">
+<h4 id="orgfd95fc8"><span class="section-number-4">3.8.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-8-3">
+<ul class="org-ul">
+<li>M. Zappavigna, Discourse of Twitter and Social Media: How We Use Language to Create Affiliation on the Web. A&amp;C Black, 2012.</li>
+<li>A. Hodgkin, Following Searle on Twitter: How Words Create Digital Institutions. University of Chicago Press, 2017.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org061ac0b" class="outline-3">
+<h3 id="org061ac0b"><span class="section-number-3">3.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>“Pluralistic: Elon Musk’s Blue Tick scam (08 Dec 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/12/08/giant-teddybears/">https://pluralistic.net/2025/12/08/giant-teddybears/</a></li>
+
+<li>BY, “How Elon Musk Ruined Twitter.” Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://jacobin.com/2025/10/enshittification-doctorow-musk-twitter-internet">https://jacobin.com/2025/10/enshittification-doctorow-musk-twitter-internet</a></li>
+
+<li>R. McHugh, “A SpaceX flight attendant said Elon Musk exposed himself and propositioned her for sex, documents show. The company paid $250,000 for her silence.,” Business Insider. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.businessinsider.com/spacex-paid-250000-to-a-flight-attendant-who-accused-elon-musk-of-sexual-misconduct-2022-5">https://www.businessinsider.com/spacex-paid-250000-to-a-flight-attendant-who-accused-elon-musk-of-sexual-misconduct-2022-5</a></li>
+
+<li>L. McGaughy, “Elon Musk’s Long Game to Influence the Texas Legislature,” ProPublica. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://www.propublica.org/article/elon-musk-texas-legislature-laws-spacex-tesla">https://www.propublica.org/article/elon-musk-texas-legislature-laws-spacex-tesla</a></li>
+
+<li>“NAACP to Sue over Elon Musk’s xAI Data Center in Memphis,” Democracy Now! Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/6/18/headlines/naacp_to_sue_over_elon_musks_xai_data_center_in_memphis">https://www.democracynow.org/2025/6/18/headlines/naacp_to_sue_over_elon_musks_xai_data_center_in_memphis</a></li>
+
+<li>R. Cooper, “Elon Musk Declares Himself President, Shuts Down Government,” The American Prospect. Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://prospect.org/api/content/02516f1e-be4c-11ef-8a88-12163087a831/">https://prospect.org/api/content/02516f1e-be4c-11ef-8a88-12163087a831/</a></li>
+<li>“Elon Musk Is Inaugurating a New Era of Billionaire Rule.” Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://jacobin.com/2024/12/trump-musk-republicans-billionaire-rule">https://jacobin.com/2024/12/trump-musk-republicans-billionaire-rule</a></li>
+<li>“Elon Musk promotes the global fascist right,” World Socialist Web Site. Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/12/21/pers-d21.html">https://www.wsws.org/en/articles/2024/12/21/pers-d21.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“X goes ‘thermonuclear’ against media donors,” Freedom of the Press. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://freedom.press/issues/x-goes-thermonuclear-against-media-donors/">https://freedom.press/issues/x-goes-thermonuclear-against-media-donors/</a></li>
+
+<li>A. Mackey, “EFF to Court: Reject X’s Effort to Revive a Speech-Chilling Lawsuit Against a Nonprofit,” Electronic Frontier Foundation. Accessed: Nov. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/11/eff-court-reject-xs-effort-revive-speech-chilling-lawsuit-against-nonprofit">https://www.eff.org/deeplinks/2024/11/eff-court-reject-xs-effort-revive-speech-chilling-lawsuit-against-nonprofit</a></li>
+
+<li>“The banning of X/Twitter in Brazil and the authoritarian drive of the capitalist state,” World Socialist Web Site. Accessed: Sep. 08, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/09/07/wtll-s07.html">https://www.wsws.org/en/articles/2024/09/07/wtll-s07.html</a></li>
+<li>“Twitter to Begin Layoffs Today, Internal Email Reveals,” The Wire. <a href="https://thewire.in/tech/twitter-layoffs-internal-email">https://thewire.in/tech/twitter-layoffs-internal-email</a> (accessed Nov. 06, 2022).</li>
+<li>“Twitter: Musk defends deep cuts to company’s workforce,” BBC News, Nov. 05, 2022. Accessed: Nov. 06, 2022. [Online]. Available: <a href="https://www.bbc.com/news/business-63524219">https://www.bbc.com/news/business-63524219</a></li>
+<li>“Elon Musk Moves Closer to Twitter Takeover As Employees Fear Mass Firings,” Democracy Now! <a href="https://www.democracynow.org/2022/10/27/headlines/elon_musk_moves_closer_to_twitter_takeover_as_employees_fear_mass_firings">https://www.democracynow.org/2022/10/27/headlines/elon_musk_moves_closer_to_twitter_takeover_as_employees_fear_mass_firings</a> (accessed Oct. 28, 2022).</li>
+<li>“The Download: The Money Issue, and the problems with open sourcing Twitter’s algorithms,” MIT Technology Review. <a href="https://www.technologyreview.com/2022/04/27/1051508/download-money-issue-crypto-dollar-problems-open-sourcing-twitters-algorithms-elon-musk/">https://www.technologyreview.com/2022/04/27/1051508/download-money-issue-crypto-dollar-problems-open-sourcing-twitters-algorithms-elon-musk/</a> (accessed Apr. 28, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e7d47b" class="outline-2">
+<h2 id="org8e7d47b"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgeaeb0fc" class="outline-3">
+<h3 id="orgeaeb0fc"><span class="section-number-3">4.1.</span> Texts</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgd2bef06" class="outline-4">
+<h4 id="orgd2bef06"><span class="section-number-4">4.1.1.</span> Dummies</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>L. Fitton, M. Gruen, and L. Poston, Twitter For Dummies. John Wiley &amp; Sons, 2010.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org693897b" class="outline-4">
+<h4 id="org693897b"><span class="section-number-4">4.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>D. Murthy, Twitter: Social Communication in the Twitter Age. Wiley, 2013.</li>
+<li>D. Murthy, <b>Twitter.</b> John Wiley &amp; Sons, 2018.</li>
+
+<li>McFedries, Twitter Tips, Tricks, and Tweets. Wiley, 2010.</li>
+<li>T. O’Reilly and S. Milstein, <b>The Twitter Book.</b> O’Reilly Media, Inc., 2011.</li>
+<li>J. S. McDougall, #tweetsmart: 25 Twitter Projects to Help You Build Your Community, 1st edition. O’Reilly Media, 2012.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0c69fa8" class="outline-2">
+<h2 id="org0c69fa8"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org22c62bf" class="outline-3">
+<h3 id="org22c62bf"><span class="section-number-3">5.1.</span> Literature</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>A. Aciman and E. Rensin, Twitterature: The World’s Greatest Books in Twenty Tweets or Less. Penguin Publishing Group, 2009.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org94df275" class="outline-2">
+<h2 id="org94df275"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgd356bbd" class="outline-3">
+<h3 id="orgd356bbd"><span class="section-number-3">6.1.</span> Critical Studies</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>“Deleting X: Why SIGDOC Left the Platform – Communications of the ACM.” Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://cacm.acm.org/opinion/deleting-x-why-sigdoc-left-the-platform/">https://cacm.acm.org/opinion/deleting-x-why-sigdoc-left-the-platform/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbd80523" class="outline-2">
+<h2 id="orgbd80523"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>M. Vengattil, A. Chaturvedi, M. Vengattil, and A. Chaturvedi, “India limits content takedown powers to fewer officials after spat with Musk’s X,” Reuters, Oct. 23, 2025. Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://www.reuters.com/business/media-telecom/india-limits-content-takedown-powers-fewer-officials-after-spat-with-musks-x-2025-10-23/">https://www.reuters.com/business/media-telecom/india-limits-content-takedown-powers-fewer-officials-after-spat-with-musks-x-2025-10-23/</a></li>
+
+<li>F. Diaz-Maurin, “When Grok is wrong: The risks of AI chatbots spreading misinformation in a crisis,” Bulletin of the Atomic Scientists. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/06/when-grok-is-wrong-the-risks-of-ai-chatbots-spreading-misinformation-in-a-crisis/">https://thebulletin.org/2025/06/when-grok-is-wrong-the-risks-of-ai-chatbots-spreading-misinformation-in-a-crisis/</a></li>
+
+<li>“House Republicans Pass Bill Letting Musk ‘Fleece Consumers’ With His X Money Scheme | Common Dreams.” Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.commondreams.org/news/elon-musk-x-money">https://www.commondreams.org/news/elon-musk-x-money</a></li>
+
+<li>S. Engelberg, “An Open Letter to Elon Musk,” ProPublica. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.propublica.org/article/elon-musk-open-letter-doge">https://www.propublica.org/article/elon-musk-open-letter-doge</a></li>
+
+<li>“It’s time for eXit.” Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jan/07/its-time-exit">https://theecologist.org/2025/jan/07/its-time-exit</a></li>
+
+<li>“How Billionaire Elon Musk’s Extremism Is Shaping Global Politics,” Democracy Now! Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/1/6/quinn_slobodian_musk_global_far_right">https://www.democracynow.org/2025/1/6/quinn_slobodian_musk_global_far_right</a></li>
+
+<li>J. K. and M. Buckley, “X’s Last-Minute Update to the Kids Online Safety Act Still Fails to Protect Kids—or Adults—Online,” Electronic Frontier Foundation. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/12/xs-last-minute-update-kids-online-safety-act-still-fails-protect-kids-or-adults">https://www.eff.org/deeplinks/2024/12/xs-last-minute-update-kids-online-safety-act-still-fails-protect-kids-or-adults</a></li>
+
+<li>“Complexity Science Hub * News * Why CSH Will No Longer Be Active On X.” Accessed: Nov. 29, 2024. [Online]. Available: <a href="https://csh.ac.at/news/why-csh-will-no-longer-be-active-on-x/">https://csh.ac.at/news/why-csh-will-no-longer-be-active-on-x/</a></li>
+
+<li>“Like ‘old Twitter’: The scientific community finds a new home on Bluesky.” Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://www.science.org/content/article/old-twitter-scientific-community-finds-new-home-bluesky">https://www.science.org/content/article/old-twitter-scientific-community-finds-new-home-bluesky</a></li>
+
+<li>J. Koebler ·, “The Great Migration to Bluesky Gives Me Hope for the Future of the Internet,” 404 Media. Accessed: Nov. 16, 2024. [Online]. Available: <a href="https://www.404media.co/the-great-migration-to-bluesky-gives-me-hope-for-the-future-of-the-internet/">https://www.404media.co/the-great-migration-to-bluesky-gives-me-hope-for-the-future-of-the-internet/</a></li>
+
+<li>“Nostr public keys of Twitter Accounts,” nostr.directory. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://nostr.directory/">https://nostr.directory/</a></li>
+
+<li>D. Nield, “How to leave Twitter for Bluesky,” Popular Science. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.popsci.com/diy/how-to-leave-twitter-for-bluesky/">https://www.popsci.com/diy/how-to-leave-twitter-for-bluesky/</a></li>
+
+<li>G. Corsi, B. Marino, and W. Wong, “The spread of synthetic media on X,” Harvard Kennedy School Misinformation Review, Jun. 2024, doi: 10.37016/mr-2020-140.</li>
+
+<li>S. Baribi-Bartov, B. Swire-Thompson, and N. Grinberg, “Supersharers of fake news on Twitter,” Science, vol. 384, no. 6699, pp. 979–982, May 2024, doi: 10.1126/science.adl4435.</li>
+
+<li>V. Sanzgiri, “The biggest challenge X’s Community Notes will likely face in India,” MediaNama. Accessed: Apr. 05, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/04/223-x-community-notes-challenge-india/">https://www.medianama.com/2024/04/223-x-community-notes-challenge-india/</a></li>
+
+<li>“For Online Disinformation and Hate, X Marks the Spot,” The Equation. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/kate-cell/for-online-disinformation-and-hate-x-marks-the-spot/">https://blog.ucsusa.org/kate-cell/for-online-disinformation-and-hate-x-marks-the-spot/</a></li>
+
+<li>B. Haggart, “What Elon Musk’s destruction of Twitter tells us about the future of social media,” The Conversation. <a href="http://theconversation.com/what-elon-musks-destruction-of-twitter-tells-us-about-the-future-of-social-media-194895">http://theconversation.com/what-elon-musks-destruction-of-twitter-tells-us-about-the-future-of-social-media-194895</a> (accessed Nov. 22, 2022).</li>
+
+<li>D. Angus and T. Graham, “Thinking of breaking up with Twitter? Here’s the right way to do it,” The Conversation. <a href="http://theconversation.com/thinking-of-breaking-up-with-twitter-heres-the-right-way-to-do-it-195002">http://theconversation.com/thinking-of-breaking-up-with-twitter-heres-the-right-way-to-do-it-195002</a> (accessed Nov. 22, 2022).</li>
+
+<li>K. Gullo, “Monetization, Not Human Rights or Vulnerable Communities, Matter Most at Twitter Under Musk,” Electronic Frontier Foundation, Nov. 21, 2022. <a href="https://www.eff.org/deeplinks/2022/11/twitters-monetizable-users-not-human-rights-matter-most-under-musks-rein-leaving">https://www.eff.org/deeplinks/2022/11/twitters-monetizable-users-not-human-rights-matter-most-under-musks-rein-leaving</a> (accessed Nov. 22, 2022).</li>
+
+<li>M. Schreiber, “‘Verified’ anti-vax accounts proliferate as Twitter struggles to police content,” The Guardian, Nov. 21, 2022. Accessed: Nov. 22, 2022. [Online]. Available: <a href="https://www.theguardian.com/technology/2022/nov/21/twitter-anti-vax-health-misinformation">https://www.theguardian.com/technology/2022/nov/21/twitter-anti-vax-health-misinformation</a></li>
+
+<li>Q. Wong, “Twitter’s Fake-Account Problem Got Messier With Musk. It May Get Worse,” CNET. <a href="https://www.cnet.com/news/social-media/twitters-fake-account-problem-got-messier-with-musk-it-may-get-worse/">https://www.cnet.com/news/social-media/twitters-fake-account-problem-got-messier-with-musk-it-may-get-worse/</a> (accessed Nov. 18, 2022).</li>
+<li>J. Cox ·, “‘Elon Musk’ Was a Prolific Money Launderer for Hackers and Drug Traffickers. It Was Secretly the FBI,” 404 Media. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://www.404media.co/elon-musk-was-a-prolific-money-launderer-for-hackers-and-drug-traffickers-it-was-secretly-the-fbi/">https://www.404media.co/elon-musk-was-a-prolific-money-launderer-for-hackers-and-drug-traffickers-it-was-secretly-the-fbi/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

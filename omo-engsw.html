@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Software Engineering</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Software Engineering</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4c23f9b">1. General</a></li>
+<li><a href="#orgc339da9">2. STEMM</a>
+<ul>
+<li><a href="#org33e838a">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orgb0f122e">2.1.1. Complexity Science</a></li>
+<li><a href="#org73890d5">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org137e6d1">2.2. AI</a></li>
+<li><a href="#org3213be0">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org152779d">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgaf0fc8b">3.1. Space and Time</a></li>
+<li><a href="#orga8f8300">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#orgb31e5da">3.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#orgeb8c8b8">3.4. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#orgf416278">3.4.1. Special Groups</a></li>
+</ul>
+</li>
+<li><a href="#orgc7bb0c6">3.5. Business Studies, Misc</a>
+<ul>
+<li><a href="#org20500c4">3.5.1. Management</a></li>
+<li><a href="#org5c0733f">3.5.2. Career Guides</a></li>
+</ul>
+</li>
+<li><a href="#org4189935">3.6. Humanities, Misc</a></li>
+<li><a href="#orge359eab">3.7. Security Studies, Misc</a></li>
+<li><a href="#org6ee7389">3.8. Communication, Misc</a></li>
+<li><a href="#orga9b9dfd">3.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge0c116e">4. Core</a>
+<ul>
+<li><a href="#org92685c3">4.1. Education</a>
+<ul>
+<li><a href="#orgf32f8bb">4.1.1. Programmes</a></li>
+<li><a href="#org80c24bc">4.1.2. Courses</a></li>
+</ul>
+</li>
+<li><a href="#org02e2b05">4.2. Texts</a>
+<ul>
+<li><a href="#org4fa4d38">4.2.1. PJ</a></li>
+<li><a href="#orgf51a8ae">4.2.2. IS</a></li>
+<li><a href="#org4ed446f">4.2.3. OOAD</a></li>
+<li><a href="#orgd197aab">4.2.4. Applied SE</a></li>
+<li><a href="#org91f3f3d">4.2.5. New Perspectives</a></li>
+<li><a href="#org5856737">4.2.6. Software Quality</a></li>
+<li><a href="#org61666c8">4.2.7. SE Continuous</a></li>
+<li><a href="#org2f07aea">4.2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org114787f">4.3. Journals</a></li>
+</ul>
+</li>
+<li><a href="#org0788040">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org4c23f9b" class="outline-2">
+<h2 id="org4c23f9b"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Software engineering,” Wikipedia. Jun. 07, 2025. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Software_engineering&amp;oldid=1294435037">https://en.wikipedia.org/w/index.php?title=Software_engineering&amp;oldid=1294435037</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc339da9" class="outline-2">
+<h2 id="orgc339da9"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org33e838a" class="outline-3">
+<h3 id="org33e838a"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgb0f122e" class="outline-4">
+<h4 id="orgb0f122e"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>J. Xiong, New Software Engineering Paradigm Based on Complexity Science: An Introduction to NSE. New York, NY: Springer, 2011. doi: 10.1007/978-1-4419-7326-9.
+<ul class="org-ul">
+<li>“New Software Engineering Paradigm Based on Complexity Science: An Introduction to NSE: Xiong, Jay: 9781441973252: Amazon.com: Books.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://www.amazon.com/Software-Engineering-Paradigm-Complexity-Science/dp/1441973257">https://www.amazon.com/Software-Engineering-Paradigm-Complexity-Science/dp/1441973257</a></li>
+</ul></li>
+
+<li>M. Serrano Zanetti, “A complex systems approach to software engineering,” Doctoral Thesis, ETH Zurich, 2013. doi: 10.3929/ethz-a-010007378.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org73890d5" class="outline-4">
+<h4 id="org73890d5"><span class="section-number-4">2.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org137e6d1" class="outline-3">
+<h3 id="org137e6d1"><span class="section-number-3">2.2.</span> AI</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“Benchmarks for AI in Software Engineering – Communications of the ACM.” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://cacm.acm.org/blogcacm/benchmarks-for-ai-in-software-engineering/">https://cacm.acm.org/blogcacm/benchmarks-for-ai-in-software-engineering/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3213be0" class="outline-3">
+<h3 id="org3213be0"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>J. Du, “Analyzing the Structural Complexity of Software Systems Using Complex Network Theory,” in Proceeding of 2021 International Conference on Wireless Communications, Networking and Applications, Z. Qian, M. A. Jabbar, and X. Li, Eds., Singapore: Springer Nature, 2022, pp. 478–486. doi: 10.1007/978-981-19-2456-9<sub>49</sub>.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org152779d" class="outline-2">
+<h2 id="org152779d"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgaf0fc8b" class="outline-3">
+<h3 id="orgaf0fc8b"><span class="section-number-3">3.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orga8f8300" class="outline-3">
+<h3 id="orga8f8300"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-orgb31e5da" class="outline-3">
+<h3 id="orgb31e5da"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-orgeb8c8b8" class="outline-3">
+<h3 id="orgeb8c8b8"><span class="section-number-3">3.4.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgf416278" class="outline-4">
+<h4 id="orgf416278"><span class="section-number-4">3.4.1.</span> Special Groups</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>D. Damian, K. Blincoe, D. Ford, A. Serebrenik, and Z. Masood, Eds., Equity, Diversity, and Inclusion in Software Engineering: Best Practices and Insights. Berkeley, CA: Apress, 2024. doi: 10.1007/978-1-4842-9651-6.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc7bb0c6" class="outline-3">
+<h3 id="orgc7bb0c6"><span class="section-number-3">3.5.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org20500c4" class="outline-4">
+<h4 id="org20500c4"><span class="section-number-4">3.5.1.</span> Management</h4>
+<div class="outline-text-4" id="text-3-5-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgbdc433d"></a>Project Management<br />
+<div class="outline-text-5" id="text-orgbdc433d">
+<ul class="org-ul">
+<li>R. H. Thayer, SOFTWARE ENGINEERING PROJECT MANAGEMENT, 2ND EDITION, Second edition. Wiley, 2006.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfa6445b"></a>Misc<br />
+<div class="outline-text-5" id="text-orgfa6445b">
+<ul class="org-ul">
+<li>J. Stanier, Become an Effective Software Engineering Manager: How to Be the Leader Your Development Team Needs. La Vergne: O′Reilly, 2020.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org5c0733f" class="outline-4">
+<h4 id="org5c0733f"><span class="section-number-4">3.5.2.</span> Career Guides</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ul class="org-ul">
+<li>G. Orosz, The Software Engineer’s Guidebook: Navigating Senior, Tech Lead, and Staff Engineer Positions at Tech Companies and Startups, First Edition. Shroff/Pragmatic Engineer, 2023.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4189935" class="outline-3">
+<h3 id="org4189935"><span class="section-number-3">3.6.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-orge359eab" class="outline-3">
+<h3 id="orge359eab"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org6ee7389" class="outline-3">
+<h3 id="org6ee7389"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orga9b9dfd" class="outline-3">
+<h3 id="orga9b9dfd"><span class="section-number-3">3.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>V. Castro, “How to Prepare for Leadership Roles in Software Engineering,” IEEE Computer Society. Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://www.computer.org/publications/tech-news/build-your-career/prepare-software-engineering-leadership/">https://www.computer.org/publications/tech-news/build-your-career/prepare-software-engineering-leadership/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0c116e" class="outline-2">
+<h2 id="orge0c116e"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org92685c3" class="outline-3">
+<h3 id="org92685c3"><span class="section-number-3">4.1.</span> Education</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgf32f8bb" class="outline-4">
+<h4 id="orgf32f8bb"><span class="section-number-4">4.1.1.</span> Programmes</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgd581222"></a>Graduate Studies<br />
+<div class="outline-text-5" id="text-orgd581222">
+<ul class="org-ul">
+<li>L. Tweed, “Purdue University Offering a New Online MS in Software Engineering,” IEEE Computer Society. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://www.computer.org/publications/tech-news/trends/purdue-online-se-degree/">https://www.computer.org/publications/tech-news/trends/purdue-online-se-degree/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org80c24bc" class="outline-4">
+<h4 id="org80c24bc"><span class="section-number-4">4.1.2.</span> Courses</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Laboratory in Software Engineering | Electrical Engineering and Computer Science,” MIT OpenCourseWare. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ocw.mit.edu/courses/6-170-laboratory-in-software-engineering-fall-2005/">https://ocw.mit.edu/courses/6-170-laboratory-in-software-engineering-fall-2005/</a></li>
+<li>“Foundations of Software Engineering | Civil and Environmental Engineering,” MIT OpenCourseWare. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ocw.mit.edu/courses/1-124j-foundations-of-software-engineering-fall-2000/">https://ocw.mit.edu/courses/1-124j-foundations-of-software-engineering-fall-2000/</a></li>
+<li>“Software Engineering Concepts | Aeronautics and Astronautics,” MIT OpenCourseWare. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ocw.mit.edu/courses/16-355j-software-engineering-concepts-fall-2005/">https://ocw.mit.edu/courses/16-355j-software-engineering-concepts-fall-2005/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Software Engineering for Web Applications | Electrical Engineering and Computer Science,” MIT OpenCourseWare. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ocw.mit.edu/courses/6-171-software-engineering-for-web-applications-fall-2003/">https://ocw.mit.edu/courses/6-171-software-engineering-for-web-applications-fall-2003/</a></li>
+<li>“Performance Engineering of Software Systems | Electrical Engineering and Computer Science,” MIT OpenCourseWare. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/">https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/</a></li>
+
+<li>“Software Engineering - ACM CCECC.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ccecc.acm.org/guidance/software-engineering">https://ccecc.acm.org/guidance/software-engineering</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org02e2b05" class="outline-3">
+<h3 id="org02e2b05"><span class="section-number-3">4.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org4fa4d38" class="outline-4">
+<h4 id="org4fa4d38"><span class="section-number-4">4.2.1.</span> PJ</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>P. Jalote, A CONCISE INTRODUCTION TO SOFTWARE ENGINEERING WITH OPEN SOURCE AND GENAI 2ED, 2nd Second 2025 ed. edition. Cham: Springer, 2025.</li>
+<li>P. Jalote, Pankaj Jalote’s Software Engineering: A Precise Approach. Wiley, 2010.</li>
+<li>P. Jalote, An Integrated Approach To Software Engineering. Narosa, 2005.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf51a8ae" class="outline-4">
+<h4 id="orgf51a8ae"><span class="section-number-4">4.2.2.</span> IS</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>I. Sommerville, ENGINEERING SOFTWARE PRODUCTS: AN INTRODUCTION TO MODERN SOFTWARE ENGINEERING|, First Edition. Pearson Education, 2020.</li>
+<li>I. Sommerville, Software Engineering, 10/e [Paperback] Sommerville, Ian, Tenth edition. Pearson Education, 2017.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4ed446f" class="outline-4">
+<h4 id="org4ed446f"><span class="section-number-4">4.2.3.</span> OOAD</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>Jacobson, OBJECT ORIENTED SOFTWARE ENGINEERING: A USE CASE DRIVEN APPROACH, 1st edition. Pearson India, 2002.</li>
+<li>B. Dutoit, OBJECT ORIENTED SOFTWARE ENGINEERING: USING UML PATTERNS AND JAVA, 3RD EDN, 3rd edition. Pearson Education India, 2013.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd197aab" class="outline-4">
+<h4 id="orgd197aab"><span class="section-number-4">4.2.4.</span> Applied SE</h4>
+<div class="outline-text-4" id="text-4-2-4">
+</div>
+<ul class="org-ul">
+<li><a id="org2b0cb6d"></a>SE for Rnd<br />
+<div class="outline-text-5" id="text-org2b0cb6d">
+<ul class="org-ul">
+<li>D. Irving, K. Hertweck, L. Johnston, J. Ostblom, and C. Wickham, Research Software Engineering with Python, 1st edition. Boca Raton: CRC Press, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf35ce7b"></a>Data Science<br />
+<div class="outline-text-5" id="text-orgf35ce7b">
+<ul class="org-ul">
+<li>C. Nelson, Software Engineering for Data Scientists: From Notebooks to Scalable Systems, First Edition. Shroff/O’Reilly, 2024.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org91f3f3d" class="outline-4">
+<h4 id="org91f3f3d"><span class="section-number-4">4.2.5.</span> New Perspectives</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<ul class="org-ul">
+<li>J. Mejía, M. Muñoz, A. Rocha, Y. H. Pérez, and H. Avila-George, Eds., New Perspectives in Software Engineering. Cham: Springer, 2025.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5856737" class="outline-4">
+<h4 id="org5856737"><span class="section-number-4">4.2.6.</span> Software Quality</h4>
+<div class="outline-text-4" id="text-4-2-6">
+<ul class="org-ul">
+<li>S. Pargaonkar, A Guide to Software Quality Engineering, 1st edition. Boca Raton: Auerbach Publications, 2024.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61666c8" class="outline-4">
+<h4 id="org61666c8"><span class="section-number-4">4.2.7.</span> SE Continuous</h4>
+<div class="outline-text-4" id="text-4-2-7">
+<ul class="org-ul">
+<li>J. Bosch, Ed., Continuous Software Engineering, 2014th edition. Cham: Springer-Nature New York Inc, 2014.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f07aea" class="outline-4">
+<h4 id="org2f07aea"><span class="section-number-4">4.2.8.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-8">
+<ul class="org-ul">
+<li>R. Sethi, SOFTWARE ENGINEERING. Cambridge: Cambridge Univ Pr, 2022.</li>
+
+<li>D. Farley, Modern Software Engineering: An Engineering Discipline for Software in the Age of Agile Development and Continuous Delivery, 1st edition. Boston Columbus New York San Francisco Amsterdam London: Addison-Wesley Professional, 2021.</li>
+
+<li>“Software Engineering at Google: Lessons Learned from Programming Over Time (Audio Download): Titus Winters, Tom Manshreck, Hyrum Wright, Mark Sando, Upfront Books: Amazon.in: Books.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://www.amazon.in/Software-Engineering-Google-Lessons-Programming/dp/B08VKVBPWV">https://www.amazon.in/Software-Engineering-Google-Lessons-Programming/dp/B08VKVBPWV</a></li>
+
+<li>R. Pressman and B. Maxim, Software Engineering: A Practitioner’s Approach | 9th Edition, Standard Edition. McGraw Hill, 2023.</li>
+<li>R. S. Pressman, <i>Software Engineering: A Practitioner’s Approach.</i> Palgrave Macmillan, 2005.</li>
+
+<li>Pfleeger, Software Engineering:Theory and Practice, 4/Ed, 4th edition. Pearson Education India, 2011.</li>
+
+<li>D. Bjørner, Software Engineering 3: Domains, Requirements, and Software Design, 2006th edition. Springer-Verlag Berlin and Heidelberg GmbH &amp; Co. K, 2010.</li>
+
+<li>V. Gruhn and R. Striemer, The Essence of Software Engineering. Springer, 2018.</li>
+
+<li>I. Jacobson, H. “Bud” Lawson, P.-W. Ng, P. E. McMahon, and M. Goedicke, The Essentials of Modern Software Engineering: Free the Practices from the Method Prisons! San Rafael: Morgan &amp; Claypool Publishers, 2019.</li>
+<li>I. Jacobson, P.-W. Ng, P. E. McMahon, I. Spence, and S. Lidman, The Essence of Software Engineering: Applying the SEMAT Kernel. Addison-Wesley, 2013.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org114787f" class="outline-3">
+<h3 id="org114787f"><span class="section-number-3">4.3.</span> Journals</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>“IEEE Transactions on Software Engineering | IEEE Computer Society Digital Library.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://www.computer.org/csdl/journal/ts">https://www.computer.org/csdl/journal/ts</a></li>
+<li>“IEEE Xplore: IEEE Transactions on Software Engineering.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32">https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32</a></li>
+
+<li>“ACM TRANSACTIONS ON SOFTWARE ENGINEERING AND METHODOLOGY Home,” ACM Transactions on Software Engineering and Methodology. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://dl.acm.org/journal/tosem">https://dl.acm.org/journal/tosem</a></li>
+
+<li>“PROCEEDINGS OF THE ACM ON SOFTWARE ENGINEERING Home,” Proceedings of the ACM on Software Engineering. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://dl.acm.org/journal/pacmse">https://dl.acm.org/journal/pacmse</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0788040" class="outline-2">
+<h2 id="org0788040"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Who will be the senior engineers of 2036?” Accessed: Jun. 25, 2026. [Online]. Available: <a href="https://www.linuxfoundation.org/blog/who-will-be-the-senior-engineers-of-2036">https://www.linuxfoundation.org/blog/who-will-be-the-senior-engineers-of-2036</a></li>
+
+<li>“Software Engineering Body of Knowledge (SWEBOK),” IEEE Computer Society. Accessed: Oct. 05, 2025. [Online]. Available: <a href="https://www.computer.org/education/bodies-of-knowledge/software-engineering/">https://www.computer.org/education/bodies-of-knowledge/software-engineering/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

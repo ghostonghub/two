@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Software Development - FLOSS</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Software Development - FLOSS</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9fdaf1c">1. General</a></li>
+<li><a href="#org541000b">2. STEMM</a>
+<ul>
+<li><a href="#org3356783">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1b0573d">3. Worldly Matters</a>
+<ul>
+<li><a href="#org48437c7">3.1. Space and Time</a></li>
+<li><a href="#orgf19a612">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org7aec6ad">3.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org09f6e94">3.4. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org07ee983">3.4.1. Orgs</a></li>
+<li><a href="#orgc67c49b">3.4.2. Community</a></li>
+<li><a href="#org0f918b9">3.4.3. Law</a></li>
+<li><a href="#org27da0fc">3.4.4. Nation States</a></li>
+<li><a href="#orgc6a6cba">3.4.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org5404f62">3.5. Business Studies, Misc</a>
+<ul>
+<li><a href="#orgb6c1b3b">3.5.1. Finance</a></li>
+</ul>
+</li>
+<li><a href="#orga8395b7">3.6. Humanities, Misc</a></li>
+<li><a href="#org8696e24">3.7. Security Studies, Misc</a></li>
+<li><a href="#org8943ea6">3.8. Communication, Misc</a></li>
+<li><a href="#orge6dc613">3.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org92654ae">4. Core</a>
+<ul>
+<li><a href="#orgde3ac20">4.1. Education</a></li>
+<li><a href="#org9feb1a8">4.2. Open Source</a></li>
+<li><a href="#org4df2f93">4.3. Free Software</a></li>
+<li><a href="#org79970f8">4.4. Videos</a></li>
+</ul>
+</li>
+<li><a href="#orgb0bae24">5. Arts</a>
+<ul>
+<li><a href="#org51fc634">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgccb15b4">6. Special Topics</a>
+<ul>
+<li><a href="#org1159003">6.1. Critical Studies</a></li>
+<li><a href="#orgb75a32a">6.2. Videos</a></li>
+</ul>
+</li>
+<li><a href="#orgb071c4b">7. Misc</a>
+<ul>
+<li><a href="#org7228a93">7.1. Misc</a></li>
+<li><a href="#org91dfc4f">7.2. Internet Resources</a></li>
+<li><a href="#org4391b0d">7.3. ClearlyDefined</a></li>
+<li><a href="#org137a3f5">7.4. Texts</a></li>
+<li><a href="#org972de6e">7.5. Community</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org9fdaf1c" class="outline-2">
+<h2 id="org9fdaf1c"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org541000b" class="outline-2">
+<h2 id="org541000b"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org3356783" class="outline-3">
+<h3 id="org3356783"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Alumnus, “CC @ SXSW: Protecting the Commons in the Age of AI,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/04/09/cc-sxsw-protecting-the-commons-in-the-age-of-ai/">https://creativecommons.org/2025/04/09/cc-sxsw-protecting-the-commons-in-the-age-of-ai/</a></li>
+
+<li>S. B. and A. Hancock, “EFF’s Policy on LLM-Assisted Contributions to Our Open-Source Projects,” Electronic Frontier Foundation. Accessed: Feb. 20, 2026. [Online]. Available: <a href="https://www.eff.org/deeplinks/2026/02/effs-policy-llm-assisted-contributions-our-open-source-projects">https://www.eff.org/deeplinks/2026/02/effs-policy-llm-assisted-contributions-our-open-source-projects</a></li>
+
+<li>“The State of Open Source Software in 2025.” Accessed: Nov. 28, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/blog/the-state-of-open-source-software-in-2025">https://www.linuxfoundation.org/blog/the-state-of-open-source-software-in-2025</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b0573d" class="outline-2">
+<h2 id="org1b0573d"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org48437c7" class="outline-3">
+<h3 id="org48437c7"><span class="section-number-3">3.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orgf19a612" class="outline-3">
+<h3 id="orgf19a612"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org7aec6ad" class="outline-3">
+<h3 id="org7aec6ad"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-org09f6e94" class="outline-3">
+<h3 id="org09f6e94"><span class="section-number-3">3.4.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org07ee983" class="outline-4">
+<h4 id="org07ee983"><span class="section-number-4">3.4.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgb1ae263"></a>Free Software Foundation<br />
+<div class="outline-text-5" id="text-orgb1ae263">
+<ul class="org-ul">
+<li>“Front Page — Free Software Foundation — working together for free software.” Accessed: Feb. 03, 2025. [Online]. Available: <a href="https://www.fsf.org/">https://www.fsf.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb9337f3"></a>Open Source Initiative<br />
+<div class="outline-text-5" id="text-orgb9337f3">
+<ul class="org-ul">
+<li>“Home Page,” Open Source Initiative. Accessed: Feb. 03, 2025. [Online]. Available: <a href="https://opensource.org">https://opensource.org</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8775235"></a>Software Freedom Conservancy<br />
+<div class="outline-text-5" id="text-org8775235">
+<ul class="org-ul">
+<li><i>“Software Freedom Conservancy.”</i> Accessed April 9, 2021. <a href="https://sfconservancy.org/">https://sfconservancy.org/</a>.</li>
+</ul>
+</div>
+</li>
+<li><a id="org14aca35"></a>IEEE<br />
+<div class="outline-text-5" id="text-org14aca35">
+<ul class="org-ul">
+<li><i>“Welcome - IEEE SA OPEN.”</i> Accessed April 9, 2021. <a href="https://saopen.ieee.org/">https://saopen.ieee.org/</a>.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcdaa405"></a>Misc<br />
+<div class="outline-text-5" id="text-orgcdaa405">
+<ul class="org-ul">
+<li>“Fosstodon,” Mastodon hosted on fosstodon.org. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://fosstodon.org/">https://fosstodon.org/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgc67c49b" class="outline-4">
+<h4 id="orgc67c49b"><span class="section-number-4">3.4.2.</span> Community</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>“Home,” CHAOSS. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://chaoss.community/">https://chaoss.community/</a></li>
+
+<li>“About,” CHAOSS. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://chaoss.community/about-chaoss/">https://chaoss.community/about-chaoss/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0f918b9" class="outline-4">
+<h4 id="org0f918b9"><span class="section-number-4">3.4.3.</span> Law</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<ul class="org-ul">
+<li>“SPDX License List | Software Package Data Exchange (SPDX).” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://spdx.org/licenses/">https://spdx.org/licenses/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org27da0fc" class="outline-4">
+<h4 id="org27da0fc"><span class="section-number-4">3.4.4.</span> Nation States</h4>
+<div class="outline-text-4" id="text-3-4-4">
+</div>
+<ul class="org-ul">
+<li><a id="org95cf0e8"></a>India<br />
+<ul class="org-ul">
+<li><a id="org62890e0"></a>General<br /></li>
+<li><a id="org2bd5d9a"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgf2bcd87"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgf9ba567"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org71b5ead"></a>Misc<br />
+<div class="outline-text-7" id="text-org71b5ead">
+<ul class="org-ul">
+<li>TFiR, India Leads Global Open Source Growth: 17M Developers &amp; Rising | Open Source Summit India, (Aug. 05, 2025). Accessed: Sep. 06, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=p8GcL_Ulszg">https://www.youtube.com/watch?v=p8GcL_Ulszg</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org54e9115"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org00f0f7b"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org505e82f"></a>Special Topics<br /></li>
+<li><a id="orgcdb853f"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgc6a6cba" class="outline-4">
+<h4 id="orgc6a6cba"><span class="section-number-4">3.4.5.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org5404f62" class="outline-3">
+<h3 id="org5404f62"><span class="section-number-3">3.5.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgb6c1b3b" class="outline-4">
+<h4 id="orgb6c1b3b"><span class="section-number-4">3.5.1.</span> Finance</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ul class="org-ul">
+<li>“Raise and spend money with full transparency.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://opencollective.com/">https://opencollective.com/</a></li>
+
+<li>“OTF,” OTF. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.opentech.fund/">https://www.opentech.fund/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8395b7" class="outline-3">
+<h3 id="orga8395b7"><span class="section-number-3">3.6.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-org8696e24" class="outline-3">
+<h3 id="org8696e24"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org8943ea6" class="outline-3">
+<h3 id="org8943ea6"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orge6dc613" class="outline-3">
+<h3 id="orge6dc613"><span class="section-number-3">3.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>News and O. P. Team, “Open Source AI Fellowship Announced at UN Open Source Week,” Open Source Initiative. Accessed: Jul. 02, 2026. [Online]. Available: <a href="https://opensource.org/blog/open-source-ai-fellowship-announced-at-un-open-source-week">https://opensource.org/blog/open-source-ai-fellowship-announced-at-un-open-source-week</a></li>
+
+<li>News and O. P. Team, “Open Source AI Fellowship Announced at UN Open Source Week,” Open Source Initiative. Accessed: Jun. 27, 2026. [Online]. Available: <a href="https://opensource.org/blog/open-source-ai-fellowship-announced-at-un-open-source-week">https://opensource.org/blog/open-source-ai-fellowship-announced-at-un-open-source-week</a></li>
+
+<li>“Home | Open Source United Portal.” Accessed: Jun. 27, 2026. [Online]. Available: <a href="https://opensource.un.org/en">https://opensource.un.org/en</a></li>
+<li>“UN Open Source Week 2026 | United Nations Open Source Event.” Accessed: Jun. 27, 2026. [Online]. Available: <a href="https://www.unopensource.org/">https://www.unopensource.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Linux Foundation Welcomes Mitsubishi Electric as Gold Member During Open Source Summit Japan.” Accessed: Dec. 08, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/press/linux-foundation-welcomes-mitsubishi-electric-as-gold-member-during-open-source-summit-japan">https://www.linuxfoundation.org/press/linux-foundation-welcomes-mitsubishi-electric-as-gold-member-during-open-source-summit-japan</a></li>
+
+<li>“The state of global open source 2025,” Ubuntu. Accessed: Nov. 20, 2025. [Online]. Available: <a href="https://ubuntu.com/engage/world-of-open-source-global-2025">https://ubuntu.com/engage/world-of-open-source-global-2025</a></li>
+<li>C. Ltd, “Enterprise open source adoption,” Canonical. Accessed: Nov. 20, 2025. [Online]. Available: <a href="https://canonical.com/open-source-adoption">https://canonical.com/open-source-adoption</a></li>
+<li>C. Ltd, “83% of organizations see value in adopting open source, but report major gaps in security and governance,” Canonical. Accessed: Nov. 20, 2025. [Online]. Available: <a href="https://canonical.com/blog/state-of-global-open-source-2025">https://canonical.com/blog/state-of-global-open-source-2025</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>News and R. Suehle, “Sustaining Open Source: The Next 25 Years Depend on What We Do Together Now,” Open Source Initiative. Accessed: Nov. 19, 2025. [Online]. Available: <a href="https://opensource.org/blog/sustaining-open-source-the-next-25-years-depend-on-what-we-do-together-now/">https://opensource.org/blog/sustaining-open-source-the-next-25-years-depend-on-what-we-do-together-now/</a></li>
+
+<li>“FSF confirms Ian Kelling as its new president — Free Software Foundation — Working together for free software.” Accessed: Oct. 03, 2025. [Online]. Available: <a href="https://www.fsf.org/news/2025-ian-kelling-becomes-board-president">https://www.fsf.org/news/2025-ian-kelling-becomes-board-president</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“FSF confirms Ian Kelling as its new president — Free Software Foundation — Working together for free software.” Accessed: Oct. 03, 2025. [Online]. Available: <a href="https://www.fsf.org/news/2025-ian-kelling-becomes-board-president">https://www.fsf.org/news/2025-ian-kelling-becomes-board-president</a></li>
+
+<li>“Open Source as Europe’s Strategic Advantage.” Accessed: Sep. 30, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/world-of-open-source-eu-2025">https://www.linuxfoundation.org/research/world-of-open-source-eu-2025</a></li>
+
+<li>“FSF confirms Alexandre Oliva to board of directors — Free Software Foundation — Working together for free software.” Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://www.fsf.org/news/fsf-confirms-alexandre-oliva-to-board-of-directors">https://www.fsf.org/news/fsf-confirms-alexandre-oliva-to-board-of-directors</a></li>
+
+<li>“Fifty Years of Open Source Software Supply-Chain Security – Communications of the ACM.” Accessed: Sep. 20, 2025. [Online]. Available: <a href="https://cacm.acm.org/practice/fifty-years-of-open-source-software-supply-chain-security/">https://cacm.acm.org/practice/fifty-years-of-open-source-software-supply-chain-security/</a></li>
+
+<li>“Job opportunity: Program Manager at the Free Software Foundation — Free Software Foundation — Working together for free software.” Accessed: Sep. 20, 2025. [Online]. Available: <a href="https://www.fsf.org/news/2025-fsf-job-opportunity-pm">https://www.fsf.org/news/2025-fsf-job-opportunity-pm</a></li>
+
+<li>“2025 State of Tech Talent Report,” Linux Foundation - Education. Accessed: Sep. 19, 2025. [Online]. Available: <a href="https://training.linuxfoundation.org/2025-state-of-tech-talent-report/">https://training.linuxfoundation.org/2025-state-of-tech-talent-report/</a></li>
+
+<li>“FSF40: Free software activists to speak on their history of involvement — Free Software Foundation — Working together for free software.” Accessed: Sep. 18, 2025. [Online]. Available: <a href="https://www.fsf.org/news/fsf40-volunteer-panel">https://www.fsf.org/news/fsf40-volunteer-panel</a></li>
+
+<li>“Electronic Frontier Foundation, F-Droid, and Sugar Labs leaders to speak at FSF’s fortieth anniversary — Free Software Foundation — Working together for free software.” Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://www.fsf.org/news/fsf40-foundation-panel">https://www.fsf.org/news/fsf40-foundation-panel</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Open Source Program Offices Emerge as Strategic Hubs for AI Innovation, Security and Open Source Culture.” Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/blog/open-source-program-offices-emerge-as-strategic-hubs-for-ai-innovation-security-and-open-source-culture">https://www.linuxfoundation.org/blog/open-source-program-offices-emerge-as-strategic-hubs-for-ai-innovation-security-and-open-source-culture</a></li>
+
+<li>“The State of Commercial Open Source 2025.” Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/2025-state-of-commercial-open-source">https://www.linuxfoundation.org/research/2025-state-of-commercial-open-source</a></li>
+
+<li>“Open Source as Europe’s Strategic Advantage.” Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/world-of-open-source-eu-2025">https://www.linuxfoundation.org/research/world-of-open-source-eu-2025</a></li>
+
+<li>“The 2025 State of OSPOs and Open Source Management.” Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/ospo-2025">https://www.linuxfoundation.org/research/ospo-2025</a></li>
+
+<li>C. Ltd, “69% of organizations in Europe believe adopting open source makes them more competitive – new Linux Foundation research,” Canonical. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://canonical.com/blog/open-source-advantage-europe">https://canonical.com/blog/open-source-advantage-europe</a></li>
+
+<li>“The State of Commercial Open Source 2025.” Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/2025-state-of-commercial-open-source">https://www.linuxfoundation.org/research/2025-state-of-commercial-open-source</a></li>
+
+<li>“2025 State of Tech Talent Report,” Linux Foundation - Education. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://training.linuxfoundation.org/2025-state-of-tech-talent-report/">https://training.linuxfoundation.org/2025-state-of-tech-talent-report/</a></li>
+
+<li>“Rethinking the model for sustainable open access,” Research Information. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.researchinformation.info/viewpoint/rethinking-the-model-for-sustainable-open-access/">https://www.researchinformation.info/viewpoint/rethinking-the-model-for-sustainable-open-access/</a></li>
+
+<li>“UN Open Source Week 2025 | Office for Digital and Emerging Technologies.” Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.un.org/digital-emerging-technologies/content/open-source-week-2025">https://www.un.org/digital-emerging-technologies/content/open-source-week-2025</a></li>
+
+<li>“Free Software Foundation completes its board member review — Free Software Foundation — Working together for free software.” Accessed: May 01, 2025. [Online]. Available: <a href="https://www.fsf.org/news/fsf-board-member-review-completed">https://www.fsf.org/news/fsf-board-member-review-completed</a></li>
+<li>“Overcoming barriers to Open Source procurement in the European Union,” Open Source Initiative. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://opensource.org/blog/overcoming-barriers-to-open-source-procurement-in-the-european-union">https://opensource.org/blog/overcoming-barriers-to-open-source-procurement-in-the-european-union</a></li>
+
+<li>“Your support, our focus: The OSI’s 2025 roadmap to a stronger Open Source ecosystem,” Open Source Initiative. Accessed: Mar. 25, 2025. [Online]. Available: <a href="https://opensource.org/blog/your-support-our-focus-the-osis-2025-roadmap-to-a-stronger-open-source-ecosystem">https://opensource.org/blog/your-support-our-focus-the-osis-2025-roadmap-to-a-stronger-open-source-ecosystem</a></li>
+
+<li>“Overcoming barriers to Open Source procurement in the European Union,” Open Source Initiative. Accessed: Mar. 14, 2025. [Online]. Available: <a href="https://opensource.org/blog/overcoming-barriers-to-open-source-procurement-in-the-european-union">https://opensource.org/blog/overcoming-barriers-to-open-source-procurement-in-the-european-union</a></li>
+
+<li>“Richard Stallman,” Wikipedia. Dec. 30, 2024. Accessed: Dec. 31, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Richard_Stallman&amp;oldid=1266256664">https://en.wikipedia.org/w/index.php?title=Richard_Stallman&amp;oldid=1266256664</a></li>
+
+<li>“Build in the Open: Funding the Future of Trustworthy Tech,” Mozilla Foundation. Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/funding-the-future-of-trustworthy-tech/">https://foundation.mozilla.org/en/blog/funding-the-future-of-trustworthy-tech/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“More than fifteen free software socials to be held globally — Free Software Foundation — Working together for free software.” Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://www.fsf.org/news/fifteen-librelocal-meetups-announced">https://www.fsf.org/news/fifteen-librelocal-meetups-announced</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org92654ae" class="outline-2">
+<h2 id="org92654ae"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgde3ac20" class="outline-3">
+<h3 id="orgde3ac20"><span class="section-number-3">4.1.</span> Education</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>K. Barratt, “Future-Ready: How HPE is Powering Its Consulting Force with Open Source Education &amp; Certifications,” Linux Foundation - Education. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://training.linuxfoundation.org/blog/hpe-future-ready/">https://training.linuxfoundation.org/blog/hpe-future-ready/</a></li>
+
+<li>“The Journal of Brief Ideas.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://beta.briefideas.org/">https://beta.briefideas.org/</a></li>
+<li>“Journal of Open Source Education.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://jose.theoj.org">https://jose.theoj.org</a></li>
+<li>“Journal of Open Source Software.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://joss.theoj.org">https://joss.theoj.org</a></li>
+<li>“Open Journals.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="http://www.theoj.org/">http://www.theoj.org/</a></li>
+<li>“Journal of Open Source Software.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://joss.theoj.org">https://joss.theoj.org</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9feb1a8" class="outline-3">
+<h3 id="org9feb1a8"><span class="section-number-3">4.2.</span> Open Source</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>E. S. Raymond, <b>The Cathedral &amp; the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary.</b> O'Reilly Media, Inc., 2001.</li>
+
+<li>K. Fogel, <i>Producing Open Source Software: How to Run a Successful Free Software Project.</i> O’Reilly Media, Inc., 2005.
+<ul class="org-ul">
+<li>“Producing Open Source Software.” <a href="https://producingoss.com/">https://producingoss.com/</a> (accessed Nov. 13, 2021).</li>
+</ul></li>
+
+<li><b>“Open Source For You | Opensourceforu.com | Open Source Updates,”</b> Open Source For You. <a href="https://www.opensourceforu.com/">https://www.opensourceforu.com/</a> (accessed Jun. 24, 2021).</li>
+
+<li>“AlternativeTo - Crowdsourced software recommendations,” AlternativeTo. <a href="https://alternativeto.net">https://alternativeto.net</a> (accessed Sep. 22, 2021).</li>
+
+<li>“Find Open Source Alternatives to commercial software | Open Source Alternative - osalt.com.” <a href="https://www.osalt.com/">https://www.osalt.com/</a> (accessed Sep. 22, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4df2f93" class="outline-3">
+<h3 id="org4df2f93"><span class="section-number-3">4.3.</span> Free Software</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li><b>“Front Page — Free Software Foundation — working together for free software.”</b> <a href="https://www.fsf.org/">https://www.fsf.org/</a> (accessed Jul. 03, 2021).
+<ul class="org-ul">
+<li>For many, especially in the global south, the 'FSF'ish IT worldview, ecosystem, and workflow might be the least harmful.</li>
+</ul></li>
+
+<li><b>“Free Software Directory.”</b> <a href="https://directory.fsf.org/?pk_campaign=fsfredesign">https://directory.fsf.org/?pk_campaign=fsfredesign</a> (accessed Jul. 03, 2021).</li>
+
+<li>“Ethical Tech | Giving Guide.” <a href="https://www.fsf.org/givingguide/v12/?pk_campaign=fall21">https://www.fsf.org/givingguide/v12/?pk_campaign=fall21</a> (accessed Nov. 19, 2021).</li>
+
+<li>“FSF Giving Guide: Freedom is the greatest gift of all — Free Software Foundation — Working together for free software.” <a href="https://www.fsf.org/blogs/community/fsf-giving-guide-freedom-is-the-greatest-gift-of-all">https://www.fsf.org/blogs/community/fsf-giving-guide-freedom-is-the-greatest-gift-of-all</a> (accessed Nov. 19, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org79970f8" class="outline-3">
+<h3 id="org79970f8"><span class="section-number-3">4.4.</span> Videos</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>“Free Software Foundation,” Framatube. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://framatube.org/a/fsf/video-channels">https://framatube.org/a/fsf/video-channels</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb0bae24" class="outline-2">
+<h2 id="orgb0bae24"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org51fc634" class="outline-3">
+<h3 id="org51fc634"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgccb15b4" class="outline-2">
+<h2 id="orgccb15b4"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org1159003" class="outline-3">
+<h3 id="org1159003"><span class="section-number-3">6.1.</span> Critical Studies</h3>
+</div>
+<div id="outline-container-orgb75a32a" class="outline-3">
+<h3 id="orgb75a32a"><span class="section-number-3">6.2.</span> Videos</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>“Free Software Foundation,” Framatube. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://framatube.org/a/fsf/video-channels">https://framatube.org/a/fsf/video-channels</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb071c4b" class="outline-2">
+<h2 id="orgb071c4b"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org7228a93" class="outline-3">
+<h3 id="org7228a93"><span class="section-number-3">7.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>A. Anonymous, “Open Movement’s Common(s) Causes,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2024/11/18/open-movements-commons-causes/">https://creativecommons.org/2024/11/18/open-movements-commons-causes/</a></li>
+
+<li>“Measuring OSPO Value.” Accessed: Jun. 30, 2026. [Online]. Available: <a href="https://www.linuxfoundation.org/blog/measuring-ospo-value">https://www.linuxfoundation.org/blog/measuring-ospo-value</a></li>
+<li>“Measuring OSPO Value.” Accessed: Jun. 30, 2026. [Online]. Available: <a href="https://www.linuxfoundation.org/research/measuring-ospo-value">https://www.linuxfoundation.org/research/measuring-ospo-value</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“OpenSearchCon Europe 2026 Speaker Lineup Highlights the Future of Open Source Search, Observability and AI Innovation.” Accessed: Feb. 20, 2026. [Online]. Available: <a href="https://www.linuxfoundation.org/press/opensearchcon-europe-2026-speaker-lineup-highlights-the-future-of-open-source-search-observability-and-ai-innovation">https://www.linuxfoundation.org/press/opensearchcon-europe-2026-speaker-lineup-highlights-the-future-of-open-source-search-observability-and-ai-innovation</a></li>
+
+<li>E. from the sharing-the-software dept, “Richard Stallman Was Asked: Is Software Piracy Wrong? - Slashdot.” Accessed: Jan. 27, 2026. [Online]. Available: <a href="https://news.slashdot.org/story/26/01/25/1952231/richard-stallman-was-asked-is-software-piracy-wrong">https://news.slashdot.org/story/26/01/25/1952231/richard-stallman-was-asked-is-software-piracy-wrong</a></li>
+
+<li>“New Study Finds Confidential Computing Emerging as a Strategic Imperative for Secure AI and Data Collaboration.” Accessed: Dec. 05, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/press/new-study-finds-confidential-computing-emerging-as-a-strategic-imperative-for-secure-ai-and-data-collaboration">https://www.linuxfoundation.org/press/new-study-finds-confidential-computing-emerging-as-a-strategic-imperative-for-secure-ai-and-data-collaboration</a></li>
+
+<li>“Linux Foundation Newsletter: November 2025.” Accessed: Nov. 25, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/blog/linux-foundation-newsletter-november-2025">https://www.linuxfoundation.org/blog/linux-foundation-newsletter-november-2025</a></li>
+
+<li>“Open Robust Compartmentalization Alliance (ORCA).” Accessed: Nov. 25, 2025. [Online]. Available: <a href="https://orca-lf.org/?hss_channel=tw-14706299">https://orca-lf.org/?hss_channel=tw-14706299</a></li>
+
+<li>“Xen Project Delivers Xen 4.21, a Modernized Hypervisor with Broader Architecture Support and Improved Performance.” Accessed: Nov. 20, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/press/xen-project-delivers-xen-4.21-a-modernized-hypervisor-with-broader-architecture-support-and-improved-performance">https://www.linuxfoundation.org/press/xen-project-delivers-xen-4.21-a-modernized-hypervisor-with-broader-architecture-support-and-improved-performance</a></li>
+
+<li>“The State of Global Open Source 2025.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/world-of-open-source-global-2025">https://www.linuxfoundation.org/research/world-of-open-source-global-2025</a></li>
+
+<li>“OpenSSF Announces Key Membership Growth and Golden Egg Award Winners at Open Source SecurityCon North America.” Accessed: Nov. 11, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/press/openssf-announces-key-membership-growth-and-golden-egg-award-winners-at-open-source-securitycon-north-america">https://www.linuxfoundation.org/press/openssf-announces-key-membership-growth-and-golden-egg-award-winners-at-open-source-securitycon-north-america</a></li>
+
+<li>N. archive and N. Vidal, “A Season of Change at OSI,” Open Source Initiative. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://opensource.org/blog/a-season-of-change-at-osi/">https://opensource.org/blog/a-season-of-change-at-osi/</a></li>
+
+<li>“FSF confirms Ian Kelling as its new president — Free Software Foundation — Working together for free software.” Accessed: Oct. 07, 2025. [Online]. Available: <a href="https://www.fsf.org/news/2025-ian-kelling-becomes-board-president">https://www.fsf.org/news/2025-ian-kelling-becomes-board-president</a></li>
+<li>“FSF turns forty with a groundbreaking new project and a new president — Free Software Foundation — Working together for free software.” Accessed: Oct. 07, 2025. [Online]. Available: <a href="https://www.fsf.org/news/fsf-turns-forty-with-a-new-president-and-a-new-campaign">https://www.fsf.org/news/fsf-turns-forty-with-a-new-president-and-a-new-campaign</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>News and N. Vidal, “Hacktoberfest and the OSI: Growing Open Source adoption,” Open Source Initiative. Accessed: Oct. 04, 2025. [Online]. Available: <a href="https://opensource.org/blog/hacktoberfest-and-the-osi-growing-open-source-adoption/">https://opensource.org/blog/hacktoberfest-and-the-osi-growing-open-source-adoption/</a></li>
+
+<li>“The 2025 State of OSPOs and Open Source Management.” Accessed: Sep. 17, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/ospo-2025">https://www.linuxfoundation.org/research/ospo-2025</a></li>
+<li>News and Osi, “OSI charts next phase for the organization with executive director search,” Open Source Initiative. Accessed: Sep. 17, 2025. [Online]. Available: <a href="https://opensource.org/blog/osi-next-phase-executive-director-search/">https://opensource.org/blog/osi-next-phase-executive-director-search/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The software we have to use at work must respect our freedom — Free Software Foundation — Working together for free software.” Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.fsf.org/blogs/community/the-software-we-have-to-use-at-work-must-respect-our-freedom">https://www.fsf.org/blogs/community/the-software-we-have-to-use-at-work-must-respect-our-freedom</a></li>
+
+<li>“Defending Savannah from DDoS attacks — Free Software Foundation — Working together for free software.” Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.fsf.org/bulletin/2025/spring/defending-savannah-from-ddos-attacks">https://www.fsf.org/bulletin/2025/spring/defending-savannah-from-ddos-attacks</a></li>
+
+<li>T. D. Giacomo, “Open Source projects vs products: A strategic approach,” OpenSource.net. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://opensource.net/open-source-projects-vs-products/">https://opensource.net/open-source-projects-vs-products/</a></li>
+
+<li>S. Fermigier, “Open Source in Europe: Facing the regulatory challenge,” OpenSource.net. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://opensource.net/open-source-cra-challenge/">https://opensource.net/open-source-cra-challenge/</a></li>
+
+<li>“SustainOSS,” A Space for Open Source Sustainers. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://sustainoss.org/">https://sustainoss.org/</a></li>
+<li>T. Augspurger, “Sustain Open Source, sustain the planet: A new conversation,” OpenSource.net. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://opensource.net/oss-for-climate-podcast/">https://opensource.net/oss-for-climate-podcast/</a></li>
+
+<li>“Ada goes to the set: let’s make an animated movie - FSFE,” FSFE - Free Software Foundation Europe. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://fsfe.org/news/2024/news-20240515-01.html">https://fsfe.org/news/2024/news-20240515-01.html</a></li>
+
+<li>“Kuleana and software freedom for the future,” Software Freedom Conservancy. Accessed: Dec. 25, 2024. [Online]. Available: <a href="https://sfconservancy.org/blog/2024/dec/23/kuleana-and-software-freedom-for-the-future/">https://sfconservancy.org/blog/2024/dec/23/kuleana-and-software-freedom-for-the-future/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Block Joins OSI, Launches Public Policy Lab for Open Source,” Block Joins OSI, Launches Public Policy Lab for Open Source. Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://block.xyz/inside/block-joins-open-source-initiative-launches-public-policy-lab-to-advance-open-source-ecosystems">https://block.xyz/inside/block-joins-open-source-initiative-launches-public-policy-lab-to-advance-open-source-ecosystems</a></li>
+<li>“Block,” Block. Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://block.xyz/">https://block.xyz/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Open Source Software Developer Report.” Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/open-source-developer-survey-2024">https://www.linuxfoundation.org/research/open-source-developer-survey-2024</a></li>
+<li>S. Hendrick and B. Trinkenreich, “Open Source Software Developer Report: How Developers Benefit from Professional Events,” The Linux Foundation, Oct. 2024. doi: 10.70828/IPIH2109.</li>
+
+<li>“Pathways to Open Data: Findings from the 2024 World Open Innovation Conference Challenge Session.” Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/pathways-to-open-data">https://www.linuxfoundation.org/research/pathways-to-open-data</a></li>
+
+<li>“Software Freedom Conservancy gives its first Distinguished Service Award in Software Freedom to Lance Albertson,” Software Freedom Conservancy. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://sfconservancy.org/news/2025/aug/01/distinguished-award-in-lance-albertson/">https://sfconservancy.org/news/2025/aug/01/distinguished-award-in-lance-albertson/</a></li>
+
+<li>D. Cassel, “How the Free Software Foundation Battles the LLM Bots,” The New Stack. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://thenewstack.io/how-the-free-software-foundation-battles-the-llm-bots/">https://thenewstack.io/how-the-free-software-foundation-battles-the-llm-bots/</a></li>
+
+<li>News and N. Vidal, “End of 10: The Open Source alternative to forced obsolescence,” Open Source Initiative. Accessed: Jul. 17, 2025. [Online]. Available: <a href="https://opensource.org/blog/end-of-10-the-open-source-alternative-to-forced-obsolescence">https://opensource.org/blog/end-of-10-the-open-source-alternative-to-forced-obsolescence</a></li>
+
+<li>“The 2025 Open Source Networking Study: The Role and Value of Open Source in the Networking Industry’s Software Stack.” Accessed: Jul. 16, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/2025-open-source-networking">https://www.linuxfoundation.org/research/2025-open-source-networking</a></li>
+
+<li>“Pluralistic: Semantic drift versus ethical drift (14 Jul 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jul. 15, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/07/14/pole-star/">https://pluralistic.net/2025/07/14/pole-star/</a></li>
+
+<li>Events and K. Steen-James, “Building digital public goods: Reflections from UN Open Source Week 2025,” Open Source Initiative. Accessed: Jul. 09, 2025. [Online]. Available: <a href="https://opensource.org/blog/building-digital-public-goods-reflections-from-un-open-source-week-2025">https://opensource.org/blog/building-digital-public-goods-reflections-from-un-open-source-week-2025</a></li>
+
+<li>News and N. Vidal, “LinuxFr.org joins the OSI: strengthening the francophone community,” Open Source Initiative. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://opensource.org/blog/linuxfr-org-joins-the-osi-strengthening-the-francophone-community">https://opensource.org/blog/linuxfr-org-joins-the-osi-strengthening-the-francophone-community</a></li>
+
+<li>“There is no collective freedom without you — Free Software Foundation — Working together for free software.” Accessed: Jul. 01, 2025. [Online]. Available: <a href="https://www.fsf.org/bulletin/2025/spring/there-is-no-collective-freedom-without-you">https://www.fsf.org/bulletin/2025/spring/there-is-no-collective-freedom-without-you</a></li>
+
+<li>T. Tech, “Many Ways Up the Mountain: The Scrappy, Creative World of Open Source Hacking.” Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://exposingtheinvisible.org/en/articles/osint-hacking/">https://exposingtheinvisible.org/en/articles/osint-hacking/</a></li>
+
+<li>News and N. Vidal, “Introducing the new API for OSI Approved Licenses®,” Open Source Initiative. Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://opensource.org/blog/introducing-the-new-api-for-osi-approved-licenses">https://opensource.org/blog/introducing-the-new-api-for-osi-approved-licenses</a></li>
+
+<li>“Free software can defy dystopia — Free Software Foundation — Working together for free software.” Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.fsf.org/appeal/2025-spring/free-software-can-defy-dystopia">https://www.fsf.org/appeal/2025-spring/free-software-can-defy-dystopia</a></li>
+
+<li>“FSF adds provisional board member Alexandre Oliva — Free Software Foundation — Working together for free software.” Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.fsf.org/news/provisional-board-member-05-2025-oliva">https://www.fsf.org/news/provisional-board-member-05-2025-oliva</a></li>
+
+<li>“Citations — Free Software Foundation — Working together for free software.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://www.fsf.org/bulletin/2025/spring/citations">https://www.fsf.org/bulletin/2025/spring/citations</a></li>
+
+<li>News and J. Maris, “Investing in Open Source sustainability: OSI supports Open Forum Europe’s EU Sovereign Tech Fund proposal,” Open Source Initiative. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://opensource.org/blog/investing-in-open-source-sustainability-osi-supports-open-forum-europes-eu-sovereign-tech-fund-proposal">https://opensource.org/blog/investing-in-open-source-sustainability-osi-supports-open-forum-europes-eu-sovereign-tech-fund-proposal</a></li>
+
+<li>F. Force, “The Top Five — For the Week Ending May 9, 2025,” FOSS Force. Accessed: Jun. 08, 2025. [Online]. Available: <a href="https://fossforce.com/2025/05/the-top-five-for-the-week-ending-may-9-2025/">https://fossforce.com/2025/05/the-top-five-for-the-week-ending-may-9-2025/</a></li>
+
+<li>News and N. Vidal, “End of 10: The Open Source alternative to forced obsolescence,” Open Source Initiative. Accessed: May 29, 2025. [Online]. Available: <a href="https://opensource.org/blog/end-of-10-the-open-source-alternative-to-forced-obsolescence">https://opensource.org/blog/end-of-10-the-open-source-alternative-to-forced-obsolescence</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“NASA Stennis Releases First Open-Source Software - NASA.” Accessed: May 09, 2025. [Online]. Available: <a href="https://www.nasa.gov/centers-and-facilities/stennis/stennis-first-open-source-software/">https://www.nasa.gov/centers-and-facilities/stennis/stennis-first-open-source-software/</a></li>
+
+<li>“New Guide on Simplifying Software Component Updates – Open Source Security Foundation.” Accessed: May 09, 2025. [Online]. Available: <a href="https://openssf.org/blog/2025/05/07/new-guide-on-simplifying-software-component-updates/">https://openssf.org/blog/2025/05/07/new-guide-on-simplifying-software-component-updates/</a></li>
+
+<li>“Advance your career and organization with the CODE certification,” Open Source Initiative. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://opensource.org/blog/advance-your-career-and-organization-with-the-code-certification">https://opensource.org/blog/advance-your-career-and-organization-with-the-code-certification</a></li>
+
+<li>“2025 State of Open Source Report | OpenLogic by Perforce.” Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://www.openlogic.com/resources/state-of-open-source-report">https://www.openlogic.com/resources/state-of-open-source-report</a></li>
+<li>“Key insights from the 2025 State of Open Source Report,” Open Source Initiative. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://opensource.org/blog/key-insights-from-the-2025-state-of-open-source-report">https://opensource.org/blog/key-insights-from-the-2025-state-of-open-source-report</a></li>
+<li>“Free Software Foundation,” Framatube. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://framatube.org/a/fsf/video-channels">https://framatube.org/a/fsf/video-channels</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“There are no ‘Degrees of Open’: why Openness is binary,” Open Source Initiative. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://opensource.org/blog/there-are-no-degrees-of-open-why-openness-is-binary">https://opensource.org/blog/there-are-no-degrees-of-open-why-openness-is-binary</a></li>
+
+<li>“The OSI endorses the United Nations Open Source Principles,” Open Source Initiative. Accessed: Apr. 05, 2025. [Online]. Available: <a href="https://opensource.org/blog/osi-endorses-united-nations-open-source-principles">https://opensource.org/blog/osi-endorses-united-nations-open-source-principles</a></li>
+
+<li>B. Byfield, “Zoë Kooyman on Post-Stallman Changes at the Free Software Foundation (Part 2),” FOSS Force. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://fossforce.com/2025/03/zoe-kooyman-on-post-stallman-changes-at-the-free-software-foundation-part-2/">https://fossforce.com/2025/03/zoe-kooyman-on-post-stallman-changes-at-the-free-software-foundation-part-2/</a></li>
+
+<li>“Free Software Supporter &#x2013; Issue 203, March 2025 — Free Software Foundation — Working together for free software.” Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://www.fsf.org/free-software-supporter/2025/march">https://www.fsf.org/free-software-supporter/2025/march</a></li>
+
+<li>“Frequently Asked Questions about the GNU Licenses - GNU Project - Free Software Foundation.” Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://www.gnu.org/licenses/gpl-faq.html#ReportingViolation">https://www.gnu.org/licenses/gpl-faq.html#ReportingViolation</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Your support, our focus: The OSI’s 2025 roadmap to a stronger Open Source ecosystem,” Open Source Initiative. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://opensource.org/blog/your-support-our-focus-the-osis-2025-roadmap-to-a-stronger-open-source-ecosystem">https://opensource.org/blog/your-support-our-focus-the-osis-2025-roadmap-to-a-stronger-open-source-ecosystem</a></li>
+
+<li>“The OSI endorses the United Nations Open Source Principles,” Open Source Initiative. Accessed: Mar. 14, 2025. [Online]. Available: <a href="https://opensource.org/blog/osi-endorses-united-nations-open-source-principles">https://opensource.org/blog/osi-endorses-united-nations-open-source-principles</a></li>
+
+<li>“Society will never be free under nonfree software — Free Software Foundation — Working together for free software.” Accessed: Jan. 31, 2025. [Online]. Available: <a href="https://www.fsf.org/bulletin/2024/fall/society-will-never-be-free-under-nonfree-software">https://www.fsf.org/bulletin/2024/fall/society-will-never-be-free-under-nonfree-software</a></li>
+
+<li>“Free Software Foundation Bulletin.” Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://magazine.fsf.org/2024-fall/">https://magazine.fsf.org/2024-fall/</a></li>
+
+<li>“Anchoring the FSF in its values — Free Software Foundation — Working together for free software.” Accessed: Jan. 12, 2025. [Online]. Available: <a href="https://www.fsf.org/news/anchoring-the-fsf-in-its-values">https://www.fsf.org/news/anchoring-the-fsf-in-its-values</a></li>
+
+<li>“Embroidery and resilient software freedom in 2025,” Software Freedom Conservancy. Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://sfconservancy.org/blog/2025/jan/06/embroidery-and-resilient-software-freedom-in-2025/">https://sfconservancy.org/blog/2025/jan/06/embroidery-and-resilient-software-freedom-in-2025/</a></li>
+
+<li>“2024 Annual Report,” Open Source Initiative. Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://opensource.org/2024-annual-report">https://opensource.org/2024-annual-report</a></li>
+
+<li>“2024 end-of-year review: policy and standards,” Open Source Initiative. Accessed: Dec. 20, 2024. [Online]. Available: <a href="https://opensource.org/blog/2024-end-of-year-review-policy-and-standards">https://opensource.org/blog/2024-end-of-year-review-policy-and-standards</a></li>
+
+<li>“Free Software Foundation Bulletin.” Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://magazine.fsf.org/2024-fall/">https://magazine.fsf.org/2024-fall/</a></li>
+
+<li>“IDAD 2024 - Dec. 20: For freedom, against restriction — Free Software Foundation — Working together for free software.” Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.fsf.org/blogs/community/idad-2024">https://www.fsf.org/blogs/community/idad-2024</a></li>
+
+<li>“Top articles at OpenSource.net in 2024,” Open Source Initiative. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://opensource.org/blog/top-articles-at-opensource-net-in-2024">https://opensource.org/blog/top-articles-at-opensource-net-in-2024</a></li>
+
+<li>“Standards and the presumption of conformity,” Open Source Initiative. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://opensource.org/blog/standards-and-the-presumption-of-conformity">https://opensource.org/blog/standards-and-the-presumption-of-conformity</a></li>
+
+<li>“Improving Open Source security with the new GitHub Secure Open Source Fund,” Open Source Initiative. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://opensource.org/blog/improving-open-source-security-with-the-new-github-secure-open-source-fund">https://opensource.org/blog/improving-open-source-security-with-the-new-github-secure-open-source-fund</a></li>
+
+<li>“Open Tech Advocacy for a New Era,” Mozilla Foundation. Accessed: Nov. 16, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/open-tech-advocacy-for-a-new-era/">https://foundation.mozilla.org/en/blog/open-tech-advocacy-for-a-new-era/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org91dfc4f" class="outline-3">
+<h3 id="org91dfc4f"><span class="section-number-3">7.2.</span> Internet Resources</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>“Open Sustainable Technology.” Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://opensustain.tech/">https://opensustain.tech/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4391b0d" class="outline-3">
+<h3 id="org4391b0d"><span class="section-number-3">7.3.</span> ClearlyDefined</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>“ClearlyDefined: 2024 in review – milestones, growth and community impact,” Open Source Initiative. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://opensource.org/blog/clearlydefined-2024-in-review-milestones-growth-and-community-impact">https://opensource.org/blog/clearlydefined-2024-in-review-milestones-growth-and-community-impact</a></li>
+<li>“ClearlyDefined at SOSS Fusion 2024: a collaborative solution to Open Source license compliance,” Open Source Initiative. Accessed: Dec. 08, 2024. [Online]. Available: <a href="https://opensource.org/blog/clearlydefined-at-soss-fusion-2024-a-collaborative-solution-to-open-source-license-compliance">https://opensource.org/blog/clearlydefined-at-soss-fusion-2024-a-collaborative-solution-to-open-source-license-compliance</a></li>
+
+<li>“Better identifying conda packages with ClearlyDefined,” Open Source Initiative. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://opensource.org/blog/better-identifying-conda-packages-with-clearlydefined">https://opensource.org/blog/better-identifying-conda-packages-with-clearlydefined</a></li>
+<li>“GUAC adopts license metadata from ClearlyDefined,” Open Source Initiative. Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://opensource.org/blog/guac-adopts-license-metadata-from-clearlydefined">https://opensource.org/blog/guac-adopts-license-metadata-from-clearlydefined</a></li>
+<li>“Unveiling ClearlyDefined: this free SBOM service gets cleared for takeoff,” Open Source Initiative. Accessed: May 17, 2024. [Online]. Available: <a href="https://opensource.org/blog/unveiling-clearlydefined-this-free-sbom-service-gets-cleared-for-takeoff">https://opensource.org/blog/unveiling-clearlydefined-this-free-sbom-service-gets-cleared-for-takeoff</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org137a3f5" class="outline-3">
+<h3 id="org137a3f5"><span class="section-number-3">7.4.</span> Texts</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>C. Tozzi and J. Zittrain, For Fun and Profit. Cambridge, MA: Mit Pr, 2017.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org972de6e" class="outline-3">
+<h3 id="org972de6e"><span class="section-number-3">7.5.</span> Community</h3>
+<div class="outline-text-3" id="text-7-5">
+<ul class="org-ul">
+<li>“What role community plays in free software and more &#x2013; Interview with David Wilson — Free Software Foundation — Working together for free software.” Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.fsf.org/blogs/community/what-role-community-plays-in-free-software-and-more-interview-with-david-wilson">https://www.fsf.org/blogs/community/what-role-community-plays-in-free-software-and-more-interview-with-david-wilson</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

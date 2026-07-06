@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TikTok</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">TikTok</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org885c71a">1. General</a></li>
+<li><a href="#orgbfc2f6c">2. Fair Tech</a>
+<ul>
+<li><a href="#org343f961">2.1. Mozilla Foundation</a></li>
+<li><a href="#orgf07e18a">2.2. Electronic Frontier Foundation</a></li>
+<li><a href="#orgd254614">2.3. Bruce Schneier</a></li>
+<li><a href="#org375fa1c">2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1f37bb4">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgc559826">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgdcf16aa">4. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org885c71a" class="outline-2">
+<h2 id="org885c71a"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgbfc2f6c" class="outline-2">
+<h2 id="orgbfc2f6c"><span class="section-number-2">2.</span> Fair Tech</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org343f961" class="outline-3">
+<h3 id="org343f961"><span class="section-number-3">2.1.</span> Mozilla Foundation</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Is it safe to shop on Instagram? TikTok? Facebook?,” Mozilla Foundation. Accessed: Dec. 18, 2022. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/is-it-safe-to-shop-on-instagram-tiktok-facebook/">https://foundation.mozilla.org/en/blog/is-it-safe-to-shop-on-instagram-tiktok-facebook/</a></li>
+<li>“Mozilla Research: TikTok Lite Lacks Critical Safety Features, Neglects Global Majority Users,” Mozilla Foundation. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/mozilla-research-tiktok-lite-lacks-critical-safety-features-neglects-global-majority-users/">https://foundation.mozilla.org/en/blog/mozilla-research-tiktok-lite-lacks-critical-safety-features-neglects-global-majority-users/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf07e18a" class="outline-3">
+<h3 id="orgf07e18a"><span class="section-number-3">2.2.</span> Electronic Frontier Foundation</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>J. K. and P. Collings, “Congress Should Give Up on Unconstitutional TikTok Bans,” Electronic Frontier Foundation. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/congress-should-give-unconstitutional-tiktok-bans">https://www.eff.org/deeplinks/2024/03/congress-should-give-unconstitutional-tiktok-bans</a></li>
+<li>J. Richman, “Why U.S. House Members Opposed the TikTok Ban Bill,” Electronic Frontier Foundation. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/why-us-house-members-opposed-tiktok-ban-bill">https://www.eff.org/deeplinks/2024/03/why-us-house-members-opposed-tiktok-ban-bill</a></li>
+<li>H. H. and D. Greene, “5 Questions to Ask Before Backing the TikTok Ban,” Electronic Frontier Foundation. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/03/5-big-unanswered-questions-about-tiktok-bill">https://www.eff.org/deeplinks/2024/03/5-big-unanswered-questions-about-tiktok-bill</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd254614" class="outline-3">
+<h3 id="orgd254614"><span class="section-number-3">2.3.</span> Bruce Schneier</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“Banning TikTok - Schneier on Security.” Accessed: Feb. 28, 2023. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2023/02/banning-tiktok.html">https://www.schneier.com/blog/archives/2023/02/banning-tiktok.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org375fa1c" class="outline-3">
+<h3 id="org375fa1c"><span class="section-number-3">2.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>“TikTok ban would weaken press freedom,” Freedom of the Press. Accessed: Apr. 27, 2024. [Online]. Available: <a href="https://freedom.press/news/tiktok-ban-would-weaken-press-freedom/">https://freedom.press/news/tiktok-ban-would-weaken-press-freedom/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1f37bb4" class="outline-2">
+<h2 id="org1f37bb4"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc559826" class="outline-3">
+<h3 id="orgc559826"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>E. Baker-White, “How TikTok cozied up to wealthy investors in Saudi Arabia and the UAE,” Rest of World. Accessed: Nov. 07, 2025. [Online]. Available: <a href="https://restofworld.org/2025/tiktok-saudi-uae-investors-us-ban/">https://restofworld.org/2025/tiktok-saudi-uae-investors-us-ban/</a></li>
+
+<li>“Trump signs executive order approving takeover of TikTok by US investment consortium,” World Socialist Web Site. Accessed: Sep. 28, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/09/27/hbew-s27.html">https://www.wsws.org/en/articles/2025/09/27/hbew-s27.html</a></li>
+
+<li>D. G. and E. Galperin, “EFF Statement on TikTok Ownership Deal,” Electronic Frontier Foundation. Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/09/eff-statement-tiktok-ownership-deal">https://www.eff.org/deeplinks/2025/09/eff-statement-tiktok-ownership-deal</a></li>
+
+<li>“TikTok’s Secret Sauce.” Accessed: Feb. 07, 2024. [Online]. Available: <a href="http://knightcolumbia.org/blog/tiktoks-secret-sauce">http://knightcolumbia.org/blog/tiktoks-secret-sauce</a></li>
+
+<li>N. Mazurov, “Forget a Ban — Why Are Journalists Using TikTok in the First Place?,” The Intercept. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://theintercept.com/2024/04/07/tiktok-ban-journalists-safety/">https://theintercept.com/2024/04/07/tiktok-ban-journalists-safety/</a></li>
+
+<li>“How a TikTok ban in the U.S. could violate 1st Amendment rights,” PBS NewsHour. Accessed: Mar. 14, 2024. [Online]. Available: <a href="https://www.pbs.org/newshour/show/how-a-tiktok-ban-in-the-u-s-could-violate-1st-amendment-rights">https://www.pbs.org/newshour/show/how-a-tiktok-ban-in-the-u-s-could-violate-1st-amendment-rights</a></li>
+
+<li>“TikTok’s Secret Sauce.” Accessed: Feb. 07, 2024. [Online]. Available: <a href="http://knightcolumbia.org/blog/tiktoks-secret-sauce">http://knightcolumbia.org/blog/tiktoks-secret-sauce</a></li>
+
+<li>“Why we’re hopeful about mental health videos on TikTok | Psyche Ideas,” Psyche. Accessed: Nov. 13, 2023. [Online]. Available: <a href="https://psyche.co/ideas/why-were-hopeful-about-mental-health-videos-on-tiktok">https://psyche.co/ideas/why-were-hopeful-about-mental-health-videos-on-tiktok</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdcf16aa" class="outline-2">
+<h2 id="orgdcf16aa"><span class="section-number-2">4.</span> Misc</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>M. Suresh, “Labubu, Stanley Cups And The Aesthetic Chaos: Gendered And Environmental Costs Of Tiktok Trends,” Feminism in India. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/08/05/labubu-stanley-cups-and-the-aesthetic-chaos-gendered-and-environmental-costs-of-tiktok-trends/">https://feminisminindia.com/2025/08/05/labubu-stanley-cups-and-the-aesthetic-chaos-gendered-and-environmental-costs-of-tiktok-trends/</a></li>
+
+<li>“Berlin’s Striking TikTok Workers Stand Up to a Tech Giant.” Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://jacobin.com/2025/08/berlin-tiktok-tech-ai-strike">https://jacobin.com/2025/08/berlin-tiktok-tech-ai-strike</a></li>
+
+<li>M. Anindya, “TikTok’s messy merger in Indonesia could be a preview of what’s to come in the U.S.,” Rest of World. Accessed: Jul. 15, 2025. [Online]. Available: <a href="https://restofworld.org/2025/tiktok-indonesia-tokopedia-merger-problems/">https://restofworld.org/2025/tiktok-indonesia-tokopedia-merger-problems/</a></li>
+
+<li>“TikTok bathroom ritual leads to police investigation at Russian cadet school,” Meduza. Accessed: May 28, 2025. [Online]. Available: <a href="https://meduza.io/en/feature/2025/05/27/tiktok-bathroom-ritual-leads-to-police-investigation-at-russian-cadet-school">https://meduza.io/en/feature/2025/05/27/tiktok-bathroom-ritual-leads-to-police-investigation-at-russian-cadet-school</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Everyone is asking the wrong questions about TikTok,” Software Freedom Conservancy. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://sfconservancy.org/blog/2025/jan/18/usa-should-require-bytedance-to-open-source-tiktok/">https://sfconservancy.org/blog/2025/jan/18/usa-should-require-bytedance-to-open-source-tiktok/</a></li>
+<li>D. Greene, “EFF Statement on U.S. Supreme Court’s Decision to Uphold TikTok Ban,” Electronic Frontier Foundation. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/01/eff-statement-us-supreme-courts-decision-uphold-tiktok-ban">https://www.eff.org/deeplinks/2025/01/eff-statement-us-supreme-courts-decision-uphold-tiktok-ban</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Misinformation on TikTok: How Documented Examined Hundreds of Videos in Different Languages.” Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://gijn.org/stories/tiktok-misinformation-how-documented-translated-hundreds-videos/">https://gijn.org/stories/tiktok-misinformation-how-documented-translated-hundreds-videos/</a></li>
+
+<li>“‘Who are we to judge,’ ask … judges, upholding TikTok ban,” Freedom of the Press. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://freedom.press/issues/who-are-we-to-judge-ask-judges-upholding-tiktok-ban/">https://freedom.press/issues/who-are-we-to-judge-ask-judges-upholding-tiktok-ban/</a></li>
+
+<li>“Why teenagers are deliberately seeking brain rot on TikTok | Psyche Ideas,” Psyche. Accessed: Oct. 09, 2024. [Online]. Available: <a href="https://psyche.co/ideas/why-teenagers-are-deliberately-seeking-brain-rot-on-tiktok">https://psyche.co/ideas/why-teenagers-are-deliberately-seeking-brain-rot-on-tiktok</a></li>
+
+<li>D. Stover, “Who needs a government ban? TikTok users are already defending themselves,” Bulletin of the Atomic Scientists. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/08/who-needs-a-government-ban-tiktok-users-are-already-defending-themselves/">https://thebulletin.org/2024/08/who-needs-a-government-ban-tiktok-users-are-already-defending-themselves/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Despite international hires, TikTok is Chinese at its core,” Rest of World. Accessed: May 08, 2024. [Online]. Available: <a href="https://restofworld.org/2024/tiktok-chinese-us-ban/">https://restofworld.org/2024/tiktok-chinese-us-ban/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

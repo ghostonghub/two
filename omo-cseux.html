@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UX</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">UX</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org630779d">1. General</a></li>
+<li><a href="#orgbe9fb08">2. STEMM</a>
+<ul>
+<li><a href="#orge89744f">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc23ddc8">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgc4bdea6">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org31471b2">4. Core</a></li>
+<li><a href="#org9dd2bf6">5. Arts</a>
+<ul>
+<li><a href="#org4f938bc">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6d12daa">6. Special Topics</a>
+<ul>
+<li><a href="#org3064902">6.1. Texts</a></li>
+<li><a href="#org610e979">6.2. Applied UX</a>
+<ul>
+<li><a href="#org2fd9274">6.2.1. Business</a></li>
+<li><a href="#org1e2e43e">6.2.2. Games</a></li>
+<li><a href="#org934cb49">6.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4a758d2">6.3. Observing UX</a></li>
+<li><a href="#orgbe660f6">6.4. Sketching UX</a></li>
+<li><a href="#org21f0452">6.5. Quant UX</a></li>
+</ul>
+</li>
+<li><a href="#org0ef5d05">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org630779d" class="outline-2">
+<h2 id="org630779d"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“User experience,” Wikipedia. Jun. 02, 2025. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=User_experience&amp;oldid=1293604240">https://en.wikipedia.org/w/index.php?title=User_experience&amp;oldid=1293604240</a></li>
+<li>“UX,” Wikipedia. Feb. 04, 2023. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=UX&amp;oldid=1137354727">https://en.wikipedia.org/w/index.php?title=UX&amp;oldid=1137354727</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe9fb08" class="outline-2">
+<h2 id="orgbe9fb08"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge89744f" class="outline-3">
+<h3 id="orge89744f"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgc23ddc8" class="outline-2">
+<h2 id="orgc23ddc8"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc4bdea6" class="outline-3">
+<h3 id="orgc4bdea6"><span class="section-number-3">3.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org31471b2" class="outline-2">
+<h2 id="org31471b2"><span class="section-number-2">4.</span> Core</h2>
+</div>
+<div id="outline-container-org9dd2bf6" class="outline-2">
+<h2 id="org9dd2bf6"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org4f938bc" class="outline-3">
+<h3 id="org4f938bc"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org6d12daa" class="outline-2">
+<h2 id="org6d12daa"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org3064902" class="outline-3">
+<h3 id="org3064902"><span class="section-number-3">6.1.</span> Texts</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>J. Yablonski, Laws of UX: Using Psychology to Design Better Products &amp; Services, Second Edition, Second edition. Shroff/O’Reilly, 2024.</li>
+<li>“Laws of UX, 2nd Edition [Book].” Accessed: Feb. 13, 2024. [Online]. Available: <a href="https://www.oreilly.com/library/view/laws-of-ux/9781098146955/">https://www.oreilly.com/library/view/laws-of-ux/9781098146955/</a></li>
+<li>E. Stull, UX Fundamentals for Non-UX Professionals: User Experience Principles for Managers, Writers, Designers, and Developers, 1st ed. edition. New York, NY: APress, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Levin, Designing Multi-Device Experiences: An Ecosystem Approach to User Experiences across Devices, First Edition. Shroff/O’Reilly, 2014.</li>
+<li>M. Krishnaraj, User Expectations / Experience The Great Balancing Act | e. Wiley, 2019.</li>
+<li>B. Franz and M. Kauer-Franz, Usability and User Experience Design: The Comprehensive Guide to Data-Driven UX Design, First Edition. Shroff/Rheinwerk Computing, 2024.</li>
+<li>T. Greever, Articulating Design Decisions: Communicate with Stakeholders, Keep Your Sanity, and Deliver the Best User Experience, Second Edition, Second edition. Shroff/O’Reilly, 2020.</li>
+<li>A. Marcus, HCI and User-Experience Design: Fast-Forward to the Past, Present, and Future, 1st ed. 2015 edition. London: Springer Nature, 2015.</li>
+<li>S. K. Shivakumar, A Complete Guide to Portals and User Experience Platforms, 1st edition. Boca Raton: Chapman and Hall/CRC, 2015.</li>
+<li>E. Rosenzweig, Successful User Experience: Strategies and Roadmaps. Waltham, Massachusetts: Morgan Kaufmann Publishers In, 2015.</li>
+<li>A. Riener, A.-K. Frison, F. V. D. Sand, K. Holl, and P. Zotz, User Experience Is Brand Experience: The Psychology Behind Successful Digital Products and Services, 1st ed. 2020 edition. Cham, Switzerland: Springer, 2020.</li>
+<li>N. Voil, User Experience Foundations. Swindon, UK: BCS, The Chartered Institute for IT, 2020.</li>
+<li>G. Allanwood and P. Beare, User Experience Design: A Practical Introduction, 1st edition. Bloomsbury Visual Arts, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org610e979" class="outline-3">
+<h3 id="org610e979"><span class="section-number-3">6.2.</span> Applied UX</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org2fd9274" class="outline-4">
+<h4 id="org2fd9274"><span class="section-number-4">6.2.1.</span> Business</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ul class="org-ul">
+<li>S. Kantamneni, User Experience Design: A Practical Playbook for Business Growth, 1st edition. Hoboken, New Jersey: John Wiley &amp; Sons Inc, 2022.</li>
+<li>C.-M. Karat, J. O. Blom, and J. Karat, Eds., Designing Personalized User Experiences in eCommerce: 5, Softcover reprint of the original 1st ed. 2004 edition. Dordrecht: Springer, 2010.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e2e43e" class="outline-4">
+<h4 id="org1e2e43e"><span class="section-number-4">6.2.2.</span> Games</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<ul class="org-ul">
+<li>R. Bernhaupt, Ed., Evaluating User Experience in Games: Concepts and Methods, 2010th edition. New York: Springer London Ltd, 2010.</li>
+<li>B. Bostan, Ed., Game User Experience And Player-Centered Design, 1st ed. 2020 edition. Cham: Springer Nature Switzerland AG, 2021.</li>
+<li>T. Kojic, User Experience for Serious Games in Virtual Reality, 2024th edition. Cham: Springer, 2024.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org934cb49" class="outline-4">
+<h4 id="org934cb49"><span class="section-number-4">6.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-2-3">
+<ul class="org-ul">
+<li>E. Kapros and M. Koutsombogera, Eds., Designing for the User Experience in Learning Systems, Softcover reprint of the original 1st ed. 2018 edition. Springer Nature Switzerland AG, 2019.</li>
+<li>C. Rowland and M. Charlier, User Experience Design for the Internet of Things: Why it’s More Than UI and Industrial Design, First Edition. Shroff/O’Reilly, 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4a758d2" class="outline-3">
+<h3 id="org4a758d2"><span class="section-number-3">6.3.</span> Observing UX</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>E. Goodman, M. Kuniavsky, and A. Moed, Observing the User Experience: A Practitioner’s Guide to User Research, 2nd edition. Amsterdam Boston: Morgan Kaufmann Pub, 2012.</li>
+<li>M. Kuniavsky, Observing the User Experience: A Practitioner’s Guide to User Research. Elsevier, 2003.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe660f6" class="outline-3">
+<h3 id="orgbe660f6"><span class="section-number-3">6.4.</span> Sketching UX</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>S. Greenberg, S. Carpendale, N. Marquardt, and B. Buxton, Sketching User Experiences: The Workbook, Workbook edition. Amsterdam Boston: Morgan Kaufmann Pub, 2011.</li>
+<li>B. Buxton, Sketching User Experiences Get, Illustrated edition. Amsterdam Boston: Morgan Kaufmann Pub, 2007.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21f0452" class="outline-3">
+<h3 id="org21f0452"><span class="section-number-3">6.5.</span> Quant UX</h3>
+<div class="outline-text-3" id="text-6-5">
+<ul class="org-ul">
+<li>J. Sauro and J. R. Lewis, Quantifying the User Experience: Practical Statistics for User Research, 2nd edition. Place of publication not identified: Morgan Kaufmann, 2016.</li>
+<li>C. Chapman and K. Rodden, Quantitative User Experience Research: Informing Product Decisions by Understanding Users at Scale, 1st ed. edition. Berkeley, CA: APress, 2023.</li>
+<li>W. Albert and T. S. Tullis, Measuring the User Experience: Collecting, Analyzing, and Presenting Ux Metrics, 3rd edition. Cambridge: Morgan Kaufmann Pub, 2022.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ef5d05" class="outline-2">
+<h2 id="org0ef5d05"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Myers Awarded 2025 CBI Human-Computer Interaction History Prize | CHARLES BABBAGE INSTITUTE | College of Science and Engineering.” Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://cse.umn.edu/cbi/news/myers-awarded-2025-cbi-human-computer-interaction-history-prize">https://cse.umn.edu/cbi/news/myers-awarded-2025-cbi-human-computer-interaction-history-prize</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:29</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

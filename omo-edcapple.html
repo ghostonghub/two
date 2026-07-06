@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everyday Computing - Apple</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Everyday Computing - Apple</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org454442c">1. General</a></li>
+<li><a href="#org1999a6d">2. News, Tech Support</a></li>
+<li><a href="#org9d4ba27">3. System Admin</a></li>
+<li><a href="#org71cb799">4. Security</a>
+<ul>
+<li><a href="#org1b82099">4.1. Proprietary Software</a></li>
+<li><a href="#org3d77228">4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc0e4953">5. AI</a></li>
+<li><a href="#org17d442e">6. Products</a>
+<ul>
+<li><a href="#org7620698">6.1. iPhone</a>
+<ul>
+<li><a href="#org6284560">6.1.1. General</a></li>
+<li><a href="#org2cc0dfd">6.1.2. Safe Tech</a></li>
+<li><a href="#org89fbe01">6.1.3. STEMM</a></li>
+<li><a href="#orgcb3129b">6.1.4. Worldly Matters</a></li>
+<li><a href="#org47a991a">6.1.5. Core</a></li>
+<li><a href="#org9e8e513">6.1.6. Special Topics</a></li>
+<li><a href="#org59bb25a">6.1.7. Arts</a></li>
+<li><a href="#orgf3dc71b">6.1.8. Special Topics</a></li>
+<li><a href="#orgba54b62">6.1.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8a93d64">6.2. iMac</a>
+<ul>
+<li><a href="#orgb169e2f">6.2.1. General</a></li>
+<li><a href="#orgba57b12">6.2.2. Security</a></li>
+<li><a href="#orgde605d3">6.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc00a7e5">6.3. iPad</a></li>
+</ul>
+</li>
+<li><a href="#org3e7c91f">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org454442c" class="outline-2">
+<h2 id="org454442c"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org1999a6d" class="outline-2">
+<h2 id="org1999a6d"><span class="section-number-2">2.</span> News, Tech Support</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>“Macworld,” Macworld. <a href="https://www.macworld.com/">https://www.macworld.com/</a> (accessed Aug. 09, 2023).</li>
+
+<li>“MacRumors: Apple News and Rumors,” MacRumors, Aug. 09, 2023. <a href="https://www.macrumors.com/">https://www.macrumors.com/</a> (accessed Aug. 09, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9d4ba27" class="outline-2">
+<h2 id="org9d4ba27"><span class="section-number-2">3.</span> System Admin</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>D. Smith, Apple macOS and iOS System Administration: Integrating and Supporting iPhones, iPads, and MacBooks, 1st ed. edition. Apress, 2020.</li>
+
+<li>C. Edge and R. Trouton, Apple Device Management: A Unified Theory of Managing Macs, iPads, iPhones, and Apple TVs, 2nd ed. edition. Apress, 2023.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org71cb799" class="outline-2">
+<h2 id="org71cb799"><span class="section-number-2">4.</span> Security</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org1b82099" class="outline-3">
+<h3 id="org1b82099"><span class="section-number-3">4.1.</span> Proprietary Software</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“The Best Mac Antivirus Software for 2023,” PCMAG. <a href="https://www.pcmag.com/picks/the-best-mac-antivirus-protection">https://www.pcmag.com/picks/the-best-mac-antivirus-protection</a> (accessed Aug. 09, 2023).</li>
+<li>“16 Mac security tips to keep your Mac safe,” Macworld. <a href="https://www.macworld.com/article/668710/how-secure-mac.html">https://www.macworld.com/article/668710/how-secure-mac.html</a> (accessed Aug. 09, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3d77228" class="outline-3">
+<h3 id="org3d77228"><span class="section-number-3">4.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>“The Objective-See Foundation,” The Objective-See Foundation. <a href="https://objective-see.org">https://objective-see.org</a> (accessed Aug. 09, 2023).</li>
+<li>“Objective-See: Do Not Disturb.” <a href="https://objective-see.org/products/dnd.html">https://objective-see.org/products/dnd.html</a> (accessed Aug. 09, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc0e4953" class="outline-2">
+<h2 id="orgc0e4953"><span class="section-number-2">5.</span> AI</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>R. Diab, “Apple Intelligence will help AI become as commonplace as word processing,” The Conversation. Accessed: Oct. 22, 2024. [Online]. Available: <a href="http://theconversation.com/apple-intelligence-will-help-ai-become-as-commonplace-as-word-processing-241448">http://theconversation.com/apple-intelligence-will-help-ai-become-as-commonplace-as-word-processing-241448</a></li>
+<li>“Using Apple’s AI Tools? Here’s What Features To Expect In iOS 18 Beta And Full Release,” Mozilla Foundation. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/apple-ai-ios-18/">https://foundation.mozilla.org/en/blog/apple-ai-ios-18/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org17d442e" class="outline-2">
+<h2 id="org17d442e"><span class="section-number-2">6.</span> Products</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org7620698" class="outline-3">
+<h3 id="org7620698"><span class="section-number-3">6.1.</span> iPhone</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org6284560" class="outline-4">
+<h4 id="org6284560"><span class="section-number-4">6.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>“iPhone,” Wikipedia. Sep. 29, 2021. Accessed: Sep. 30, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=IPhone&amp;oldid=1047124419">https://en.wikipedia.org/w/index.php?title=IPhone&amp;oldid=1047124419</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2cc0dfd" class="outline-4">
+<h4 id="org2cc0dfd"><span class="section-number-4">6.1.2.</span> Safe Tech</h4>
+<div class="outline-text-4" id="text-6-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="orga1b7a54"></a>Privacy And Security<br />
+<ul class="org-ul">
+<li><a id="org11b2105"></a>EFF<br />
+<div class="outline-text-6" id="text-org11b2105">
+<ul class="org-ul">
+<li>EFF, “How to: Encrypt Your iPhone,” Surveillance Self-Defense, Sep. 17, 2014. <a href="https://ssd.eff.org/en/module/how-encrypt-your-iphone">https://ssd.eff.org/en/module/how-encrypt-your-iphone</a> (accessed Mar. 31, 2022).</li>
+<li>“How to: Get to Know iPhone Privacy and Security Settings.” Accessed: Jun. 02, 2025. [Online]. Available: <a href="https://ssd.eff.org/module/how-to-get-to-know-iphone-privacy-and-security-settings">https://ssd.eff.org/module/how-to-get-to-know-iphone-privacy-and-security-settings</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbbca66e"></a>Proprietary Software<br />
+<div class="outline-text-6" id="text-orgbbca66e">
+<ul class="org-ul">
+<li>“‎Bitdefender Mobile Security,” App Store, May 29, 2023. <a href="https://apps.apple.com/us/app/bitdefender-mobile-security/id1255893012">https://apps.apple.com/us/app/bitdefender-mobile-security/id1255893012</a> (accessed Jul. 03, 2023).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org200a6d2"></a>Misc<br />
+<div class="outline-text-5" id="text-org200a6d2">
+<ul class="org-ul">
+<li>“Apple’s iOS takes a bite out of your freedom — Free Software Foundation — Working together for free software.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://www.fsf.org/campaigns/apple">https://www.fsf.org/campaigns/apple</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org89fbe01" class="outline-4">
+<h4 id="org89fbe01"><span class="section-number-4">6.1.3.</span> STEMM</h4>
+<div class="outline-text-4" id="text-6-1-3">
+</div>
+<ul class="org-ul">
+<li><a id="orgcaca03f"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org3010a3e"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org35b6b0f"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgcb3129b" class="outline-4">
+<h4 id="orgcb3129b"><span class="section-number-4">6.1.4.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-6-1-4">
+</div>
+<ul class="org-ul">
+<li><a id="org7374621"></a>Misc<br />
+<div class="outline-text-5" id="text-org7374621">
+<ul class="org-ul">
+<li>“Pluralistic: Apple threatens to stop selling iPhones in the EU (26 Sep 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/09/26/empty-threats/">https://pluralistic.net/2025/09/26/empty-threats/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org47a991a" class="outline-4">
+<h4 id="org47a991a"><span class="section-number-4">6.1.5.</span> Core</h4>
+<div class="outline-text-4" id="text-6-1-5">
+<ul class="org-ul">
+<li>D. Pogue, iPhone – The Missing Manual 13e: The Book That Should Have Been in the Box. 2019.</li>
+<li>D. Pogue, iPhone Unlocked. 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9e8e513" class="outline-4">
+<h4 id="org9e8e513"><span class="section-number-4">6.1.6.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-6-1-6">
+</div>
+<ul class="org-ul">
+<li><a id="org4004999"></a>Critical Studies<br />
+<div class="outline-text-5" id="text-org4004999">
+<ul class="org-ul">
+<li>“Apple’s iOS takes a bite out of your freedom — Free Software Foundation — Working together for free software.” Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://www.fsf.org/campaigns/apple">https://www.fsf.org/campaigns/apple</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org59bb25a" class="outline-4">
+<h4 id="org59bb25a"><span class="section-number-4">6.1.7.</span> Arts</h4>
+<div class="outline-text-4" id="text-6-1-7">
+</div>
+<ul class="org-ul">
+<li><a id="org061aeeb"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgf3dc71b" class="outline-4">
+<h4 id="orgf3dc71b"><span class="section-number-4">6.1.8.</span> Special Topics</h4>
+</div>
+<div id="outline-container-orgba54b62" class="outline-4">
+<h4 id="orgba54b62"><span class="section-number-4">6.1.9.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-1-9">
+<ul class="org-ul">
+<li>“Can iPhones get viruses? A guide to iPhone and iOS security,” Proton. Accessed: Jun. 25, 2026. [Online]. Available: <a href="https://proton.me/blog/blog-does-my-phone-have-virus">https://proton.me/blog/blog-does-my-phone-have-virus</a></li>
+
+<li>B. Schneier, “Apple’s New Memory Integrity Enforcement,” Schneier on Security. Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/09/apples-new-memory-integrity-enforcement.html">https://www.schneier.com/blog/archives/2025/09/apples-new-memory-integrity-enforcement.html</a></li>
+
+<li>S. Commerce, “Your iPhone just became a scanner, editor, and document wizard for life,” Popular Science. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://www.popsci.com/sponsored-content/iscanner-iphone-document-editor-app-lifetime-subscription-sponsored-deal/">https://www.popsci.com/sponsored-content/iscanner-iphone-document-editor-app-lifetime-subscription-sponsored-deal/</a></li>
+
+<li>D. Nield, “How to make text bigger—and 7 other iPhone tricks you might not know,” Popular Science. Accessed: May 28, 2024. [Online]. Available: <a href="https://www.popsci.com/diy/iphone-accessibility-tips/">https://www.popsci.com/diy/iphone-accessibility-tips/</a></li>
+
+<li>“Stop Using Your Face or Thumb to Unlock Your Phone,” Gizmodo. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://gizmodo.com/stop-using-your-face-or-thumb-to-unlock-your-phone-1851438205">https://gizmodo.com/stop-using-your-face-or-thumb-to-unlock-your-phone-1851438205</a></li>
+
+<li>“New iOS Security Feature Makes It Harder for Police to Unlock Seized Phones,” Schneier on Security. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/11/new-ios-security-feature-makes-it-harder-for-police-to-unlock-seized-phones.html">https://www.schneier.com/blog/archives/2024/11/new-ios-security-feature-makes-it-harder-for-police-to-unlock-seized-phones.html</a></li>
+<li>B. Schneier, “Details about the iOS Inactivity Reboot Feature,” Schneier on Security. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/12/details-about-the-ios-inactivity-reboot-feature.html">https://www.schneier.com/blog/archives/2024/12/details-about-the-ios-inactivity-reboot-feature.html</a></li>
+
+<li>D. Raghav, “Apple iOS 26 Update to Add Call &amp; Message Screening Features,” MEDIANAMA. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/06/223-apple-block-spam-calls-messages-ios-26/">https://www.medianama.com/2025/06/223-apple-block-spam-calls-messages-ios-26/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8a93d64" class="outline-3">
+<h3 id="org8a93d64"><span class="section-number-3">6.2.</span> iMac</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-orgb169e2f" class="outline-4">
+<h4 id="orgb169e2f"><span class="section-number-4">6.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ul class="org-ul">
+<li>“Mac (computer),” Wikipedia. Jul. 18, 2023. Accessed: Aug. 09, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mac_(computer)&amp;oldid=1165983396">https://en.wikipedia.org/w/index.php?title=Mac_(computer)&amp;oldid=1165983396</a></li>
+<li>“Mac,” Apple. <a href="https://www.apple.com/mac/">https://www.apple.com/mac/</a> (accessed Aug. 09, 2023).</li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“The best Macs of 2023,” ZDNET. <a href="https://www.zdnet.com/article/best-mac/">https://www.zdnet.com/article/best-mac/</a> (accessed Aug. 09, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba57b12" class="outline-4">
+<h4 id="orgba57b12"><span class="section-number-4">6.2.2.</span> Security</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<ul class="org-ul">
+<li><b>“Mac user?”</b> <a href="https://ssd.eff.org/playlist/mac-user">https://ssd.eff.org/playlist/mac-user</a> (accessed Aug. 09, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Objective-See: Do Not Disturb.” <a href="https://objective-see.org/products/dnd.html">https://objective-see.org/products/dnd.html</a> (accessed Aug. 09, 2023).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde605d3" class="outline-4">
+<h4 id="orgde605d3"><span class="section-number-4">6.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-2-3">
+<ul class="org-ul">
+<li>“macOS,” Wikipedia. Aug. 04, 2023. Accessed: Aug. 09, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=MacOS&amp;oldid=1168710161">https://en.wikipedia.org/w/index.php?title=MacOS&amp;oldid=1168710161</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc00a7e5" class="outline-3">
+<h3 id="orgc00a7e5"><span class="section-number-3">6.3.</span> iPad</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>D. Spivey, iPad For Seniors For Dummies. 2020.</li>
+
+<li>N. Vandome, iPad for Seniors in easy steps: Covers all iPads with iPadOS 13, including iPad mini and iPad Pro. 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3e7c91f" class="outline-2">
+<h2 id="org3e7c91f"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>J. Cox ·, “Apple ‘Hide My Email’ Vulnerability Reveals Peoples’ Real Email Addresses,” 404 Media. Accessed: Jul. 02, 2026. [Online]. Available: <a href="https://www.404media.co/apple-hide-my-email-vulnerability-reveals-peoples-real-email-addresses/">https://www.404media.co/apple-hide-my-email-vulnerability-reveals-peoples-real-email-addresses/</a></li>
+
+<li>B. from the top-secret dept, “Apple iPhone 18 Details Leaked In Tata Data Breach - Slashdot.” Accessed: Jul. 01, 2026. [Online]. Available: <a href="https://it.slashdot.org/story/26/06/30/1856223/apple-iphone-18-details-leaked-in-tata-data-breach?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed">https://it.slashdot.org/story/26/06/30/1856223/apple-iphone-18-details-leaked-in-tata-data-breach?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed</a></li>
+
+<li>T. Klosowski, “The UK Is Still Trying to Backdoor Encryption for Apple Users,” Electronic Frontier Foundation. Accessed: Oct. 02, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users">https://www.eff.org/deeplinks/2025/10/uk-still-trying-backdoor-encryption-apple-users</a></li>
+
+<li>C. Doctorow, “Apple to Australians: You’re Too Stupid to Choose Your Own Apps,” Electronic Frontier Foundation. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/06/apple-australians-youre-too-stupid-choose-your-own-apps">https://www.eff.org/deeplinks/2025/06/apple-australians-youre-too-stupid-choose-your-own-apps</a></li>
+
+<li>B. Schneier, “An iCloud Backdoor Would Make Our Phones Less Safe,” Schneier on Security. Accessed: Feb. 27, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/02/an-icloud-backdoor-would-make-our-phones-less-safe.html">https://www.schneier.com/blog/archives/2025/02/an-icloud-backdoor-would-make-our-phones-less-safe.html</a></li>
+
+<li>“Pluralistic: Apple’s encryption capitulation (25 Feb 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Feb. 26, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/02/25/sneak-and-peek/">https://pluralistic.net/2025/02/25/sneak-and-peek/</a></li>
+
+<li>T. K. and A. Crocker, “Cornered by the UK’s Demand for an Encryption Backdoor, Apple Turns Off Its Strongest Security Setting,” Electronic Frontier Foundation. Accessed: Feb. 22, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/cornered-uks-demand-encryption-backdoor-apple-turns-its-strongest-security-setting">https://www.eff.org/deeplinks/2025/02/cornered-uks-demand-encryption-backdoor-apple-turns-its-strongest-security-setting</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Klosowski, “The UK’s Demands for Apple to Break Encryption Is an Emergency for Us All,” Electronic Frontier Foundation. Accessed: Feb. 11, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/uks-demands-apple-break-encryption-emergency-us-all">https://www.eff.org/deeplinks/2025/02/uks-demands-apple-break-encryption-emergency-us-all</a></li>
+
+<li>B. Schneier, “UK Is Ordering Apple to Break Its Own Encryption,” Schneier on Security. Accessed: Feb. 09, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/02/uk-is-ordering-apple-to-break-its-own-encryption.html">https://www.schneier.com/blog/archives/2025/02/uk-is-ordering-apple-to-break-its-own-encryption.html</a></li>
+
+<li>D. Nield, “6 iOS 18 settings you might want to change ASAP,” Popular Science. Accessed: Sep. 30, 2024. [Online]. Available: <a href="https://www.popsci.com/diy/ios-18-settings-to-change/">https://www.popsci.com/diy/ios-18-settings-to-change/</a></li>
+
+<li>“Using Apple’s AI Tools? Here’s What Features To Expect In iOS 18 Beta And Full Release,” Mozilla Foundation. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://foundation.mozilla.org/en/blog/apple-ai-ios-18/">https://foundation.mozilla.org/en/blog/apple-ai-ios-18/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Maitra, “Apple Blocks Match Group From Accessing Antitrust Probe Data,” MEDIANAMA. Accessed: Mar. 16, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/03/223-apple-successfully-blocks-match-adif-from-accessing-commercially-secretive-info-the-india-antitrust-case-so-far/">https://www.medianama.com/2025/03/223-apple-successfully-blocks-match-adif-from-accessing-commercially-secretive-info-the-india-antitrust-case-so-far/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everyday Computing - Hardware Tools</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Everyday Computing - Hardware Tools</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd6bf0e4">1. General</a></li>
+<li><a href="#orga9674e6">2. Fair Tech</a></li>
+<li><a href="#org6e43454">3. Repair, Admin</a>
+<ul>
+<li><a href="#org088d3c4">3.1. COMPTIA</a></li>
+<li><a href="#orge753c21">3.2. Right To Repair</a>
+<ul>
+<li><a href="#orga291aec">3.2.1. General</a></li>
+<li><a href="#org6970fb9">3.2.2. Fair Tech</a></li>
+<li><a href="#orgb508e6a">3.2.3. STEMM</a></li>
+<li><a href="#orgecae3f8">3.2.4. Worldly Matters</a></li>
+<li><a href="#orgc29608c">3.2.5. Arts</a></li>
+<li><a href="#org23171b2">3.2.6. Special Topics</a></li>
+<li><a href="#org1300d73">3.2.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org54e879c">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org36097f7">4. BIOS</a></li>
+<li><a href="#orged46031">5. Devices</a>
+<ul>
+<li><a href="#org82ac98c">5.1. Power</a>
+<ul>
+<li><a href="#org94cf0c4">5.1.1. Power UPS</a></li>
+<li><a href="#org653dcad">5.1.2. Portable Battery</a></li>
+</ul>
+</li>
+<li><a href="#org91f3844">5.2. Networking Devices</a>
+<ul>
+<li><a href="#org9d58096">5.2.1. Wi Fi Extenders</a></li>
+<li><a href="#org10022be">5.2.2. Routers</a></li>
+</ul>
+</li>
+<li><a href="#org2fdc89b">5.3. Peripherals</a>
+<ul>
+<li><a href="#org9530dfe">5.3.1. Printers</a></li>
+<li><a href="#orgc8165fa">5.3.2. Display</a></li>
+<li><a href="#org647d385">5.3.3. Mice</a></li>
+</ul>
+</li>
+<li><a href="#orgdd88972">5.4. Doorbell Cameras</a></li>
+<li><a href="#org3ac413f">5.5. Storage Devices</a>
+<ul>
+<li><a href="#org2d31db9">5.5.1. Pen Drives</a></li>
+<li><a href="#orgf5291de">5.5.2. External Hard Drives</a></li>
+</ul>
+</li>
+<li><a href="#org0a3c21e">5.6. C1</a>
+<ul>
+<li><a href="#org5d2c941">5.6.1. PDAs</a></li>
+<li><a href="#orgf600654">5.6.2. Tablets</a></li>
+<li><a href="#org2d9c758">5.6.3. Watches</a></li>
+<li><a href="#org0359bcf">5.6.4. Desktop, Laptop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org19a5880">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgd6bf0e4" class="outline-2">
+<h2 id="orgd6bf0e4"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orga9674e6" class="outline-2">
+<h2 id="orga9674e6"><span class="section-number-2">2.</span> Fair Tech</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>“Hardware Devices that Support GNU/Linux — Free Software Foundation — Working together for free software.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.fsf.org/resources/hw">https://www.fsf.org/resources/hw</a></li>
+<li>“Beautiful, Secure, Privacy-Respecting Devices,” Purism. <a href="https://puri.sm/">https://puri.sm/</a> (accessed Jul. 02, 2021).</li>
+<li>“Libre Tech Shop – Ethical and Hackable Products + Convenience,” Libre Tech Shop. <a href="https://libretech.shop/">https://libretech.shop/</a> (accessed Dec. 31, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6e43454" class="outline-2">
+<h2 id="org6e43454"><span class="section-number-2">3.</span> Repair, Admin</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org088d3c4" class="outline-3">
+<h3 id="org088d3c4"><span class="section-number-3">3.1.</span> COMPTIA</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>S. Commerce, “Ditch your boring job—work in IT with CompTIA certifications,” Popular Science. Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://www.popsci.com/gear/comptia-tech-it-certification-deal/">https://www.popsci.com/gear/comptia-tech-it-certification-deal/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Hutz, M. Meyers, and T. Everett, Mike Meyers’ CompTIA A+ Guide to Managing and Troubleshooting PCs, Seventh Edition, 7th edition. New York: McGraw-Hill Education, 2023.</li>
+
+<li>S. Commerce, “Enhance your CompTIA skills in 2024 with this complete certification training bundle, now $65,” Popular Science. Accessed: Jan. 05, 2024. [Online]. Available: <a href="https://www.popsci.com/sponsored-content/comptia-certification-iduonova-learning-deal/">https://www.popsci.com/sponsored-content/comptia-certification-iduonova-learning-deal/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Humble Tech Book Bundle: Sybex CompTIA and More by Wiley,” Humble Bundle. Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://www.humblebundle.com/books/sybex-comptia-and-more-wiley-books">https://www.humblebundle.com/books/sybex-comptia-and-more-wiley-books</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge753c21" class="outline-3">
+<h3 id="orge753c21"><span class="section-number-3">3.2.</span> Right To Repair</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orga291aec" class="outline-4">
+<h4 id="orga291aec"><span class="section-number-4">3.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org6970fb9" class="outline-4">
+<h4 id="org6970fb9"><span class="section-number-4">3.2.2.</span> Fair Tech</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>“The FSF fights for your right to repair — Free Software Foundation — Working together for free software.” Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://www.fsf.org/campaigns/fight-to-repair">https://www.fsf.org/campaigns/fight-to-repair</a></li>
+<li>“Defend Your Right to Repair!,” Electronic Frontier Foundation. Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://www.eff.org/issues/right-to-repair">https://www.eff.org/issues/right-to-repair</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb508e6a" class="outline-4">
+<h4 id="orgb508e6a"><span class="section-number-4">3.2.3.</span> STEMM</h4>
+<div class="outline-text-4" id="text-3-2-3">
+</div>
+<ul class="org-ul">
+<li><a id="org82339a1"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgecae3f8" class="outline-4">
+<h4 id="orgecae3f8"><span class="section-number-4">3.2.4.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-3-2-4">
+</div>
+<ul class="org-ul">
+<li><a id="org1fabfd3"></a>Orgs<br />
+<div class="outline-text-5" id="text-org1fabfd3">
+<ul class="org-ul">
+<li>“Repowered | Your Partner for Electronics Recycling &amp; Refurbishing,” Repowered. Accessed: Oct. 12, 2024. [Online]. Available: <a href="https://getrepowered.org/">https://getrepowered.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6922f27"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgc29608c" class="outline-4">
+<h4 id="orgc29608c"><span class="section-number-4">3.2.5.</span> Arts</h4>
+<div class="outline-text-4" id="text-3-2-5">
+</div>
+<ul class="org-ul">
+<li><a id="org1631111"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-org23171b2" class="outline-4">
+<h4 id="org23171b2"><span class="section-number-4">3.2.6.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-3-2-6">
+</div>
+<ul class="org-ul">
+<li><a id="org2a9d829"></a>The Ecologist<br />
+<div class="outline-text-5" id="text-org2a9d829">
+<ul class="org-ul">
+<li>“Right to repair ‘would reduce inequality.’” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jul/24/right-repair-would-reduce-inequality">https://theecologist.org/2025/jul/24/right-repair-would-reduce-inequality</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1c853b4"></a>Transnational Institute<br />
+<div class="outline-text-5" id="text-org1c853b4">
+<ul class="org-ul">
+<li>M. R. Ginting Pius, “Right to Repair and Circular Economy | Transnational Institute.” Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://www.tni.org/en/article/right-to-repair-and-circular-economy">https://www.tni.org/en/article/right-to-repair-and-circular-economy</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org07003e5"></a>Electronic Frontier Foundation<br />
+<div class="outline-text-5" id="text-org07003e5">
+<ul class="org-ul">
+<li>C. Romero, “Why Is It So Expensive To Repair My Devices?,” Electronic Frontier Foundation. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/10/why-it-so-expensive-repair-my-devices">https://www.eff.org/deeplinks/2024/10/why-it-so-expensive-repair-my-devices</a></li>
+
+<li>H. T. and T. Klosowski, “Celebrate Repair Independence Day!,” Electronic Frontier Foundation. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/07/celebrate-repair-independence-day">https://www.eff.org/deeplinks/2024/07/celebrate-repair-independence-day</a></li>
+<li>C. Romero, “Keep The Momentum Going for The Right to Repair,” Electronic Frontier Foundation. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/06/keep-momentum-going-right-repair">https://www.eff.org/deeplinks/2024/06/keep-momentum-going-right-repair</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc69e306"></a>CDT<br />
+<div class="outline-text-5" id="text-orgc69e306">
+<ul class="org-ul">
+<li>“The Time Has Come to Recognize the Right to Repair,” Center for Democracy and Technology. Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://cdt.org/insights/the-time-has-come-to-recognize-the-right-to-repair/">https://cdt.org/insights/the-time-has-come-to-recognize-the-right-to-repair/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org1300d73" class="outline-4">
+<h4 id="org1300d73"><span class="section-number-4">3.2.7.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org54e879c" class="outline-3">
+<h3 id="org54e879c"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“securepairs.org,” securepairs.org. <a href="https://securepairs.org/">https://securepairs.org/</a> (accessed Apr. 20, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org36097f7" class="outline-2">
+<h2 id="org36097f7"><span class="section-number-2">4.</span> BIOS</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>“Campaign for Free BIOS — Free Software Foundation — Working together for free software.” Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.fsf.org/campaigns/free-bios.html">https://www.fsf.org/campaigns/free-bios.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged46031" class="outline-2">
+<h2 id="orged46031"><span class="section-number-2">5.</span> Devices</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org82ac98c" class="outline-3">
+<h3 id="org82ac98c"><span class="section-number-3">5.1.</span> Power</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org94cf0c4" class="outline-4">
+<h4 id="org94cf0c4"><span class="section-number-4">5.1.1.</span> Power UPS</h4>
+</div>
+<div id="outline-container-org653dcad" class="outline-4">
+<h4 id="org653dcad"><span class="section-number-4">5.1.2.</span> Portable Battery</h4>
+</div>
+</div>
+<div id="outline-container-org91f3844" class="outline-3">
+<h3 id="org91f3844"><span class="section-number-3">5.2.</span> Networking Devices</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org9d58096" class="outline-4">
+<h4 id="org9d58096"><span class="section-number-4">5.2.1.</span> Wi Fi Extenders</h4>
+</div>
+<div id="outline-container-org10022be" class="outline-4">
+<h4 id="org10022be"><span class="section-number-4">5.2.2.</span> Routers</h4>
+<div class="outline-text-4" id="text-5-2-2">
+</div>
+<ul class="org-ul">
+<li><a id="orgf767468"></a>General<br /></li>
+<li><a id="org52ab48b"></a>Fair Tech<br />
+<ul class="org-ul">
+<li><a id="org7067add"></a>Free Software Foundation<br />
+<div class="outline-text-6" id="text-org7067add">
+<ul class="org-ul">
+<li>“Routers | RYF.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://ryf.fsf.org/categories/routers">https://ryf.fsf.org/categories/routers</a></li>
+<li>“Wireless Adapters | RYF.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://ryf.fsf.org/categories/wireless-adapters">https://ryf.fsf.org/categories/wireless-adapters</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6a3ce24"></a>Electronic Frontier Foundation<br />
+<div class="outline-text-6" id="text-org6a3ce24">
+<ul class="org-ul">
+<li>“Router,” Electronic Frontier Foundation. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.eff.org/tags/router">https://www.eff.org/tags/router</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org64dd37b"></a>Consumer Reports<br />
+<div class="outline-text-6" id="text-org64dd37b">
+<ul class="org-ul">
+<li>“Best Wireless Routers of 2023,” Consumer Reports. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.consumerreports.org/electronics-computers/wireless-routers/best-wireless-routers-of-the-year-a2357339300/">https://www.consumerreports.org/electronics-computers/wireless-routers/best-wireless-routers-of-the-year-a2357339300/</a></li>
+<li>“Best Wireless Router Reviews – Consumer Reports.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.consumerreports.org/electronics-computers/wireless-routers/">https://www.consumerreports.org/electronics-computers/wireless-routers/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf4696ce"></a>Misc<br />
+<div class="outline-text-6" id="text-orgf4696ce">
+<ul class="org-ul">
+<li>FOTP, <i>“Keeping your home Wi-Fi router reasonably secure,”</i> Freedom of the Press. <a href="https://freedom.press/training/blog/wifi-router-security/">https://freedom.press/training/blog/wifi-router-security/</a> (accessed Jan. 08, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgda0e74e"></a>Pop Tech<br />
+<ul class="org-ul">
+<li><a id="org0966bad"></a>MSM<br />
+<div class="outline-text-6" id="text-org0966bad">
+<ul class="org-ul">
+<li>B. Ranj, “The best Wi-Fi routers of 2023,” Popular Science. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.popsci.com/gear/best-wifi-routers/">https://www.popsci.com/gear/best-wifi-routers/</a></li>
+<li>“The best Wi-Fi routers of 2023,” ZDNET. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.zdnet.com/home-and-office/networking/best-wifi-router/">https://www.zdnet.com/home-and-office/networking/best-wifi-router/</a></li>
+<li>“The Best Wi-Fi Routers for 2024,” PCMAG. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.pcmag.com/picks/the-best-wireless-routers">https://www.pcmag.com/picks/the-best-wireless-routers</a></li>
+<li>“Best Wi-Fi Routers for 2023,” CNET. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.cnet.com/home/internet/best-wi-fi-router/">https://www.cnet.com/home/internet/best-wi-fi-router/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaecf924"></a>Misc<br />
+<div class="outline-text-6" id="text-orgaecf924">
+<ul class="org-ul">
+<li>G. Shukla and C. Hoffman, “The Best Wi-Fi Routers of 2023,” How-To Geek. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.howtogeek.com/722600/best-wi-fi-routers/">https://www.howtogeek.com/722600/best-wi-fi-routers/</a></li>
+<li>A. S. from B. N. last updated, “Best Wi-Fi routers for 2023,” Tom’s Guide. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.tomsguide.com/us/best-wifi-routers,review-2498.html">https://www.tomsguide.com/us/best-wifi-routers,review-2498.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge51ea54"></a>Big Tech<br />
+<ul class="org-ul">
+<li><a id="org6781f80"></a>NETGEAR<br />
+<ul class="org-ul">
+<li><a id="org6e6a39c"></a>General<br />
+<div class="outline-text-7" id="text-org6e6a39c">
+<ul class="org-ul">
+<li>NETGEAR, “NETGEAR’S Mesh WiFi Network Routers + Systems,” NETGEAR. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.netgear.com/home/wifi/mesh/">https://www.netgear.com/home/wifi/mesh/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcd4a9dc"></a>Apps<br />
+<div class="outline-text-7" id="text-orgcd4a9dc">
+<ul class="org-ul">
+<li>NETGEAR, “Orbi App - Orbi Setup,” NETGEAR. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.netgear.com/home/services/orbi-app/">https://www.netgear.com/home/services/orbi-app/</a>
+<ul class="org-ul">
+<li>“‎NETGEAR Orbi - WiFi System App,” App Store. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://apps.apple.com/us/app/netgear-orbi-wifi-system-app/id1182184397">https://apps.apple.com/us/app/netgear-orbi-wifi-system-app/id1182184397</a></li>
+<li>“NETGEAR Orbi – WiFi System App - Apps on Google Play.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://play.google.com/store/apps/details?id=com.dragonflow.android.orbi&amp;hl=en_US">https://play.google.com/store/apps/details?id=com.dragonflow.android.orbi&amp;hl=en_US</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgb9763c6"></a>Misc<br />
+<div class="outline-text-5" id="text-orgb9763c6">
+<ul class="org-ul">
+<li>S. Oh, “Get a New Wireless Router – The Markup.” Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://themarkup.org/gentle-january/2024/01/11/get-a-new-wireless-router">https://themarkup.org/gentle-january/2024/01/11/get-a-new-wireless-router</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2fdc89b" class="outline-3">
+<h3 id="org2fdc89b"><span class="section-number-3">5.3.</span> Peripherals</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org9530dfe" class="outline-4">
+<h4 id="org9530dfe"><span class="section-number-4">5.3.1.</span> Printers</h4>
+<div class="outline-text-4" id="text-5-3-1">
+</div>
+<ul class="org-ul">
+<li><a id="org34e814f"></a>General<br /></li>
+<li><a id="org55ca1e6"></a>Toner Cartridge<br />
+<div class="outline-text-5" id="text-org55ca1e6">
+<ul class="org-ul">
+<li>“proffisy 18A Toner Cartridge Easy Refill 218A Toner Cartridge Compatible with HP LJ Pro M132nw MFP, M132a MFP, M104w, M104, M104a, Upgraded Toner Print 2000 Pages -1pcs : Amazon.in: Computers &amp; Accessories.” Accessed: Mar. 09, 2025. [Online]. Available: <a href="https://www.amazon.in/Proffisy-Replacement-Cartridge-Compatible-Laserjet/dp/B07DP2PDHV?nsdOptOutParam=true">https://www.amazon.in/Proffisy-Replacement-Cartridge-Compatible-Laserjet/dp/B07DP2PDHV?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org67b9bbd"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgc8165fa" class="outline-4">
+<h4 id="orgc8165fa"><span class="section-number-4">5.3.2.</span> Display</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<ul class="org-ul">
+<li>D. Nield, “HDMI 2.2 is coming. Do you need to upgrade?,” Popular Science. Accessed: Jul. 13, 2025. [Online]. Available: <a href="https://www.popsci.com/diy/hdmi-2-2-upgrade/">https://www.popsci.com/diy/hdmi-2-2-upgrade/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org647d385" class="outline-4">
+<h4 id="org647d385"><span class="section-number-4">5.3.3.</span> Mice</h4>
+</div>
+</div>
+<div id="outline-container-orgdd88972" class="outline-3">
+<h3 id="orgdd88972"><span class="section-number-3">5.4.</span> Doorbell Cameras</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>“Video Doorbell Cameras Record Audio, Too,” Consumer Reports. <a href="https://www.consumerreports.org/video-doorbells/video-doorbell-cameras-record-audio-too-a4636115889/">https://www.consumerreports.org/video-doorbells/video-doorbell-cameras-record-audio-too-a4636115889/</a> (accessed Apr. 17, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3ac413f" class="outline-3">
+<h3 id="org3ac413f"><span class="section-number-3">5.5.</span> Storage Devices</h3>
+<div class="outline-text-3" id="text-5-5">
+</div>
+<div id="outline-container-org2d31db9" class="outline-4">
+<h4 id="org2d31db9"><span class="section-number-4">5.5.1.</span> Pen Drives</h4>
+</div>
+<div id="outline-container-orgf5291de" class="outline-4">
+<h4 id="orgf5291de"><span class="section-number-4">5.5.2.</span> External Hard Drives</h4>
+</div>
+</div>
+<div id="outline-container-org0a3c21e" class="outline-3">
+<h3 id="org0a3c21e"><span class="section-number-3">5.6.</span> C1</h3>
+<div class="outline-text-3" id="text-5-6">
+</div>
+<div id="outline-container-org5d2c941" class="outline-4">
+<h4 id="org5d2c941"><span class="section-number-4">5.6.1.</span> PDAs</h4>
+<div class="outline-text-4" id="text-5-6-1">
+</div>
+<ul class="org-ul">
+<li><a id="org21fcbb5"></a>General<br /></li>
+<li><a id="orgcd8b993"></a>Fair Tech<br />
+<ul class="org-ul">
+<li><a id="org7f16970"></a>Electronic Frontier Foundation<br />
+<div class="outline-text-6" id="text-org7f16970">
+<ul class="org-ul">
+<li>“Mobile devices,” Electronic Frontier Foundation. Accessed: Aug. 04, 2025. [Online]. Available: <a href="https://www.eff.org/mobile-devices">https://www.eff.org/mobile-devices</a></li>
+
+<li>EFF, “Privacy Breakdown of Mobile Phones,” Surveillance Self-Defense, Feb. 27, 2021. <a href="https://ssd.eff.org/en/playlist/privacy-breakdown-mobile-phones">https://ssd.eff.org/en/playlist/privacy-breakdown-mobile-phones</a> (accessed Mar. 31, 2022).</li>
+<li>A. Hancock, “Closing the Gap in Encryption on Mobile,” Electronic Frontier Foundation. Accessed: Feb. 06, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/closing-gap-encryption-mobile">https://www.eff.org/deeplinks/2025/02/closing-gap-encryption-mobile</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb32c62a"></a>Misc<br />
+<div class="outline-text-6" id="text-orgb32c62a">
+<ul class="org-ul">
+<li>“Your smartphone and you: A handbook to modern mobile maintenance,” Freedom of the Press. <a href="https://freedom.press/training/your-smartphone-and-you-handbook-modern-mobile-maintenance/">https://freedom.press/training/your-smartphone-and-you-handbook-modern-mobile-maintenance/</a> (accessed Dec. 31, 2021).</li>
+
+<li>T. Tech, “Mobile Phone Security.” <a href="https://exposingtheinvisible.org/en/guides/mobile-phone-security/">https://exposingtheinvisible.org/en/guides/mobile-phone-security/</a> (accessed Mar. 31, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgf84f94a"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org5828064"></a>Environment<br />
+<div class="outline-text-6" id="text-org5828064">
+<ul class="org-ul">
+<li>“From Smart to Senseless: The Global Impact of Ten Years of Smartphones - Greenpeace USA.” <a href="https://www.greenpeace.org/usa/research/from-smart-to-senseless-the-global-impact-of-ten-years-of-smartphones/">https://www.greenpeace.org/usa/research/from-smart-to-senseless-the-global-impact-of-ten-years-of-smartphones/</a> (accessed Apr. 27, 2022).</li>
+
+<li>K. Minor, K. L. Glavind, A. J. Schwartz, C. M. Danforth, S. Lehmann, and A. Bjerre-Nielsen, “Nature Exposure is Associated With Reduced Smartphone Use,” Environment and Behavior, vol. 55, no. 3, pp. 103–139, Apr. 2023, doi: 10.1177/00139165231167165.</li>
+
+<li>H. A. Khan, “How Delhi’s scorching heat puts smartphones to the ultimate test,” The Hindu, Jun. 14, 2024. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/technology/gadgets/how-delhis-scorching-heat-puts-smartphones-to-the-ultimate-test/article68285649.ece">https://www.thehindu.com/sci-tech/technology/gadgets/how-delhis-scorching-heat-puts-smartphones-to-the-ultimate-test/article68285649.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge6e2138"></a>Misc<br />
+<div class="outline-text-6" id="text-orge6e2138">
+<ul class="org-ul">
+<li>“Android vs iOS security: Which operating system is safer?,” Proton. Accessed: Mar. 19, 2026. [Online]. Available: <a href="https://proton.me/blog/android-vs-ios-security">https://proton.me/blog/android-vs-ios-security</a></li>
+
+<li>“FSF announces Librephone project — Free Software Foundation — Working together for free software.” Accessed: Oct. 16, 2025. [Online]. Available: <a href="https://www.fsf.org/news/librephone-project">https://www.fsf.org/news/librephone-project</a></li>
+
+<li>“Expanding the Vision for the Mobile Industry.” Accessed: Oct. 02, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/open-mobile-hub-2025">https://www.linuxfoundation.org/research/open-mobile-hub-2025</a></li>
+
+<li>“How a Rock Becomes a Smartphone CPU - IEEE Spectrum.” Accessed: Sep. 24, 2025. [Online]. Available: <a href="https://spectrum.ieee.org/the-long-strange-trip-from-silica-to-smartphone">https://spectrum.ieee.org/the-long-strange-trip-from-silica-to-smartphone</a></li>
+
+<li>“App-solutely Modded: Surveying Modded App Market Operators and Original App Developers | Light Blue Touchpaper.” Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://www.lightbluetouchpaper.org/2025/09/22/app-solutely-modded-surveying-modded-app-market-operators-and-original-app-developers/">https://www.lightbluetouchpaper.org/2025/09/22/app-solutely-modded-surveying-modded-app-market-operators-and-original-app-developers/</a></li>
+
+<li>P. Arnold and Phys.org, “Just one hour a day of social media scrolling on your smartphone can cause eye strain.” Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://medicalxpress.com/news/2025-08-hour-day-social-media-scrolling.html">https://medicalxpress.com/news/2025-08-hour-day-social-media-scrolling.html</a></li>
+
+<li>I. Dumé, “Handheld device captures airborne signs of disease,” Physics World. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://physicsworld.com/a/handheld-device-captures-airborne-signs-of-disease/">https://physicsworld.com/a/handheld-device-captures-airborne-signs-of-disease/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge63f49e"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org38f87e8"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="orgbf617be"></a>India<br />
+<div class="outline-text-7" id="text-orgbf617be">
+<ul class="org-ul">
+<li>R. Agrawal, India Connected: How the Smartphone Is Transforming the World’s Largest Democracy. Oxford University Press, 2018.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org85b9d87"></a>Misc<br />
+<div class="outline-text-6" id="text-org85b9d87">
+<ul class="org-ul">
+<li>“Arrested by Phone: A Graphic Novel,” Bloomberg.com, Dec. 04, 2025. Accessed: Dec. 08, 2025. [Online]. Available: <a href="https://www.bloomberg.com/graphics/2025-india-digital-arrest-by-phone-graphic-novel/">https://www.bloomberg.com/graphics/2025-india-digital-arrest-by-phone-graphic-novel/</a></li>
+
+<li>“Pluralistic: Apple threatens to stop selling iPhones in the EU (26 Sep 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/09/26/empty-threats/">https://pluralistic.net/2025/09/26/empty-threats/</a></li>
+
+<li>U. Choksy, “Why Trump’s tariffs could make the apps on your phone worse,” The Conversation. Accessed: Sep. 24, 2025. [Online]. Available: <a href="http://theconversation.com/why-trumps-tariffs-could-make-the-apps-on-your-phone-worse-264173">http://theconversation.com/why-trumps-tariffs-could-make-the-apps-on-your-phone-worse-264173</a></li>
+
+<li>“Expanding the Vision for the Mobile Industry.” Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/open-mobile-hub-2025">https://www.linuxfoundation.org/research/open-mobile-hub-2025</a></li>
+
+<li>M. S. Oruc, “Put down your phone and engage in boredom – how philosophy can help with digital overload,” The Conversation. Accessed: Sep. 06, 2025. [Online]. Available: <a href="http://theconversation.com/put-down-your-phone-and-engage-in-boredom-how-philosophy-can-help-with-digital-overload-262396">http://theconversation.com/put-down-your-phone-and-engage-in-boredom-how-philosophy-can-help-with-digital-overload-262396</a></li>
+
+<li>“Expanding the Vision for the Mobile Industry.” Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/open-mobile-hub-2025">https://www.linuxfoundation.org/research/open-mobile-hub-2025</a></li>
+
+<li>C. Hart and K. Carnelley, “‘Phubbing’: why ignoring your partner for your phone infuriates certain people – and causes them to retaliate,” The Conversation. Accessed: Aug. 28, 2025. [Online]. Available: <a href="http://theconversation.com/phubbing-why-ignoring-your-partner-for-your-phone-infuriates-certain-people-and-causes-them-to-retaliate-263963">http://theconversation.com/phubbing-why-ignoring-your-partner-for-your-phone-infuriates-certain-people-and-causes-them-to-retaliate-263963</a></li>
+
+<li>“India Outstrips China in Smartphone Exports to US,” NewsClick. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.newsclick.in/india-outstrips-china-smartphone-exports-us">https://www.newsclick.in/india-outstrips-china-smartphone-exports-us</a></li>
+
+<li>R. L. B. Conversation The Conversation &amp;. Rob Brooks, The, “The high-tech parasites feeding off human hosts,” Scroll.in. Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://scroll.in/article/1083065/the-high-tech-parasites-feeding-off-human-hosts">https://scroll.in/article/1083065/the-high-tech-parasites-feeding-off-human-hosts</a></li>
+
+<li>R. L. Brown and R. Brooks, “Your smartphone is a parasite, according to evolution,” The Conversation. Accessed: Jun. 02, 2025. [Online]. Available: <a href="http://theconversation.com/your-smartphone-is-a-parasite-according-to-evolution-256795">http://theconversation.com/your-smartphone-is-a-parasite-according-to-evolution-256795</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org8bdbbb9"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org7893fb4"></a>Variants<br />
+<ul class="org-ul">
+<li><a id="org951b11a"></a>iPhone<br />
+<div class="outline-text-7" id="text-org951b11a">
+<ul class="org-ul">
+<li>iPhone: <a href="https://tinyurl.com/4vhcads3">https://tinyurl.com/4vhcads3</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org000ffad"></a>Android<br />
+<div class="outline-text-7" id="text-org000ffad">
+<ul class="org-ul">
+<li>Android: <a href="https://tinyurl.com/37c7st4t">https://tinyurl.com/37c7st4t</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc34e457"></a>Misc<br />
+<div class="outline-text-7" id="text-orgc34e457">
+<ul class="org-ul">
+<li><b>“The Light Phone.”</b> <a href="https://www.thelightphone.com/">https://www.thelightphone.com/</a> (accessed Jul. 02, 2021).</li>
+<li><b>“Fairphone | The phone that cares for people and planet,”</b> Fairphone. <a href="https://www.fairphone.com/en/">https://www.fairphone.com/en/</a> (accessed Jul. 02, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org771608d"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgbf50470"></a>Privacy And Security<br /></li>
+</ul>
+</li>
+<li><a id="orge3569fd"></a>Misc<br />
+<div class="outline-text-5" id="text-orge3569fd">
+<ul class="org-ul">
+<li>“GrapheneOS exits France — what it means for encryption,” Proton. Accessed: Nov. 27, 2025. [Online]. Available: <a href="https://proton.me/blog/grapheneos-france">https://proton.me/blog/grapheneos-france</a></li>
+
+<li>“Expanding the Vision for the Mobile Industry.” Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/research/open-mobile-hub-2025">https://www.linuxfoundation.org/research/open-mobile-hub-2025</a></li>
+
+<li>“Rewriting the Rules for Mobile: Open Source, Open Possibilities.” Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://www.linuxfoundation.org/blog/rewriting-the-rules-for-mobile-open-source-open-possibilities">https://www.linuxfoundation.org/blog/rewriting-the-rules-for-mobile-open-source-open-possibilities</a></li>
+
+<li>M. Jha, “Your phone is covered in germs: a tech expert explains how to clean it without doing damage,” The Conversation. Accessed: Aug. 14, 2025. [Online]. Available: <a href="http://theconversation.com/your-phone-is-covered-in-germs-a-tech-expert-explains-how-to-clean-it-without-doing-damage-259908">http://theconversation.com/your-phone-is-covered-in-germs-a-tech-expert-explains-how-to-clean-it-without-doing-damage-259908</a></li>
+
+<li>“Understanding Mobile App Reviews to Guide Misuse Audits – Communications of the ACM.” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://cacm.acm.org/research/understanding-mobile-app-reviews-to-guide-misuse-audits/">https://cacm.acm.org/research/understanding-mobile-app-reviews-to-guide-misuse-audits/</a></li>
+
+<li>BY, “For All That Is Good About Humankind, Ban Smartphones.” Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://jacobin.com/2025/06/ban-smartphones-tech-society">https://jacobin.com/2025/06/ban-smartphones-tech-society</a></li>
+
+<li>“The Crime Messenger: How Sky ECC Phones Became a Tool of the Criminal Trade,” OCCRP. Accessed: Nov. 30, 2024. [Online]. Available: <a href="https://www.occrp.org/en/project/the-crime-messenger">https://www.occrp.org/en/project/the-crime-messenger</a></li>
+
+<li>R. S. Government, B. D. at Purism, and SPC, “A Secure Supply Chain and Your Privacy: Smartphone Components,” Purism. Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://puri.sm/posts/a-secure-supply-chain-and-your-privacy-smartphone-components/">https://puri.sm/posts/a-secure-supply-chain-and-your-privacy-smartphone-components/</a></li>
+
+<li>“Accrescent | Home.” Accessed: Jul. 22, 2024. [Online]. Available: <a href="https://accrescent.app">https://accrescent.app</a></li>
+
+<li>S. Parasnis, “Japan’s New Act to Promote Fair App Store Practices,” MEDIANAMA. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/06/223-japan-passes-law-clear-up-app-store-monopolies/">https://www.medianama.com/2024/06/223-japan-passes-law-clear-up-app-store-monopolies/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Xavier, “Apple iOS vulnerability chain exposes new attack pathway, researchers say,” The Hindu, Mar. 19, 2026. Accessed: Mar. 19, 2026. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/technology/apple-ios-vulnerability-chain-exposes-new-attack-pathway-researchers-say/article70760838.ece">https://www.thehindu.com/sci-tech/technology/apple-ios-vulnerability-chain-exposes-new-attack-pathway-researchers-say/article70760838.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgf600654" class="outline-4">
+<h4 id="orgf600654"><span class="section-number-4">5.6.2.</span> Tablets</h4>
+<div class="outline-text-4" id="text-5-6-2">
+</div>
+<ul class="org-ul">
+<li><a id="org723d431"></a>iPad<br />
+<div class="outline-text-6" id="text-org723d431">
+<ul class="org-ul">
+<li>D. Spivey, iPad For Seniors For Dummies. 2020.</li>
+
+<li>N. Vandome, iPad for Seniors in easy steps: Covers all iPads with iPadOS 13, including iPad mini and iPad Pro. 2019.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga120934"></a>Misc<br /></li>
+</ul>
+</div>
+<div id="outline-container-org2d9c758" class="outline-4">
+<h4 id="org2d9c758"><span class="section-number-4">5.6.3.</span> Watches</h4>
+</div>
+<div id="outline-container-org0359bcf" class="outline-4">
+<h4 id="org0359bcf"><span class="section-number-4">5.6.4.</span> Desktop, Laptop</h4>
+<div class="outline-text-4" id="text-5-6-4">
+<ul class="org-ul">
+<li>“Pluralistic: 13 Nov 2022 The Framework is the most exciting laptop I’ve ever broken – Pluralistic: Daily links from Cory Doctorow.” Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://pluralistic.net/2022/11/13/graceful-failure/">https://pluralistic.net/2022/11/13/graceful-failure/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org19a5880" class="outline-2">
+<h2 id="org19a5880"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>B. Schneier, “China Accuses Nvidia of Putting Backdoors into Their Chips,” Schneier on Security. Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/08/china-accuses-nvidia-of-putting-backdoors-into-their-chips.html">https://www.schneier.com/blog/archives/2025/08/china-accuses-nvidia-of-putting-backdoors-into-their-chips.html</a></li>
+
+<li>“Introducing the Framework Desktop and newest Framework Laptop 13,” Framework. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://frame.work/">https://frame.work/</a></li>
+
+<li>H. Zaffar, “The rise of ‘Frankenstein’ laptops in New Delhi’s repair markets,” The Verge. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://www.theverge.com/tech/639126/india-frankenstein-laptops">https://www.theverge.com/tech/639126/india-frankenstein-laptops</a></li>
+
+<li>“Pluralistic: Brother makes a demon-haunted printer (05 Mar 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Mar. 06, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/03/05/printers-devil/">https://pluralistic.net/2025/03/05/printers-devil/</a></li>
+
+<li>C. Romero, “Let’s Answer the Question: ‘Why is Printer Ink So Expensive?,’” Electronic Frontier Foundation. Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/10/lets-answer-question-why-printer-ink-so-expensive">https://www.eff.org/deeplinks/2024/10/lets-answer-question-why-printer-ink-so-expensive</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

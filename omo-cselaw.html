@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ICT Law</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">ICT Law</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb00cb7a">1. General</a></li>
+<li><a href="#orgdc42fad">2. STEMM</a>
+<ul>
+<li><a href="#org9a406b8">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org269b54f">2.1.1. Complexity Science</a></li>
+<li><a href="#org56b28cc">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgaab5528">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org5e032d9">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgdf16005">3.1. Orgs</a></li>
+<li><a href="#org8f78b5a">3.2. Nation States</a>
+<ul>
+<li><a href="#orga50c3d1">3.2.1. India</a></li>
+<li><a href="#org9b5a4d2">3.2.2. EU</a></li>
+</ul>
+</li>
+<li><a href="#org59ecf30">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf79968e">4. Core</a>
+<ul>
+<li><a href="#org17ce7ae">4.1. Education</a>
+<ul>
+<li><a href="#orga0082e7">4.1.1. Texts</a></li>
+</ul>
+</li>
+<li><a href="#org9e021a6">4.2. Patents</a>
+<ul>
+<li><a href="#org61b9f28">4.2.1. General</a></li>
+<li><a href="#org48d5f52">4.2.2. Free Software Foundation</a></li>
+<li><a href="#orgf841bdc">4.2.3. Electronic Frontier Foundation</a></li>
+<li><a href="#org841e742">4.2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1ef87d5">4.3. DRM</a>
+<ul>
+<li><a href="#org5fde0f9">4.3.1. General</a></li>
+<li><a href="#org933cc43">4.3.2. Free Software Foundation</a></li>
+<li><a href="#org822e23e">4.3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org91303ba">4.4. Licensing</a>
+<ul>
+<li><a href="#org54a6ce6">4.4.1. General</a></li>
+<li><a href="#org96fce06">4.4.2. Free Software Foundation</a></li>
+<li><a href="#org5467a43">4.4.3. GNU</a></li>
+<li><a href="#org66beaff">4.4.4. Creative Commons</a></li>
+<li><a href="#orgb6cbdc1">4.4.5. Open Source Initiative</a></li>
+<li><a href="#org052cbb6">4.4.6. Re:Create</a></li>
+<li><a href="#org899e6ff">4.4.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgded9617">4.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9771e75">5. Special Topics</a>
+<ul>
+<li><a href="#org89c1784">5.1. Open Source Initiative</a></li>
+<li><a href="#org028931b">5.2. Electronic Privacy Information Center</a></li>
+<li><a href="#org1eee55d">5.3. Bruce Schneier</a></li>
+<li><a href="#orgf5a587e">5.4. Freedom Of The Press</a></li>
+<li><a href="#orga0ec54c">5.5. Software Freedom Conservancy</a></li>
+<li><a href="#org8364b18">5.6. Access Now</a></li>
+<li><a href="#org30fa8f1">5.7. Cory Doctorow</a></li>
+<li><a href="#org4d992db">5.8. Electronic Frontier Foundation</a></li>
+</ul>
+</li>
+<li><a href="#orga625604">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgb00cb7a" class="outline-2">
+<h2 id="orgb00cb7a"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgdc42fad" class="outline-2">
+<h2 id="orgdc42fad"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org9a406b8" class="outline-3">
+<h3 id="org9a406b8"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org269b54f" class="outline-4">
+<h4 id="org269b54f"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Can algorithms bend toward justice? | Santa Fe Institute.” <a href="https://www.santafe.edu/news-center/news/can-algorithms-bend-toward-justice">https://www.santafe.edu/news-center/news/can-algorithms-bend-toward-justice</a> (accessed Apr. 02, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org56b28cc" class="outline-4">
+<h4 id="org56b28cc"><span class="section-number-4">2.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgaab5528" class="outline-3">
+<h3 id="orgaab5528"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“Computational Attorneys: Opportunities and Challenges | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/computational-attorneys-opportunities-and-challenges/">https://www.siam.org/publications/siam-news/articles/computational-attorneys-opportunities-and-challenges/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Noble, “Copyright and AI: the Cases and the Consequences,” Electronic Frontier Foundation. Accessed: Feb. 20, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/copyright-and-ai-cases-and-consequences">https://www.eff.org/deeplinks/2025/02/copyright-and-ai-cases-and-consequences</a></li>
+<li>T. Noble, “AI and Copyright: Expanding Copyright Hurts Everyone—Here’s What to Do Instead,” Electronic Frontier Foundation. Accessed: Feb. 20, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/ai-and-copyright-expanding-copyright-hurts-everyone-heres-what-do-instead">https://www.eff.org/deeplinks/2025/02/ai-and-copyright-expanding-copyright-hurts-everyone-heres-what-do-instead</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5e032d9" class="outline-2">
+<h2 id="org5e032d9"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgdf16005" class="outline-3">
+<h3 id="orgdf16005"><span class="section-number-3">3.1.</span> Orgs</h3>
+</div>
+<div id="outline-container-org8f78b5a" class="outline-3">
+<h3 id="org8f78b5a"><span class="section-number-3">3.2.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orga50c3d1" class="outline-4">
+<h4 id="orga50c3d1"><span class="section-number-4">3.2.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ul class="org-ul">
+<li><a id="orgf0bee64"></a>General<br /></li>
+<li><a id="org4302457"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org644c648"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org5493660"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org54e9af5"></a>Orgs<br />
+<div class="outline-text-6" id="text-org54e9af5">
+<ul class="org-ul">
+<li>“Internet Freedom Foundation,” Internet Freedom Foundation. <a href="https://internetfreedom.in/">https://internetfreedom.in/</a> (accessed Jul. 31, 2023).</li>
+<li>Software Freedom Law Center</li>
+</ul>
+</div>
+</li>
+<li><a id="orge9729d3"></a>Misc<br />
+<div class="outline-text-6" id="text-orge9729d3">
+<ul class="org-ul">
+<li>“Supreme Court stays order invoking the ‘Right to Be Forgotten’ for removal of news reports &amp; judicial records from the public domain,” Internet Freedom Foundation (IFF). Accessed: Feb. 20, 2026. [Online]. Available: <a href="https://internetfreedom.in/supreme-court-stays-order-invoking-the-right-to-be-forgotten-for-removal-of-news-reports-judicial-records-from-the-public-domain/">https://internetfreedom.in/supreme-court-stays-order-invoking-the-right-to-be-forgotten-for-removal-of-news-reports-judicial-records-from-the-public-domain/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Bansal, “MeitY Notifies New Amendments to IT Rules on Synthetic Media,” MEDIANAMA. Accessed: Feb. 14, 2026. [Online]. Available: <a href="https://www.medianama.com/2026/02/223-meity-amendments-it-rules-synthetic-media-deepfakes/">https://www.medianama.com/2026/02/223-meity-amendments-it-rules-synthetic-media-deepfakes/</a></li>
+<li>A. Bansal, “What Platforms must know about new IT Rules on synthetic media?,” MEDIANAMA. Accessed: Feb. 14, 2026. [Online]. Available: <a href="https://www.medianama.com/2026/02/223-platforms-users-meity-it-rules-synthetic-media/">https://www.medianama.com/2026/02/223-platforms-users-meity-it-rules-synthetic-media/</a></li>
+<li>A. Bansal, “MeitY Shortens Takedown Timelines: What It Means for Users,” MEDIANAMA. Accessed: Feb. 14, 2026. [Online]. Available: <a href="https://www.medianama.com/2026/02/223-meity-shortens-takedown-timelines-impact-on-users/">https://www.medianama.com/2026/02/223-meity-shortens-takedown-timelines-impact-on-users/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“New IT Rules Violate Digital Rights, Undermine Constitutional Protection for Users: IFF,” NewsClick. Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://www.newsclick.in/new-it-rules-violate-digital-rights-undermine-constitutional-protection-users-iff">https://www.newsclick.in/new-it-rules-violate-digital-rights-undermine-constitutional-protection-users-iff</a></li>
+
+<li>“Analysis of the Comments on the Draft Temporary Suspension Rules, 2024,” Internet Freedom Foundation (IFF). Accessed: Jan. 30, 2026. [Online]. Available: <a href="https://internetfreedom.in/analysis-of-the-comments-on-the-draft-temporary-suspension-rules-2024/">https://internetfreedom.in/analysis-of-the-comments-on-the-draft-temporary-suspension-rules-2024/</a></li>
+
+<li>“Green Light for AI, Orange for Rights,” The Wire. Accessed: Nov. 28, 2025. [Online]. Available: <a href="https://thewire.in/tech/green-light-for-ai-orange-for-rights">https://thewire.in/tech/green-light-for-ai-orange-for-rights</a></li>
+
+<li>“‘Unchecked Powers to Govt, New Barriers to Transparency’: IFF on Digital Personal Data Protection Act,” The Wire. Accessed: Nov. 16, 2025. [Online]. Available: <a href="https://thewire.in/rights/unchecked-powers-to-govt-new-barriers-to-transparency-iff-on-digital-personal-data-protection-act">https://thewire.in/rights/unchecked-powers-to-govt-new-barriers-to-transparency-iff-on-digital-personal-data-protection-act</a></li>
+
+<li>I. Hamid, “Shielding Power: India’s Privacy Laws And The Erosion Of Transparency,” Feminism in India. Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/10/31/rti-act-india-privacy-laws-erosion-of-transparency/">https://feminisminindia.com/2025/10/31/rti-act-india-privacy-laws-erosion-of-transparency/</a></li>
+
+<li>“IFF’s Initial Statement on the Draft Information Technology Amendment Rules, 2025,” Internet Freedom Foundation (IFF). Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://internetfreedom.in/iffs-initial-statement-on-the-draft-information-technology-amendment-rules-2025/">https://internetfreedom.in/iffs-initial-statement-on-the-draft-information-technology-amendment-rules-2025/</a></li>
+
+<li>“Jio Platforms among six shortlisted to build consent framework under DPDP Act,” Moneycontrol. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://www.moneycontrol.com/technology/jio-platforms-among-six-shortlisted-to-build-consent-framework-under-dpdp-act-article-13349345.html">https://www.moneycontrol.com/technology/jio-platforms-among-six-shortlisted-to-build-consent-framework-under-dpdp-act-article-13349345.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgeff0f29"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orga2ef09b"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgd82ef97"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org5b5c284"></a>Telecom Bill<br />
+<div class="outline-text-6" id="text-org5b5c284">
+<ul class="org-ul">
+<li>Telecom Bill: <a href="https://tinyurl.com/rscmjazn">https://tinyurl.com/rscmjazn</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8e3d8ac"></a>DPDP Bill<br />
+<div class="outline-text-6" id="text-org8e3d8ac">
+<ul class="org-ul">
+<li>DPDP Bill: <a href="https://tinyurl.com/56xwjht7">https://tinyurl.com/56xwjht7</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org958e840"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="orgdcdaae4"></a>Misc<br />
+<div class="outline-text-6" id="text-orgdcdaae4">
+<ul class="org-ul">
+<li>SFLC.in, “Rights Line | Your digital rights helpline.” Accessed: Sep. 19, 2025. [Online]. Available: <a href="https://sflc.in/rightsline">https://sflc.in/rightsline</a></li>
+
+<li>“Will a ‘Beer Biceps Code’ result in web censorship? Let’s first have a public consultation,” Internet Freedom Foundation. Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://internetfreedom.in/will-a-beer-biceps-code-result-in-web-censorship-lets-first-have-a-public-consultation/">https://internetfreedom.in/will-a-beer-biceps-code-result-in-web-censorship-lets-first-have-a-public-consultation/</a></li>
+
+<li>“India Needs a Law to Govern Generative AI, But a Blanket Ban Won’t Work,” The Wire. Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://thewire.in/tech/india-needs-a-law-to-govern-generative-ai-but-a-blanket-ban-wont-work">https://thewire.in/tech/india-needs-a-law-to-govern-generative-ai-but-a-blanket-ban-wont-work</a></li>
+
+<li>Sukriti, “A Primer on the NetChoice and Murthy cases before SCOTUS and why they matter for India — The Digital Constitutionalist.” Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://digi-con.org/a-primer-on-the-netchoice-and-murthy-cases-before-scotus-and-why-they-matter-for-india/">https://digi-con.org/a-primer-on-the-netchoice-and-murthy-cases-before-scotus-and-why-they-matter-for-india/</a></li>
+
+<li>‘Attack on Media Freedom’: Journalists Protest Data Protection Act | NewsClick, (Apr. 25, 2025). Accessed: Apr. 25, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=lrij5vnehzk">https://www.youtube.com/watch?v=lrij5vnehzk</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>The Wire, ‘Data Protection’ or Scuttling RTI? | Jaanne Bhi Do Yaaro, (Apr. 14, 2025). Accessed: Apr. 18, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=IJRf79s5rD8">https://www.youtube.com/watch?v=IJRf79s5rD8</a></li>
+
+<li>T. H. Bureau, “Pause, review, repeal ‘RTI-destroying amendment’: Jairam Ramesh to Ashwini Vaishnaw,” The Hindu, Apr. 13, 2025. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/jairam-ramesh-writes-to-vaishnaw-to-repeal-rti-destroying-amendment/article69446080.ece">https://www.thehindu.com/news/national/jairam-ramesh-writes-to-vaishnaw-to-repeal-rti-destroying-amendment/article69446080.ece</a></li>
+<li>“RTI: Ashwini Vaishnaw’s Defence of Section 44(3) is Wrong on a Reading of Law and Facts,” The Wire. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://thewire.in/law/fact-check-ashwini-vaishnaw-section-44-3-dpdpa-rti-act">https://thewire.in/law/fact-check-ashwini-vaishnaw-section-44-3-dpdpa-rti-act</a></li>
+
+<li>Digital Personal Data Protection Act:Its effect on Democracy &amp; Us. Accessed: Apr. 08, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=pRg19eoCay0">https://www.youtube.com/watch?v=pRg19eoCay0</a></li>
+
+<li>K. Pant, “Video: Does India’s data protection law undermine citizens’ right to know?,” Scroll.in. Accessed: Apr. 01, 2025. [Online]. Available: <a href="https://scroll.in/video/1080832/video-does-indias-data-protection-law-undermine-citizens-right-to-know">https://scroll.in/video/1080832/video-does-indias-data-protection-law-undermine-citizens-right-to-know</a></li>
+
+<li>“Civil society seeks rollback of DPDP changes to RTI Act,” The Economic Times. Accessed: Mar. 23, 2025. [Online]. Available: <a href="https://economictimes.indiatimes.com/tech/technology/civil-society-seeks-rollback-of-dpdp-changes-to-rti-act/articleshow/119313948.cms">https://economictimes.indiatimes.com/tech/technology/civil-society-seeks-rollback-of-dpdp-changes-to-rti-act/articleshow/119313948.cms</a></li>
+
+<li>“The Draft Digital Personal Data Protection Rules: Surveillance For Surveillance’s Sake,” The Wire. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://thewire.in/rights/draft-dpdp-rules-surveillance-for-surveillances-sake">https://thewire.in/rights/draft-dpdp-rules-surveillance-for-surveillances-sake</a></li>
+
+<li>R. Krishnamurthy, “Draft Digital Personal Data Protection Rules 2025 will only be a nominal checkbox: Apar Gupta,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/draft-digital-personal-data-protection-rules-2025-will-only-be-a-nominal-checkbox-apar-gupta">https://www.downtoearth.org.in/science-technology/draft-digital-personal-data-protection-rules-2025-will-only-be-a-nominal-checkbox-apar-gupta</a></li>
+
+<li>“SC Directs DoPT, States To Appoint Information Commissioners Within Specified Timeline,” The Wire. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://thewire.in/government/sc-directs-dopt-states-to-appoint-information-commissioners-within-specified-timeline">https://thewire.in/government/sc-directs-dopt-states-to-appoint-information-commissioners-within-specified-timeline</a></li>
+
+<li>J. M. K. &amp; S. Mohan, “How the draft rules for implementing data protection falls short,” The Hindu, Jan. 13, 2025. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/technology/how-the-draft-rules-for-implementing-data-protection-falls-short/article69092017.ece">https://www.thehindu.com/sci-tech/technology/how-the-draft-rules-for-implementing-data-protection-falls-short/article69092017.ece</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>A. Gupta, “The draft digital data protection rules will advance authoritarianism,” The Hindu, Jan. 12, 2025. Accessed: Jan. 13, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/op-ed/the-draft-digital-data-protection-rules-will-advance-authoritarianism/article69092725.ece">https://www.thehindu.com/opinion/op-ed/the-draft-digital-data-protection-rules-will-advance-authoritarianism/article69092725.ece</a></li>
+
+<li>“No secret affair: on the draft Digital Personal Data Protection Rules, 2025,” The Hindu, Jan. 05, 2025. Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/no-secret-affair-on-the-draft-digital-personal-data-protection-rules-2025/article69064313.ece">https://www.thehindu.com/opinion/editorial/no-secret-affair-on-the-draft-digital-personal-data-protection-rules-2025/article69064313.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Women in Governance: Mahima Kaul and Mishi Choudhary | Asia Society.” Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://asiasociety.org/india/events/women-governance-mahima-kaul-and-mishi-choudhary">https://asiasociety.org/india/events/women-governance-mahima-kaul-and-mishi-choudhary</a></li>
+
+<li>kavya pradeep, “The Digital Competition Bill, 2024: What’s the fuss about?,” Frontline. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/science-and-technology/digital-competition-bill-2024-big-tech-google-amazon-facebook-reliance-digital-advertising/article68330828.ece">https://frontline.thehindu.com/science-and-technology/digital-competition-bill-2024-big-tech-google-amazon-facebook-reliance-digital-advertising/article68330828.ece</a></li>
+
+<li>“India’s Sudden Reversal on Privacy Will Affect the Global Internet,” The Wire. <a href="https://thewire.in/rights/india-privacy-data-protection-global-internet-effect">https://thewire.in/rights/india-privacy-data-protection-global-internet-effect</a> (accessed Sep. 10, 2022).</li>
+
+<li>“CERT-In Directions on Cybersecurity: An Explainer,” Internet Freedom Foundation, May 05, 2022. <a href="https://internetfreedom.in/cert-in-guidelines-on-cybersecurity-an-explainer/">https://internetfreedom.in/cert-in-guidelines-on-cybersecurity-an-explainer/</a> (accessed Dec. 03, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf2e27a7"></a>eff<br />
+<div class="outline-text-6" id="text-orgf2e27a7">
+<ul class="org-ul">
+<li>K. R. and K. Opsahl, “India’s Draconian Rules for Internet Platforms Threaten User Privacy and Undermine Encryption,” Electronic Frontier Foundation, Jul. 20, 2021. <a href="https://www.eff.org/deeplinks/2021/07/indias-draconian-rules-internet-platforms-threaten-user-privacy-and-undermine">https://www.eff.org/deeplinks/2021/07/indias-draconian-rules-internet-platforms-threaten-user-privacy-and-undermine</a> (accessed Dec. 03, 2022).</li>
+<li>K. Rodriguez, “Why Indian Courts Should Reject Traceability Obligations,” Electronic Frontier Foundation, Jun. 02, 2021. <a href="https://www.eff.org/deeplinks/2021/06/why-indian-courts-should-reject-traceability-obligations">https://www.eff.org/deeplinks/2021/06/why-indian-courts-should-reject-traceability-obligations</a> (accessed Dec. 03, 2022).</li>
+<li>M. Baghdasaryan, “EFF and Partners Urge the Indian Government to Keep End-to-End Encryption Alive,” Electronic Frontier Foundation, Jul. 18, 2022. <a href="https://www.eff.org/deeplinks/2022/07/eff-and-partners-urge-indian-government-keep-end-end-encryption-alive">https://www.eff.org/deeplinks/2022/07/eff-and-partners-urge-indian-government-keep-end-end-encryption-alive</a> (accessed Dec. 03, 2022).</li>
+<li>K. Gullo, “India Requires Internet Services to Collect and Store Vast Amount of Customer Data, Building a Path to Mass Surveillance,” Electronic Frontier Foundation, Dec. 02, 2022. <a href="https://www.eff.org/deeplinks/2022/12/india-requires-internet-services-collect-and-store-vast-amount-customer-data">https://www.eff.org/deeplinks/2022/12/india-requires-internet-services-collect-and-store-vast-amount-customer-data</a> (accessed Dec. 03, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orge83c8f5"></a>iff<br />
+<div class="outline-text-6" id="text-orge83c8f5">
+<ul class="org-ul">
+<li>“IFF Joins RTI Campaign: Ensuring Privacy Protections don’t weaken Transparency,” Internet Freedom Foundation. Accessed: Apr. 13, 2025. [Online]. Available: <a href="https://internetfreedom.in/iff-joins-rti-campaign-ensuring-privacy-protections-dont-weaken-transparency/">https://internetfreedom.in/iff-joins-rti-campaign-ensuring-privacy-protections-dont-weaken-transparency/</a></li>
+<li>“Section 44(3) and the Systematic Dismantling of the RTI Act: A Fact Check to Ashwini Vaishnaw,” Internet Freedom Foundation. Accessed: Apr. 13, 2025. [Online]. Available: <a href="https://internetfreedom.in/section-44-3-and-the-systematic-dismantling-of-the-rti-act-a-fact-check-to-ashwini-vaishnaw/">https://internetfreedom.in/section-44-3-and-the-systematic-dismantling-of-the-rti-act-a-fact-check-to-ashwini-vaishnaw/</a></li>
+<li>“A Guide to Data Protection Compliance for Civil Society Organisations in India,” Internet Freedom Foundation. Accessed: Jan. 31, 2025. [Online]. Available: <a href="https://internetfreedom.in/a-guidata-protection-compliance-for-civil-society-organisations-in-india/">https://internetfreedom.in/a-guidata-protection-compliance-for-civil-society-organisations-in-india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf94b3c6"></a>tpp<br />
+<div class="outline-text-6" id="text-orgf94b3c6">
+<ul class="org-ul">
+<li>K. Rajmohan, “Data Localization: India’s Tryst with Data Sovereignty | TechPolicy.Press,” Tech Policy Press. Accessed: Feb. 03, 2025. [Online]. Available: <a href="https://techpolicy.press/data-localization-indias-tryst-with-data-sovereignty">https://techpolicy.press/data-localization-indias-tryst-with-data-sovereignty</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org39514b8"></a>ifex<br />
+<div class="outline-text-6" id="text-org39514b8">
+<ul class="org-ul">
+<li>M. Tzabiras, “India: Snapshot of the Draft Digital Personal Data Protection Rules 2025,” IFEX. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://ifex.org/india-snapshot-of-the-draft-digital-personal-data-protection-rules-2025/">https://ifex.org/india-snapshot-of-the-draft-digital-personal-data-protection-rules-2025/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfc29dd2"></a>cfa<br />
+<div class="outline-text-6" id="text-orgfc29dd2">
+<ul class="org-ul">
+<li>T. Franco, “Secrecy is protecting defaulters under the RBI Act and the proposed DPDP Act.,” Centre for Financial Accountability. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.cenfa.org/secrecy-is-protecting-defaulters-under-the-rbi-act-and-the-proposed-dpdp-act/">https://www.cenfa.org/secrecy-is-protecting-defaulters-under-the-rbi-act-and-the-proposed-dpdp-act/</a></li>
+<li>CFA, “Nothing Personal? The DPDP Act and the End of RTI,” Centre for Financial Accountability. Accessed: Apr. 25, 2025. [Online]. Available: <a href="https://www.cenfa.org/nothing-personal-the-dpdp-act-and-the-end-of-rti/">https://www.cenfa.org/nothing-personal-the-dpdp-act-and-the-end-of-rti/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org98cc8be"></a>sflc<br />
+<div class="outline-text-6" id="text-org98cc8be">
+<ul class="org-ul">
+<li>“SFLC.in’s Comments on Draft Digital Competition Bill.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://sflc.in/sflc-ins-comments-on-the-draft-digital-competition-bill-2024/">https://sflc.in/sflc-ins-comments-on-the-draft-digital-competition-bill-2024/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org93c4966"></a>mn<br />
+<div class="outline-text-6" id="text-org93c4966">
+<ul class="org-ul">
+<li>S. Mathi, “First draft of India’s Digital Competition Bill ready: Report,” MediaNama. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/02/223-first-draft-digital-competition-bill/">https://www.medianama.com/2024/02/223-first-draft-digital-competition-bill/</a></li>
+<li>Mimansa, “Guide: Draft Digital Personal Data Protection Act Rules,” MEDIANAMA. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/01/223-guide-draft-digital-personal-data-protection-act-rules/">https://www.medianama.com/2025/01/223-guide-draft-digital-personal-data-protection-act-rules/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org9b5a4d2" class="outline-4">
+<h4 id="org9b5a4d2"><span class="section-number-4">3.2.2.</span> EU</h4>
+<div class="outline-text-4" id="text-3-2-2">
+</div>
+<ul class="org-ul">
+<li><a id="orgbcc3438"></a>GDPR<br />
+<ul class="org-ul">
+<li><a id="org6f84aa0"></a>General<br />
+<div class="outline-text-6" id="text-org6f84aa0">
+<ul class="org-ul">
+<li>“General Data Protection Regulation,” Wikipedia. Jun. 02, 2025. Accessed: Jun. 05, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=General_Data_Protection_Regulation&amp;oldid=1293559967">https://en.wikipedia.org/w/index.php?title=General_Data_Protection_Regulation&amp;oldid=1293559967</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2f38aba"></a>Texts<br />
+<div class="outline-text-6" id="text-org2f38aba">
+<ul class="org-ul">
+<li>A. V. D. Bussche and P. Voigt, The EU General Data Protection Regulation (Gdpr): A Practical Guide, 2nd edition. Cham: Springer Nature, 2024.</li>
+<li>M. Foulsham, B. Hitchen, and A. Denley, GDPR: How To Achieve and Maintain Compliance, 1st edition. London ; New York: Routledge, 2019.</li>
+<li>A. Taal, Ed., The GDPR Challenge: Privacy, Technology, and Compliance in an Age of Accelerating Change, 1st edition. CRC Press, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="org94af30d"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgbff2385"></a>Popular Resources<br />
+<ul class="org-ul">
+<li><a id="org6c6ce26"></a>Dummies Series<br />
+<div class="outline-text-8" id="text-org6c6ce26">
+<ul class="org-ul">
+<li>S. Dibble, GDPR For Dummies, 1st edition. For Dummies, 2019.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgbf1a4f2"></a>Small Business<br />
+<div class="outline-text-7" id="text-orgbf1a4f2">
+<ul class="org-ul">
+<li>S. Alford, GDPR: A Game of Snakes and Ladders: How Small Businesses Can Win at the Compliance Game, 1st edition. Abingdon, Oxon New York, NY: Routledge, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga6c321f"></a>Health<br />
+<div class="outline-text-7" id="text-orga6c321f">
+<ul class="org-ul">
+<li>M. Tzanou, Ed., Health Data Privacy under the GDPR: Big Data Challenges and Regulatory Responses, 1st edition. London New York: Routledge, 2023.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org8c04552"></a>Misc<br />
+<div class="outline-text-6" id="text-org8c04552">
+<ul class="org-ul">
+<li>“‘GDPR compliance is hard’, but is it? – 20 hours to overcome privacy issues in mobile apps,” Internet Policy Review. Accessed: Jan. 20, 2023. [Online]. Available: <a href="https://policyreview.info/articles/news/gdpr-compliance-privacy-issues-mobile-apps/1678">https://policyreview.info/articles/news/gdpr-compliance-privacy-issues-mobile-apps/1678</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org59ecf30" class="outline-3">
+<h3 id="org59ecf30"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Software Freedom Law Center,” Wikipedia. Aug. 29, 2024. Accessed: Jan. 13, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Software_Freedom_Law_Center&amp;oldid=1242850906">https://en.wikipedia.org/w/index.php?title=Software_Freedom_Law_Center&amp;oldid=1242850906</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf79968e" class="outline-2">
+<h2 id="orgf79968e"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org17ce7ae" class="outline-3">
+<h3 id="org17ce7ae"><span class="section-number-3">4.1.</span> Education</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orga0082e7" class="outline-4">
+<h4 id="orga0082e7"><span class="section-number-4">4.1.1.</span> Texts</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>R. Giblin and C. Doctorow, Chokepoint Capitalism: How Big Tech and Big Content Captured Creative Labor Markets and How We’ll Win Them Back. Beacon Press, 2023.</li>
+<li>“Smart Technologies and the End(s) of Law.” Accessed: May 09, 2024. [Online]. Available: <a href="https://www.e-elgar.com/shop/gbp/smart-technologies-and-the-end-s-of-law-9781786430229.html">https://www.e-elgar.com/shop/gbp/smart-technologies-and-the-end-s-of-law-9781786430229.html</a></li>
+<li>J. Zittrain, <b>The Future of the Internet&#x2013;And How to Stop It.</b> Yale University Press, 2008.</li>
+<li>L. Lessig, <i>Free Culture.</i> Lulu.com, 2015.</li>
+<li>L. Lessig, <i>Code: And Other Laws of Cyberspace, Version 2.0.</i> Lawrence Lessig, 2006.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9e021a6" class="outline-3">
+<h3 id="org9e021a6"><span class="section-number-3">4.2.</span> Patents</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org61b9f28" class="outline-4">
+<h4 id="org61b9f28"><span class="section-number-4">4.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org48d5f52" class="outline-4">
+<h4 id="org48d5f52"><span class="section-number-4">4.2.2.</span> Free Software Foundation</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>“End Software Patents.” <a href="https://endsoftwarepatents.org/">https://endsoftwarepatents.org/</a> (accessed Nov. 20, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf841bdc" class="outline-4">
+<h4 id="orgf841bdc"><span class="section-number-4">4.2.3.</span> Electronic Frontier Foundation</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>A. Kamdar, <i>“Defend Innovation: How to Fix Our Broken Patent System,”</i> Electronic Frontier Foundation, Feb. 23, 2015. <a href="https://www.eff.org/wp/defend-innovation-how-fix-our-broken-patent-system">https://www.eff.org/wp/defend-innovation-how-fix-our-broken-patent-system</a> (accessed Jan. 25, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org841e742" class="outline-4">
+<h4 id="org841e742"><span class="section-number-4">4.2.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org1ef87d5" class="outline-3">
+<h3 id="org1ef87d5"><span class="section-number-3">4.3.</span> DRM</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org5fde0f9" class="outline-4">
+<h4 id="org5fde0f9"><span class="section-number-4">4.3.1.</span> General</h4>
+</div>
+<div id="outline-container-org933cc43" class="outline-4">
+<h4 id="org933cc43"><span class="section-number-4">4.3.2.</span> Free Software Foundation</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<ul class="org-ul">
+<li><b>“We oppose DRM. | Defective by Design.”</b> <a href="https://www.defectivebydesign.org/">https://www.defectivebydesign.org/</a> (accessed Jul. 02, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org822e23e" class="outline-4">
+<h4 id="org822e23e"><span class="section-number-4">4.3.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org91303ba" class="outline-3">
+<h3 id="org91303ba"><span class="section-number-3">4.4.</span> Licensing</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org54a6ce6" class="outline-4">
+<h4 id="org54a6ce6"><span class="section-number-4">4.4.1.</span> General</h4>
+</div>
+<div id="outline-container-org96fce06" class="outline-4">
+<h4 id="org96fce06"><span class="section-number-4">4.4.2.</span> Free Software Foundation</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<ul class="org-ul">
+<li><b>“FSF Licensing &amp; Compliance Team — Free Software Foundation — Working together for free software.”</b> <a href="https://www.fsf.org/licensing?pk_campaign=fsfredesign">https://www.fsf.org/licensing?pk_campaign=fsfredesign</a> (accessed Jul. 03, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5467a43" class="outline-4">
+<h4 id="org5467a43"><span class="section-number-4">4.4.3.</span> GNU</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<ul class="org-ul">
+<li>“Frequently Asked Questions about the GNU Licenses - GNU Project - Free Software Foundation.” <a href="https://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic">https://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic</a> (accessed Apr. 13, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org66beaff" class="outline-4">
+<h4 id="org66beaff"><span class="section-number-4">4.4.4.</span> Creative Commons</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<ul class="org-ul">
+<li>“When we share, everyone wins,” Creative Commons. <a href="https://creativecommons.org/">https://creativecommons.org/</a> (accessed Mar. 14, 2022).</li>
+<li>C. Doctorow, “A Bug in Early Creative Commons Licenses Has Enabled a New Breed of Superpredator,” Medium, Jan. 25, 2022. <a href="https://doctorow.medium.com/a-bug-in-early-creative-commons-licenses-has-enabled-a-new-breed-of-superpredator-5f6360713299">https://doctorow.medium.com/a-bug-in-early-creative-commons-licenses-has-enabled-a-new-breed-of-superpredator-5f6360713299</a> (accessed Jan. 26, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb6cbdc1" class="outline-4">
+<h4 id="orgb6cbdc1"><span class="section-number-4">4.4.5.</span> Open Source Initiative</h4>
+<div class="outline-text-4" id="text-4-4-5">
+<ul class="org-ul">
+<li>“ClearlyDefined.” Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://clearlydefined.io/about">https://clearlydefined.io/about</a></li>
+<li>“Licenses,” Open Source Initiative. Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://opensource.org/licenses/">https://opensource.org/licenses/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org052cbb6" class="outline-4">
+<h4 id="org052cbb6"><span class="section-number-4">4.4.6.</span> Re:Create</h4>
+<div class="outline-text-4" id="text-4-4-6">
+<ul class="org-ul">
+<li>“Open Source Initiative Joins the Re:Create Coalition,” Re:Create. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.recreatecoalition.org/press_release/open-source-initiative-joins-the-recreate-coalition/">https://www.recreatecoalition.org/press_release/open-source-initiative-joins-the-recreate-coalition/</a></li>
+<li>“Homepage,” Re:Create. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.recreatecoalition.org/">https://www.recreatecoalition.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org899e6ff" class="outline-4">
+<h4 id="org899e6ff"><span class="section-number-4">4.4.7.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-4-7">
+<ul class="org-ul">
+<li>Events and N. Vidal, “State of the Source at ATO 2025: Licensing 201,” Open Source Initiative. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://opensource.org/blog/state-of-the-source-at-ato-2025-licensing-201/">https://opensource.org/blog/state-of-the-source-at-ato-2025-licensing-201/</a></li>
+
+<li>“Protect Your Code Against Licensing Risks – Communications of the ACM.” Accessed: Jul. 22, 2025. [Online]. Available: <a href="https://cacm.acm.org/news/protect-your-code-against-licensing-risks/">https://cacm.acm.org/news/protect-your-code-against-licensing-risks/</a></li>
+
+<li>osilic: An utility for listing &amp; searching Open Source Initiative licenses via their public API.</li>
+
+<li>“‘I Question Copyright’ – Question Copyright.” <a href="https://questioncopyright.org/i-question-copyright">https://questioncopyright.org/i-question-copyright</a> (accessed Nov. 12, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgded9617" class="outline-3">
+<h3 id="orgded9617"><span class="section-number-3">4.5.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-5">
+<ul class="org-ul">
+<li>M. Hildebrandt, <b>Law for Computer Scientists and Other Folk.</b> Oxford University Press, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9771e75" class="outline-2">
+<h2 id="org9771e75"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org89c1784" class="outline-3">
+<h3 id="org89c1784"><span class="section-number-3">5.1.</span> Open Source Initiative</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Top Open Source licenses in 2024,” Open Source Initiative. Accessed: Jan. 05, 2025. [Online]. Available: <a href="https://opensource.org/blog/top-open-source-licenses-in-2024">https://opensource.org/blog/top-open-source-licenses-in-2024</a></li>
+<li>“Beyond SPDX: expanding licenses identified by ClearlyDefined,” Open Source Initiative. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://opensource.org/blog/beyond-spdx-expanding-licenses-identified-by-clearlydefined">https://opensource.org/blog/beyond-spdx-expanding-licenses-identified-by-clearlydefined</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org028931b" class="outline-3">
+<h3 id="org028931b"><span class="section-number-3">5.2.</span> Electronic Privacy Information Center</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“PRESS RELEASE: EPIC Partners with the Heising-Simons Foundation to Promote a Human Rights-First Approach to Emerging Technology,” EPIC - Electronic Privacy Information Center. Accessed: Oct. 22, 2024. [Online]. Available: <a href="https://epic.org/press-release-epic-partners-with-the-heising-simons-foundation-to-promote-a-human-rights-first-approach-to-emerging-technology/">https://epic.org/press-release-epic-partners-with-the-heising-simons-foundation-to-promote-a-human-rights-first-approach-to-emerging-technology/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1eee55d" class="outline-3">
+<h3 id="org1eee55d"><span class="section-number-3">5.3.</span> Bruce Schneier</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“Brett Solomon on Digital Rights - Schneier on Security.” Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2024/07/brett-solomon-on-digital-rights.html">https://www.schneier.com/blog/archives/2024/07/brett-solomon-on-digital-rights.html</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf5a587e" class="outline-3">
+<h3 id="orgf5a587e"><span class="section-number-3">5.4.</span> Freedom Of The Press</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>“Copyright and public records don’t mix,” Freedom of the Press. Accessed: Jul. 17, 2024. [Online]. Available: <a href="https://freedom.press/news/copyright-and-public-records-dont-mix/">https://freedom.press/news/copyright-and-public-records-dont-mix/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga0ec54c" class="outline-3">
+<h3 id="orga0ec54c"><span class="section-number-3">5.5.</span> Software Freedom Conservancy</h3>
+<div class="outline-text-3" id="text-5-5">
+<ul class="org-ul">
+<li>“Software Freedom Conservancy Launches Self-Service Copyright Assignment Process,” Software Freedom Conservancy. <a href="https://sfconservancy.org/news/2022/may/02/conservancy-launches-copyright-assignment-system/">https://sfconservancy.org/news/2022/may/02/conservancy-launches-copyright-assignment-system/</a> (accessed May 03, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8364b18" class="outline-3">
+<h3 id="org8364b18"><span class="section-number-3">5.6.</span> Access Now</h3>
+<div class="outline-text-3" id="text-5-6">
+<ul class="org-ul">
+<li>B. Solomon, “A pathway forward for digital rights,” Access Now. Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.accessnow.org/a-pathway-forward-for-digital-rights/">https://www.accessnow.org/a-pathway-forward-for-digital-rights/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org30fa8f1" class="outline-3">
+<h3 id="org30fa8f1"><span class="section-number-3">5.7.</span> Cory Doctorow</h3>
+<div class="outline-text-3" id="text-5-7">
+<ul class="org-ul">
+<li>“Pluralistic: The US Copyright Office frees the McFlurry (28 Oct 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/10/28/mcbroken/">https://pluralistic.net/2024/10/28/mcbroken/</a></li>
+<li>“Pluralistic: An open copyright casebook, featuring AI, Warhol and more (30 Jul 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/07/30/open-and-shut-casebook/">https://pluralistic.net/2024/07/30/open-and-shut-casebook/</a></li>
+<li>“Pluralistic: 2024’s public domain is a banger (20 Dec 2023) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Dec. 21, 2023. [Online]. Available: <a href="https://pluralistic.net/2023/12/20/em-oh-you-ess-ee/">https://pluralistic.net/2023/12/20/em-oh-you-ess-ee/</a></li>
+<li>C. Doctorow, “20 Years Of Copyright Wars,” Gizmodo, Aug. 08, 2022. <a href="https://gizmodo.com/cory-doctorow-copyright-laws-tech-antitrust-1849376858">https://gizmodo.com/cory-doctorow-copyright-laws-tech-antitrust-1849376858</a> (accessed Aug. 09, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4d992db" class="outline-3">
+<h3 id="org4d992db"><span class="section-number-3">5.8.</span> Electronic Frontier Foundation</h3>
+<div class="outline-text-3" id="text-5-8">
+<ul class="org-ul">
+<li>M. S. and T. Noble, “Copyright Is Not a Tool to Silence Critics of Religious Education,” Electronic Frontier Foundation. Accessed: Aug. 29, 2024. [Online]. Available: <a href="https://www.eff.org/deeplinks/2024/08/copyright-not-tool-silence-critics-religious-education">https://www.eff.org/deeplinks/2024/08/copyright-not-tool-silence-critics-religious-education</a></li>
+<li>“Coders’ Rights Project,” Electronic Frontier Foundation. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.eff.org/issues/coders">https://www.eff.org/issues/coders</a></li>
+<li>M. Stoltz, “Don’t Make Copyright Law in Smoke-Filled Rooms,” Electronic Frontier Foundation. Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/01/dont-make-copyright-law-smoke-filled-rooms">https://www.eff.org/deeplinks/2025/01/dont-make-copyright-law-smoke-filled-rooms</a></li>
+<li>C. McSherry, “What Proponents of Digital Replica Laws Can Learn from the Digital Millennium Copyright Act,” Electronic Frontier Foundation. Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/01/what-proponents-digital-replica-laws-can-learn-digital-millennium-copyright-act">https://www.eff.org/deeplinks/2025/01/what-proponents-digital-replica-laws-can-learn-digital-millennium-copyright-act</a></li>
+<li>M. Stoltz, “Open Licensing Promotes Culture and Learning. That’s Why EFF Is Upgrading its Creative Commons Licenses.,” Electronic Frontier Foundation. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/02/open-licensing-promotes-culture-and-learning-thats-why-eff-upgrading-its-creative">https://www.eff.org/deeplinks/2025/02/open-licensing-promotes-culture-and-learning-thats-why-eff-upgrading-its-creative</a></li>
+
+<li><b>“Creativity &amp; Innovation,”</b> Electronic Frontier Foundation. <a href="https://www.eff.org/issues/innovation">https://www.eff.org/issues/innovation</a> (accessed Jul. 03, 2021).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga625604" class="outline-2">
+<h2 id="orga625604"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Alumnus, “CC Launches its 2025-2028 Strategic Plan,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/01/22/cc-launches-its-2025-2028-strategic-plan/">https://creativecommons.org/2025/01/22/cc-launches-its-2025-2028-strategic-plan/</a></li>
+
+<li>Alumnus, “Welcoming New CC Board Members,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/03/06/creative-commons-announces-new-board-members/">https://creativecommons.org/2025/03/06/creative-commons-announces-new-board-members/</a></li>
+
+<li>Alumnus, “From Strategy to Action: Focus Areas for 2025,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/03/03/from-strategy-to-action-focus-areas-for-2025/">https://creativecommons.org/2025/03/03/from-strategy-to-action-focus-areas-for-2025/</a></li>
+
+<li>Alumnus, “Understanding CC Licenses and AI Training: A Legal Primer,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/">https://creativecommons.org/2025/05/15/understanding-cc-licenses-and-ai-training-a-legal-primer/</a></li>
+
+<li>Alumnus, “The Next Chapter: Strengthening the Creative Commons Community Together,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/05/15/the-next-chapter-strengthening-the-creative-commons-community-together/">https://creativecommons.org/2025/05/15/the-next-chapter-strengthening-the-creative-commons-community-together/</a></li>
+
+<li>Alumnus, “Creative Commons Becomes an Official UNESCO NGO Partner,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/08/21/creative-commons-becomes-an-official-unesco-ngo-partner/">https://creativecommons.org/2025/08/21/creative-commons-becomes-an-official-unesco-ngo-partner/</a></li>
+
+<li>Alumnus, “We Asked, You Answered: How Your Feedback Shapes CC Signals,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/08/27/we-asked-you-answered-how-your-feedback-shapes-cc-signals/">https://creativecommons.org/2025/08/27/we-asked-you-answered-how-your-feedback-shapes-cc-signals/</a></li>
+
+<li>A. Eayrs, “Integrating Choices in Open Standards: CC Signals and the RSL Standard,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/12/10/integrating-choices-in-open-standards/">https://creativecommons.org/2025/12/10/integrating-choices-in-open-standards/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Eayrs, “CC Signals: What We’ve Been Working On,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2025/12/15/cc-signals-what-weve-been-working-on/">https://creativecommons.org/2025/12/15/cc-signals-what-weve-been-working-on/</a></li>
+
+<li>A. Eayrs, “Building the Future in 2026,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2026/01/08/building-the-future-in-2026/">https://creativecommons.org/2026/01/08/building-the-future-in-2026/</a></li>
+<li>A. Eayrs, “Building What Comes Next: Community Engagement at Creative Commons,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2026/02/17/building-what-comes-next-community-engagement-at-creative-commons/">https://creativecommons.org/2026/02/17/building-what-comes-next-community-engagement-at-creative-commons/</a></li>
+<li>A. Eayrs, “Celebrating 25 Years of Choosing to Share,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2026/04/14/celebrating-25-years-of-choosing-to-share/">https://creativecommons.org/2026/04/14/celebrating-25-years-of-choosing-to-share/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Eayrs, “Update on CC Signals: What Changed and Why,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2026/04/23/update-on-cc-signals-what-changed-and-why/">https://creativecommons.org/2026/04/23/update-on-cc-signals-what-changed-and-why/</a></li>
+<li>A. Eayrs, “The Legacy of 25 Years of Creative Commons,” Creative Commons. Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://creativecommons.org/2026/07/02/the-legacy-of-25-years-of-creative-commons/">https://creativecommons.org/2026/07/02/the-legacy-of-25-years-of-creative-commons/</a></li>
+
+<li>“Some Unfortunate Delays in our Struggle for Copyleft Justice,” Software Freedom Conservancy. Accessed: Jan. 27, 2026. [Online]. Available: <a href="https://sfconservancy.org/blog/2026/jan/26/delay-in-start-of-vizio-trial/">https://sfconservancy.org/blog/2026/jan/26/delay-in-start-of-vizio-trial/</a></li>
+<li>“A Slight Delay in our Struggle for Copyleft Justice,” Software Freedom Conservancy. Accessed: Jan. 10, 2026. [Online]. Available: <a href="https://sfconservancy.org/blog/2026/jan/09/delay-in-start-of-vizio-trial/">https://sfconservancy.org/blog/2026/jan/09/delay-in-start-of-vizio-trial/</a></li>
+
+<li>J. Mullin, “EFF Tells Patent Office: Don’t Cut the Public Out of Patent Review,” Electronic Frontier Foundation. Accessed: Dec. 03, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/12/eff-tells-patent-office-dont-cut-public-out-patent-review">https://www.eff.org/deeplinks/2025/12/eff-tells-patent-office-dont-cut-public-out-patent-review</a></li>
+
+<li>B. Schneier, “Legal Restrictions on Vulnerability Disclosure,” Schneier on Security. Accessed: Nov. 20, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/11/legal-restrictions-on-vulnerability-disclosure.html">https://www.schneier.com/blog/archives/2025/11/legal-restrictions-on-vulnerability-disclosure.html</a></li>
+
+<li>C. O’Connell, “Taking stock of Big Tech: the 2025 RDR Index,” Access Now. Accessed: Nov. 16, 2025. [Online]. Available: <a href="https://www.accessnow.org/big-tech-2025-rdr-index/">https://www.accessnow.org/big-tech-2025-rdr-index/</a></li>
+<li>“The 2025 Ranking Digital Rights Big Tech Edition,” Ranking Digital Rights. Accessed: Nov. 16, 2025. [Online]. Available: <a href="https://rankingdigitalrights.org/bte25/">https://rankingdigitalrights.org/bte25/</a></li>
+<li>“The 2025 Ranking Digital Rights Big Tech Edition,” Ranking Digital Rights. Accessed: Nov. 16, 2025. [Online]. Available: <a href="https://rankingdigitalrights.org/bte25/executive-summary">https://rankingdigitalrights.org/bte25/executive-summary</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Does Using In-Copyright Works as Training Data Infringe? – Communications of the ACM.” Accessed: Oct. 04, 2025. [Online]. Available: <a href="https://cacm.acm.org/opinion/does-using-in-copyright-works-as-training-data-infringe/">https://cacm.acm.org/opinion/does-using-in-copyright-works-as-training-data-infringe/</a></li>
+
+<li>B. Schneier, “Lawsuit About WhatsApp Security,” Schneier on Security. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/09/lawsuit-about-whatsapp-security.html">https://www.schneier.com/blog/archives/2025/09/lawsuit-about-whatsapp-security.html</a></li>
+
+<li>“Pluralistic: All (antitrust) politics are local (02 Sep 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/09/02/act-locally/">https://pluralistic.net/2025/09/02/act-locally/</a></li>
+
+<li>C. Romero, “EFF Awards Spotlight ✨ Just Futures Law,” Electronic Frontier Foundation. Accessed: Sep. 04, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/08/eff-awards-spotlight-just-futures-law">https://www.eff.org/deeplinks/2025/08/eff-awards-spotlight-just-futures-law</a></li>
+
+<li>“Pluralistic: The worst possible antitrust outcome (03 Sep 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Sep. 04, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/09/03/unpunishing-process/">https://pluralistic.net/2025/09/03/unpunishing-process/</a></li>
+
+<li>“Pluralistic: Bluesky creates the world’s weirdest, hardest-to-understand binding arbitration clause (15 Aug 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Aug. 16, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/08/15/dogs-breakfast/">https://pluralistic.net/2025/08/15/dogs-breakfast/</a></li>
+
+<li>T. Hamilton, “Digital Rights Are Everyone’s Business, and Yours Can Join the Fight!,” Electronic Frontier Foundation. Accessed: Aug. 05, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/08/digital-rights-are-everyones-business-your-team-can-join-fight">https://www.eff.org/deeplinks/2025/08/digital-rights-are-everyones-business-your-team-can-join-fight</a></li>
+
+<li>“Deconstructing the Take It Down Act – Communications of the ACM.” Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://cacm.acm.org/opinion/deconstructing-the-take-it-down-act/">https://cacm.acm.org/opinion/deconstructing-the-take-it-down-act/</a></li>
+
+<li>“FOSS Community Invited to Historic Copyleft Trial,” Software Freedom Conservancy. Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://sfconservancy.org/news/2025/jul/24/travel-grants-for-vizio-trial-to-foss-community/">https://sfconservancy.org/news/2025/jul/24/travel-grants-for-vizio-trial-to-foss-community/</a></li>
+
+<li>B. Schneier, “Encryption Backdoors and the Fourth Amendment,” Schneier on Security. Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/07/encryption-backdoors-and-the-fourth-amendment.html">https://www.schneier.com/blog/archives/2025/07/encryption-backdoors-and-the-fourth-amendment.html</a></li>
+
+<li>“Pluralistic: How my DRM-free principles left me owning the rights to a German audiobook (21 Jul 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jul. 22, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/07/21/martin-mensch/">https://pluralistic.net/2025/07/21/martin-mensch/</a></li>
+
+<li>A. Schwartz, “How to Build on Washington’s ‘My Health, My Data’ Act,” Electronic Frontier Foundation. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/06/how-build-washingtons-my-health-my-data-act">https://www.eff.org/deeplinks/2025/06/how-build-washingtons-my-health-my-data-act</a></li>
+
+<li>“Copyleft-next Relaunched,” Software Freedom Conservancy. Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://sfconservancy.org/news/2025/jul/01/copyleft-next-relaunched/">https://sfconservancy.org/news/2025/jul/01/copyleft-next-relaunched/</a></li>
+
+<li>“The Information Rights Project,” The Information Rights Project. Accessed: Jun. 27, 2025. [Online]. Available: <a href="https://informationrights.org/">https://informationrights.org/</a></li>
+
+<li>K. Robertson, “Unspoken Implications: A Preliminary Analysis of Bill C-2 and Canada’s Potential Data-Sharing Obligations Towards the United States and Other Countries,” Citizen Lab, University of Toronto, Jun. 2025. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://citizenlab.ca/2025/06/a-preliminary-analysis-of-bill-c-2/">https://citizenlab.ca/2025/06/a-preliminary-analysis-of-bill-c-2/</a></li>
+
+<li>“The IP Laws That Stop Disenshittification.” Accessed: Apr. 12, 2025. [Online]. Available: <a href="https://jacobin.com/2025/04/ip-anticircumvention-tech-trump-tariffs">https://jacobin.com/2025/04/ip-anticircumvention-tech-trump-tariffs</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-07 Tue 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everyday Computing - Networks</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Everyday Computing - Networks</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd746a74">1. General</a></li>
+<li><a href="#org40b7d94">2. Fair Tech</a></li>
+<li><a href="#orgc48d088">3. STEMM</a>
+<ul>
+<li><a href="#org65c9fe4">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc4b05ab">4. Worldly Matters</a>
+<ul>
+<li><a href="#org6749cf0">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org10bebfd">5. Core</a>
+<ul>
+<li><a href="#org2c51427">5.1. Networking Devices</a>
+<ul>
+<li><a href="#org63c35ee">5.1.1. Wi Fi Extenders</a></li>
+<li><a href="#org5370d49">5.1.2. Routers</a></li>
+</ul>
+</li>
+<li><a href="#org0a03250">5.2. Internet</a></li>
+<li><a href="#org9cde47e">5.3. Texts</a>
+<ul>
+<li><a href="#org43d31f3">5.3.1. Humble Book Bundles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4712d76">6. Arts</a>
+<ul>
+<li><a href="#org1563cc6">6.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9ff67a5">7. Special Topics</a>
+<ul>
+<li><a href="#org37ce2d5">7.1. Bruce Schneier</a></li>
+</ul>
+</li>
+<li><a href="#org48cc131">8. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgd746a74" class="outline-2">
+<h2 id="orgd746a74"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org40b7d94" class="outline-2">
+<h2 id="org40b7d94"><span class="section-number-2">2.</span> Fair Tech</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>“Pluralistic: Trump’s FCC abandons the future (24 Jul 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/07/24/geometry-hates-cars/">https://pluralistic.net/2025/07/24/geometry-hates-cars/</a></li>
+
+<li>A. H. and B. Budington, “FBI Warning on IoT Devices: How to Tell If You Are Impacted,” Electronic Frontier Foundation. Accessed: Jun. 27, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/06/fbi-warning-iot-devices-how-tell-if-you-are-impacted">https://www.eff.org/deeplinks/2025/06/fbi-warning-iot-devices-how-tell-if-you-are-impacted</a></li>
+<li>A. Hancock, “Certbot 4.0: Long Live Short-Lived Certs!,” Electronic Frontier Foundation. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/04/certbot-40-long-live-short-lived-certs">https://www.eff.org/deeplinks/2025/04/certbot-40-long-live-short-lived-certs</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc48d088" class="outline-2">
+<h2 id="orgc48d088"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org65c9fe4" class="outline-3">
+<h3 id="org65c9fe4"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Do Wi-Fi Routers Track Your Browsing? I Read 30,000 Words of Privacy Policies to Find Out,” CNET. Accessed: May 20, 2025. [Online]. Available: <a href="https://www.cnet.com/home/internet/do-wi-fi-routers-track-you-rbrowsing-i-read-30000-words-of-privacy-policies-to-find-out/">https://www.cnet.com/home/internet/do-wi-fi-routers-track-you-rbrowsing-i-read-30000-words-of-privacy-policies-to-find-out/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4b05ab" class="outline-2">
+<h2 id="orgc4b05ab"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6749cf0" class="outline-3">
+<h3 id="org6749cf0"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org10bebfd" class="outline-2">
+<h2 id="org10bebfd"><span class="section-number-2">5.</span> Core</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org2c51427" class="outline-3">
+<h3 id="org2c51427"><span class="section-number-3">5.1.</span> Networking Devices</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org63c35ee" class="outline-4">
+<h4 id="org63c35ee"><span class="section-number-4">5.1.1.</span> Wi Fi Extenders</h4>
+</div>
+<div id="outline-container-org5370d49" class="outline-4">
+<h4 id="org5370d49"><span class="section-number-4">5.1.2.</span> Routers</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ul class="org-ul">
+<li><a id="org3ee9544"></a>General<br /></li>
+<li><a id="org1740197"></a>Fair Tech<br />
+<ul class="org-ul">
+<li><a id="org5df7381"></a>Free Software Foundation<br />
+<div class="outline-text-6" id="text-org5df7381">
+<ul class="org-ul">
+<li>“Routers | RYF.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://ryf.fsf.org/categories/routers">https://ryf.fsf.org/categories/routers</a></li>
+<li>“Wireless Adapters | RYF.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://ryf.fsf.org/categories/wireless-adapters">https://ryf.fsf.org/categories/wireless-adapters</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb2d09d0"></a>Electronic Frontier Foundation<br />
+<div class="outline-text-6" id="text-orgb2d09d0">
+<ul class="org-ul">
+<li>“Router,” Electronic Frontier Foundation. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.eff.org/tags/router">https://www.eff.org/tags/router</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8f709e5"></a>Consumer Reports<br />
+<div class="outline-text-6" id="text-org8f709e5">
+<ul class="org-ul">
+<li>“Best Wireless Routers of 2023,” Consumer Reports. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.consumerreports.org/electronics-computers/wireless-routers/best-wireless-routers-of-the-year-a2357339300/">https://www.consumerreports.org/electronics-computers/wireless-routers/best-wireless-routers-of-the-year-a2357339300/</a></li>
+<li>“Best Wireless Router Reviews – Consumer Reports.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.consumerreports.org/electronics-computers/wireless-routers/">https://www.consumerreports.org/electronics-computers/wireless-routers/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org217923b"></a>Misc<br />
+<div class="outline-text-6" id="text-org217923b">
+<ul class="org-ul">
+<li>FOTP, <i>“Keeping your home Wi-Fi router reasonably secure,”</i> Freedom of the Press. <a href="https://freedom.press/training/blog/wifi-router-security/">https://freedom.press/training/blog/wifi-router-security/</a> (accessed Jan. 08, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org998e1bb"></a>Pop Tech<br />
+<ul class="org-ul">
+<li><a id="orgebf863e"></a>MSM<br />
+<div class="outline-text-6" id="text-orgebf863e">
+<ul class="org-ul">
+<li>B. Ranj, “The best Wi-Fi routers of 2023,” Popular Science. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.popsci.com/gear/best-wifi-routers/">https://www.popsci.com/gear/best-wifi-routers/</a></li>
+<li>“The best Wi-Fi routers of 2023,” ZDNET. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.zdnet.com/home-and-office/networking/best-wifi-router/">https://www.zdnet.com/home-and-office/networking/best-wifi-router/</a></li>
+<li>“The Best Wi-Fi Routers for 2024,” PCMAG. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.pcmag.com/picks/the-best-wireless-routers">https://www.pcmag.com/picks/the-best-wireless-routers</a></li>
+<li>“Best Wi-Fi Routers for 2023,” CNET. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.cnet.com/home/internet/best-wi-fi-router/">https://www.cnet.com/home/internet/best-wi-fi-router/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfa538d4"></a>Misc<br />
+<div class="outline-text-6" id="text-orgfa538d4">
+<ul class="org-ul">
+<li>G. Shukla and C. Hoffman, “The Best Wi-Fi Routers of 2023,” How-To Geek. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.howtogeek.com/722600/best-wi-fi-routers/">https://www.howtogeek.com/722600/best-wi-fi-routers/</a></li>
+<li>A. S. from B. N. last updated, “Best Wi-Fi routers for 2023,” Tom’s Guide. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.tomsguide.com/us/best-wifi-routers,review-2498.html">https://www.tomsguide.com/us/best-wifi-routers,review-2498.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge48e077"></a>Big Tech<br />
+<ul class="org-ul">
+<li><a id="orgdd526e4"></a>NETGEAR<br />
+<ul class="org-ul">
+<li><a id="org363984a"></a>General<br />
+<div class="outline-text-7" id="text-org363984a">
+<ul class="org-ul">
+<li>NETGEAR, “NETGEAR’S Mesh WiFi Network Routers + Systems,” NETGEAR. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.netgear.com/home/wifi/mesh/">https://www.netgear.com/home/wifi/mesh/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org659066d"></a>Apps<br />
+<div class="outline-text-7" id="text-org659066d">
+<ul class="org-ul">
+<li>NETGEAR, “Orbi App - Orbi Setup,” NETGEAR. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://www.netgear.com/home/services/orbi-app/">https://www.netgear.com/home/services/orbi-app/</a>
+<ul class="org-ul">
+<li>“‎NETGEAR Orbi - WiFi System App,” App Store. Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://apps.apple.com/us/app/netgear-orbi-wifi-system-app/id1182184397">https://apps.apple.com/us/app/netgear-orbi-wifi-system-app/id1182184397</a></li>
+<li>“NETGEAR Orbi – WiFi System App - Apps on Google Play.” Accessed: Dec. 30, 2023. [Online]. Available: <a href="https://play.google.com/store/apps/details?id=com.dragonflow.android.orbi&amp;hl=en_US">https://play.google.com/store/apps/details?id=com.dragonflow.android.orbi&amp;hl=en_US</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgb596ec7"></a>Misc<br />
+<div class="outline-text-5" id="text-orgb596ec7">
+<ul class="org-ul">
+<li>S. Oh, “Get a New Wireless Router – The Markup.” Accessed: Jan. 12, 2024. [Online]. Available: <a href="https://themarkup.org/gentle-january/2024/01/11/get-a-new-wireless-router">https://themarkup.org/gentle-january/2024/01/11/get-a-new-wireless-router</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0a03250" class="outline-3">
+<h3 id="org0a03250"><span class="section-number-3">5.2.</span> Internet</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Everyday Computing - Internet: <a href="https://tinyurl.com/bdfempzn">https://tinyurl.com/bdfempzn</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9cde47e" class="outline-3">
+<h3 id="org9cde47e"><span class="section-number-3">5.3.</span> Texts</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org43d31f3" class="outline-4">
+<h4 id="org43d31f3"><span class="section-number-4">5.3.1.</span> Humble Book Bundles</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ul class="org-ul">
+<li>“Humble Tech Book Bundle: Networking Mastery by Packt,” Humble Bundle. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://www.humblebundle.com/books/networking-mastery-packt-books">https://www.humblebundle.com/books/networking-mastery-packt-books</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4712d76" class="outline-2">
+<h2 id="org4712d76"><span class="section-number-2">6.</span> Arts</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org1563cc6" class="outline-3">
+<h3 id="org1563cc6"><span class="section-number-3">6.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org9ff67a5" class="outline-2">
+<h2 id="org9ff67a5"><span class="section-number-2">7.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org37ce2d5" class="outline-3">
+<h3 id="org37ce2d5"><span class="section-number-3">7.1.</span> Bruce Schneier</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>B. Schneier, “TP-Link Router Botnet,” Schneier on Security. Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/03/tp-link-router-botnet.html">https://www.schneier.com/blog/archives/2025/03/tp-link-router-botnet.html</a></li>
+<li>B. Schneier, “Windscribe Acquitted on Charges of Not Collecting Users’ Data,” Schneier on Security. Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/04/windscribe-acquitted-on-charges-of-not-collecting-users-data.html">https://www.schneier.com/blog/archives/2025/04/windscribe-acquitted-on-charges-of-not-collecting-users-data.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org48cc131" class="outline-2">
+<h2 id="org48cc131"><span class="section-number-2">8.</span> Misc</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>“Yahoo Tech: I Review Routers for a Living. Don’t Buy a Router Right Now,” EPIC - Electronic Privacy Information Center. Accessed: Apr. 03, 2026. [Online]. Available: <a href="https://epic.org/yahoo-tech-i-review-routers-for-a-living-dont-buy-a-router-right-now/">https://epic.org/yahoo-tech-i-review-routers-for-a-living-dont-buy-a-router-right-now/</a></li>
+
+<li>“What the FCC router ban means for FOSS,” Software Freedom Conservancy. Accessed: Apr. 03, 2026. [Online]. Available: <a href="https://sfconservancy.org/blog/2026/apr/02/fcc-router-ban/">https://sfconservancy.org/blog/2026/apr/02/fcc-router-ban/</a></li>
+
+<li>“What the FCC router ban means for FOSS,” Software Freedom Conservancy. Accessed: Apr. 04, 2026. [Online]. Available: <a href="https://sfconservancy.org/blog/2026/apr/02/fcc-router-ban/">https://sfconservancy.org/blog/2026/apr/02/fcc-router-ban/</a></li>
+
+<li>I. Dumé, “Is your WiFi spying on you?,” Physics World. Accessed: Dec. 05, 2025. [Online]. Available: <a href="https://physicsworld.com/is-your-wifi-spying-on-you/">https://physicsworld.com/is-your-wifi-spying-on-you/</a></li>
+
+<li>B. Schneier, “Banning VPNs,” Schneier on Security. Accessed: Dec. 03, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/12/banning-vpns.html">https://www.schneier.com/blog/archives/2025/12/banning-vpns.html</a></li>
+
+<li>I. Dumé, “Is your WiFi spying on you?,” Physics World. Accessed: Nov. 26, 2025. [Online]. Available: <a href="https://physicsworld.com/is-your-wifi-spying-on-you/">https://physicsworld.com/is-your-wifi-spying-on-you/</a></li>
+
+<li>R. Alajaji, “Lawmakers Want to Ban VPNs—And They Have No Idea What They’re Doing,” Electronic Frontier Foundation. Accessed: Nov. 14, 2025. [Online]. Available: <a href="https://www.eff.org/deeplinks/2025/11/lawmakers-want-ban-vpns-and-they-have-no-idea-what-theyre-doing">https://www.eff.org/deeplinks/2025/11/lawmakers-want-ban-vpns-and-they-have-no-idea-what-theyre-doing</a></li>
+
+<li>B. Schneier, “Serious F5 Breach,” Schneier on Security. Accessed: Oct. 24, 2025. [Online]. Available: <a href="https://www.schneier.com/blog/archives/2025/10/serious-f5-breach.html">https://www.schneier.com/blog/archives/2025/10/serious-f5-breach.html</a></li>
+
+<li>“Wi-Fi 6,” Wikipedia. Apr. 20, 2022. Accessed: Apr. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Wi-Fi_6&amp;oldid=1083738377">https://en.wikipedia.org/w/index.php?title=Wi-Fi_6&amp;oldid=1083738377</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-07 Tue 00:30</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
