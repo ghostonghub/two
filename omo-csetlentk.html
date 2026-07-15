@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-15 Wed 17:15 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Computer Science and Engineering, Information, Communication Technology, Misc - The Least Everyone Needs To Know</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Computer Science and Engineering, Information, Communication Technology, Misc - The Least Everyone Needs To Know</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf2680d5">1. General</a></li>
+<li><a href="#org699239c">2. Informatics: The Least Everyone Needs To Know</a>
+<ul>
+<li><a href="#org21e0df3">2.1. General</a></li>
+<li><a href="#orgc669f95">2.2. Digital IDs</a></li>
+<li><a href="#orgafc2ff5">2.3. Biometrics</a></li>
+<li><a href="#orgcdd1802">2.4. Data Visualization</a></li>
+<li><a href="#org87da2ff">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org017e53f">3. Blockchain: The Least Everyone Needs to Know</a>
+<ul>
+<li><a href="#org449b5cb">3.1. General</a>
+<ul>
+<li><a href="#orgf8270eb">3.1.1. Wikipedia</a></li>
+<li><a href="#orgd542f73">3.1.2. Dummies Series</a></li>
+</ul>
+</li>
+<li><a href="#org7d6970a">3.2. Fair Tech</a></li>
+<li><a href="#org0628a55">3.3. STEMM</a></li>
+<li><a href="#orgf09c247">3.4. Worldly Matters</a>
+<ul>
+<li><a href="#org352653c">3.4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb1f8b6f">3.5. Special Topics</a>
+<ul>
+<li><a href="#orgba51637">3.5.1. Critical Studies</a></li>
+<li><a href="#orgf772034">3.5.2. Texts</a></li>
+</ul>
+</li>
+<li><a href="#org8718596">3.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org20973c4">4. Digital Networks: The Least Everyone Needs To Know</a>
+<ul>
+<li><a href="#org0f96a98">4.1. General</a></li>
+<li><a href="#org5249f04">4.2. Worldly Matters</a></li>
+<li><a href="#org6920445">4.3. Mozilla Foundation</a></li>
+<li><a href="#orgffb4daa">4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org840c2ec">5. Data Science, Artificial Intelligence</a>
+<ul>
+<li><a href="#orgf7fbc85">5.1. Data Science: The Least Everyone Needs To Know</a>
+<ul>
+<li><a href="#orgafd9e94">5.1.1. General</a></li>
+<li><a href="#orge28e562">5.1.2. Fair Tech</a></li>
+<li><a href="#org955f630">5.1.3. Systems Sciences, Misc</a></li>
+<li><a href="#org020f9fb">5.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0fe3dd0">5.2. AI: The Least Everyone Needs To Know</a>
+<ul>
+<li><a href="#orgbc13190">5.2.1. General</a></li>
+<li><a href="#orgece7a5b">5.2.2. Fair Tech, Misc</a></li>
+<li><a href="#orgf1bad92">5.2.3. Special Topics</a></li>
+<li><a href="#orgf9dfc90">5.2.4. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2cd9151">6. Advanced Sciences, Misc</a>
+<ul>
+<li><a href="#org1f0af41">6.1. Quantum Computing: The Least Everyone Needs to Know</a></li>
+</ul>
+</li>
+<li><a href="#org7fb579e">7. Special Topics</a>
+<ul>
+<li><a href="#orgf9e01a7">7.1. Digital Security: The Least Everyone Needs To Know</a></li>
+</ul>
+</li>
+<li><a href="#org61c06c2">8. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgf2680d5" class="outline-2">
+<h2 id="orgf2680d5"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>C. Newport, <b>Digital Minimalism: On Living Better with Less Technology.</b> Penguin UK, 2019.</li>
+<li>T. Chatfield and T. S. of Life, How to Thrive in the Digital Age. Pan Macmillan, 2012.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org699239c" class="outline-2">
+<h2 id="org699239c"><span class="section-number-2">2.</span> Informatics: The Least Everyone Needs To Know</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org21e0df3" class="outline-3">
+<h3 id="org21e0df3"><span class="section-number-3">2.1.</span> General</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Informatics,” Wikipedia. Jun. 29, 2021. Accessed: Jul. 08, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Informatics&amp;oldid=1031083802">https://en.wikipedia.org/w/index.php?title=Informatics&amp;oldid=1031083802</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc669f95" class="outline-3">
+<h3 id="orgc669f95"><span class="section-number-3">2.2.</span> Digital IDs</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li><a href="https://htmlpreview.github.io/?https://github.com/ghostonghub/two/blob/main/omo-cseid.html">Ditigal IDs</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgafc2ff5" class="outline-3">
+<h3 id="orgafc2ff5"><span class="section-number-3">2.3.</span> Biometrics</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>M. Fairhurst, <i>Biometrics: A Very Short Introduction.</i> Oxford University Press, 2018.</li>
+<li>P. H. Gregory and M. A. Simon, <i>Biometrics For Dummies.</i> John Wiley &amp; Sons, 2009.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcdd1802" class="outline-3">
+<h3 id="orgcdd1802"><span class="section-number-3">2.4.</span> Data Visualization</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li><b>“Our World in Data,”</b> Our World in Data. <a href="https://ourworldindata.org">https://ourworldindata.org</a> (accessed Apr. 19, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org87da2ff" class="outline-3">
+<h3 id="org87da2ff"><span class="section-number-3">2.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org017e53f" class="outline-2">
+<h2 id="org017e53f"><span class="section-number-2">3.</span> Blockchain: The Least Everyone Needs to Know</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org449b5cb" class="outline-3">
+<h3 id="org449b5cb"><span class="section-number-3">3.1.</span> General</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgf8270eb" class="outline-4">
+<h4 id="orgf8270eb"><span class="section-number-4">3.1.1.</span> Wikipedia</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“Blockchain,” Wikipedia. May 22, 2023. Accessed: Jul. 06, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Blockchain&amp;oldid=1156356537">https://en.wikipedia.org/w/index.php?title=Blockchain&amp;oldid=1156356537</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd542f73" class="outline-4">
+<h4 id="orgd542f73"><span class="section-number-4">3.1.2.</span> Dummies Series</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>T. Laurence, Blockchain for Dummies, 2ed | e. Wiley, 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7d6970a" class="outline-3">
+<h3 id="org7d6970a"><span class="section-number-3">3.2.</span> Fair Tech</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Search:blockchain,” Electronic Frontier Foundation. Accessed: Feb. 01, 2024. [Online]. Available: <a href="https://www.eff.org/search/site/blockchain">https://www.eff.org/search/site/blockchain</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0628a55" class="outline-3">
+<h3 id="org0628a55"><span class="section-number-3">3.3.</span> STEMM</h3>
+</div>
+<div id="outline-container-orgf09c247" class="outline-3">
+<h3 id="orgf09c247"><span class="section-number-3">3.4.</span> Worldly Matters</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org352653c" class="outline-4">
+<h4 id="org352653c"><span class="section-number-4">3.4.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>P. D. Filippi and A. Wright, <b>Blockchain and the Law: The Rule of Code.</b> Harvard University Press, 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb1f8b6f" class="outline-3">
+<h3 id="orgb1f8b6f"><span class="section-number-3">3.5.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgba51637" class="outline-4">
+<h4 id="orgba51637"><span class="section-number-4">3.5.1.</span> Critical Studies</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ul class="org-ul">
+<li>Bruce Schneier, <b><a href="https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/">There's No Good Reason to Trust Blockchain Technology</a></b>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf772034" class="outline-4">
+<h4 id="orgf772034"><span class="section-number-4">3.5.2.</span> Texts</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ul class="org-ul">
+<li>D. Tapscott and A. Tapscott, Blockchain Revolution. UK: Penguin, 2018.</li>
+<li>H. B. Review, D. Tapscott, M. Iansiti, and K. R. Lakhani, Blockchain: The Insights You Need from Harvard Business Review. Harvard Business Press, 2019.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Drescher, Blockchain Basics: A Non-Technical Introduction in 25 Steps, 1st edition. APRESS, 2017.</li>
+<li>M. Swan, Blockchain: Blueprint for a New Economy. O’Reilly Media, Inc., 2015.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8718596" class="outline-3">
+<h3 id="org8718596"><span class="section-number-3">3.6.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org20973c4" class="outline-2">
+<h2 id="org20973c4"><span class="section-number-2">4.</span> Digital Networks: The Least Everyone Needs To Know</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0f96a98" class="outline-3">
+<h3 id="org0f96a98"><span class="section-number-3">4.1.</span> General</h3>
+</div>
+<div id="outline-container-org5249f04" class="outline-3">
+<h3 id="org5249f04"><span class="section-number-3">4.2.</span> Worldly Matters</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>R. J. Diebert, <b>Reset: Reclaiming the Internet for Civil Society.</b> September Publishing, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6920445" class="outline-3">
+<h3 id="org6920445"><span class="section-number-3">4.3.</span> Mozilla Foundation</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li><b>“Internet Health Report,”</b> Mozilla Foundation. <a href="https://foundation.mozilla.org/en/insights/internet-health-report/">https://foundation.mozilla.org/en/insights/internet-health-report/</a> (accessed Feb. 01, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgffb4daa" class="outline-3">
+<h3 id="orgffb4daa"><span class="section-number-3">4.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org840c2ec" class="outline-2">
+<h2 id="org840c2ec"><span class="section-number-2">5.</span> Data Science, Artificial Intelligence</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgf7fbc85" class="outline-3">
+<h3 id="orgf7fbc85"><span class="section-number-3">5.1.</span> Data Science: The Least Everyone Needs To Know</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgafd9e94" class="outline-4">
+<h4 id="orgafd9e94"><span class="section-number-4">5.1.1.</span> General</h4>
+</div>
+<div id="outline-container-orge28e562" class="outline-4">
+<h4 id="orge28e562"><span class="section-number-4">5.1.2.</span> Fair Tech</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>B. Schneier, <b>Data and Goliath: The Hidden Battles to Collect Your Data and Control Your World.</b> W. W. Norton &amp; Company, 2015.
+<ul class="org-ul">
+<li>A computer scientist's accessible, bird's eye view of the worldly issues of IT.</li>
+</ul></li>
+<li>C. O'Neil, <b>Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy.</b> Penguin UK, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org955f630" class="outline-4">
+<h4 id="org955f630"><span class="section-number-4">5.1.3.</span> Systems Sciences, Misc</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<ul class="org-ul">
+<li>S. E. Page, <b>The Model Thinker: What You Need to Know to Make Data Work for You.</b> Basic Books, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org020f9fb" class="outline-4">
+<h4 id="org020f9fb"><span class="section-number-4">5.1.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org0fe3dd0" class="outline-3">
+<h3 id="org0fe3dd0"><span class="section-number-3">5.2.</span> AI: The Least Everyone Needs To Know</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgbc13190" class="outline-4">
+<h4 id="orgbc13190"><span class="section-number-4">5.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li><a id="orgc960e8d"></a> M. Mitchell, <b>Artificial Intelligence: A Guide for Thinking Humans.</b> Penguin UK, 2019.
+<ul class="org-ul">
+<li>The least everyone needs to know about AI. Additionally, to situate AI, Data Science, Big Data, etc. in the 'Big Picture', see, <i>Scale</i> by G. West.</li>
+</ul></li>
+<li><b>S. Wolfram</b>, What Is ChatGPT Doing &#x2026; and Why Does It Work? Champaign, Illinois: Wolfram Research, Inc., 2023.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgece7a5b" class="outline-4">
+<h4 id="orgece7a5b"><span class="section-number-4">5.2.2.</span> Fair Tech, Misc</h4>
+<div class="outline-text-4" id="text-5-2-2">
+</div>
+<ul class="org-ul">
+<li><a id="org71e2723"></a>Electronic Frontier Foundation<br />
+<div class="outline-text-5" id="text-org71e2723">
+<ul class="org-ul">
+<li>“Search:ai,” Electronic Frontier Foundation. Accessed: Feb. 01, 2024. [Online]. Available: <a href="https://www.eff.org/search/site/ai">https://www.eff.org/search/site/ai</a></li>
+<li>“Search:artificial intelligence,” Electronic Frontier Foundation. Accessed: Feb. 01, 2024. [Online]. Available: <a href="https://www.eff.org/search/site/artificial%20intelligence">https://www.eff.org/search/site/artificial%20intelligence</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org00a36f6"></a>Misc<br />
+<div class="outline-text-5" id="text-org00a36f6">
+<ul class="org-ul">
+<li>C. Doctorow, The Reverse Centaur’s Guide to Life After AI: How to Think About Artificial Intelligence Before It’s Too Late. Verso.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgf1bad92" class="outline-4">
+<h4 id="orgf1bad92"><span class="section-number-4">5.2.3.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-5-2-3">
+</div>
+<ul class="org-ul">
+<li><a id="orgeb54b06"></a>Classics, Misc<br />
+<div class="outline-text-5" id="text-orgeb54b06">
+<ul class="org-ul">
+<li>D. R. Hofstadter and D. C. Dennett, <b>The Mind's I: Fantasies and Reflections on Self and Soul.</b> Penguin Books, 1981.
+<ul class="org-ul">
+<li>A wonderful, enchanting book! One that got many all excited about everything in it. But, it is now dated and, by itself, quite misleading.</li>
+</ul></li>
+<li>D. R. Hofstadter, <b>Gödel, Escher, Bach: An Eternal Golden Braid.</b> Penguin, 2000.
+<ul class="org-ul">
+<li>A wonderful, low tech book; though now dated, it is still excellent for learning some rudimentary theoretical computer science, AI, and much more!</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcf48576"></a>Critical Studies<br />
+<div class="outline-text-5" id="text-orgcf48576">
+<ul class="org-ul">
+<li><b>“The Fetishism of AI,”</b> Monthly Review. Accessed: May 02, 2026. [Online]. Available: <a href="https://monthlyreview.org/articles/the-fetishism-of-ai/">https://monthlyreview.org/articles/the-fetishism-of-ai/</a></li>
+<li><b>“Home,” AI Now Institute.</b> <a href="https://ainowinstitute.org/">https://ainowinstitute.org/</a> (accessed Jun. 17, 2023).</li>
+<li>K. Crawford, Atlas Of AI: Power, Politics, And The Planetary Costs Of Artificial Intelligence. New Haven London: Yale Univ Pr, 2021.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgf9dfc90" class="outline-4">
+<h4 id="orgf9dfc90"><span class="section-number-4">5.2.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-2-4">
+<ul class="org-ul">
+<li>A. Narayanan and S. Kapoor, <b>AI Snake Oil: What Artificial Intelligence Can Do, What It Can’t, and How to Tell the Difference.</b> Princeton University Press, 2024.</li>
+<li>P. Domingos, <i>The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World.</i> Penguin UK, 2015.</li>
+<li>D. Auerbach, <i>Bitwise: A Life in Code.</i> Knopf Doubleday Publishing Group, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2cd9151" class="outline-2">
+<h2 id="org2cd9151"><span class="section-number-2">6.</span> Advanced Sciences, Misc</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org1f0af41" class="outline-3">
+<h3 id="org1f0af41"><span class="section-number-3">6.1.</span> Quantum Computing: The Least Everyone Needs to Know</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li><b>S. Aaronson</b>, Quantum Computing Since Democritus. Cambridge: Cambridge Univ Pr, 2013.</li>
+<li>C. Bernhardt, Quantum Computing for Everyone. The MIT Press.</li>
+<li>J. Gribbin, Computing with Quantum Cats: From Colossus to Qubits. Random House, 2013.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7fb579e" class="outline-2">
+<h2 id="org7fb579e"><span class="section-number-2">7.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgf9e01a7" class="outline-3">
+<h3 id="orgf9e01a7"><span class="section-number-3">7.1.</span> Digital Security: The Least Everyone Needs To Know</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><a href="https://htmlpreview.github.io/?https://github.com/ghostonghub/security/blob/main/omo-sec2ict-all.html">Digital Security: The Least Everyone Needs To Know</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org61c06c2" class="outline-2">
+<h2 id="org61c06c2"><span class="section-number-2">8.</span> Misc</h2>
+<div class="outline-text-2" id="text-8">
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ghostonghub/zero/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-15 Wed 17:15</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
